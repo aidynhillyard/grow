@@ -10,7 +10,7 @@ This project is a short text-based role-playing game (rpg) where the player grow
 
 ## User Story
 
-The user is a person who enjoys self-paced, story-focused games, such as "slice of life" environments.
+The user is a person who enjoys self-paced, story-focused games, such as "slice of life" environments.  The user also enjoys learning more about other communities and identities, as the game aims to challenge assumptions about disabilities.
 
 ## Wireframes
 
