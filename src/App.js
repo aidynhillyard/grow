@@ -2,7 +2,9 @@ import './App.css';
 import { Routes, Route } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Grow from "./Components/Grow/Grow";
-import About from "./Components/About/About"
+import Home from "./Components/Home/Home";
+import Town from "./Components/Town/Town";
+import About from "./Components/About/About";
 import Container from "react-bootstrap/Container";
 import Footer from "./Components/Footer/Footer";
 
@@ -14,6 +16,8 @@ function App() {
         <main>
           <Routes>
             <Route path='/' element={<Grow />}></Route>
+            <Route path="/home" element={<Home />}></Route>
+            <Route path='/town' element={<Town />}></Route>
             <Route path='/about' element={<About />}></Route>
           </Routes>
         </main>
