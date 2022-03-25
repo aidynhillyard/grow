@@ -2,6 +2,7 @@ import "./Pot2.css";
 import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 
 const Pot2 = () => {
@@ -13,22 +14,11 @@ const Pot2 = () => {
   return (
     <Container>
       <p>
-        <Button variant="success" onClick={handleShow}>
-          Plant a Seed
-        </Button>
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Care for Plant</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            You've spent one Action Point to plant a seed.
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="primary" onClick={handleClose}>
-              Okay
-            </Button>
-          </Modal.Footer>
-        </Modal>{" "}
+      <Button variant="success">
+              <Link to="/planting" id="link-to-planting">
+                Plant a Seed
+              </Link>
+      </Button>
         Pot #2 -- Empty
       </p>
     </Container>

@@ -5,6 +5,7 @@ import Grow from "./Components/Grow/Grow";
 import Home from "./Components/Home/Home";
 import Town from "./Components/Town/Town";
 import About from "./Components/About/About";
+import Planting from "./Components/Planting/Planting";
 import Container from "react-bootstrap/Container";
 import Footer from "./Components/Footer/Footer";
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="/home" element={<Home />}></Route>
             <Route path='/town' element={<Town />}></Route>
             <Route path='/about' element={<About />}></Route>
+            <Route path='/planting' element={<Planting />}></Route>
           </Routes>
         </main>
       </Container>
