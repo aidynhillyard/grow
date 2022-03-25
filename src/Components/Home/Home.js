@@ -30,7 +30,7 @@ return (
     <Accordion.Header>End Day</Accordion.Header>
     <Accordion.Body>
       <p>If you have completed everything you would like to do today, or if you have no more Action Points remaining, you may end the day and start a new, fresh day. This replenishes your Action Points. Would you like to end the day now?</p>
-      (Button: End the Day)
+      <Button variant="danger">End the Day</Button>
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
