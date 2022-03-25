@@ -6,7 +6,7 @@
 
 ## Project Description
 
-This project is a short text-based role-playing game (rpg) where the player grows plants and trades them to townspeople for mysterious letters.
+This project is a short text-based role-playing game (rpg) where the player grows plants and trades them to townspeople for mysterious letters. The player plays as a person who has recently recovered from an accident, but they still have some memory loss and are now using a wheelchair permanently. The player pieces together information about their past and possible dreams for their future through the mysterious letters.
 
 ## User Story
 
@@ -34,8 +34,8 @@ The user is a person who enjoys self-paced, story-focused games, such as "slice 
     - 3 different types of plants (marigolds, snapdragons, and sunflowers)
     - 3 different townspeople
     - 3 total letters
-    - Action Points
-- 4 Action Points per day; points reset each day
+- Action Points
+    - 4 Action Points per day; points reset each day
     - Activities that consume Action Points are: 1. planting a seed, 2. caring for a plant, 3. talking to a townsperson
     - Examining plants and traveling to town do not consume Action Points
 - Setting
