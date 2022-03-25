@@ -3,7 +3,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div>
-        This is the footer.
+        Designed and coded by Aidyn Hillyard, 2022
     </div>
   );
 };
