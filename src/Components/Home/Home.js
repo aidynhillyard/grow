@@ -1,17 +1,13 @@
 import "./Home.css";
-import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import { Link } from "react-router-dom";
+import Pot1 from "../Pot1/Pot1";
+import Pot2 from "../Pot2/Pot2";
+import Pot3 from "../Pot3/Pot3";
 
 const Home = () => {
-
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
 return (
     <Container>
@@ -19,23 +15,9 @@ return (
   <Accordion.Item eventKey="0">
     <Accordion.Header>Examine Pots</Accordion.Header>
     <Accordion.Body>
-      <p><Button variant="primary" onClick={handleShow}>
-      Care for Plant
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Care for Plant</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>You've spent one Action Point to care for your plant.</Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
-            Okay
-          </Button>
-        </Modal.Footer>
-      </Modal> Pot #1 -- Plant: (plantName), Age: (plantAge), Fully Grown: (fullyGrown)</p>
-      <p><Button variant="success">Plant a Seed</Button> Pot #2 -- Empty</p>
-      <p><Button variant="success">Plant a Seed</Button> Pot #3 -- Empty</p>
+      <Pot1 />
+      <Pot2 />
+      <Pot3 />
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
