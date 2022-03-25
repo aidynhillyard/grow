@@ -12,21 +12,25 @@ const Pot3 = () => {
 
   return (
     <Container>
-      <p><Button variant="success" onClick={handleShow}>
-      Plant a Seed
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Care for Plant</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>You've spent one Action Point to plant a seed.</Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
-            Okay
-          </Button>
-        </Modal.Footer>
-      </Modal> Pot #2 -- Empty</p>
+      <p>
+        <Button variant="success" onClick={handleShow}>
+          Plant a Seed
+        </Button>
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Care for Plant</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            You've spent one Action Point to plant a seed.
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="primary" onClick={handleClose}>
+              Okay
+            </Button>
+          </Modal.Footer>
+        </Modal>{" "}
+        Pot #2 -- Empty
+      </p>
     </Container>
   );
 };
