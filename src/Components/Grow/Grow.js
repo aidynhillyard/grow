@@ -18,7 +18,10 @@ const Grow = () => {
   // let pot1IsFullyGrown = null/undefined
 
   // Psuedo code for "Plant a Seed" button (with type) should:
-  
+
+  //  run function checkIfPotIsEmpty; function checks for pot1IsEmpty = true
+  //  if pot1IsEmpty = true, then variables are set as below
+  //  else if pot1IsEmpty = false, then alert: 'This pot already has a plant in it!'
   //    actionPoints -1
   //    pot1IsEmpty = false
   //    pot1Type = type of seed planted (onClick function setPot1Type: let pot1Type = 'marigold')
@@ -48,6 +51,10 @@ const Grow = () => {
   //        if pot1Type = 'snapdragon' && pot1Age >= 3, then pot1IsFullyGrown = true
   //        if pot1Type = 'sunflower' && pot1Age >= 4, then pot1IsFullyGrown = true
   //      pot1IsFullyGrown value should display (maybe even in <span> to be green)
+
+  // Psuedo code for Examine Pots display
+  //    if pot1IsEmpty = false, then display "Care for Plant" button
+  //      else, display "Plant a Seed" button
 
   return (
     <Container>
