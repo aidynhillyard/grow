@@ -54,7 +54,7 @@ const Town = () => {
 
   return (
     <Container>
-      <h1>This is the Town</h1>
+      <h1>Town</h1>
       <p>This is placeholder text about the town. It also has instructions on talking to the townspeople below.</p>
         <Accordion>
   <Accordion.Item eventKey="0">

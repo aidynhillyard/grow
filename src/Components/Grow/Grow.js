@@ -31,10 +31,7 @@ const Grow = () => {
 console.log(pot1IsEmpty)
   const checkIfPot1IsEmptyMarigold = () => {
     if (pot1IsEmpty === true && actionPoints > 0) {
-      // setActionPoints -= 1 // useState
       setPot1IsEmpty(!pot1IsEmpty) //function
-      // setPot1Type = 'marigold' //useState
-      // setPot1Age(prevState => prevState + 1) //function
       setPot1IsCaredFor(!pot1IsCaredFor) //function
       setPot1IsFullyGrown(!pot1IsFullyGrown) //function
       console.log(actionPoints)
@@ -127,7 +124,7 @@ console.log(pot1IsEmpty)
           setPot1IsFullyGrown={setPot1IsFullyGrown}
           />
           </div>
-          <Button variant="success" onClick={() => {setLocation("town")}}>Travel to Town</Button>
+          
           {/* ********
         Town
         ******** */}
@@ -137,7 +134,8 @@ console.log(pot1IsEmpty)
         <Town
         />
         </div>
-        <Button variant="success" onClick={() => {setLocation("home")}}>Travel to Home</Button>
+        <div><Button variant="success" style={{display: location === "town" ? "inline" : "none"}} onClick={() => {setLocation("home")}}>Travel to Home</Button></div>
+        <div><Button variant="success" style={{display: location === "home" ? "inline" : "none"}} onClick={() => {setLocation("town")}}>Travel to Town</Button></div>
         {console.log(location)}
     </Container>
     
