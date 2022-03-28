@@ -33,7 +33,7 @@ console.log(actionPoints)
             and how they grow. There might even be a picture of a marigold at
             some point.
             <p>
-              <Button variant="success" onClick={() => {checkIfPot1IsEmptyMarigold(); handleShow(); setPlanting(false); decrementActionPoints(); setPot1Type("Marigold"); incrementPot1Age()}} style={{display: pot1IsEmpty === false ? "none" : "inline"}}>
+              <Button variant="info" onClick={() => {checkIfPot1IsEmptyMarigold(); handleShow(); setPlanting(false); decrementActionPoints(); setPot1Type("Marigold"); incrementPot1Age()}} >
                 Plant a Seed
               </Button>
               <Modal show={show} onHide={handleClose}>

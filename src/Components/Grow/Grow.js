@@ -12,7 +12,7 @@ const Grow = () => {
   // *** USE STATES ***
   
   // Location will show/hide Home and Town
-  const [location, setLocation] = useState("home")
+  const [location, setLocation] = useState("tutorial")
   
   // Action Points start at 4 each day
   const [actionPoints, setActionPoints] = useState(4)
@@ -32,7 +32,7 @@ console.log(pot1IsEmpty)
   const checkIfPot1IsEmptyMarigold = () => {
     if (pot1IsEmpty === true && actionPoints > 0) {
       // setActionPoints -= 1 // useState
-      // setPot1IsEmpty = false //function
+      setPot1IsEmpty(!pot1IsEmpty) //function
       // setPot1Type = 'marigold' //useState
       // setPot1Age(prevState => prevState + 1) //function
       setPot1IsCaredFor(!pot1IsCaredFor) //function
@@ -89,7 +89,7 @@ console.log(pot1IsEmpty)
             <h2>Tagline</h2>
         </div>
         <div>
-        <Button variant="success">
+        <Button variant="success" onClick={() => {setLocation("tutorial")}}>
               Start a New Game
             </Button>{' '}
             <p>Action Points = {actionPoints}</p>
@@ -99,7 +99,18 @@ console.log(pot1IsEmpty)
             <p style={{display: pot1IsCaredFor === null ? "none" : "inline"}}>Is the Plant Cared For? = {pot1IsCaredFor}</p>
             <p>Is the Plant Fully Grown? = {pot1IsFullyGrown}</p>
         </div>
-        <div style={{display: location === "town" ? "none" : "inline"}}>
+        {/* ********
+        Tutorial
+        ******** */}
+        <div style={{display: location === "tutorial" ? "inline" : "none"}}>
+          <h1>This is the Tutorial</h1>
+          <p>It has text under it.</p>
+          <Button variant="success" onClick={() => {setLocation("home")}}>Go to Home</Button>
+        </div>
+        {/* ********
+        Home
+        ******** */}
+        <div style={{display: location === "home" ? "inline" : "none"}}>
         <Home
           checkIfPot1IsEmptyMarigold={checkIfPot1IsEmptyMarigold}
           actionPoints={actionPoints}
@@ -117,14 +128,19 @@ console.log(pot1IsEmpty)
           />
           </div>
           <Button variant="success" onClick={() => {setLocation("town")}}>Travel to Town</Button>
+          {/* ********
+        Town
+        ******** */}
         <div 
-        style={{display: location === "home" ? "none" : "inline"}}
+        style={{display: location === "town" ? "inline" : "none"}}
         >
         <Town
         />
         </div>
         <Button variant="success" onClick={() => {setLocation("home")}}>Travel to Home</Button>
+        {console.log(location)}
     </Container>
+    
   );
 };
 

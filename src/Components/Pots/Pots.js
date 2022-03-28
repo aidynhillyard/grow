@@ -22,10 +22,19 @@ useEffect(() => console.log("Hello world"), [planting]);
 
   return (
     <Container>
-      <p>
-        <Button variant="primary" onClick={handleShow}>
+      <div><p>
+      Pot #1 -- Plant: {pot1Type}, Age: {pot1Age}, Fully Grown: {pot1IsFullyGrown ? "true" : "false"}</p>
+      </div>
+        <div style={{display: pot1IsEmpty === true ? "none" : "block"}}><Button variant="primary" onClick={handleShow}>
           Care for Plant
         </Button>
+        </div>
+        <div style={{display: pot1IsEmpty === false ? "none" : "block"}}>
+        <Button variant="success" className="choose-a-seed" onClick={() => setPlanting(true)}>
+          Choose a Seed
+        </Button>
+        </div>
+      <div style={{display: planting === false ? "none" : "inline"}}></div>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Care for Plant</Modal.Title>
@@ -39,10 +48,9 @@ useEffect(() => console.log("Hello world"), [planting]);
             </Button>
           </Modal.Footer>
         </Modal>
-        Pot #1 -- Plant: {pot1Type}, Age: {pot1Age}, Fully Grown: {pot1IsFullyGrown ? "true" : "false"}
-      </p>
+        
       <p>
-        <Button variant="success">Plant a Seed</Button>
+        <Button variant="info" className="plant-a-seed">Plant a Seed</Button>
         Pot #2 -- Empty
       </p>
       <p>
@@ -51,6 +59,8 @@ useEffect(() => console.log("Hello world"), [planting]);
         </Button>
         Pot #3 -- Empty
       </p>
+
+      {/* Planting Div */}
       <div style={{display: planting === false ? "none" : "inline"}}>
       <Planting
         checkIfPot1IsEmptyMarigold={checkIfPot1IsEmptyMarigold}
