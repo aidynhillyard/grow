@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import Pots from "../Pots/Pots";
 import { useState } from 'react'
 
-const Home = ({ checkIfPot1IsEmptyMarigold, actionPoints, pot1IsEmpty, pot1Type, pot1Age, pot1IsCaredFor, pot1IsFullyGrown }) => {
+const Home = ({ checkIfPot1IsEmptyMarigold, actionPoints, setActionPoints, pot1IsEmpty, setPot1IsEmpty, pot1Type, setPot1Type, pot1Age, setPot1Age, pot1IsCaredFor, setPot1IsCaredFor, pot1IsFullyGrown, setPot1IsFullyGrown }) => {
 
 
   
@@ -19,11 +19,17 @@ const Home = ({ checkIfPot1IsEmptyMarigold, actionPoints, pot1IsEmpty, pot1Type,
             <Pots
               checkIfPot1IsEmptyMarigold={checkIfPot1IsEmptyMarigold}
               actionPoints={actionPoints}
+              setActionPoints={setActionPoints}
               pot1IsEmpty={pot1IsEmpty}
+              setPot1IsEmpty={setPot1IsEmpty}
               pot1Type={pot1Type}
+              setPot1Type={setPot1Type}
               pot1Age={pot1Age}
+              setPot1Age={setPot1Age}
               pot1IsCaredFor={pot1IsCaredFor}
+              setPot1IsCaredFor={setPot1IsCaredFor}
               pot1IsFullyGrown={pot1IsFullyGrown}
+              setPot1IsFullyGrown={setPot1IsFullyGrown}
               />
           </Accordion.Body>
         </Accordion.Item>

@@ -6,7 +6,7 @@ import Modal from "react-bootstrap/Modal";
 import Planting from "../Planting/Planting";
 import { useEffect } from 'react'
 
-const Pots = ({ checkIfPot1IsEmptyMarigold, actionPoints, pot1IsEmpty, pot1Type, pot1Age, pot1IsCaredFor, pot1IsFullyGrown }) => {
+const Pots = ({ checkIfPot1IsEmptyMarigold, actionPoints, setActionPoints, pot1IsEmpty, setPot1IsEmpty, pot1Type, setPot1Type, pot1Age, setPot1Age, pot1IsCaredFor, setPot1IsCaredFor, pot1IsFullyGrown, setPot1IsFullyGrown }) => {
 
 
   // useStates
@@ -56,11 +56,17 @@ useEffect(() => console.log("Hello world"), [planting]);
       <Planting
         checkIfPot1IsEmptyMarigold={checkIfPot1IsEmptyMarigold}
         actionPoints={actionPoints}
+        setActionPoints={setActionPoints}
         pot1IsEmpty={pot1IsEmpty}
+        setPot1IsEmpty={setPot1IsEmpty}
         pot1Type={pot1Type}
+        setPot1Type={setPot1Type}
         pot1Age={pot1Age}
+        setPot1Age={setPot1Age}
         pot1IsCaredFor={pot1IsCaredFor}
+        setPot1IsCaredFor={setPot1IsCaredFor}
         pot1IsFullyGrown={pot1IsFullyGrown}
+        setPot1IsFullyGrown={setPot1IsFullyGrown}
         planting={planting}
         setPlanting={setPlanting}
         />
