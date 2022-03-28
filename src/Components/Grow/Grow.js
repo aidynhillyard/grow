@@ -13,13 +13,13 @@ const Grow = () => {
   // Psuedo code for default state of pots
 
   let pot1IsEmpty = true
-  let pot1Type = undefined
-  let pot1Age = undefined
-  let pot1IsCaredFor = undefined
-  let pot1IsFullyGrown = undefined
+  let pot1Type = 'empty'
+  let pot1Age = null
+  let pot1IsCaredFor = null
+  let pot1IsFullyGrown = null
 
   // Psuedo code for "Plant a Seed" button (with type) should:
-
+console.log(pot1IsEmpty)
   const checkIfPot1IsEmptyMarigold = () => {
     if (pot1IsEmpty === true && actionPoints > 0) {
       actionPoints -= 1
@@ -28,10 +28,11 @@ const Grow = () => {
       pot1Age = 0
       pot1IsCaredFor = true
       pot1IsFullyGrown = false
+      console.log(actionPoints)
     } else if (pot1IsEmpty === true && actionPoints <= 0) {
-      return ("You do not have enough Action Points to plant a seed.")
+      console.log("You do not have enough Action Points to plant a seed.")
     } else if (pot1IsEmpty === false) {
-      return ("This pot already has a plant in it!")
+      console.log("This pot already has a plant in it!")
     }
   }
   //  run function checkIfPotIsEmpty; function checks for pot1IsEmpty = true
@@ -81,10 +82,17 @@ const Grow = () => {
         <Button variant="success">
               Start a New Game
             </Button>{' '}
+            <p>Action Points = {actionPoints}</p>
+            <p>Is the Pot Empty? = {pot1IsEmpty}</p>
+            <p>Plant Type = {pot1Type}</p>
+            <p>Plant Age = {pot1Age}</p>
+            <p>Is the Plant Cared For? = {pot1IsCaredFor}</p>
+            <p>Is the Plant Fully Grown? = {pot1IsFullyGrown}</p>
         </div>
         <Home
           checkIfPot1IsEmptyMarigold={checkIfPot1IsEmptyMarigold}
           actionPoints={actionPoints}
+          
           />
         <Town />
     </Container>

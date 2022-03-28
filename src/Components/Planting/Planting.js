@@ -10,8 +10,7 @@ const Planting = ({ checkIfPot1IsEmptyMarigold, actionPoints }) => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  console.log(checkIfPot1IsEmptyMarigold)
-console.log(actionPoints)
+  
   return (
     <Container>
       <Accordion defaultActiveKey="0">
