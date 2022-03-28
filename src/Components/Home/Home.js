@@ -2,10 +2,9 @@ import "./Home.css";
 import Container from "react-bootstrap/Container";
 import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
 import Pots from "../Pots/Pots";
 
-const Home = () => {
+const Home = ({ checkIfPot1IsEmptyMarigold, actionPoints }) => {
   
   return (
     <Container>
@@ -13,7 +12,10 @@ const Home = () => {
         <Accordion.Item eventKey="0">
           <Accordion.Header>Examine Pots</Accordion.Header>
           <Accordion.Body>
-            <Pots />
+            <Pots
+              checkIfPot1IsEmptyMarigold={checkIfPot1IsEmptyMarigold}
+              actionPoints={actionPoints}
+              />
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1">
@@ -24,9 +26,8 @@ const Home = () => {
               like to travel now?
             </p>
             <Button variant="success">
-              <Link to="/town" id="link-to-town">
+              
                 Travel to Town
-              </Link>
             </Button>{" "}
           </Accordion.Body>
         </Accordion.Item>

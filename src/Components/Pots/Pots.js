@@ -3,9 +3,9 @@ import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import Planting from '../Planting/Planting'
+import Planting from "../Planting/Planting";
 
-const Pots = () => {
+const Pots = ({ checkIfPot1IsEmptyMarigold, actionPoints }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -33,10 +33,7 @@ const Pots = () => {
         Pot #1 -- Plant: (plantName), Age: (plantAge), Fully Grown: (fullyGrown)
       </p>
       <p>
-        <Button variant="success">
-          
-            Plant a Seed
-        </Button>
+        <Button variant="success">Plant a Seed</Button>
         Pot #2 -- Empty
       </p>
       <p>
@@ -58,9 +55,11 @@ const Pots = () => {
         </Modal>{" "}
         Pot #3 -- Empty
       </p>
-      <Planting />
+      <Planting
+        checkIfPot1IsEmptyMarigold={checkIfPot1IsEmptyMarigold}
+        actionPoints={actionPoints}
+        />
     </Container>
-    
   );
 };
 

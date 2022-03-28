@@ -1,18 +1,17 @@
 import "./Planting.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Accordion from "react-bootstrap/Accordion";
 
-const Planting = ({ checkIfPot1IsEmptyMarigold }) => {
+const Planting = ({ checkIfPot1IsEmptyMarigold, actionPoints }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   console.log(checkIfPot1IsEmptyMarigold)
-
+console.log(actionPoints)
   return (
     <Container>
       <Accordion defaultActiveKey="0">
@@ -36,9 +35,8 @@ const Planting = ({ checkIfPot1IsEmptyMarigold }) => {
                 </Modal.Body>
                 <Modal.Footer>
                   <Button variant="primary" onClick={handleClose}>
-                    <Link to="/home" id="link-to-home">
+                    
                       Okay
-                    </Link>
                   </Button>
                 </Modal.Footer>
               </Modal>{" "}
@@ -65,9 +63,8 @@ const Planting = ({ checkIfPot1IsEmptyMarigold }) => {
                 </Modal.Body>
                 <Modal.Footer>
                   <Button variant="primary" onClick={handleClose}>
-                    <Link to="/home" id="link-to-home">
+                    
                       Okay
-                    </Link>
                   </Button>
                 </Modal.Footer>
               </Modal>{" "}
@@ -94,9 +91,8 @@ const Planting = ({ checkIfPot1IsEmptyMarigold }) => {
                 </Modal.Body>
                 <Modal.Footer>
                   <Button variant="primary" onClick={handleClose}>
-                    <Link to="/home" id="link-to-home">
+                    
                       Okay
-                    </Link>
                   </Button>
                 </Modal.Footer>
               </Modal>{" "}
@@ -107,9 +103,7 @@ const Planting = ({ checkIfPot1IsEmptyMarigold }) => {
           <Accordion.Header>Return to Previous Menu</Accordion.Header>
           <Accordion.Body>
             <Button variant="success">
-              <Link to="/home" id="link-to-home">
                 Previous Menu
-              </Link>
             </Button>{" "}
           </Accordion.Body>
         </Accordion.Item>

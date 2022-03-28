@@ -1,8 +1,8 @@
 import "./Grow.css";
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-import { Link } from "react-router-dom";
 import Home from "../Home/Home";
+import Town from "../Town/Town";
 
 const Grow = () => {
 
@@ -78,11 +78,15 @@ const Grow = () => {
             <h2>Tagline</h2>
         </div>
         <div>
-        <Button variant="success"><Link to="/home" id="link-to-home">
+        <Button variant="success">
               Start a New Game
-            </Link></Button>{' '}
+            </Button>{' '}
         </div>
-        <Home />
+        <Home
+          checkIfPot1IsEmptyMarigold={checkIfPot1IsEmptyMarigold}
+          actionPoints={actionPoints}
+          />
+        <Town />
     </Container>
   );
 };
