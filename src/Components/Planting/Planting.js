@@ -6,11 +6,12 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Accordion from "react-bootstrap/Accordion";
 
-const Planting = () => {
+const Planting = ({ checkIfPot1IsEmptyMarigold }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  console.log(checkIfPot1IsEmptyMarigold)
 
   return (
     <Container>
@@ -22,7 +23,7 @@ const Planting = () => {
             and how they grow. There might even be a picture of a marigold at
             some point.
             <p>
-              <Button variant="success" onClick={handleShow}>
+              <Button variant="success" onClick={() => {checkIfPot1IsEmptyMarigold(); handleShow()}}>
                 Plant a Seed
               </Button>
               <Modal show={show} onHide={handleClose}>

@@ -3,20 +3,17 @@ import Container from "react-bootstrap/Container";
 import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import Pot1 from "../Pot1/Pot1";
-import Pot2 from "../Pot2/Pot2";
-import Pot3 from "../Pot3/Pot3";
+import Pots from "../Pots/Pots";
 
 const Home = () => {
+  
   return (
     <Container>
       <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header>Examine Pots</Accordion.Header>
           <Accordion.Body>
-            <Pot1 />
-            <Pot2 />
-            <Pot3 />
+            <Pots />
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1">

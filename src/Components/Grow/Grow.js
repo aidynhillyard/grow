@@ -2,23 +2,38 @@ import "./Grow.css";
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
+import Home from "../Home/Home";
 
 const Grow = () => {
 
   // Start of Day / Start of Game
 
-  // let actionPoints = 4
+  let actionPoints = 4
 
   // Psuedo code for default state of pots
 
-  // let pot1IsEmpty = true
-  // let pot1Type = null/undefined
-  // let pot1Age = null/undefined
-  // let pot1IsCaredFor = null/undefined
-  // let pot1IsFullyGrown = null/undefined
+  let pot1IsEmpty = true
+  let pot1Type = undefined
+  let pot1Age = undefined
+  let pot1IsCaredFor = undefined
+  let pot1IsFullyGrown = undefined
 
   // Psuedo code for "Plant a Seed" button (with type) should:
 
+  const checkIfPot1IsEmptyMarigold = () => {
+    if (pot1IsEmpty === true && actionPoints > 0) {
+      actionPoints -= 1
+      pot1IsEmpty = false
+      pot1Type = 'marigold'
+      pot1Age = 0
+      pot1IsCaredFor = true
+      pot1IsFullyGrown = false
+    } else if (pot1IsEmpty === true && actionPoints <= 0) {
+      return ("You do not have enough Action Points to plant a seed.")
+    } else if (pot1IsEmpty === false) {
+      return ("This pot already has a plant in it!")
+    }
+  }
   //  run function checkIfPotIsEmpty; function checks for pot1IsEmpty = true
   //  if pot1IsEmpty = true, then variables are set as below
   //  else if pot1IsEmpty = false, then alert: 'This pot already has a plant in it!'
@@ -67,6 +82,7 @@ const Grow = () => {
               Start a New Game
             </Link></Button>{' '}
         </div>
+        <Home />
     </Container>
   );
 };
