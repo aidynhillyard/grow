@@ -3,11 +3,15 @@ import Container from "react-bootstrap/Container";
 import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
 import Pots from "../Pots/Pots";
+import { useState } from 'react'
 
-const Home = ({ checkIfPot1IsEmptyMarigold, actionPoints }) => {
+const Home = ({ checkIfPot1IsEmptyMarigold, actionPoints, pot1IsEmpty, pot1Type, pot1Age, pot1IsCaredFor, pot1IsFullyGrown }) => {
+
+
   
   return (
     <Container>
+      <h1>This is Home... Home is where the heart is!</h1>
       <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header>Examine Pots</Accordion.Header>
@@ -15,6 +19,11 @@ const Home = ({ checkIfPot1IsEmptyMarigold, actionPoints }) => {
             <Pots
               checkIfPot1IsEmptyMarigold={checkIfPot1IsEmptyMarigold}
               actionPoints={actionPoints}
+              pot1IsEmpty={pot1IsEmpty}
+              pot1Type={pot1Type}
+              pot1Age={pot1Age}
+              pot1IsCaredFor={pot1IsCaredFor}
+              pot1IsFullyGrown={pot1IsFullyGrown}
               />
           </Accordion.Body>
         </Accordion.Item>
@@ -25,7 +34,7 @@ const Home = ({ checkIfPot1IsEmptyMarigold, actionPoints }) => {
               To speak with townspeople, you may travel to the town. Would you
               like to travel now?
             </p>
-            <Button variant="success">
+            <Button variant="success" >
               
                 Travel to Town
             </Button>{" "}

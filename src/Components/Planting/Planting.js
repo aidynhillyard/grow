@@ -4,13 +4,17 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Accordion from "react-bootstrap/Accordion";
+import { useEffect } from 'react'
 
-const Planting = ({ checkIfPot1IsEmptyMarigold, actionPoints }) => {
+const Planting = ({ checkIfPot1IsEmptyMarigold, actionPoints, pot1IsEmpty, pot1Type, pot1Age, pot1IsCaredFor, pot1IsFullyGrown, planting, setPlanting }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  
+
+
+
+console.log(actionPoints)
   return (
     <Container>
       <Accordion defaultActiveKey="0">
@@ -21,7 +25,7 @@ const Planting = ({ checkIfPot1IsEmptyMarigold, actionPoints }) => {
             and how they grow. There might even be a picture of a marigold at
             some point.
             <p>
-              <Button variant="success" onClick={() => {checkIfPot1IsEmptyMarigold(); handleShow()}}>
+              <Button variant="success" onClick={() => {checkIfPot1IsEmptyMarigold(); handleShow(); setPlanting(false)}} style={{display: pot1IsEmpty === false ? "none" : "inline"}}>
                 Plant a Seed
               </Button>
               <Modal show={show} onHide={handleClose}>
@@ -33,7 +37,7 @@ const Planting = ({ checkIfPot1IsEmptyMarigold, actionPoints }) => {
                   tomorrow to care for your plant!
                 </Modal.Body>
                 <Modal.Footer>
-                  <Button variant="primary" onClick={handleClose}>
+                  <Button variant="primary" onClick={() => {handleClose()}}>
                     
                       Okay
                   </Button>

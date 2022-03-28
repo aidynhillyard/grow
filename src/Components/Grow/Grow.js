@@ -3,17 +3,33 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Home from "../Home/Home";
 import Town from "../Town/Town";
+import { useEffect } from "react";
+import { useState } from 'react';
 
 const Grow = () => {
+  let actionPoints = 4
+
+  
+  // useState
+  const [location, setLocation] = useState("home")
+
+
+  // useEffect(() => console.log('hello world'), [actionPoints]);
+
+
+  // useEffect(async () => {
+  //   const response = await axios.get(apiUrl + "/groups");
+  //   setGroups(response.data.groups);
+  // }, [toggle]);
 
   // Start of Day / Start of Game
 
-  let actionPoints = 4
+  // let actionPoints = 4
 
   // Psuedo code for default state of pots
 
   let pot1IsEmpty = true
-  let pot1Type = 'empty'
+  let pot1Type = 'none'
   let pot1Age = null
   let pot1IsCaredFor = null
   let pot1IsFullyGrown = null
@@ -29,6 +45,7 @@ console.log(pot1IsEmpty)
       pot1IsCaredFor = true
       pot1IsFullyGrown = false
       console.log(actionPoints)
+      console.log(pot1IsEmpty)
     } else if (pot1IsEmpty === true && actionPoints <= 0) {
       console.log("You do not have enough Action Points to plant a seed.")
     } else if (pot1IsEmpty === false) {
@@ -83,18 +100,31 @@ console.log(pot1IsEmpty)
               Start a New Game
             </Button>{' '}
             <p>Action Points = {actionPoints}</p>
-            <p>Is the Pot Empty? = {pot1IsEmpty}</p>
+            <p>Is the Pot Empty? = {pot1IsEmpty ? "true" : "false"}</p>
             <p>Plant Type = {pot1Type}</p>
             <p>Plant Age = {pot1Age}</p>
             <p>Is the Plant Cared For? = {pot1IsCaredFor}</p>
             <p>Is the Plant Fully Grown? = {pot1IsFullyGrown}</p>
         </div>
+        <div style={{display: location === "town" ? "none" : "inline"}}>
         <Home
           checkIfPot1IsEmptyMarigold={checkIfPot1IsEmptyMarigold}
           actionPoints={actionPoints}
-          
+          pot1IsEmpty={pot1IsEmpty}
+          pot1Type={pot1Type}
+          pot1Age={pot1Age}
+          pot1IsCaredFor={pot1IsCaredFor}
+          pot1IsFullyGrown={pot1IsFullyGrown}
           />
-        <Town />
+          </div>
+          <Button variant="success" onClick={() => {setLocation("town")}}>Travel to Town</Button>
+        <div 
+        style={{display: location === "home" ? "none" : "inline"}}
+        >
+        <Town
+        />
+        </div>
+        <Button variant="success" onClick={() => {setLocation("home")}}>Travel to Home</Button>
     </Container>
   );
 };
