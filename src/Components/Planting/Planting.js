@@ -18,6 +18,10 @@ const decrementActionPoints = () => {
     setActionPoints(prevState => prevState - 1)
 }
 
+const incrementPot1Age = () => {
+    setPot1Age(prevState => prevState + 1)
+}
+
 console.log(actionPoints)
   return (
     <Container>
@@ -29,7 +33,7 @@ console.log(actionPoints)
             and how they grow. There might even be a picture of a marigold at
             some point.
             <p>
-              <Button variant="success" onClick={() => {checkIfPot1IsEmptyMarigold(); handleShow(); setPlanting(false); decrementActionPoints(); setPot1Type("Marigold")}} style={{display: pot1IsEmpty === false ? "none" : "inline"}}>
+              <Button variant="success" onClick={() => {checkIfPot1IsEmptyMarigold(); handleShow(); setPlanting(false); decrementActionPoints(); setPot1Type("Marigold"); incrementPot1Age()}} style={{display: pot1IsEmpty === false ? "none" : "inline"}}>
                 Plant a Seed
               </Button>
               <Modal show={show} onHide={handleClose}>

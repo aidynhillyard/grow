@@ -34,7 +34,7 @@ console.log(pot1IsEmpty)
       // setActionPoints -= 1 // useState
       // setPot1IsEmpty = false //function
       // setPot1Type = 'marigold' //useState
-      // setPot1Age = 0 //function
+      // setPot1Age(prevState => prevState + 1) //function
       setPot1IsCaredFor(!pot1IsCaredFor) //function
       setPot1IsFullyGrown(!pot1IsFullyGrown) //function
       console.log(actionPoints)
@@ -96,7 +96,7 @@ console.log(pot1IsEmpty)
             <p>Is the Pot Empty? = {pot1IsEmpty ? "true" : "false"}</p>
             <p>Plant Type = {pot1Type}</p>
             <p>Plant Age = {pot1Age}</p>
-            <p>Is the Plant Cared For? = {pot1IsCaredFor}</p>
+            <p style={{display: pot1IsCaredFor === null ? "none" : "inline"}}>Is the Plant Cared For? = {pot1IsCaredFor}</p>
             <p>Is the Plant Fully Grown? = {pot1IsFullyGrown}</p>
         </div>
         <div style={{display: location === "town" ? "none" : "inline"}}>

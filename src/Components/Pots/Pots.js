@@ -16,7 +16,6 @@ const Pots = ({ checkIfPot1IsEmptyMarigold, actionPoints, setActionPoints, pot1I
   const handleShow = () => setShow(true);
 
   const [planting, setPlanting] = useState(false)
-  const [age, setAge] = useState(0)
 
     // useEffect???
 useEffect(() => console.log("Hello world"), [planting]);
@@ -40,7 +39,7 @@ useEffect(() => console.log("Hello world"), [planting]);
             </Button>
           </Modal.Footer>
         </Modal>
-        Pot #1 -- Plant: {pot1Type}, Age: {age}, Fully Grown: {pot1IsFullyGrown ? "true" : "false"}
+        Pot #1 -- Plant: {pot1Type}, Age: {pot1Age}, Fully Grown: {pot1IsFullyGrown ? "true" : "false"}
       </p>
       <p>
         <Button variant="success">Plant a Seed</Button>
