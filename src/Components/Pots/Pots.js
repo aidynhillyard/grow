@@ -54,7 +54,7 @@ const Pots = ({
   useEffect(() => console.log("Hello world"), [actionPoints]);
 
   // Check if Fully Grown
-  const checkIfFullyGrown = () => {
+  const checkIfPot1FullyGrown = () => {
     if (pot1Type === "Marigold" && pot1Age >= 2) {
       setPot1IsFullyGrown(true);
       console.log("meow!");
@@ -66,6 +66,30 @@ const Pots = ({
       setPot1IsFullyGrown(false);
     }
   };
+  const checkIfPot2FullyGrown = () => {
+    if (pot2Type === "Marigold" && pot2Age >= 2) {
+      setPot2IsFullyGrown(true);
+      console.log("meow!");
+    } else if (pot2Type === "Snapdragon" && pot2Age >= 3) {
+      setPot2IsFullyGrown(true);
+    } else if (pot2Type === "Sunflower" && pot2Age >= 4) {
+      setPot2IsFullyGrown(true);
+    } else {
+      setPot2IsFullyGrown(false);
+    }
+  };
+  const checkIfPot3FullyGrown = () => {
+    if (pot3Type === "Marigold" && pot3Age >= 2) {
+      setPot3IsFullyGrown(true);
+      console.log("meow!");
+    } else if (pot3Type === "Snapdragon" && pot3Age >= 3) {
+      setPot3IsFullyGrown(true);
+    } else if (pot3Type === "Sunflower" && pot3Age >= 4) {
+      setPot3IsFullyGrown(true);
+    } else {
+      setPot3IsFullyGrown(false);
+    }
+  };
 
   // Increment & Decrement functions
   const decrementActionPoints = () => {
@@ -75,15 +99,15 @@ const Pots = ({
   // Increment Pot Age
   const incrementPot1Age = () => {
     setPot1Age((prevState) => prevState + 1);
-    checkIfFullyGrown();
+    checkIfPot1FullyGrown();
   };
   const incrementPot2Age = () => {
     setPot2Age((prevState) => prevState + 1);
-    checkIfFullyGrown();
+    checkIfPot2FullyGrown();
   };
   const incrementPot3Age = () => {
     setPot3Age((prevState) => prevState + 1);
-    checkIfFullyGrown();
+    checkIfPot3FullyGrown();
   };
 
   // Care For Plant

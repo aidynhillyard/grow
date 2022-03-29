@@ -45,7 +45,6 @@ const Grow = () => {
     if (pot1IsEmpty === true && actionPoints > 0) {
       setPot1IsEmpty(!pot1IsEmpty) //function
       setPot1IsCaredFor(!pot1IsCaredFor) //function
-      // setPot1IsFullyGrown(!pot1IsFullyGrown) //function
       console.log(actionPoints)
       console.log(pot1IsEmpty)
     } else if (pot1IsEmpty === true && actionPoints <= 0) {
@@ -60,7 +59,6 @@ const Grow = () => {
       if (pot2IsEmpty === true && actionPoints > 0) {
         setPot2IsEmpty(!pot2IsEmpty) //function
         setPot2IsCaredFor(!pot2IsCaredFor) //function
-        setPot2IsFullyGrown(!pot2IsFullyGrown) //function
         console.log(actionPoints)
         console.log(pot2IsEmpty)
       } else if (pot2IsEmpty === true && actionPoints <= 0) {
@@ -75,7 +73,6 @@ const plantPot3 = () => {
   if (pot3IsEmpty === true && actionPoints > 0) {
     setPot3IsEmpty(!pot3IsEmpty) //function
     setPot3IsCaredFor(!pot3IsCaredFor) //function
-    setPot3IsFullyGrown(!pot3IsFullyGrown) //function
     console.log(actionPoints)
     console.log(pot3IsEmpty)
   } else if (pot3IsEmpty === true && actionPoints <= 0) {
