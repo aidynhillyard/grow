@@ -87,7 +87,23 @@ const Pots = ({
   };
 
   // Care For Plant
+  const careForPlant1 = () => {
+    incrementPot1Age()
+    decrementActionPoints()
+    setPot1IsCaredFor(true)
+  }
+  const careForPlant2 = () => {
+    incrementPot2Age()
+    decrementActionPoints()
+    setPot2IsCaredFor(true)
+  }
+  const careForPlant3 = () => {
+    incrementPot3Age()
+    decrementActionPoints()
+    setPot3IsCaredFor(true)
+  }
   // should increment pot age, decrement action points, set iscaredfor to true, and hide button
+  console.log(pot1IsCaredFor)
   return (
     <Container>
       {/* Pot #1 */}
@@ -99,13 +115,12 @@ const Pots = ({
           </span>
         </p>
       </div>
-      <div style={{ display: pot1IsEmpty === true ? "none" : "block" }}>
+      <div style={{ display: (pot1IsEmpty === true || pot1IsCaredFor === true) ? "none" : "block" }}>
         <Button
           variant="info"
           onClick={() => {
-            decrementActionPoints();
+            careForPlant1();
             handleShow();
-            incrementPot1Age();
           }}
         >
           Care for Plant
@@ -173,7 +188,10 @@ const Pots = ({
         </p>
       </div>
       <div style={{ display: pot2IsEmpty === true ? "none" : "block" }}>
-        <Button variant="info" onClick={handleShow}>
+        <Button variant="info" onClick={() => {
+            careForPlant2();
+            handleShow();
+          }}>
           Care for Plant
         </Button>
       </div>
@@ -239,7 +257,10 @@ const Pots = ({
         </p>
       </div>
       <div style={{ display: pot3IsEmpty === true ? "none" : "block" }}>
-        <Button variant="info" onClick={handleShow}>
+        <Button variant="info" onClick={() => {
+            careForPlant3();
+            handleShow();
+          }}>
           Care for Plant
         </Button>
       </div>
