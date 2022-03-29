@@ -19,6 +19,10 @@ const Pots = ({
   setPot1Age,
   pot1IsCaredFor,
   setPot1IsCaredFor,
+  pot1IsSeed,
+  setPot1IsSeed,
+  pot1IsSeedling,
+  setPot1IsSeedling,
   pot1IsFullyGrown,
   setPot1IsFullyGrown,
   plantPot2,
@@ -30,6 +34,10 @@ const Pots = ({
   setPot2Age,
   pot2IsCaredFor,
   setPot2IsCaredFor,
+  pot2IsSeed,
+  setPot2IsSeed,
+  pot2IsSeedling,
+  setPot2IsSeedling,
   pot2IsFullyGrown,
   setPot2IsFullyGrown,
   plantPot3,
@@ -41,6 +49,10 @@ const Pots = ({
   setPot3Age,
   pot3IsCaredFor,
   setPot3IsCaredFor,
+  pot3IsSeed,
+  setPot3IsSeed,
+  pot3IsSeedling,
+  setPot3IsSeedling,
   pot3IsFullyGrown,
   setPot3IsFullyGrown,
 }) => {
@@ -53,8 +65,8 @@ const Pots = ({
   // useEffect???
   useEffect(() => console.log("Hello world"), [actionPoints]);
 
-  // Check if Fully Grown
-  const checkIfPot1FullyGrown = () => {
+  // Check Plant Status
+  const checkPlant1Status = () => {
     if (pot1Type === "Tulip" && pot1Age >= 2) {
       setPot1IsFullyGrown(true);
       console.log("meow!");
@@ -66,7 +78,7 @@ const Pots = ({
       setPot1IsFullyGrown(false);
     }
   };
-  const checkIfPot2FullyGrown = () => {
+  const checkPlant2Status = () => {
     if (pot2Type === "Tulip" && pot2Age >= 2) {
       setPot2IsFullyGrown(true);
       console.log("meow!");
@@ -78,7 +90,7 @@ const Pots = ({
       setPot2IsFullyGrown(false);
     }
   };
-  const checkIfPot3FullyGrown = () => {
+  const checkPlant3Status = () => {
     if (pot3Type === "Tulip" && pot3Age >= 2) {
       setPot3IsFullyGrown(true);
       console.log("meow!");
@@ -112,22 +124,21 @@ const Pots = ({
     incrementPot1Age();
     decrementActionPoints();
     setPot1IsCaredFor(true);
-    checkIfPot1FullyGrown();
+    checkPlant1Status();
   };
   const careForPlant2 = () => {
     incrementPot2Age();
     decrementActionPoints();
     setPot2IsCaredFor(true);
-    checkIfPot2FullyGrown();
+    checkPlant2Status();
   };
   const careForPlant3 = () => {
     incrementPot3Age();
     decrementActionPoints();
     setPot3IsCaredFor(true);
-    checkIfPot3FullyGrown();
+    checkPlant3Status();
   };
 
-  // console.log(pot1IsCaredFor);
   return (
     <Container>
       {/* Pot #1 */}

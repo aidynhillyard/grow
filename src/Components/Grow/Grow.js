@@ -17,16 +17,15 @@ const Grow = () => {
 
   // Pot #1 UseStates
   const [pot1IsEmpty, setPot1IsEmpty] = useState(true);
-  const [pot1Type, setPot1Type] = useState("None");
-  const [pot1Age, setPot1Age] = useState(0);
   const [pot1IsCaredFor, setPot1IsCaredFor] = useState(null);
-  const [pot1IsFullyGrown, setPot1IsFullyGrown] = useState(false);
 
   // Pot #2 UseStates
   const [pot2IsEmpty, setPot2IsEmpty] = useState(true);
   const [pot2Type, setPot2Type] = useState("None");
   const [pot2Age, setPot2Age] = useState(0);
   const [pot2IsCaredFor, setPot2IsCaredFor] = useState(null);
+  const [pot2IsSeed, setPot2IsSeed] = useState(null)
+  const [pot2IsSeedling, setPot2IsSeedling] = useState(null)
   const [pot2IsFullyGrown, setPot2IsFullyGrown] = useState(false);
 
   // Pot #3 UseStates
@@ -34,6 +33,8 @@ const Grow = () => {
   const [pot3Type, setPot3Type] = useState("None");
   const [pot3Age, setPot3Age] = useState(0);
   const [pot3IsCaredFor, setPot3IsCaredFor] = useState(null);
+  const [pot3IsSeed, setPot3IsSeed] = useState(null)
+  const [pot3IsSeedling, setPot3IsSeedling] = useState(null)
   const [pot3IsFullyGrown, setPot3IsFullyGrown] = useState(false);
 
   // Town UseStates
@@ -67,17 +68,7 @@ const Grow = () => {
   console.log(talkedToFarhana);
   console.log(dialogueStepFarhana);
 
-  // Plant Pot #1 Function
-  const plantPot1 = () => {
-    if (pot1IsEmpty === true && actionPoints > 0) {
-      setPot1IsEmpty(!pot1IsEmpty); //function
-      setPot1IsCaredFor(!pot1IsCaredFor); //function
-    } else if (pot1IsEmpty === true && actionPoints <= 0) {
-      console.log("You do not have enough Action Points to plant a seed.");
-    } else if (pot1IsEmpty === false) {
-      console.log("This pot already has a plant in it!");
-    }
-  };
+  
 
   // Plant Pot #2 Function
   const plantPot2 = () => {
@@ -148,17 +139,11 @@ const Grow = () => {
           setActionPoints={setActionPoints}
           startNewDay={startNewDay}
           // Pot #1 Props
-          plantPot1={plantPot1}
           pot1IsEmpty={pot1IsEmpty}
           setPot1IsEmpty={setPot1IsEmpty}
-          pot1Type={pot1Type}
-          setPot1Type={setPot1Type}
-          pot1Age={pot1Age}
-          setPot1Age={setPot1Age}
           pot1IsCaredFor={pot1IsCaredFor}
           setPot1IsCaredFor={setPot1IsCaredFor}
-          pot1IsFullyGrown={pot1IsFullyGrown}
-          setPot1IsFullyGrown={setPot1IsFullyGrown}
+
           // Pot #2 Props
           plantPot2={plantPot2}
           pot2IsEmpty={pot2IsEmpty}
@@ -169,6 +154,10 @@ const Grow = () => {
           setPot2Age={setPot2Age}
           pot2IsCaredFor={pot2IsCaredFor}
           setPot2IsCaredFor={setPot2IsCaredFor}
+          pot2IsSeed={pot2IsSeed}
+          setPot2IsSeed={setPot2IsSeed}
+          pot2IsSeedling={pot2IsSeedling}
+          setPot2IsSeedling={setPot2IsSeedling}
           pot2IsFullyGrown={pot2IsFullyGrown}
           setPot2IsFullyGrown={setPot2IsFullyGrown}
           // Pot #3 Props
@@ -181,6 +170,10 @@ const Grow = () => {
           setPot3Age={setPot3Age}
           pot3IsCaredFor={pot3IsCaredFor}
           setPot3IsCaredFor={setPot3IsCaredFor}
+          pot31IsSeed={pot3IsSeed}
+          setPot3IsSeed={setPot3IsSeed}
+          pot3IsSeedling={pot3IsSeedling}
+          setPot3IsSeedling={setPot3IsSeedling}
           pot3IsFullyGrown={pot3IsFullyGrown}
           setPot3IsFullyGrown={setPot3IsFullyGrown}
         />
