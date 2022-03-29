@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Home from "../Home/Home";
 import Town from "../Town/Town";
-import { useEffect } from "react";
 import { useState } from 'react';
 
 const Grow = () => {
@@ -31,6 +30,13 @@ const Grow = () => {
   const [pot2IsCaredFor, setPot2IsCaredFor] = useState(null)
   const [pot2IsFullyGrown, setPot2IsFullyGrown] = useState(false)
 
+  // Pot #3 UseStates
+  const [pot3IsEmpty, setPot3IsEmpty] = useState(true)
+  const [pot3Type, setPot3Type] = useState("None")
+  const [pot3Age, setPot3Age] = useState(0)
+  const [pot3IsCaredFor, setPot3IsCaredFor] = useState(null)
+  const [pot3IsFullyGrown, setPot3IsFullyGrown] = useState(false)
+
   
   // Start of Day / Start of Game
 
@@ -49,14 +55,14 @@ const Grow = () => {
     }
   }
 
-    // Plant Pot #1 Function
+    // Plant Pot #2 Function
     const plantPot2 = () => {
       if (pot2IsEmpty === true && actionPoints > 0) {
-        setPot2IsEmpty(!pot1IsEmpty) //function
-        setPot2IsCaredFor(!pot1IsCaredFor) //function
-        setPot2IsFullyGrown(!pot1IsFullyGrown) //function
+        setPot2IsEmpty(!pot2IsEmpty) //function
+        setPot2IsCaredFor(!pot2IsCaredFor) //function
+        setPot2IsFullyGrown(!pot2IsFullyGrown) //function
         console.log(actionPoints)
-        console.log(pot1IsEmpty)
+        console.log(pot2IsEmpty)
       } else if (pot2IsEmpty === true && actionPoints <= 0) {
         console.log("You do not have enough Action Points to plant a seed.")
       } else if (pot2IsEmpty === false) {
@@ -64,7 +70,20 @@ const Grow = () => {
       }
     }
 
-
+// Plant Pot #3 Function
+const plantPot3 = () => {
+  if (pot3IsEmpty === true && actionPoints > 0) {
+    setPot3IsEmpty(!pot3IsEmpty) //function
+    setPot3IsCaredFor(!pot3IsCaredFor) //function
+    setPot3IsFullyGrown(!pot3IsFullyGrown) //function
+    console.log(actionPoints)
+    console.log(pot3IsEmpty)
+  } else if (pot3IsEmpty === true && actionPoints <= 0) {
+    console.log("You do not have enough Action Points to plant a seed.")
+  } else if (pot3IsEmpty === false) {
+    console.log("This pot already has a plant in it!")
+  }
+}
   // Psuedo code for Start of a New Day
 
   //  let actionPoints = 4
@@ -148,6 +167,18 @@ const Grow = () => {
           setPot2IsCaredFor={setPot2IsCaredFor}
           pot2IsFullyGrown={pot2IsFullyGrown}
           setPot2IsFullyGrown={setPot2IsFullyGrown}
+          // Pot #3 Props
+          plantPot3={plantPot3}
+          pot3IsEmpty={pot3IsEmpty}
+          setPot3IsEmpty={setPot3IsEmpty}
+          pot3Type={pot3Type}
+          setPot3Type={setPot3Type}
+          pot3Age={pot3Age}
+          setPot3Age={setPot3Age}
+          pot3IsCaredFor={pot3IsCaredFor}
+          setPot3IsCaredFor={setPot3IsCaredFor}
+          pot3IsFullyGrown={pot3IsFullyGrown}
+          setPot3IsFullyGrown={setPot3IsFullyGrown}
           />
           </div>
           

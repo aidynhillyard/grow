@@ -7,7 +7,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 import { useEffect } from 'react'
 
-const Pots = ({ actionPoints, setActionPoints, plantPot1, pot1IsEmpty, setPot1IsEmpty, pot1Type, setPot1Type, pot1Age, setPot1Age, pot1IsCaredFor, setPot1IsCaredFor, pot1IsFullyGrown, setPot1IsFullyGrown, plantPot2, pot2IsEmpty, setPot2IsEmpty, pot2Type, setPot2Type, pot2Age, setPot2Age, pot2IsCaredFor, setPot2IsCaredFor, pot2IsFullyGrown, setPot2IsFullyGrown }) => {
+const Pots = ({ actionPoints, setActionPoints, plantPot1, pot1IsEmpty, setPot1IsEmpty, pot1Type, setPot1Type, pot1Age, setPot1Age, pot1IsCaredFor, setPot1IsCaredFor, pot1IsFullyGrown, setPot1IsFullyGrown, plantPot2, pot2IsEmpty, setPot2IsEmpty, pot2Type, setPot2Type, pot2Age, setPot2Age, pot2IsCaredFor, setPot2IsCaredFor, pot2IsFullyGrown, setPot2IsFullyGrown, plantPot3, pot3IsEmpty, setPot3IsEmpty, pot3Type, setPot3Type, pot3Age, setPot3Age, pot3IsCaredFor, setPot3IsCaredFor, pot3IsFullyGrown, setPot3IsFullyGrown }) => {
 
 
   // useStates
@@ -33,6 +33,9 @@ const incrementPot1Age = () => {
 const incrementPot2Age = () => {
   setPot2Age(prevState => prevState + 1)
 }
+const incrementPot3Age = () => {
+  setPot3Age(prevState => prevState + 1)
+}
 
   return (
     <Container>
@@ -40,7 +43,8 @@ const incrementPot2Age = () => {
       <div><p>
       Pot #1 -- Plant: {pot1Type}, Age: {pot1Age}, Fully Grown: {pot1IsFullyGrown ? "true" : "false"}</p>
       </div>
-        <div style={{display: pot1IsEmpty === true ? "none" : "block"}}><Button variant="primary" onClick={handleShow}>
+        <div style={{display: pot1IsEmpty === true ? "none" : "block"}}>
+          <Button variant="info" onClick={handleShow}>
           Care for Plant
         </Button>
         </div>
@@ -70,7 +74,8 @@ const incrementPot2Age = () => {
 <div><p>
       Pot #2 -- Plant: {pot2Type}, Age: {pot2Age}, Fully Grown: {pot2IsFullyGrown ? "true" : "false"}</p>
       </div>
-        <div style={{display: pot2IsEmpty === true ? "none" : "block"}}><Button variant="info" onClick={handleShow}>
+        <div style={{display: pot2IsEmpty === true ? "none" : "block"}}>
+          <Button variant="info" onClick={handleShow}>
           Care for Plant
         </Button>
         </div>
@@ -98,9 +103,10 @@ const incrementPot2Age = () => {
 </div>
 {/* Pot #3 */}
 <div><p>
-      Pot #3 -- Plant: {pot1Type}, Age: {pot1Age}, Fully Grown: {pot1IsFullyGrown ? "true" : "false"}</p>
+      Pot #3 -- Plant: {pot3Type}, Age: {pot3Age}, Fully Grown: {pot3IsFullyGrown ? "true" : "false"}</p>
       </div>
-        <div style={{display: pot1IsEmpty === true ? "none" : "block"}}><Button variant="primary" onClick={handleShow}>
+        <div style={{display: pot3IsEmpty === true ? "none" : "block"}}>
+          <Button variant="info" onClick={handleShow}>
           Care for Plant
         </Button>
         </div>
@@ -119,11 +125,11 @@ const incrementPot2Age = () => {
           </Modal.Footer>
         </Modal>
         
-      <div style={{display: pot1IsEmpty === true ? "block" : "none"}}>
+      <div style={{display: pot3IsEmpty === true ? "block" : "none"}}>
       <DropdownButton id="dropdown-item-button" title="Choose a Seed" >
-  <Dropdown.Item as="button" onClick={() => {plantPot1(); setPlanting(false); decrementActionPoints(); setPot1Type("Marigold"); incrementPot1Age()}}>Marigold</Dropdown.Item>
-  <Dropdown.Item as="button" onClick={() => {plantPot1(); setPlanting(false); decrementActionPoints(); setPot1Type("Snapdragon"); incrementPot1Age()}}>Snapdragon</Dropdown.Item>
-  <Dropdown.Item as="button" onClick={() => {plantPot1(); setPlanting(false); decrementActionPoints(); setPot1Type("Sunflower"); incrementPot1Age()}}>Sunflower</Dropdown.Item>
+  <Dropdown.Item as="button" onClick={() => {plantPot3(); setPlanting(false); decrementActionPoints(); setPot3Type("Marigold"); incrementPot3Age()}}>Marigold</Dropdown.Item>
+  <Dropdown.Item as="button" onClick={() => {plantPot3(); setPlanting(false); decrementActionPoints(); setPot3Type("Snapdragon"); incrementPot3Age()}}>Snapdragon</Dropdown.Item>
+  <Dropdown.Item as="button" onClick={() => {plantPot3(); setPlanting(false); decrementActionPoints(); setPot3Type("Sunflower"); incrementPot3Age()}}>Sunflower</Dropdown.Item>
 </DropdownButton>
 </div>
     </Container>
