@@ -56,10 +56,7 @@ const Town = () => {
     <Container>
       <h1>Town</h1>
       <p>This is placeholder text about the town. It also has instructions on talking to the townspeople below.</p>
-        <Accordion>
-  <Accordion.Item eventKey="0">
-    <Accordion.Header>Farhana</Accordion.Header>
-    <Accordion.Body>
+      <div><h3>Farhana</h3>
       <p>This is text about Farhana. It says a little bit about who she is and her relationship to you. There's probably also a picture of her.</p>
       <Alert show={show1} variant="success">
         <p>
@@ -87,33 +84,14 @@ const Town = () => {
         </div>
       </Alert>
 
-      {(!show1 && !show2) && <Button onClick={() => setShow1(true)}>Talk</Button>}
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="1">
-    <Accordion.Header>Ji</Accordion.Header>
-    <Accordion.Body>
+      {(!show1 && !show2) && <Button onClick={() => setShow1(true)}>Talk</Button>}</div>
+      <div><h3>Ji</h3>
       <p>This is text about Ji. It says a little bit about who they are and their relationship to you. There's probably also a picture of them.</p>
-      <Button variant="primary">Talk</Button>
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="2">
-    <Accordion.Header>Alba</Accordion.Header>
-    <Accordion.Body>
-    <p>This is text about Alba. It says a little bit about who they are and their relationship to you. There's probably also a picture of them.</p>
-      <Button variant="primary">Talk</Button>
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="3">
-    <Accordion.Header>Travel Back Home</Accordion.Header>
-    <Accordion.Body>
-      <p>To check on your plants or end the day, you need to travel back home. Would you like to travel back home now?</p>
-      <Button variant="success"><Link to="/home" id="link-to-home">
-              Travel Back Home
-            </Link></Button>{' '}
-    </Accordion.Body>
-  </Accordion.Item>
-</Accordion>
+      <Button variant="primary">Talk</Button></div>
+      <div><h3>Alba</h3>
+      <p>This is text about Alba. It says a little bit about who they are and their relationship to you. There's probably also a picture of them.</p>
+      <Button variant="primary">Talk</Button></div>
+        
     </Container>
   );
 };
