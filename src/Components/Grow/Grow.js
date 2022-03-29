@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Home from "../Home/Home";
 import Town from "../Town/Town";
+import NewDay from "../NewDay/NewDay";
 import { useState } from 'react';
 
 const Grow = () => {
@@ -14,7 +15,7 @@ const Grow = () => {
   const [location, setLocation] = useState("tutorial")
   
   // Action Points start at 4 each day
-  const [actionPoints, setActionPoints] = useState(4)
+  const [actionPoints, setActionPoints] = useState(3)
 
   // Pot #1 UseStates
   const [pot1IsEmpty, setPot1IsEmpty] = useState(true)
@@ -37,8 +38,13 @@ const Grow = () => {
   const [pot3IsCaredFor, setPot3IsCaredFor] = useState(null)
   const [pot3IsFullyGrown, setPot3IsFullyGrown] = useState(false)
 
- 
-  // Start of Day / Start of Game
+  // Start of Day
+const startNewDay = () => {
+  setActionPoints(4);
+  setPot1IsCaredFor(false);
+  setPot2IsCaredFor(false);
+  setPot3IsCaredFor(false);
+};
 
   // Plant Pot #1 Function
   const plantPot1 = () => {
@@ -106,6 +112,10 @@ const plantPot3 = () => {
             </Button>{' '}
             <p>Action Points = {actionPoints}</p>
         </div>
+        <div style={{display: actionPoints === 0 ? "inline" : "none"}}>
+        <NewDay
+        startNewDay={startNewDay}/>
+        </div>
         {/* ********
         Tutorial
         ******** */}
@@ -121,6 +131,7 @@ const plantPot3 = () => {
         <Home
           actionPoints={actionPoints}
           setActionPoints={setActionPoints}
+          startNewDay={startNewDay}
           // Pot #1 Props
           plantPot1={plantPot1}
           pot1IsEmpty={pot1IsEmpty}
@@ -172,6 +183,7 @@ const plantPot3 = () => {
         <div><Button variant="success" style={{display: location === "town" ? "inline" : "none"}} onClick={() => {setLocation("home")}}>Travel to Home</Button></div>
         <div><Button variant="success" style={{display: location === "home" ? "inline" : "none"}} onClick={() => {setLocation("town")}}>Travel to Town</Button></div>
         {console.log(location)}
+        
     </Container>
     
   );
