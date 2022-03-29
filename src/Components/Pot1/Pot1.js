@@ -32,6 +32,7 @@ const Pot1 = ({
     if (pot1IsEmpty === true && actionPoints > 0) {
       setPot1IsEmpty(!pot1IsEmpty); //function
       setPot1IsCaredFor(!pot1IsCaredFor); //function
+      setPot1IsSeed(true);
     } else if (pot1IsEmpty === true && actionPoints <= 0) {
       console.log("You do not have enough Action Points to plant a seed.");
     } else if (pot1IsEmpty === false) {
@@ -41,17 +42,46 @@ const Pot1 = ({
 
   // Check Plant Status
   const checkPlant1Status = () => {
-    if (pot1Type === "Tulip" && pot1Age >= 2) {
-      setPot1IsFullyGrown(true);
+    if (pot1Type === "Tulip" && pot1Age <2) {
+      setPot1IsSeed(true);
       console.log("meow!");
-    } else if (pot1Type === "Iris" && pot1Age >= 3) {
-      setPot1IsFullyGrown(true);
-    } else if (pot1Type === "Forget-Me-Not" && pot1Age >= 4) {
-      setPot1IsFullyGrown(true);
-    } else {
-      setPot1IsFullyGrown(false);
+    } else if (pot1Type === "Tulip" && pot1Age < 3) {
+        setPot1IsSeed(false);
+        setPot1IsSeedling(true);
+    } else if (pot1Type === "Tulip" && pot1Age >= 3) {
+        setPot1IsSeedling(false);
+        setPot1IsFullyGrown(true);
+    } else if (pot1Type === "Iris" && pot1Age < 2) {
+        setPot1IsSeed(true);
+    } else if (pot1Type === "Iris" && pot1Age < 4) {
+        setPot1IsSeed(false);
+        setPot1IsSeedling(true);
+    } else if (pot1Type === "Iris" && pot1Age >= 4) {
+        setPot1IsSeedling(false);
+        setPot1IsFullyGrown(true);
+    } else if (pot1Type === "Forget-Me-Not" && pot1Age < 3) {
+        setPot1IsSeed(true);
+    } else if (pot1Type === "Forget-Me-Not" && pot1Age < 5) {
+        setPot1IsSeed(false);
+        setPot1IsSeedling(true);
+    } else if (pot1Type === "Forget-Me-Not" && pot1Age >= 5) {
+        setPot1IsSeedling(false);
+        setPot1IsFullyGrown(true);
     }
-  };
+  }
+
+//   const checkPlant1Status = () => {
+//     if (pot1Type === "Tulip" && pot1Age >= 2) {
+//       setPot1IsFullyGrown(true);
+//       console.log("meow!");
+//     } else if (pot1Type === "Iris" && pot1Age >= 3) {
+//       setPot1IsFullyGrown(true);
+//     } else if (pot1Type === "Forget-Me-Not" && pot1Age >= 4) {
+//       setPot1IsFullyGrown(true);
+//     } else {
+//       setPot1IsFullyGrown(false);
+//     }
+//   };
   
   // Increment Pot Age
   const incrementPot1Age = () => {
@@ -73,7 +103,7 @@ const Pot1 = ({
         <p>
           Plant #1: {pot1Type}
           <span style={{ display: pot1IsEmpty === true ? "none" : "inline" }}>
-            , Age: {pot1Age}, Fully Grown: {pot1IsFullyGrown ? "True" : "False"}
+            , Age: {pot1Age}, Seed: {pot1IsSeed ? "True" : "False"}, Seedling: {pot1IsSeedling ? "True" : "False"} Fully Grown: {pot1IsFullyGrown ? "True" : "False"}
           </span>
         </p>
       </div>
