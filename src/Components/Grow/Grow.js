@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Home from "../Home/Home";
 import Town from "../Town/Town";
 import NewDay from "../NewDay/NewDay";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Grow = () => {
   // *** USE STATES ***
@@ -21,21 +21,11 @@ const Grow = () => {
 
   // Pot #2 UseStates
   const [pot2IsEmpty, setPot2IsEmpty] = useState(true);
-  const [pot2Type, setPot2Type] = useState("None");
-  const [pot2Age, setPot2Age] = useState(0);
   const [pot2IsCaredFor, setPot2IsCaredFor] = useState(null);
-  const [pot2IsSeed, setPot2IsSeed] = useState(null)
-  const [pot2IsSeedling, setPot2IsSeedling] = useState(null)
-  const [pot2IsFullyGrown, setPot2IsFullyGrown] = useState(false);
 
   // Pot #3 UseStates
   const [pot3IsEmpty, setPot3IsEmpty] = useState(true);
-  const [pot3Type, setPot3Type] = useState("None");
-  const [pot3Age, setPot3Age] = useState(0);
   const [pot3IsCaredFor, setPot3IsCaredFor] = useState(null);
-  const [pot3IsSeed, setPot3IsSeed] = useState(null)
-  const [pot3IsSeedling, setPot3IsSeedling] = useState(null)
-  const [pot3IsFullyGrown, setPot3IsFullyGrown] = useState(false);
 
   // Town UseStates
   const [talkedToFarhana, setTalkedToFarhana] = useState(false);
@@ -44,6 +34,9 @@ const Grow = () => {
   const [dialogueStepJi, setDialogueStepJi] = useState(1);
   const [talkedToAlba, setTalkedToAlba] = useState(false);
   const [dialogueStepAlba, setDialogueStepAlba] = useState(1);
+
+  // useEffect Placeholder
+  useEffect(() => console.log("Hello world"), [actionPoints]);
 
   // Start of Day
   const startNewDay = () => {
@@ -67,32 +60,6 @@ const Grow = () => {
   };
   console.log(talkedToFarhana);
   console.log(dialogueStepFarhana);
-
-  
-
-  // Plant Pot #2 Function
-  const plantPot2 = () => {
-    if (pot2IsEmpty === true && actionPoints > 0) {
-      setPot2IsEmpty(!pot2IsEmpty); //function
-      setPot2IsCaredFor(!pot2IsCaredFor); //function
-    } else if (pot2IsEmpty === true && actionPoints <= 0) {
-      console.log("You do not have enough Action Points to plant a seed.");
-    } else if (pot2IsEmpty === false) {
-      console.log("This pot already has a plant in it!");
-    }
-  };
-
-  // Plant Pot #3 Function
-  const plantPot3 = () => {
-    if (pot3IsEmpty === true && actionPoints > 0) {
-      setPot3IsEmpty(!pot3IsEmpty); //function
-      setPot3IsCaredFor(!pot3IsCaredFor); //function
-    } else if (pot3IsEmpty === true && actionPoints <= 0) {
-      console.log("You do not have enough Action Points to plant a seed.");
-    } else if (pot3IsEmpty === false) {
-      console.log("This pot already has a plant in it!");
-    }
-  };
 
   return (
     <Container>
@@ -143,39 +110,16 @@ const Grow = () => {
           setPot1IsEmpty={setPot1IsEmpty}
           pot1IsCaredFor={pot1IsCaredFor}
           setPot1IsCaredFor={setPot1IsCaredFor}
-
           // Pot #2 Props
-          plantPot2={plantPot2}
           pot2IsEmpty={pot2IsEmpty}
           setPot2IsEmpty={setPot2IsEmpty}
-          pot2Type={pot2Type}
-          setPot2Type={setPot2Type}
-          pot2Age={pot2Age}
-          setPot2Age={setPot2Age}
           pot2IsCaredFor={pot2IsCaredFor}
           setPot2IsCaredFor={setPot2IsCaredFor}
-          pot2IsSeed={pot2IsSeed}
-          setPot2IsSeed={setPot2IsSeed}
-          pot2IsSeedling={pot2IsSeedling}
-          setPot2IsSeedling={setPot2IsSeedling}
-          pot2IsFullyGrown={pot2IsFullyGrown}
-          setPot2IsFullyGrown={setPot2IsFullyGrown}
           // Pot #3 Props
-          plantPot3={plantPot3}
           pot3IsEmpty={pot3IsEmpty}
           setPot3IsEmpty={setPot3IsEmpty}
-          pot3Type={pot3Type}
-          setPot3Type={setPot3Type}
-          pot3Age={pot3Age}
-          setPot3Age={setPot3Age}
           pot3IsCaredFor={pot3IsCaredFor}
           setPot3IsCaredFor={setPot3IsCaredFor}
-          pot31IsSeed={pot3IsSeed}
-          setPot3IsSeed={setPot3IsSeed}
-          pot3IsSeedling={pot3IsSeedling}
-          setPot3IsSeedling={setPot3IsSeedling}
-          pot3IsFullyGrown={pot3IsFullyGrown}
-          setPot3IsFullyGrown={setPot3IsFullyGrown}
         />
       </div>
 

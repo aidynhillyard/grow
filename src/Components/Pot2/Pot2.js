@@ -1,4 +1,4 @@
-import "./Pot1.css";
+import "./Pot2.css";
 import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
@@ -6,13 +6,13 @@ import Modal from "react-bootstrap/Modal";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 
-const Pot1 = ({
+const Pot2 = ({
   actionPoints,
   setActionPoints,
-  pot1IsEmpty,
-  setPot1IsEmpty,
-  pot1IsCaredFor,
-  setPot1IsCaredFor,
+  pot2IsEmpty,
+  setPot2IsEmpty,
+  pot2IsCaredFor,
+  setPot2IsCaredFor,
 }) => {
 
   // useStates
@@ -20,36 +20,36 @@ const Pot1 = ({
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  // Pot #1 UseStates
-  const [pot1Type, setPot1Type] = useState("None");
-  const [pot1Age, setPot1Age] = useState(0);
-  const [pot1IsSeed, setPot1IsSeed] = useState(null)
-  const [pot1IsSeedling, setPot1IsSeedling] = useState(null)
-  const [pot1IsFullyGrown, setPot1IsFullyGrown] = useState(false);
+  // Pot #2 UseStates
+  const [pot2Type, setPot2Type] = useState("None");
+  const [pot2Age, setPot2Age] = useState(0);
+  const [pot2IsSeed, setPot2IsSeed] = useState(null)
+  const [pot2IsSeedling, setPot2IsSeedling] = useState(null)
+  const [pot2IsFullyGrown, setPot2IsFullyGrown] = useState(false);
 
-  // Plant Pot #1 Function
-  const plantPot1 = () => {
-    if (pot1IsEmpty === true && actionPoints > 0) {
-      setPot1IsEmpty(!pot1IsEmpty); //function
-      setPot1IsCaredFor(!pot1IsCaredFor); //function
-    } else if (pot1IsEmpty === true && actionPoints <= 0) {
+  // Plant Pot #2 Function
+  const plantPot2 = () => {
+    if (pot2IsEmpty === true && actionPoints > 0) {
+      setPot2IsEmpty(!pot2IsEmpty); //function
+      setPot2IsCaredFor(!pot2IsCaredFor); //function
+    } else if (pot2IsEmpty === true && actionPoints <= 0) {
       console.log("You do not have enough Action Points to plant a seed.");
-    } else if (pot1IsEmpty === false) {
+    } else if (pot2IsEmpty === false) {
       console.log("This pot already has a plant in it!");
     }
   };
 
   // Check Plant Status
-  const checkPlant1Status = () => {
-    if (pot1Type === "Tulip" && pot1Age >= 2) {
-      setPot1IsFullyGrown(true);
+  const checkPlant2Status = () => {
+    if (pot2Type === "Tulip" && pot2Age >= 2) {
+      setPot2IsFullyGrown(true);
       console.log("meow!");
-    } else if (pot1Type === "Iris" && pot1Age >= 3) {
-      setPot1IsFullyGrown(true);
-    } else if (pot1Type === "Forget-Me-Not" && pot1Age >= 4) {
-      setPot1IsFullyGrown(true);
+    } else if (pot2Type === "Iris" && pot2Age >= 3) {
+      setPot2IsFullyGrown(true);
+    } else if (pot2Type === "Forget-Me-Not" && pot2Age >= 4) {
+      setPot2IsFullyGrown(true);
     } else {
-      setPot1IsFullyGrown(false);
+      setPot2IsFullyGrown(false);
     }
   };
   
@@ -59,39 +59,37 @@ const Pot1 = ({
   };
 
   // Increment Pot Age
-  const incrementPot1Age = () => {
-    setPot1Age((prevState) => prevState + 1);
+  const incrementPot2Age = () => {
+    setPot2Age((prevState) => prevState + 1);
   };
 
   // Care For Plant
-  const careForPlant1 = () => {
-    incrementPot1Age();
+  const careForPlant2 = () => {
+    incrementPot2Age();
     decrementActionPoints();
-    setPot1IsCaredFor(true);
-    checkPlant1Status();
+    setPot2IsCaredFor(true);
+    checkPlant2Status();
   };
 
   return (
     <Container>
-      {/* Pot #1 */}
+      {/* Pot #2 */}
       <div>
         <p>
-          Plant #1: {pot1Type}
-          <span style={{ display: pot1IsEmpty === true ? "none" : "inline" }}>
-            , Age: {pot1Age}, Fully Grown: {pot1IsFullyGrown ? "True" : "False"}
+          Plant #2: {pot2Type}
+          <span style={{ display: pot2IsEmpty === true ? "none" : "inline" }}>
+            , Age: {pot2Age}, Fully Grown: {pot2IsFullyGrown ? "True" : "False"}
           </span>
         </p>
       </div>
-      <div
-        style={{
+      <div style={{
           display:
-            pot1IsEmpty === true || pot1IsCaredFor === true ? "none" : "block",
-        }}
-      >
+            pot2IsEmpty === true || pot2IsCaredFor === true ? "none" : "block",
+        }}>
         <Button
           variant="info"
           onClick={() => {
-            careForPlant1();
+            careForPlant2();
             handleShow();
           }}
         >
@@ -113,15 +111,15 @@ const Pot1 = ({
         </Modal.Footer>
       </Modal>
 
-      <div style={{ display: pot1IsEmpty === true && actionPoints > 0 ? "block" : "none" }}>
+      <div style={{ display: pot2IsEmpty === true && actionPoints > 0 ? "block" : "none" }}>
         <DropdownButton id="dropdown-item-button" title="Choose a Seed">
           <Dropdown.Item
             as="button"
             onClick={() => {
-              plantPot1();
+              plantPot2();
               decrementActionPoints();
-              setPot1Type("Tulip");
-              incrementPot1Age();
+              setPot2Type("Tulip");
+              incrementPot2Age();
             }}
           >
             Tulip
@@ -129,10 +127,10 @@ const Pot1 = ({
           <Dropdown.Item
             as="button"
             onClick={() => {
-              plantPot1();
+              plantPot2();
               decrementActionPoints();
-              setPot1Type("Iris");
-              incrementPot1Age();
+              setPot2Type("Iris");
+              incrementPot2Age();
             }}
           >
             Iris
@@ -140,19 +138,18 @@ const Pot1 = ({
           <Dropdown.Item
             as="button"
             onClick={() => {
-              plantPot1();
+              plantPot2();
               decrementActionPoints();
-              setPot1Type("Forget-Me-Not");
-              incrementPot1Age();
+              setPot2Type("Forget-Me-Not");
+              incrementPot2Age();
             }}
           >
             Forget-Me-Not
           </Dropdown.Item>
         </DropdownButton>
       </div>
-      
     </Container>
   );
 };
 
-export default Pot1;
+export default Pot2;
