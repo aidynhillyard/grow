@@ -22,14 +22,12 @@ const Town = ({
 }) => {
 
   // useStates for Show/Hide Dialogue
-
   const [showF1, setShowF1] = useState(false);
   const [showF2, setShowF2] = useState(false);
   const [showJ1, setShowJ1] = useState(false);
   const [showJ2, setShowJ2] = useState(false);
   const [showA1, setShowA1] = useState(false);
   const [showA2, setShowA2] = useState(false);
-
 
   // Talk to Farhana Function
   const farhanaConversation = () => {
@@ -140,7 +138,7 @@ const Town = ({
         </Alert>
 
         {!showF1 && !showF2 && (
-          <Button
+          <Button style={{ display: actionPoints > 0 ? "inline" : "none" }}
             onClick={() => {
               setShowF1(true);
               farhanaConversation();
@@ -193,7 +191,7 @@ const Town = ({
         </Alert>
 
         {!showJ1 && !showJ2 && (
-          <Button
+          <Button style={{ display: actionPoints > 0 ? "inline" : "none" }}
             onClick={() => {
               setShowJ1(true);
               jiConversation();
@@ -246,7 +244,7 @@ const Town = ({
         </Alert>
 
         {!showA1 && !showA2 && (
-          <Button
+          <Button style={{ display: actionPoints > 0 ? "inline" : "none" }}
             onClick={() => {
               setShowA1(true);
               albaConversation();
