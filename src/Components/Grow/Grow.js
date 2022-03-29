@@ -13,7 +13,7 @@ const Grow = () => {
   const [location, setLocation] = useState("tutorial");
 
   // Action Points start at 4 each day
-  const [actionPoints, setActionPoints] = useState(2);
+  const [actionPoints, setActionPoints] = useState(4);
 
   // Pot #1 UseStates
   const [pot1IsEmpty, setPot1IsEmpty] = useState(true);
@@ -85,17 +85,7 @@ const Grow = () => {
       console.log("This pot already has a plant in it!");
     }
   };
-  // Psuedo code for Start of a New Day
-
-  //  let actionPoints = 4
-  //  if pot1IsEmpty = false, then pot1IsCaredFor = False
-  //      Most/all buttons have onClick that runs a function checking for pot1IsCaredFor
-  //      if pot1IsCaredFor = False, then launch modal or alert
-  //        saying you must go to Examine Pots to care for plant
-  //      you can dismiss alert, but if you try to go anywhere except Examine Pots,
-  //        alert comes up again
-
-
+  
   return (
     <Container>
       <div>
@@ -201,9 +191,15 @@ const Grow = () => {
           style={{
             display:
               location === "home" &&
-              (pot1IsCaredFor === true || pot1IsCaredFor === null || pot1IsEmpty === true) &&
-              (pot2IsCaredFor === true || pot2IsCaredFor === null || pot2IsEmpty === true) &&
-              (pot3IsCaredFor === true || pot3IsCaredFor === null || pot3IsEmpty === true)
+              (pot1IsCaredFor === true ||
+                pot1IsCaredFor === null ||
+                pot1IsEmpty === true) &&
+              (pot2IsCaredFor === true ||
+                pot2IsCaredFor === null ||
+                pot2IsEmpty === true) &&
+              (pot3IsCaredFor === true ||
+                pot3IsCaredFor === null ||
+                pot3IsEmpty === true)
                 ? "inline"
                 : "none",
           }}

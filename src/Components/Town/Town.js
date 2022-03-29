@@ -58,7 +58,7 @@ const Town = () => {
       <p>This is placeholder text about the town. It also has instructions on talking to the townspeople below.</p>
         <Accordion>
   <Accordion.Item eventKey="0">
-    <Accordion.Header>Farhana (TownspersonA/BestFriend)</Accordion.Header>
+    <Accordion.Header>Farhana</Accordion.Header>
     <Accordion.Body>
       <p>This is text about Farhana. It says a little bit about who she is and her relationship to you. There's probably also a picture of her.</p>
       <Alert show={show1} variant="success">
@@ -91,16 +91,16 @@ const Town = () => {
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-    <Accordion.Header>TownspersonB</Accordion.Header>
+    <Accordion.Header>Ji</Accordion.Header>
     <Accordion.Body>
-      <p>This is text about TownspersonB. It says a little bit about who they are and their relationship to you. There's probably also a picture of them.</p>
+      <p>This is text about Ji. It says a little bit about who they are and their relationship to you. There's probably also a picture of them.</p>
       <Button variant="primary">Talk</Button>
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
-    <Accordion.Header>TownspersonC</Accordion.Header>
+    <Accordion.Header>Alba</Accordion.Header>
     <Accordion.Body>
-    <p>This is text about TownspersonC. It says a little bit about who they are and their relationship to you. There's probably also a picture of them.</p>
+    <p>This is text about Alba. It says a little bit about who they are and their relationship to you. There's probably also a picture of them.</p>
       <Button variant="primary">Talk</Button>
     </Accordion.Body>
   </Accordion.Item>
