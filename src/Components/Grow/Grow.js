@@ -50,18 +50,28 @@ const Grow = () => {
     setPot1IsCaredFor(false);
     setPot2IsCaredFor(false);
     setPot3IsCaredFor(false);
+    if (talkedToFarhana === true) {
+      setDialogueStepFarhana((prevState) => prevState + 1)
+    }
+    if (talkedToJi === true) {
+      setDialogueStepJi((prevState) => prevState + 1)
+    }
+    if (talkedToAlba === true) {
+      setDialogueStepAlba((prevState) => prevState + 1)
+    }
     setTalkedToFarhana(false);
     setTalkedToJi(false);
     setTalkedToAlba(false);
   };
+console.log(talkedToFarhana)
+console.log(dialogueStepFarhana)
+
 
   // Plant Pot #1 Function
   const plantPot1 = () => {
     if (pot1IsEmpty === true && actionPoints > 0) {
       setPot1IsEmpty(!pot1IsEmpty); //function
       setPot1IsCaredFor(!pot1IsCaredFor); //function
-      console.log(actionPoints);
-      console.log(pot1IsEmpty);
     } else if (pot1IsEmpty === true && actionPoints <= 0) {
       console.log("You do not have enough Action Points to plant a seed.");
     } else if (pot1IsEmpty === false) {
@@ -74,8 +84,6 @@ const Grow = () => {
     if (pot2IsEmpty === true && actionPoints > 0) {
       setPot2IsEmpty(!pot2IsEmpty); //function
       setPot2IsCaredFor(!pot2IsCaredFor); //function
-      console.log(actionPoints);
-      console.log(pot2IsEmpty);
     } else if (pot2IsEmpty === true && actionPoints <= 0) {
       console.log("You do not have enough Action Points to plant a seed.");
     } else if (pot2IsEmpty === false) {
@@ -88,8 +96,6 @@ const Grow = () => {
     if (pot3IsEmpty === true && actionPoints > 0) {
       setPot3IsEmpty(!pot3IsEmpty); //function
       setPot3IsCaredFor(!pot3IsCaredFor); //function
-      console.log(actionPoints);
-      console.log(pot3IsEmpty);
     } else if (pot3IsEmpty === true && actionPoints <= 0) {
       console.log("You do not have enough Action Points to plant a seed.");
     } else if (pot3IsEmpty === false) {
@@ -238,7 +244,6 @@ const Grow = () => {
           Travel to Town
         </Button>
       </div>
-      {console.log(location)}
     </Container>
   );
 };

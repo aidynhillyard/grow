@@ -61,21 +61,12 @@ const Town = ({
   // could have photo of town and text about town at top
 
   // Conditional Logic for talking to a townsperson (e.g., Farhana)
-
-  // let talkedToFarhana = false
-  // let dialogueStepFarhana = 1
-
-  // Clicking the "talk" button runs the talkToFarhana function
-  //    if talkedToFarhana = true, then modal: "You have already talked to Farhana today."
-  //    else:
-  //      actionPoints -1
-  //      Determine which dialogue to show
+//     Determine which dialogue to show
   //        if dialogueStepFarhana = 1, then display conversation1
   //        else if dialogueStepFarhana = 2, then display conversation2
   //        else if dialogueStepFarhana = 3, then display conversation3
   //        else if dialogueStepFarhana = 4, then display conversation4
   //        else (if dialogueStepFarhana >= 5), then display conversation5
-  //  Close button onClick sets talkedToFarhana = true
 
   // On End Day, if talkedToFarhana = true, then dialogueStepFarhana += 1
   // On Start New Day, talkedToFarhana = false, but dialogueStepFarhana does not change
@@ -94,7 +85,8 @@ const Town = ({
         This is placeholder text about the town. It also has instructions on
         talking to the townspeople below.
       </p>
-      <div>
+      {/* Farhana Dialogue #1 */}
+      <div className="farhana-dialogue1">
         <h3>Farhana</h3>
         <p>
           This is text about Farhana. It says a little bit about who she is and
@@ -130,6 +122,58 @@ const Town = ({
         </Alert>
         <Alert show={showF2} variant="success">
           <p>Farhana's response. She says things depending on what you say.</p>
+          <div className="d-flex justify-content-end">
+            <Button onClick={() => setShowF2(false)} variant="outline-success">
+              Close
+            </Button>
+          </div>
+        </Alert>
+
+        {!showF1 && !showF2 && (
+          <Button style={{ display: actionPoints > 0 ? "inline" : "none" }}
+            onClick={() => {
+              setShowF1(true);
+              farhanaConversation();
+            }}
+          >
+            Talk
+          </Button>
+        )}
+      </div>
+      {/* Farhana Dialogue #2 */}
+      <div className="farhana-dialogue2">
+        <h3>Farhana</h3>
+        <p>
+          This is text about Farhana. It says a little bit about who she is and
+          her relationship to you. There's probably also a picture of her.
+        </p>
+
+        <Alert show={showF1} variant="success">
+          <div className="npc-dialogue">
+            <p>
+              Second part of dialogue with Farhana. She tells you more about the town and who you used to be.
+            </p>
+          </div>
+          <hr />
+          <div className="player-dialogue">
+            <p>
+              You get to respond to what she says.
+            </p>
+          </div>
+          <div className="d-flex justify-content-end">
+            <Button
+              onClick={() => {
+                setShowF2(true);
+                setShowF1(false);
+              }}
+              variant="outline-success"
+            >
+              Next
+            </Button>
+          </div>
+        </Alert>
+        <Alert show={showF2} variant="success">
+          <p>Here is Farhana's response.</p>
           <div className="d-flex justify-content-end">
             <Button onClick={() => setShowF2(false)} variant="outline-success">
               Close

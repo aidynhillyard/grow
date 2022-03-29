@@ -127,7 +127,7 @@ const Pots = ({
     checkIfPot3FullyGrown();
   };
 
-  console.log(pot1IsCaredFor);
+  // console.log(pot1IsCaredFor);
   return (
     <Container>
       {/* Pot #1 */}
