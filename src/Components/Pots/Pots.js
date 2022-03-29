@@ -50,10 +50,8 @@ const Pots = ({
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [planting, setPlanting] = useState(false);
-
   // useEffect???
-  useEffect(() => console.log("Hello world"), [planting]);
+  useEffect(() => console.log("Hello world"), [actionPoints]);
 
   // Check if Fully Grown
   const checkIfFullyGrown = () => {
@@ -134,7 +132,6 @@ const Pots = ({
             as="button"
             onClick={() => {
               plantPot1();
-              setPlanting(false);
               decrementActionPoints();
               setPot1Type("Marigold");
               incrementPot1Age();
@@ -146,7 +143,6 @@ const Pots = ({
             as="button"
             onClick={() => {
               plantPot1();
-              setPlanting(false);
               decrementActionPoints();
               setPot1Type("Snapdragon");
               incrementPot1Age();
@@ -158,7 +154,6 @@ const Pots = ({
             as="button"
             onClick={() => {
               plantPot1();
-              setPlanting(false);
               decrementActionPoints();
               setPot1Type("Sunflower");
               incrementPot1Age();
@@ -203,7 +198,6 @@ const Pots = ({
             as="button"
             onClick={() => {
               plantPot2();
-              setPlanting(false);
               decrementActionPoints();
               setPot2Type("Marigold");
               incrementPot2Age();
@@ -215,7 +209,6 @@ const Pots = ({
             as="button"
             onClick={() => {
               plantPot2();
-              setPlanting(false);
               decrementActionPoints();
               setPot2Type("Snapdragon");
               incrementPot2Age();
@@ -227,7 +220,6 @@ const Pots = ({
             as="button"
             onClick={() => {
               plantPot2();
-              setPlanting(false);
               decrementActionPoints();
               setPot2Type("Sunflower");
               incrementPot2Age();
@@ -272,7 +264,6 @@ const Pots = ({
             as="button"
             onClick={() => {
               plantPot3();
-              setPlanting(false);
               decrementActionPoints();
               setPot3Type("Marigold");
               incrementPot3Age();
@@ -284,7 +275,6 @@ const Pots = ({
             as="button"
             onClick={() => {
               plantPot3();
-              setPlanting(false);
               decrementActionPoints();
               setPot3Type("Snapdragon");
               incrementPot3Age();
@@ -296,7 +286,6 @@ const Pots = ({
             as="button"
             onClick={() => {
               plantPot3();
-              setPlanting(false);
               decrementActionPoints();
               setPot3Type("Sunflower");
               incrementPot3Age();
