@@ -1,0 +1,18 @@
+.alert {
+    background-color: teal;
+    color: black;
+    border-radius: 40px;
+}
+
+.player-dialogue {
+    text-align: right;
+}
+
+.npc-dialogue {
+    text-align: left;
+}
+
+.btn-outline-success {
+    background-color: black;
+    color: white;
+}

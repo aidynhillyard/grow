@@ -36,12 +36,23 @@ const Grow = () => {
   const [pot3IsCaredFor, setPot3IsCaredFor] = useState(null);
   const [pot3IsFullyGrown, setPot3IsFullyGrown] = useState(false);
 
+  // Town UseStates
+  const [talkedToFarhana, setTalkedToFarhana] = useState(false)
+  const [dialogueStepFarhana, setDialogueStepFarhana] = useState(1)
+  const [talkedToJi, setTalkedToJi] = useState(false)
+  const [dialogueStepJi, setDialogueStepJi] = useState(1)
+  const [talkedToAlba, setTalkedToAlba] = useState(false)
+  const [dialogueStepAlba, setDialogueStepAlba] = useState(1)
+
   // Start of Day
   const startNewDay = () => {
     setActionPoints(4);
     setPot1IsCaredFor(false);
     setPot2IsCaredFor(false);
     setPot3IsCaredFor(false);
+    setTalkedToFarhana(false);
+    setTalkedToJi(false);
+    setTalkedToAlba(false);
   };
 
   // Plant Pot #1 Function
@@ -85,6 +96,8 @@ const Grow = () => {
       console.log("This pot already has a plant in it!");
     }
   };
+
+ 
   
   return (
     <Container>
@@ -172,7 +185,22 @@ const Grow = () => {
         Town
         ******** */}
       <div style={{ display: location === "town" ? "inline" : "none" }}>
-        <Town />
+        <Town
+        actionPoints={actionPoints}
+        setActionPoints={setActionPoints}
+        talkedToFarhana={talkedToFarhana}
+        setTalkedToFarhana={setTalkedToFarhana}
+        talkedToJi={talkedToJi}
+        setTalkedToJi={setTalkedToJi}
+        talkedToAlba={talkedToAlba}
+        setTalkedToAlba={setTalkedToAlba}
+        dialogueStepFarhana={dialogueStepFarhana}
+        setDialogueStepFarhana={setDialogueStepFarhana}
+        dialogueStepJi={dialogueStepJi}
+        setDialogueStepJi={setDialogueStepJi}
+        dialogueStepAlba={dialogueStepAlba}
+        setDialogueStepAlba={setDialogueStepAlba}
+        />
       </div>
       <div>
         <Button
