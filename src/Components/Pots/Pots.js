@@ -357,6 +357,9 @@ const Pots = ({
           </Dropdown.Item>
         </DropdownButton>
       </div>
+      <div>
+        <p style={{ display: (pot1IsCaredFor === true && pot2IsCaredFor === true && pot3IsCaredFor === true) ? "block" : "none" }}>You have cared for all of your plants. You can check back after a new day.</p>
+      </div>
     </Container>
   );
 };
