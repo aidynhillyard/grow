@@ -31,14 +31,6 @@ const Town = ({
   dialogueStepAlba,
 }) => {
 
-  // useStates for Show/Hide Dialogue
-  const [showF1, setShowF1] = useState(false);
-  const [showF2, setShowF2] = useState(false);
-  const [showJ1, setShowJ1] = useState(false);
-  const [showJ2, setShowJ2] = useState(false);
-  const [showA1, setShowA1] = useState(false);
-  const [showA2, setShowA2] = useState(false);
-
   // Talk to Farhana Function
   const farhanaConversation = () => {
     if (talkedToFarhana === false) {
@@ -93,6 +85,7 @@ const Town = ({
       </p>
       <div className="farhana">
       <h3>Farhana</h3>
+      <p>(she/her/hers)</p>
         <p>
           This is text about Farhana. It says a little bit about who she is and
           her relationship to you. There's probably also a picture of her.
@@ -133,6 +126,7 @@ const Town = ({
       </div>
       <div className="ji">
         <h3>Ji</h3>
+        <p>(he/him/his)</p>
         <p>
           This is text about Ji. It says a little bit about who they are and
           their relationship to you. There's probably also a picture of them.
@@ -175,6 +169,7 @@ const Town = ({
       </div>
       <div className="alba">
         <h3>Alba</h3>
+        (they/them/theirs)
         <p>
           This is text about Alba. It says a little bit about who they are and
           their relationship to you. There's probably also a picture of them.
