@@ -37,7 +37,7 @@ const Grow = () => {
   const [pot3IsCaredFor, setPot3IsCaredFor] = useState(null)
   const [pot3IsFullyGrown, setPot3IsFullyGrown] = useState(false)
 
-  
+ 
   // Start of Day / Start of Game
 
   // Plant Pot #1 Function
@@ -45,7 +45,7 @@ const Grow = () => {
     if (pot1IsEmpty === true && actionPoints > 0) {
       setPot1IsEmpty(!pot1IsEmpty) //function
       setPot1IsCaredFor(!pot1IsCaredFor) //function
-      setPot1IsFullyGrown(!pot1IsFullyGrown) //function
+      // setPot1IsFullyGrown(!pot1IsFullyGrown) //function
       console.log(actionPoints)
       console.log(pot1IsEmpty)
     } else if (pot1IsEmpty === true && actionPoints <= 0) {
@@ -102,9 +102,9 @@ const plantPot3 = () => {
   //      pot1IsCaredFor = True
   //      pot1Age += 1
   //      run function checkIfFullyGrown
-  //        if pot1Type = marigold && pot1Age >= 2, then pot1IsFullyGrown = true
-  //        if pot1Type = 'snapdragon' && pot1Age >= 3, then pot1IsFullyGrown = true
-  //        if pot1Type = 'sunflower' && pot1Age >= 4, then pot1IsFullyGrown = true
+  //        if pot1Type === 'marigold' && pot1Age >= 2, then setPot1IsFullyGrown(true)
+  //        if pot1Type === 'snapdragon' && pot1Age >= 3, then setPot1IsFullyGrown(true)
+  //        if pot1Type === 'sunflower' && pot1Age >= 4, then setPot1IsFullyGrown(true)
   //      pot1IsFullyGrown value should display (maybe even in <span> to be green)
 
   // Psuedo code for Examine Pots display
