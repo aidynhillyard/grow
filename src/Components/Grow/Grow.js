@@ -15,7 +15,7 @@ const Grow = () => {
   const [location, setLocation] = useState("tutorial")
   
   // Action Points start at 4 each day
-  const [actionPoints, setActionPoints] = useState(3)
+  const [actionPoints, setActionPoints] = useState(4)
 
   // Pot #1 UseStates
   const [pot1IsEmpty, setPot1IsEmpty] = useState(true)
@@ -181,7 +181,7 @@ const plantPot3 = () => {
         />
         </div>
         <div><Button variant="success" style={{display: location === "town" ? "inline" : "none"}} onClick={() => {setLocation("home")}}>Travel to Home</Button></div>
-        <div><Button variant="success" style={{display: location === "home" ? "inline" : "none"}} onClick={() => {setLocation("town")}}>Travel to Town</Button></div>
+        <div><Button variant="success" style={{display: (location === "home" && pot1IsCaredFor === true && pot2IsCaredFor === true && pot3IsCaredFor === true) ? "inline" : "none"}} onClick={() => {setLocation("town")}}>Travel to Town</Button></div>
         {console.log(location)}
         
     </Container>

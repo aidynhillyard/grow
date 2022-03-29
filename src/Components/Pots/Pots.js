@@ -133,7 +133,7 @@ const Pots = ({
       {/* Pot #1 */}
       <div>
         <p>
-          Pot #1: {pot1Type}
+          Plant #1: {pot1Type}
           <span style={{ display: pot1IsEmpty === true ? "none" : "inline" }}>
             , Age: {pot1Age}, Fully Grown: {pot1IsFullyGrown ? "True" : "False"}
           </span>
@@ -210,7 +210,7 @@ const Pots = ({
       {/* Pot #2 */}
       <div>
         <p>
-          Pot #2: {pot2Type}
+          Plant #2: {pot2Type}
           <span style={{ display: pot2IsEmpty === true ? "none" : "inline" }}>
             , Age: {pot2Age}, Fully Grown: {pot2IsFullyGrown ? "True" : "False"}
           </span>
@@ -285,7 +285,7 @@ const Pots = ({
       {/* Pot #3 */}
       <div>
         <p>
-          Pot #3: {pot3Type}
+          Plant #3: {pot3Type}
           <span style={{ display: pot3IsEmpty === true ? "none" : "inline" }}>
             , Age: {pot3Age}, Fully Grown: {pot3IsFullyGrown ? "True" : "False"}
           </span>
