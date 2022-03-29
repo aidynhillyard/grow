@@ -55,36 +55,36 @@ const Pots = ({
 
   // Check if Fully Grown
   const checkIfPot1FullyGrown = () => {
-    if (pot1Type === "Marigold" && pot1Age >= 2) {
+    if (pot1Type === "Tulip" && pot1Age >= 2) {
       setPot1IsFullyGrown(true);
       console.log("meow!");
-    } else if (pot1Type === "Snapdragon" && pot1Age >= 3) {
+    } else if (pot1Type === "Iris" && pot1Age >= 3) {
       setPot1IsFullyGrown(true);
-    } else if (pot1Type === "Sunflower" && pot1Age >= 4) {
+    } else if (pot1Type === "Forget-Me-Not" && pot1Age >= 4) {
       setPot1IsFullyGrown(true);
     } else {
       setPot1IsFullyGrown(false);
     }
   };
   const checkIfPot2FullyGrown = () => {
-    if (pot2Type === "Marigold" && pot2Age >= 2) {
+    if (pot2Type === "Tulip" && pot2Age >= 2) {
       setPot2IsFullyGrown(true);
       console.log("meow!");
-    } else if (pot2Type === "Snapdragon" && pot2Age >= 3) {
+    } else if (pot2Type === "Iris" && pot2Age >= 3) {
       setPot2IsFullyGrown(true);
-    } else if (pot2Type === "Sunflower" && pot2Age >= 4) {
+    } else if (pot2Type === "Forget-Me-Not" && pot2Age >= 4) {
       setPot2IsFullyGrown(true);
     } else {
       setPot2IsFullyGrown(false);
     }
   };
   const checkIfPot3FullyGrown = () => {
-    if (pot3Type === "Marigold" && pot3Age >= 2) {
+    if (pot3Type === "Tulip" && pot3Age >= 2) {
       setPot3IsFullyGrown(true);
       console.log("meow!");
-    } else if (pot3Type === "Snapdragon" && pot3Age >= 3) {
+    } else if (pot3Type === "Iris" && pot3Age >= 3) {
       setPot3IsFullyGrown(true);
-    } else if (pot3Type === "Sunflower" && pot3Age >= 4) {
+    } else if (pot3Type === "Forget-Me-Not" && pot3Age >= 4) {
       setPot3IsFullyGrown(true);
     } else {
       setPot3IsFullyGrown(false);
@@ -177,33 +177,33 @@ const Pots = ({
             onClick={() => {
               plantPot1();
               decrementActionPoints();
-              setPot1Type("Marigold");
+              setPot1Type("Tulip");
               incrementPot1Age();
             }}
           >
-            Marigold
+            Tulip
           </Dropdown.Item>
           <Dropdown.Item
             as="button"
             onClick={() => {
               plantPot1();
               decrementActionPoints();
-              setPot1Type("Snapdragon");
+              setPot1Type("Iris");
               incrementPot1Age();
             }}
           >
-            Snapdragon
+            Iris
           </Dropdown.Item>
           <Dropdown.Item
             as="button"
             onClick={() => {
               plantPot1();
               decrementActionPoints();
-              setPot1Type("Sunflower");
+              setPot1Type("Forget-Me-Not");
               incrementPot1Age();
             }}
           >
-            Sunflower
+            Forget-Me-Not
           </Dropdown.Item>
         </DropdownButton>
       </div>
@@ -252,33 +252,33 @@ const Pots = ({
             onClick={() => {
               plantPot2();
               decrementActionPoints();
-              setPot2Type("Marigold");
+              setPot2Type("Tulip");
               incrementPot2Age();
             }}
           >
-            Marigold
+            Tulip
           </Dropdown.Item>
           <Dropdown.Item
             as="button"
             onClick={() => {
               plantPot2();
               decrementActionPoints();
-              setPot2Type("Snapdragon");
+              setPot2Type("Iris");
               incrementPot2Age();
             }}
           >
-            Snapdragon
+            Iris
           </Dropdown.Item>
           <Dropdown.Item
             as="button"
             onClick={() => {
               plantPot2();
               decrementActionPoints();
-              setPot2Type("Sunflower");
+              setPot2Type("Forget-Me-Not");
               incrementPot2Age();
             }}
           >
-            Sunflower
+            Forget-Me-Not
           </Dropdown.Item>
         </DropdownButton>
       </div>
@@ -327,33 +327,33 @@ const Pots = ({
             onClick={() => {
               plantPot3();
               decrementActionPoints();
-              setPot3Type("Marigold");
+              setPot3Type("Tulip");
               incrementPot3Age();
             }}
           >
-            Marigold
+            Tulip
           </Dropdown.Item>
           <Dropdown.Item
             as="button"
             onClick={() => {
               plantPot3();
               decrementActionPoints();
-              setPot3Type("Snapdragon");
+              setPot3Type("Iris");
               incrementPot3Age();
             }}
           >
-            Snapdragon
+            Iris
           </Dropdown.Item>
           <Dropdown.Item
             as="button"
             onClick={() => {
               plantPot3();
               decrementActionPoints();
-              setPot3Type("Sunflower");
+              setPot3Type("Forget-Me-Not");
               incrementPot3Age();
             }}
           >
-            Sunflower
+            Forget-Me-Not
           </Dropdown.Item>
         </DropdownButton>
       </div>

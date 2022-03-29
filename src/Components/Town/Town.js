@@ -1,5 +1,4 @@
 import "./Town.css";
-import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Farhana1Conversation from "../Farhana1Conversation/Farhana1Conversation";
 import Farhana2Conversation from "../Farhana2Conversation/Farhana2Conversation";
@@ -73,7 +72,7 @@ const Town = ({
   // Conditional logic for trading plant to townsperson
   // (conversation4)
 
-  // if dialogueStepFarhana === 4 && (pot1Type === 'marigold' || pot2Type === 'marigold' || pot3Type === 'marigold'), then display conversation4, which has dialgoue offering marigold plant to Farhana
+  // if dialogueStepFarhana === 4 && (pot1Type === 'tulip' || pot2Type === 'tulip' || pot3Type === 'tulip'), then display conversation4, which has dialgoue offering tulip plant to Farhana
   // Button says "Give Plant", onClick runs function to set that pot to Empty
 
   return (

@@ -37,36 +37,35 @@ const Grow = () => {
   const [pot3IsFullyGrown, setPot3IsFullyGrown] = useState(false);
 
   // Town UseStates
-  const [talkedToFarhana, setTalkedToFarhana] = useState(false)
-  const [dialogueStepFarhana, setDialogueStepFarhana] = useState(1)
-  const [talkedToJi, setTalkedToJi] = useState(false)
-  const [dialogueStepJi, setDialogueStepJi] = useState(1)
-  const [talkedToAlba, setTalkedToAlba] = useState(false)
-  const [dialogueStepAlba, setDialogueStepAlba] = useState(1)
+  const [talkedToFarhana, setTalkedToFarhana] = useState(false);
+  const [dialogueStepFarhana, setDialogueStepFarhana] = useState(1);
+  const [talkedToJi, setTalkedToJi] = useState(false);
+  const [dialogueStepJi, setDialogueStepJi] = useState(1);
+  const [talkedToAlba, setTalkedToAlba] = useState(false);
+  const [dialogueStepAlba, setDialogueStepAlba] = useState(1);
 
   // Start of Day
   const startNewDay = () => {
     setActionPoints(4);
-    setLocation("home")
+    setLocation("home");
     setPot1IsCaredFor(false);
     setPot2IsCaredFor(false);
     setPot3IsCaredFor(false);
     if (talkedToFarhana === true) {
-      setDialogueStepFarhana((prevState) => prevState + 1)
+      setDialogueStepFarhana((prevState) => prevState + 1);
     }
     if (talkedToJi === true) {
-      setDialogueStepJi((prevState) => prevState + 1)
+      setDialogueStepJi((prevState) => prevState + 1);
     }
     if (talkedToAlba === true) {
-      setDialogueStepAlba((prevState) => prevState + 1)
+      setDialogueStepAlba((prevState) => prevState + 1);
     }
     setTalkedToFarhana(false);
     setTalkedToJi(false);
     setTalkedToAlba(false);
   };
-console.log(talkedToFarhana)
-console.log(dialogueStepFarhana)
-
+  console.log(talkedToFarhana);
+  console.log(dialogueStepFarhana);
 
   // Plant Pot #1 Function
   const plantPot1 = () => {
@@ -104,8 +103,6 @@ console.log(dialogueStepFarhana)
     }
   };
 
- 
-  
   return (
     <Container>
       <div>
@@ -132,6 +129,7 @@ console.log(dialogueStepFarhana)
       <div style={{ display: location === "tutorial" ? "inline" : "none" }}>
         <h1>This is the Tutorial</h1>
         <p>It has text under it.</p>
+        <p>This is where the introduction scene will take place between the player and Farhana.</p>
         <Button
           variant="success"
           onClick={() => {
@@ -193,20 +191,20 @@ console.log(dialogueStepFarhana)
         ******** */}
       <div style={{ display: location === "town" ? "inline" : "none" }}>
         <Town
-        actionPoints={actionPoints}
-        setActionPoints={setActionPoints}
-        talkedToFarhana={talkedToFarhana}
-        setTalkedToFarhana={setTalkedToFarhana}
-        talkedToJi={talkedToJi}
-        setTalkedToJi={setTalkedToJi}
-        talkedToAlba={talkedToAlba}
-        setTalkedToAlba={setTalkedToAlba}
-        dialogueStepFarhana={dialogueStepFarhana}
-        setDialogueStepFarhana={setDialogueStepFarhana}
-        dialogueStepJi={dialogueStepJi}
-        setDialogueStepJi={setDialogueStepJi}
-        dialogueStepAlba={dialogueStepAlba}
-        setDialogueStepAlba={setDialogueStepAlba}
+          actionPoints={actionPoints}
+          setActionPoints={setActionPoints}
+          talkedToFarhana={talkedToFarhana}
+          setTalkedToFarhana={setTalkedToFarhana}
+          talkedToJi={talkedToJi}
+          setTalkedToJi={setTalkedToJi}
+          talkedToAlba={talkedToAlba}
+          setTalkedToAlba={setTalkedToAlba}
+          dialogueStepFarhana={dialogueStepFarhana}
+          setDialogueStepFarhana={setDialogueStepFarhana}
+          dialogueStepJi={dialogueStepJi}
+          setDialogueStepJi={setDialogueStepJi}
+          dialogueStepAlba={dialogueStepAlba}
+          setDialogueStepAlba={setDialogueStepAlba}
         />
       </div>
       <div>
