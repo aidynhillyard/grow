@@ -18,7 +18,7 @@ import Alba5Conversation from "../Alba5Conversation/Alba5Conversation";
 
 const Town = ({
   actionPoints,
-  setActionPoints,
+  decrementActionPoints,
   talkedToFarhana,
   setTalkedToFarhana,
   talkedToJi,
@@ -53,10 +53,8 @@ const Town = ({
     }
     setTalkedToAlba(true);
   };
-  // Decrement Action Points
-  const decrementActionPoints = () => {
-    setActionPoints((prevState) => prevState - 1);
-  };
+
+  
 
   // Conditional Logic for talking to a townsperson (e.g., Farhana)
 //     Determine which dialogue to show

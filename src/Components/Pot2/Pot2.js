@@ -8,7 +8,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 
 const Pot2 = ({
   actionPoints,
-  setActionPoints,
+  decrementActionPoints,
   pot2IsEmpty,
   setPot2IsEmpty,
   pot2IsCaredFor,
@@ -51,11 +51,6 @@ const Pot2 = ({
     } else {
       setPot2IsFullyGrown(false);
     }
-  };
-  
-  // Increment & Decrement functions
-  const decrementActionPoints = () => {
-    setActionPoints((prevState) => prevState - 1);
   };
 
   // Increment Pot Age

@@ -7,7 +7,7 @@ import PlantDescriptions from "../PlantDescriptions/PlantDescriptions";
 
 const Home = ({
   actionPoints,
-  setActionPoints,
+  decrementActionPoints,
   pot1IsEmpty,
   setPot1IsEmpty,
   pot1IsCaredFor,
@@ -27,7 +27,7 @@ const Home = ({
       <h2>Lovely Potted Plants</h2>
       <Pot1
       actionPoints={actionPoints}
-      setActionPoints={setActionPoints}
+      decrementActionPoints={decrementActionPoints}
       pot1IsEmpty={pot1IsEmpty}
       setPot1IsEmpty={setPot1IsEmpty}
       pot1IsCaredFor={pot1IsCaredFor}
@@ -35,7 +35,7 @@ const Home = ({
       />
       <Pot2 
       actionPoints={actionPoints}
-      setActionPoints={setActionPoints}
+      decrementActionPoints={decrementActionPoints}
       pot2IsEmpty={pot2IsEmpty}
       setPot2IsEmpty={setPot2IsEmpty}
       pot2IsCaredFor={pot2IsCaredFor}
@@ -43,7 +43,7 @@ const Home = ({
       />
       <Pot3 
       actionPoints={actionPoints}
-      setActionPoints={setActionPoints}
+      decrementActionPoints={decrementActionPoints}
       pot3IsEmpty={pot3IsEmpty}
       setPot3IsEmpty={setPot3IsEmpty}
       pot3IsCaredFor={pot3IsCaredFor}

@@ -38,6 +38,11 @@ const Grow = () => {
   // useEffect Placeholder
   useEffect(() => console.log("Hello world"), [actionPoints]);
 
+  // Decrement Action Points
+  const decrementActionPoints = () => {
+    setActionPoints((prevState) => prevState - 1);
+  };
+
   // Start of Day
   const startNewDay = () => {
     setActionPoints(4);
@@ -104,6 +109,7 @@ const Grow = () => {
         <Home
           actionPoints={actionPoints}
           setActionPoints={setActionPoints}
+          decrementActionPoints={decrementActionPoints}
           startNewDay={startNewDay}
           // Pot #1 Props
           pot1IsEmpty={pot1IsEmpty}
@@ -130,6 +136,7 @@ const Grow = () => {
         <Town
           actionPoints={actionPoints}
           setActionPoints={setActionPoints}
+          decrementActionPoints={decrementActionPoints}
           talkedToFarhana={talkedToFarhana}
           setTalkedToFarhana={setTalkedToFarhana}
           talkedToJi={talkedToJi}
