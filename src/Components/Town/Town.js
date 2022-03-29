@@ -21,7 +21,16 @@ const Town = ({
   setDialogueStepAlba,
 }) => {
 
-  console.log(talkedToFarhana)
+  // useStates for Show/Hide Dialogue
+
+  const [showF1, setShowF1] = useState(false);
+  const [showF2, setShowF2] = useState(false);
+  const [showJ1, setShowJ1] = useState(false);
+  const [showJ2, setShowJ2] = useState(false);
+  const [showA1, setShowA1] = useState(false);
+  const [showA2, setShowA2] = useState(false);
+
+
   // Talk to Farhana Function
   const farhanaConversation = () => {
     if (talkedToFarhana === false) {
@@ -30,6 +39,21 @@ const Town = ({
     setTalkedToFarhana(true);
   };
 
+  // Talk to Ji Function
+  const jiConversation = () => {
+    if (talkedToJi === false) {
+      decrementActionPoints();
+    }
+    setTalkedToJi(true);
+  };
+
+  // Talk to Alba Function
+  const albaConversation = () => {
+    if (talkedToAlba === false) {
+      decrementActionPoints();
+    }
+    setTalkedToAlba(true);
+  };
   // Decrement Action Points
   const decrementActionPoints = () => {
     setActionPoints((prevState) => prevState - 1);
@@ -64,8 +88,6 @@ const Town = ({
   // if dialogueStepFarhana === 4 && (pot1Type === 'marigold' || pot2Type === 'marigold' || pot3Type === 'marigold'), then display conversation4, which has dialgoue offering marigold plant to Farhana
   // Button says "Give Plant", onClick runs function to set that pot to Empty
 
-  const [show1, setShow1] = useState(false);
-  const [show2, setShow2] = useState(false);
 
   return (
     <Container>
@@ -81,7 +103,7 @@ const Town = ({
           her relationship to you. There's probably also a picture of her.
         </p>
 
-        <Alert show={show1} variant="success">
+        <Alert show={showF1} variant="success">
           <div className="npc-dialogue">
             <p>
               This is what Farhana is saying. She is talking about the town and
@@ -99,8 +121,8 @@ const Town = ({
           <div className="d-flex justify-content-end">
             <Button
               onClick={() => {
-                setShow2(true);
-                setShow1(false);
+                setShowF2(true);
+                setShowF1(false);
               }}
               variant="outline-success"
             >
@@ -108,19 +130,19 @@ const Town = ({
             </Button>
           </div>
         </Alert>
-        <Alert show={show2} variant="success">
+        <Alert show={showF2} variant="success">
           <p>Farhana's response. She says things depending on what you say.</p>
           <div className="d-flex justify-content-end">
-            <Button onClick={() => setShow2(false)} variant="outline-success">
+            <Button onClick={() => setShowF2(false)} variant="outline-success">
               Close
             </Button>
           </div>
         </Alert>
 
-        {!show1 && !show2 && (
+        {!showF1 && !showF2 && (
           <Button
             onClick={() => {
-              setShow1(true);
+              setShowF1(true);
               farhanaConversation();
             }}
           >
@@ -134,7 +156,52 @@ const Town = ({
           This is text about Ji. It says a little bit about who they are and
           their relationship to you. There's probably also a picture of them.
         </p>
-        <Button variant="primary">Talk</Button>
+        <Alert show={showJ1} variant="success">
+          <div className="npc-dialogue">
+            <p>
+              This is what Ji is saying. He is talking about the town and
+              about other things that we are interested in hearing. This is more
+              text to show he is still talking.
+            </p>
+          </div>
+          <hr />
+          <div className="player-dialogue">
+            <p>
+              Player dialogue goes here. Let's start with one dialogue option
+              first and not worry about player choices until later.
+            </p>
+          </div>
+          <div className="d-flex justify-content-end">
+            <Button
+              onClick={() => {
+                setShowJ2(true);
+                setShowJ1(false);
+              }}
+              variant="outline-success"
+            >
+              Next
+            </Button>
+          </div>
+        </Alert>
+        <Alert show={showJ2} variant="success">
+          <p>Ji's response. He says things depending on what you say.</p>
+          <div className="d-flex justify-content-end">
+            <Button onClick={() => setShowJ2(false)} variant="outline-success">
+              Close
+            </Button>
+          </div>
+        </Alert>
+
+        {!showJ1 && !showJ2 && (
+          <Button
+            onClick={() => {
+              setShowJ1(true);
+              jiConversation();
+            }}
+          >
+            Talk
+          </Button>
+        )}
       </div>
       <div>
         <h3>Alba</h3>
@@ -142,7 +209,52 @@ const Town = ({
           This is text about Alba. It says a little bit about who they are and
           their relationship to you. There's probably also a picture of them.
         </p>
-        <Button variant="primary">Talk</Button>
+        <Alert show={showA1} variant="success">
+          <div className="npc-dialogue">
+            <p>
+              This is what Alba is saying. They are talking about the town and
+              about other things that we are interested in hearing. This is more
+              text to show they are still talking.
+            </p>
+          </div>
+          <hr />
+          <div className="player-dialogue">
+            <p>
+              Player dialogue goes here. Let's start with one dialogue option
+              first and not worry about player choices until later.
+            </p>
+          </div>
+          <div className="d-flex justify-content-end">
+            <Button
+              onClick={() => {
+                setShowA2(true);
+                setShowA1(false);
+              }}
+              variant="outline-success"
+            >
+              Next
+            </Button>
+          </div>
+        </Alert>
+        <Alert show={showA2} variant="success">
+          <p>Alba's response. They say things depending on what you say.</p>
+          <div className="d-flex justify-content-end">
+            <Button onClick={() => setShowA2(false)} variant="outline-success">
+              Close
+            </Button>
+          </div>
+        </Alert>
+
+        {!showA1 && !showA2 && (
+          <Button
+            onClick={() => {
+              setShowA1(true);
+              albaConversation();
+            }}
+          >
+            Talk
+          </Button>
+        )}
       </div>
     </Container>
   );
