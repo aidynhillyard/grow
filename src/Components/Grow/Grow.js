@@ -93,20 +93,6 @@ const plantPot3 = () => {
   
   //    Could change mechanic so caring for plants is optional but they don't age without it?
 
-  // Psuedo code for Care for Plant:
-  //    Clicking "Care for Plant" button should run a function, careForPlant, that does the folowing:
-  //      actionPoints -1
-  //      pot1IsCaredFor = True
-  //      pot1Age += 1
-  //      run function checkIfFullyGrown
-  //        if pot1Type === 'marigold' && pot1Age >= 2, then setPot1IsFullyGrown(true)
-  //        if pot1Type === 'snapdragon' && pot1Age >= 3, then setPot1IsFullyGrown(true)
-  //        if pot1Type === 'sunflower' && pot1Age >= 4, then setPot1IsFullyGrown(true)
-  //      pot1IsFullyGrown value should display (maybe even in <span> to be green)
-
-  // Psuedo code for Examine Pots display
-  //    if pot1IsEmpty = false, then display "Care for Plant" button
-  //      else, display "Plant a Seed" button
 
   return (
     <Container>
@@ -119,11 +105,6 @@ const plantPot3 = () => {
               Start a New Game
             </Button>{' '}
             <p>Action Points = {actionPoints}</p>
-            <p>Is the Pot Empty? = {pot1IsEmpty ? "true" : "false"}</p>
-            <p>Plant Type = {pot1Type}</p>
-            <p>Plant Age = {pot1Age}</p>
-            <p style={{display: pot1IsCaredFor === null ? "none" : "inline"}}>Is the Plant Cared For? = {pot1IsCaredFor}</p>
-            <p>Is the Plant Fully Grown? = {pot1IsFullyGrown}</p>
         </div>
         {/* ********
         Tutorial

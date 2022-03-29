@@ -216,7 +216,10 @@ const Pots = ({
           </span>
         </p>
       </div>
-      <div style={{ display: pot2IsEmpty === true ? "none" : "block" }}>
+      <div style={{
+          display:
+            pot2IsEmpty === true || pot2IsCaredFor === true ? "none" : "block",
+        }}>
         <Button
           variant="info"
           onClick={() => {
@@ -288,7 +291,10 @@ const Pots = ({
           </span>
         </p>
       </div>
-      <div style={{ display: pot3IsEmpty === true ? "none" : "block" }}>
+      <div style={{
+          display:
+            pot3IsEmpty === true || pot3IsCaredFor === true ? "none" : "block",
+        }}>
         <Button
           variant="info"
           onClick={() => {
