@@ -1,33 +1,34 @@
-import "./Farhana2Conversation.css";
+import "./Alba2Conversation.css";
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert'
 
-const Farhana2Conversation = ({ actionPoints, farhanaConversation }) => {
+const Alba2Conversation = ({ actionPoints, albaConversation }) => {
 
   // useStates
-  const [showF1, setShowF1] = useState(false);
-  const [showF2, setShowF2] = useState(false);
+  const [showA1, setShowA1] = useState(false);
+  const [showA2, setShowA2] = useState(false);
 
   return (
     <div>
-        <Alert show={showF1} variant="success">
+<Alert show={showA1} variant="success">
           <div className="npc-dialogue">
             <p>
-              Second part of dialogue with Farhana. She tells you more about the town and who you used to be.
+              2nd Dialogue step with Alba. This is placeholder text.
             </p>
           </div>
           <hr />
           <div className="player-dialogue">
             <p>
-              You get to respond to what she says.
+              Player dialogue goes here. Let's start with one dialogue option
+              first and not worry about player choices until later.
             </p>
           </div>
           <div className="d-flex justify-content-end">
             <Button
               onClick={() => {
-                setShowF2(true);
-                setShowF1(false);
+                setShowA2(true);
+                setShowA1(false);
               }}
               variant="outline-success"
             >
@@ -35,27 +36,27 @@ const Farhana2Conversation = ({ actionPoints, farhanaConversation }) => {
             </Button>
           </div>
         </Alert>
-        <Alert show={showF2} variant="success">
-          <p>Here is Farhana's response.</p>
+        <Alert show={showA2} variant="success">
+          <p>Alba's response. They say things depending on what you say.</p>
           <div className="d-flex justify-content-end">
-            <Button onClick={() => setShowF2(false)} variant="outline-success">
+            <Button onClick={() => setShowA2(false)} variant="outline-success">
               Close
             </Button>
           </div>
         </Alert>
 
-        {!showF1 && !showF2 && (
+        {!showA1 && !showA2 && (
           <Button style={{ display: actionPoints > 0 ? "inline" : "none" }}
             onClick={() => {
-              setShowF1(true);
-              farhanaConversation();
+              setShowA1(true);
+              albaConversation();
             }}
           >
             Talk
           </Button>
         )}
-    </div>
+        </div>
   );
 };
 
-export default Farhana2Conversation;
+export default Alba2Conversation;

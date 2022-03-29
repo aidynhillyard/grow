@@ -1,9 +1,9 @@
-import "./Farhana2Conversation.css";
+import "./Farhana5Conversation.css";
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert'
 
-const Farhana2Conversation = ({ actionPoints, farhanaConversation }) => {
+const Farhana5Conversation = ({ actionPoints, farhanaConversation }) => {
 
   // useStates
   const [showF1, setShowF1] = useState(false);
@@ -14,13 +14,13 @@ const Farhana2Conversation = ({ actionPoints, farhanaConversation }) => {
         <Alert show={showF1} variant="success">
           <div className="npc-dialogue">
             <p>
-              Second part of dialogue with Farhana. She tells you more about the town and who you used to be.
+              Final dialogue step with Farhana.  You can keep trading more of the same plant to her if you want.
             </p>
           </div>
           <hr />
           <div className="player-dialogue">
             <p>
-              You get to respond to what she says.
+              Your response to what she says.
             </p>
           </div>
           <div className="d-flex justify-content-end">
@@ -36,7 +36,7 @@ const Farhana2Conversation = ({ actionPoints, farhanaConversation }) => {
           </div>
         </Alert>
         <Alert show={showF2} variant="success">
-          <p>Here is Farhana's response.</p>
+          <p>More of Farhana's response.</p>
           <div className="d-flex justify-content-end">
             <Button onClick={() => setShowF2(false)} variant="outline-success">
               Close
@@ -58,4 +58,4 @@ const Farhana2Conversation = ({ actionPoints, farhanaConversation }) => {
   );
 };
 
-export default Farhana2Conversation;
+export default Farhana5Conversation;

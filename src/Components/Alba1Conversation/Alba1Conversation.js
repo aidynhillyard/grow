@@ -1,22 +1,22 @@
-import "./Farhana1Conversation.css";
+import "./Alba1Conversation.css";
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert'
 
-const Farhana1Conversation = ({ actionPoints, farhanaConversation }) => {
+const Alba1Conversation = ({ actionPoints, albaConversation }) => {
 
   // useStates
-  const [showF1, setShowF1] = useState(false);
-  const [showF2, setShowF2] = useState(false);
+  const [showA1, setShowA1] = useState(false);
+  const [showA2, setShowA2] = useState(false);
 
   return (
     <div>
-        <Alert show={showF1} variant="success">
+<Alert show={showA1} variant="success">
           <div className="npc-dialogue">
             <p>
-              This is what Farhana is saying. She is talking about the town and
+              This is what Alba is saying. They are talking about the town and
               about other things that we are interested in hearing. This is more
-              text to show she is still talking.
+              text to show they are still talking.
             </p>
           </div>
           <hr />
@@ -29,8 +29,8 @@ const Farhana1Conversation = ({ actionPoints, farhanaConversation }) => {
           <div className="d-flex justify-content-end">
             <Button
               onClick={() => {
-                setShowF2(true);
-                setShowF1(false);
+                setShowA2(true);
+                setShowA1(false);
               }}
               variant="outline-success"
             >
@@ -38,27 +38,27 @@ const Farhana1Conversation = ({ actionPoints, farhanaConversation }) => {
             </Button>
           </div>
         </Alert>
-        <Alert show={showF2} variant="success">
-          <p>Farhana's response. She says things depending on what you say.</p>
+        <Alert show={showA2} variant="success">
+          <p>Alba's response. They say things depending on what you say.</p>
           <div className="d-flex justify-content-end">
-            <Button onClick={() => setShowF2(false)} variant="outline-success">
+            <Button onClick={() => setShowA2(false)} variant="outline-success">
               Close
             </Button>
           </div>
         </Alert>
 
-        {!showF1 && !showF2 && (
+        {!showA1 && !showA2 && (
           <Button style={{ display: actionPoints > 0 ? "inline" : "none" }}
             onClick={() => {
-              setShowF1(true);
-              farhanaConversation();
+              setShowA1(true);
+              albaConversation();
             }}
           >
             Talk
           </Button>
         )}
-    </div>
+        </div>
   );
 };
 
-export default Farhana1Conversation;
+export default Alba1Conversation;

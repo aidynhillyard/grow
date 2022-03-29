@@ -11,12 +11,6 @@ const Farhana3Conversation = ({ actionPoints, farhanaConversation }) => {
 
   return (
     <div>
-        <h3>Farhana</h3>
-        <p>
-          This is text about Farhana. It says a little bit about who she is and
-          her relationship to you. There's probably also a picture of her.
-        </p>
-
         <Alert show={showF1} variant="success">
           <div className="npc-dialogue">
             <p>
