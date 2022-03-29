@@ -5,7 +5,6 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
-import Planting from "../Planting/Planting";
 import { useEffect } from 'react'
 
 const Pots = ({ plantPot1, actionPoints, setActionPoints, pot1IsEmpty, setPot1IsEmpty, pot1Type, setPot1Type, pot1Age, setPot1Age, pot1IsCaredFor, setPot1IsCaredFor, pot1IsFullyGrown, setPot1IsFullyGrown }) => {
@@ -126,27 +125,6 @@ const incrementPot1Age = () => {
   <Dropdown.Item as="button" onClick={() => {plantPot1(); setPlanting(false); decrementActionPoints(); setPot1Type("Sunflower"); incrementPot1Age()}}>Sunflower</Dropdown.Item>
 </DropdownButton>
 </div>
-
-      {/* Planting Div */}
-      <div style={{display: planting === false ? "none" : "inline"}}>
-      <Planting
-        plantPot1={plantPot1}
-        actionPoints={actionPoints}
-        setActionPoints={setActionPoints}
-        pot1IsEmpty={pot1IsEmpty}
-        setPot1IsEmpty={setPot1IsEmpty}
-        pot1Type={pot1Type}
-        setPot1Type={setPot1Type}
-        pot1Age={pot1Age}
-        setPot1Age={setPot1Age}
-        pot1IsCaredFor={pot1IsCaredFor}
-        setPot1IsCaredFor={setPot1IsCaredFor}
-        pot1IsFullyGrown={pot1IsFullyGrown}
-        setPot1IsFullyGrown={setPot1IsFullyGrown}
-        planting={planting}
-        setPlanting={setPlanting}
-        />
-        </div>
     </Container>
   );
 };
