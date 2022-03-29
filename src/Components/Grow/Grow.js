@@ -24,11 +24,17 @@ const Grow = () => {
   const [pot1IsCaredFor, setPot1IsCaredFor] = useState(null)
   const [pot1IsFullyGrown, setPot1IsFullyGrown] = useState(false)
 
+  // Pot #2 UseStates
+  const [pot2IsEmpty, setPot2IsEmpty] = useState(true)
+  const [pot2Type, setPot2Type] = useState("None")
+  const [pot2Age, setPot2Age] = useState(0)
+  const [pot2IsCaredFor, setPot2IsCaredFor] = useState(null)
+  const [pot2IsFullyGrown, setPot2IsFullyGrown] = useState(false)
+
   
   // Start of Day / Start of Game
 
-  // Psuedo code for "Plant a Seed" button (with type) should:
-console.log(pot1IsEmpty)
+  // Plant Pot #1 Function
   const plantPot1 = () => {
     if (pot1IsEmpty === true && actionPoints > 0) {
       setPot1IsEmpty(!pot1IsEmpty) //function
@@ -42,15 +48,22 @@ console.log(pot1IsEmpty)
       console.log("This pot already has a plant in it!")
     }
   }
-  //  run function checkIfPotIsEmpty; function checks for pot1IsEmpty = true
-  //  if pot1IsEmpty = true, then variables are set as below
-  //  else if pot1IsEmpty = false, then alert: 'This pot already has a plant in it!'
-  //    actionPoints -1
-  //    pot1IsEmpty = false
-  //    pot1Type = type of seed planted (onClick function setPot1Type: let pot1Type = 'marigold')
-  //    pot1Age = 0
-  //    pot1IsCaredFor = True
-  //    potIsFullyGrown = False
+
+    // Plant Pot #1 Function
+    const plantPot2 = () => {
+      if (pot2IsEmpty === true && actionPoints > 0) {
+        setPot2IsEmpty(!pot1IsEmpty) //function
+        setPot2IsCaredFor(!pot1IsCaredFor) //function
+        setPot2IsFullyGrown(!pot1IsFullyGrown) //function
+        console.log(actionPoints)
+        console.log(pot1IsEmpty)
+      } else if (pot2IsEmpty === true && actionPoints <= 0) {
+        console.log("You do not have enough Action Points to plant a seed.")
+      } else if (pot2IsEmpty === false) {
+        console.log("This pot already has a plant in it!")
+      }
+    }
+
 
   // Psuedo code for Start of a New Day
 
@@ -109,9 +122,10 @@ console.log(pot1IsEmpty)
         ******** */}
         <div style={{display: location === "home" ? "inline" : "none"}}>
         <Home
-          plantPot1={plantPot1}
           actionPoints={actionPoints}
           setActionPoints={setActionPoints}
+          // Pot #1 Props
+          plantPot1={plantPot1}
           pot1IsEmpty={pot1IsEmpty}
           setPot1IsEmpty={setPot1IsEmpty}
           pot1Type={pot1Type}
@@ -122,6 +136,18 @@ console.log(pot1IsEmpty)
           setPot1IsCaredFor={setPot1IsCaredFor}
           pot1IsFullyGrown={pot1IsFullyGrown}
           setPot1IsFullyGrown={setPot1IsFullyGrown}
+          // Pot #2 Props
+          plantPot2={plantPot2}
+          pot2IsEmpty={pot2IsEmpty}
+          setPot2IsEmpty={setPot2IsEmpty}
+          pot2Type={pot2Type}
+          setPot2Type={setPot2Type}
+          pot2Age={pot2Age}
+          setPot2Age={setPot2Age}
+          pot2IsCaredFor={pot2IsCaredFor}
+          setPot2IsCaredFor={setPot2IsCaredFor}
+          pot2IsFullyGrown={pot2IsFullyGrown}
+          setPot2IsFullyGrown={setPot2IsFullyGrown}
           />
           </div>
           
