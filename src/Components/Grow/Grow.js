@@ -47,6 +47,7 @@ const Grow = () => {
   // Start of Day
   const startNewDay = () => {
     setActionPoints(4);
+    setLocation("home")
     setPot1IsCaredFor(false);
     setPot2IsCaredFor(false);
     setPot3IsCaredFor(false);

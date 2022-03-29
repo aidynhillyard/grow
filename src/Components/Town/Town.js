@@ -56,8 +56,6 @@ const Town = ({
     setActionPoints((prevState) => prevState - 1);
   };
 
-  // Thoughts on Town
-  // could have photo of town and text about town at top
 
   // Conditional Logic for talking to a townsperson (e.g., Farhana)
 //     Determine which dialogue to show
@@ -82,7 +80,7 @@ const Town = ({
       <h1>Town</h1>
       <p>
         This is placeholder text about the town. It also has instructions on
-        talking to the townspeople below.
+        talking to the townspeople below. One day, there might be a photo.
       </p>
       {/* Farhana Dialogue #1 */}
       <div className="farhana-dialogue1" style={{ display: dialogueStepFarhana === 1 ? "inline" : "none" }}>
@@ -94,6 +92,12 @@ const Town = ({
       {/* Farhana Dialogue #2 */}
       <div className="farhana-dialogue2" style={{ display: dialogueStepFarhana === 2 ? "inline" : "none" }}>
         <Farhana2Conversation
+        actionPoints={actionPoints}
+        farhanaConversation={farhanaConversation} />
+      </div>
+      {/* Farhana Dialogue #3 */}
+      <div className="farhana-dialogue3" style={{ display: dialogueStepFarhana === 3 ? "inline" : "none" }}>
+        <Farhana3Conversation
         actionPoints={actionPoints}
         farhanaConversation={farhanaConversation} />
       </div>
