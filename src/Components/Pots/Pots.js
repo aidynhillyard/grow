@@ -170,7 +170,7 @@ const Pots = ({
         </Modal.Footer>
       </Modal>
 
-      <div style={{ display: pot1IsEmpty === true ? "block" : "none" }}>
+      <div style={{ display: pot1IsEmpty === true && actionPoints > 0 ? "block" : "none" }}>
         <DropdownButton id="dropdown-item-button" title="Choose a Seed">
           <Dropdown.Item
             as="button"
@@ -245,7 +245,7 @@ const Pots = ({
         </Modal.Footer>
       </Modal>
 
-      <div style={{ display: pot2IsEmpty === true ? "block" : "none" }}>
+      <div style={{ display: pot2IsEmpty === true && actionPoints > 0 ? "block" : "none" }}>
         <DropdownButton id="dropdown-item-button" title="Choose a Seed">
           <Dropdown.Item
             as="button"
@@ -320,7 +320,7 @@ const Pots = ({
         </Modal.Footer>
       </Modal>
 
-      <div style={{ display: pot3IsEmpty === true ? "block" : "none" }}>
+      <div style={{ display: pot3IsEmpty === true && actionPoints > 0 ? "block" : "none" }}>
         <DropdownButton id="dropdown-item-button" title="Choose a Seed">
           <Dropdown.Item
             as="button"

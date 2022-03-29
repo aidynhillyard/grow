@@ -1,92 +1,90 @@
 import "./Grow.css";
-import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
+import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
 import Home from "../Home/Home";
 import Town from "../Town/Town";
 import NewDay from "../NewDay/NewDay";
-import { useState } from 'react';
+import { useState } from "react";
 
 const Grow = () => {
-
-  
   // *** USE STATES ***
-  
+
   // Location will show/hide Home and Town
-  const [location, setLocation] = useState("tutorial")
-  
+  const [location, setLocation] = useState("tutorial");
+
   // Action Points start at 4 each day
-  const [actionPoints, setActionPoints] = useState(4)
+  const [actionPoints, setActionPoints] = useState(2);
 
   // Pot #1 UseStates
-  const [pot1IsEmpty, setPot1IsEmpty] = useState(true)
-  const [pot1Type, setPot1Type] = useState("None")
-  const [pot1Age, setPot1Age] = useState(0)
-  const [pot1IsCaredFor, setPot1IsCaredFor] = useState(null)
-  const [pot1IsFullyGrown, setPot1IsFullyGrown] = useState(false)
+  const [pot1IsEmpty, setPot1IsEmpty] = useState(true);
+  const [pot1Type, setPot1Type] = useState("None");
+  const [pot1Age, setPot1Age] = useState(0);
+  const [pot1IsCaredFor, setPot1IsCaredFor] = useState(null);
+  const [pot1IsFullyGrown, setPot1IsFullyGrown] = useState(false);
 
   // Pot #2 UseStates
-  const [pot2IsEmpty, setPot2IsEmpty] = useState(true)
-  const [pot2Type, setPot2Type] = useState("None")
-  const [pot2Age, setPot2Age] = useState(0)
-  const [pot2IsCaredFor, setPot2IsCaredFor] = useState(null)
-  const [pot2IsFullyGrown, setPot2IsFullyGrown] = useState(false)
+  const [pot2IsEmpty, setPot2IsEmpty] = useState(true);
+  const [pot2Type, setPot2Type] = useState("None");
+  const [pot2Age, setPot2Age] = useState(0);
+  const [pot2IsCaredFor, setPot2IsCaredFor] = useState(null);
+  const [pot2IsFullyGrown, setPot2IsFullyGrown] = useState(false);
 
   // Pot #3 UseStates
-  const [pot3IsEmpty, setPot3IsEmpty] = useState(true)
-  const [pot3Type, setPot3Type] = useState("None")
-  const [pot3Age, setPot3Age] = useState(0)
-  const [pot3IsCaredFor, setPot3IsCaredFor] = useState(null)
-  const [pot3IsFullyGrown, setPot3IsFullyGrown] = useState(false)
+  const [pot3IsEmpty, setPot3IsEmpty] = useState(true);
+  const [pot3Type, setPot3Type] = useState("None");
+  const [pot3Age, setPot3Age] = useState(0);
+  const [pot3IsCaredFor, setPot3IsCaredFor] = useState(null);
+  const [pot3IsFullyGrown, setPot3IsFullyGrown] = useState(false);
 
   // Start of Day
-const startNewDay = () => {
-  setActionPoints(4);
-  setPot1IsCaredFor(false);
-  setPot2IsCaredFor(false);
-  setPot3IsCaredFor(false);
-};
+  const startNewDay = () => {
+    setActionPoints(4);
+    setPot1IsCaredFor(false);
+    setPot2IsCaredFor(false);
+    setPot3IsCaredFor(false);
+  };
 
   // Plant Pot #1 Function
   const plantPot1 = () => {
     if (pot1IsEmpty === true && actionPoints > 0) {
-      setPot1IsEmpty(!pot1IsEmpty) //function
-      setPot1IsCaredFor(!pot1IsCaredFor) //function
-      console.log(actionPoints)
-      console.log(pot1IsEmpty)
+      setPot1IsEmpty(!pot1IsEmpty); //function
+      setPot1IsCaredFor(!pot1IsCaredFor); //function
+      console.log(actionPoints);
+      console.log(pot1IsEmpty);
     } else if (pot1IsEmpty === true && actionPoints <= 0) {
-      console.log("You do not have enough Action Points to plant a seed.")
+      console.log("You do not have enough Action Points to plant a seed.");
     } else if (pot1IsEmpty === false) {
-      console.log("This pot already has a plant in it!")
+      console.log("This pot already has a plant in it!");
     }
-  }
+  };
 
-    // Plant Pot #2 Function
-    const plantPot2 = () => {
-      if (pot2IsEmpty === true && actionPoints > 0) {
-        setPot2IsEmpty(!pot2IsEmpty) //function
-        setPot2IsCaredFor(!pot2IsCaredFor) //function
-        console.log(actionPoints)
-        console.log(pot2IsEmpty)
-      } else if (pot2IsEmpty === true && actionPoints <= 0) {
-        console.log("You do not have enough Action Points to plant a seed.")
-      } else if (pot2IsEmpty === false) {
-        console.log("This pot already has a plant in it!")
-      }
+  // Plant Pot #2 Function
+  const plantPot2 = () => {
+    if (pot2IsEmpty === true && actionPoints > 0) {
+      setPot2IsEmpty(!pot2IsEmpty); //function
+      setPot2IsCaredFor(!pot2IsCaredFor); //function
+      console.log(actionPoints);
+      console.log(pot2IsEmpty);
+    } else if (pot2IsEmpty === true && actionPoints <= 0) {
+      console.log("You do not have enough Action Points to plant a seed.");
+    } else if (pot2IsEmpty === false) {
+      console.log("This pot already has a plant in it!");
     }
+  };
 
-// Plant Pot #3 Function
-const plantPot3 = () => {
-  if (pot3IsEmpty === true && actionPoints > 0) {
-    setPot3IsEmpty(!pot3IsEmpty) //function
-    setPot3IsCaredFor(!pot3IsCaredFor) //function
-    console.log(actionPoints)
-    console.log(pot3IsEmpty)
-  } else if (pot3IsEmpty === true && actionPoints <= 0) {
-    console.log("You do not have enough Action Points to plant a seed.")
-  } else if (pot3IsEmpty === false) {
-    console.log("This pot already has a plant in it!")
-  }
-}
+  // Plant Pot #3 Function
+  const plantPot3 = () => {
+    if (pot3IsEmpty === true && actionPoints > 0) {
+      setPot3IsEmpty(!pot3IsEmpty); //function
+      setPot3IsCaredFor(!pot3IsCaredFor); //function
+      console.log(actionPoints);
+      console.log(pot3IsEmpty);
+    } else if (pot3IsEmpty === true && actionPoints <= 0) {
+      console.log("You do not have enough Action Points to plant a seed.");
+    } else if (pot3IsEmpty === false) {
+      console.log("This pot already has a plant in it!");
+    }
+  };
   // Psuedo code for Start of a New Day
 
   //  let actionPoints = 4
@@ -96,38 +94,47 @@ const plantPot3 = () => {
   //        saying you must go to Examine Pots to care for plant
   //      you can dismiss alert, but if you try to go anywhere except Examine Pots,
   //        alert comes up again
-  
-  //    Could change mechanic so caring for plants is optional but they don't age without it?
 
 
   return (
     <Container>
-        <div>
-            <h1>GROW</h1>
-            <h2>Tagline</h2>
-        </div>
-        <div>
-        <Button variant="success" onClick={() => {setLocation("tutorial")}}>
-              Start a New Game
-            </Button>{' '}
-            <p>Action Points = {actionPoints}</p>
-        </div>
-        <div style={{display: actionPoints === 0 ? "inline" : "none"}}>
-        <NewDay
-        startNewDay={startNewDay}/>
-        </div>
-        {/* ********
+      <div>
+        <h1>GROW</h1>
+        <h2>Tagline</h2>
+      </div>
+      <div>
+        <Button
+          variant="success"
+          onClick={() => {
+            setLocation("tutorial");
+          }}
+        >
+          Start a New Game
+        </Button>{" "}
+        <p>Action Points = {actionPoints}</p>
+      </div>
+      <div style={{ display: actionPoints === 0 ? "inline" : "none" }}>
+        <NewDay startNewDay={startNewDay} />
+      </div>
+      {/* ********
         Tutorial
         ******** */}
-        <div style={{display: location === "tutorial" ? "inline" : "none"}}>
-          <h1>This is the Tutorial</h1>
-          <p>It has text under it.</p>
-          <Button variant="success" onClick={() => {setLocation("home")}}>Go to Home</Button>
-        </div>
-        {/* ********
+      <div style={{ display: location === "tutorial" ? "inline" : "none" }}>
+        <h1>This is the Tutorial</h1>
+        <p>It has text under it.</p>
+        <Button
+          variant="success"
+          onClick={() => {
+            setLocation("home");
+          }}
+        >
+          Go to Home
+        </Button>
+      </div>
+      {/* ********
         Home
         ******** */}
-        <div style={{display: location === "home" ? "inline" : "none"}}>
+      <div style={{ display: location === "home" ? "inline" : "none" }}>
         <Home
           actionPoints={actionPoints}
           setActionPoints={setActionPoints}
@@ -168,24 +175,47 @@ const plantPot3 = () => {
           setPot3IsCaredFor={setPot3IsCaredFor}
           pot3IsFullyGrown={pot3IsFullyGrown}
           setPot3IsFullyGrown={setPot3IsFullyGrown}
-          />
-          </div>
-          
-          {/* ********
+        />
+      </div>
+
+      {/* ********
         Town
         ******** */}
-        <div 
-        style={{display: location === "town" ? "inline" : "none"}}
+      <div style={{ display: location === "town" ? "inline" : "none" }}>
+        <Town />
+      </div>
+      <div>
+        <Button
+          variant="success"
+          style={{ display: location === "town" ? "inline" : "none" }}
+          onClick={() => {
+            setLocation("home");
+          }}
         >
-        <Town
-        />
-        </div>
-        <div><Button variant="success" style={{display: location === "town" ? "inline" : "none"}} onClick={() => {setLocation("home")}}>Travel to Home</Button></div>
-        <div><Button variant="success" style={{display: (location === "home" && pot1IsCaredFor === true && pot2IsCaredFor === true && pot3IsCaredFor === true) ? "inline" : "none"}} onClick={() => {setLocation("town")}}>Travel to Town</Button></div>
-        {console.log(location)}
-        
+          Travel to Home
+        </Button>
+      </div>
+      <div>
+        <Button
+          variant="success"
+          style={{
+            display:
+              location === "home" &&
+              (pot1IsCaredFor === true || pot1IsCaredFor === null || pot1IsEmpty === true) &&
+              (pot2IsCaredFor === true || pot2IsCaredFor === null || pot2IsEmpty === true) &&
+              (pot3IsCaredFor === true || pot3IsCaredFor === null || pot3IsEmpty === true)
+                ? "inline"
+                : "none",
+          }}
+          onClick={() => {
+            setLocation("town");
+          }}
+        >
+          Travel to Town
+        </Button>
+      </div>
+      {console.log(location)}
     </Container>
-    
   );
 };
 
