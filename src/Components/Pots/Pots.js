@@ -8,7 +8,7 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import Planting from "../Planting/Planting";
 import { useEffect } from 'react'
 
-const Pots = ({ checkIfPot1IsEmptyMarigold, actionPoints, setActionPoints, pot1IsEmpty, setPot1IsEmpty, pot1Type, setPot1Type, pot1Age, setPot1Age, pot1IsCaredFor, setPot1IsCaredFor, pot1IsFullyGrown, setPot1IsFullyGrown }) => {
+const Pots = ({ plantPot1, actionPoints, setActionPoints, pot1IsEmpty, setPot1IsEmpty, pot1Type, setPot1Type, pot1Age, setPot1Age, pot1IsCaredFor, setPot1IsCaredFor, pot1IsFullyGrown, setPot1IsFullyGrown }) => {
 
 
   // useStates
@@ -59,9 +59,9 @@ const incrementPot1Age = () => {
         
       <div style={{display: pot1IsEmpty === true ? "block" : "none"}}>
       <DropdownButton id="dropdown-item-button" title="Choose a Seed" >
-  <Dropdown.Item as="button" onClick={() => {checkIfPot1IsEmptyMarigold(); setPlanting(false); decrementActionPoints(); setPot1Type("Marigold"); incrementPot1Age()}}>Marigold</Dropdown.Item>
-  <Dropdown.Item as="button" onClick={() => {checkIfPot1IsEmptyMarigold(); setPlanting(false); decrementActionPoints(); setPot1Type("Snapdragon"); incrementPot1Age()}}>Snapdragon</Dropdown.Item>
-  <Dropdown.Item as="button" onClick={() => {checkIfPot1IsEmptyMarigold(); setPlanting(false); decrementActionPoints(); setPot1Type("Sunflower"); incrementPot1Age()}}>Sunflower</Dropdown.Item>
+  <Dropdown.Item as="button" onClick={() => {plantPot1(); setPlanting(false); decrementActionPoints(); setPot1Type("Marigold"); incrementPot1Age()}}>Marigold</Dropdown.Item>
+  <Dropdown.Item as="button" onClick={() => {plantPot1(); setPlanting(false); decrementActionPoints(); setPot1Type("Snapdragon"); incrementPot1Age()}}>Snapdragon</Dropdown.Item>
+  <Dropdown.Item as="button" onClick={() => {plantPot1(); setPlanting(false); decrementActionPoints(); setPot1Type("Sunflower"); incrementPot1Age()}}>Sunflower</Dropdown.Item>
 </DropdownButton>
 </div>
 {/* Pot #2 */}
@@ -90,9 +90,9 @@ const incrementPot1Age = () => {
         
       <div style={{display: pot1IsEmpty === true ? "block" : "none"}}>
       <DropdownButton id="dropdown-item-button" title="Choose a Seed" >
-  <Dropdown.Item as="button" onClick={() => {checkIfPot1IsEmptyMarigold(); setPlanting(false); decrementActionPoints(); setPot1Type("Marigold"); incrementPot1Age()}}>Marigold</Dropdown.Item>
-  <Dropdown.Item as="button" onClick={() => {checkIfPot1IsEmptyMarigold(); setPlanting(false); decrementActionPoints(); setPot1Type("Snapdragon"); incrementPot1Age()}}>Snapdragon</Dropdown.Item>
-  <Dropdown.Item as="button" onClick={() => {checkIfPot1IsEmptyMarigold(); setPlanting(false); decrementActionPoints(); setPot1Type("Sunflower"); incrementPot1Age()}}>Sunflower</Dropdown.Item>
+  <Dropdown.Item as="button" onClick={() => {plantPot1(); setPlanting(false); decrementActionPoints(); setPot1Type("Marigold"); incrementPot1Age()}}>Marigold</Dropdown.Item>
+  <Dropdown.Item as="button" onClick={() => {plantPot1(); setPlanting(false); decrementActionPoints(); setPot1Type("Snapdragon"); incrementPot1Age()}}>Snapdragon</Dropdown.Item>
+  <Dropdown.Item as="button" onClick={() => {plantPot1(); setPlanting(false); decrementActionPoints(); setPot1Type("Sunflower"); incrementPot1Age()}}>Sunflower</Dropdown.Item>
 </DropdownButton>
 </div>
 {/* Pot #3 */}
@@ -121,16 +121,16 @@ const incrementPot1Age = () => {
         
       <div style={{display: pot1IsEmpty === true ? "block" : "none"}}>
       <DropdownButton id="dropdown-item-button" title="Choose a Seed" >
-  <Dropdown.Item as="button" onClick={() => {checkIfPot1IsEmptyMarigold(); setPlanting(false); decrementActionPoints(); setPot1Type("Marigold"); incrementPot1Age()}}>Marigold</Dropdown.Item>
-  <Dropdown.Item as="button" onClick={() => {checkIfPot1IsEmptyMarigold(); setPlanting(false); decrementActionPoints(); setPot1Type("Snapdragon"); incrementPot1Age()}}>Snapdragon</Dropdown.Item>
-  <Dropdown.Item as="button" onClick={() => {checkIfPot1IsEmptyMarigold(); setPlanting(false); decrementActionPoints(); setPot1Type("Sunflower"); incrementPot1Age()}}>Sunflower</Dropdown.Item>
+  <Dropdown.Item as="button" onClick={() => {plantPot1(); setPlanting(false); decrementActionPoints(); setPot1Type("Marigold"); incrementPot1Age()}}>Marigold</Dropdown.Item>
+  <Dropdown.Item as="button" onClick={() => {plantPot1(); setPlanting(false); decrementActionPoints(); setPot1Type("Snapdragon"); incrementPot1Age()}}>Snapdragon</Dropdown.Item>
+  <Dropdown.Item as="button" onClick={() => {plantPot1(); setPlanting(false); decrementActionPoints(); setPot1Type("Sunflower"); incrementPot1Age()}}>Sunflower</Dropdown.Item>
 </DropdownButton>
 </div>
 
       {/* Planting Div */}
       <div style={{display: planting === false ? "none" : "inline"}}>
       <Planting
-        checkIfPot1IsEmptyMarigold={checkIfPot1IsEmptyMarigold}
+        plantPot1={plantPot1}
         actionPoints={actionPoints}
         setActionPoints={setActionPoints}
         pot1IsEmpty={pot1IsEmpty}

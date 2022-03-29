@@ -29,7 +29,7 @@ const Grow = () => {
 
   // Psuedo code for "Plant a Seed" button (with type) should:
 console.log(pot1IsEmpty)
-  const checkIfPot1IsEmptyMarigold = () => {
+  const plantPot1 = () => {
     if (pot1IsEmpty === true && actionPoints > 0) {
       setPot1IsEmpty(!pot1IsEmpty) //function
       setPot1IsCaredFor(!pot1IsCaredFor) //function
@@ -109,7 +109,7 @@ console.log(pot1IsEmpty)
         ******** */}
         <div style={{display: location === "home" ? "inline" : "none"}}>
         <Home
-          checkIfPot1IsEmptyMarigold={checkIfPot1IsEmptyMarigold}
+          plantPot1={plantPot1}
           actionPoints={actionPoints}
           setActionPoints={setActionPoints}
           pot1IsEmpty={pot1IsEmpty}
