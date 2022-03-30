@@ -4,6 +4,7 @@ import Pot1 from "../Pot1/Pot1";
 import Pot2 from "../Pot2/Pot2";
 import Pot3 from "../Pot3/Pot3";
 import PlantDescriptions from "../PlantDescriptions/PlantDescriptions";
+import Letters from "../Letters/Letters";
 
 const Home = ({
   actionPoints,
@@ -103,7 +104,12 @@ const Home = ({
           day.
         </p>
       </div>
-      <PlantDescriptions />
+      <div><PlantDescriptions /></div>
+      <div><Letters
+      letter1={letter1}
+      letter2={letter2}
+      letter3={letter3}
+      /></div>
     </Container>
   );
 };
