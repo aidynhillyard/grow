@@ -13,7 +13,8 @@ const Grow = () => {
   const [location, setLocation] = useState("tutorial");
 
   // Action Points start at 4 each day
-  const [actionPoints, setActionPoints] = useState(2);
+  const [actionPoints, setActionPoints] = useState(4);
+  const [day, setDay] = useState(1);
 
   // Pot #1 UseStates
   const [pot1IsEmpty, setPot1IsEmpty] = useState(true);
@@ -162,8 +163,9 @@ const Grow = () => {
 
   // Start of Day
   const startNewDay = () => {
-    setActionPoints(3);
+    setActionPoints(4);
     setLocation("home");
+    setDay((prevState) => prevState + 1);
     setPot1IsCaredFor(false);
     setPot2IsCaredFor(false);
     setPot3IsCaredFor(false);
@@ -192,7 +194,8 @@ const Grow = () => {
         >
           Start a New Game
         </Button>{" "}
-        <p>Action Points = {actionPoints}</p>
+        <p>Action Points: {actionPoints}</p>
+        <p>Day: {day}</p>
       </div>
       <div style={{ display: actionPoints === 0 ? "inline" : "none" }}>
         <NewDay startNewDay={startNewDay} />
