@@ -13,7 +13,7 @@ const Grow = () => {
   const [location, setLocation] = useState("tutorial");
 
   // Action Points start at 4 each day
-  const [actionPoints, setActionPoints] = useState(4);
+  const [actionPoints, setActionPoints] = useState(2);
 
   // Pot #1 UseStates
   const [pot1IsEmpty, setPot1IsEmpty] = useState(true);
@@ -117,20 +117,23 @@ const Grow = () => {
 
   // Trade Deal Farhana
 const tradeDealFarhana = () => {
-  tradePlantFarhana(true);
+  setTradePlantFarhana(true);
   if (pot1Type === "Forget-Me-Not" && pot1IsFullyGrown === true) {
     setPot1IsEmpty(true);
+    setPot1Type("None");
   } else if (pot2Type === "Forget-Me-Not" && pot2IsFullyGrown === true) {
     setPot2IsEmpty(true);
+    setPot2Type("None");
   } else {
     setPot3IsEmpty(true);
+    setPot3Type("None");
   }
 }
 
 
   // Start of Day
   const startNewDay = () => {
-    setActionPoints(4);
+    setActionPoints(3);
     setLocation("home");
     setPot1IsCaredFor(false);
     setPot2IsCaredFor(false);
