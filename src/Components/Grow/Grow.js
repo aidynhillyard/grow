@@ -48,6 +48,8 @@ const Grow = () => {
   const [dialogueStepAlba, setDialogueStepAlba] = useState(1);
   const [tradePlantAlba, setTradePlantAlba] = useState(false);
 
+  // *** FUNCTIONS ***
+
   // useEffect Placeholder
   useEffect(() => console.log("Hello world"), [actionPoints]);
 
@@ -63,7 +65,7 @@ const Grow = () => {
     setPot1IsCaredFor(null);
     setPot1IsFullyGrown(false);
     setPot1Age(null);
-  }
+  };
 
   // Reset Pot #2
   const resetPot2 = () => {
@@ -72,16 +74,16 @@ const Grow = () => {
     setPot2IsCaredFor(null);
     setPot2IsFullyGrown(false);
     setPot2Age(null);
-  }
+  };
 
-   // Reset Pot #3
-   const resetPot3 = () => {
+  // Reset Pot #3
+  const resetPot3 = () => {
     setPot3IsEmpty(true);
     setPot3Type("None");
     setPot3IsCaredFor(null);
     setPot3IsFullyGrown(false);
     setPot3Age(null);
-  }
+  };
 
   // Check Farhana Dialogue
   const checkFarhanaDialogue = () => {

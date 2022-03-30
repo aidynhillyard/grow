@@ -91,10 +91,10 @@ const Pot3 = ({
     <Container>
       {/* Pot #3 */}
       <div>
-        <p>
+      <p>
           Plant #3: {pot3Type}
           <span style={{ display: pot3IsEmpty === true ? "none" : "inline" }}>
-            , Age: {pot3Age}, Fully Grown: {pot3IsFullyGrown ? "True" : "False"}
+            , Age: {pot3Age}, Seed: {pot3IsSeed ? "True" : "False"}, Seedling: {pot3IsSeedling ? "True" : "False"} Fully Grown: {pot3IsFullyGrown ? "True" : "False"}
           </span>
         </p>
       </div>
