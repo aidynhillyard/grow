@@ -92,7 +92,11 @@ React Bootstrap
 
 ### Case 1: Incrementing and Decrementing State
 
-To increment and decrement a numeric state, I used this guide from Dave Ceddia: [link](https://daveceddia.com/usestate-hook-examples/.)
+To increment and decrement a numeric state, I used this guide from Dave Ceddia: [link](https://daveceddia.com/usestate-hook-examples/)
+
+### Case 2: Text Fade-In
+
+To fade in my dialogue text, I used this guide from Geeks For Geeks: [link](https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/)
 
 ## Code Snippet
 
