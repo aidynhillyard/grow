@@ -8,6 +8,9 @@ import PlantDescriptions from "../PlantDescriptions/PlantDescriptions";
 const Home = ({
   actionPoints,
   decrementActionPoints,
+  letter1,
+  letter2,
+  letter3,
   pot1IsEmpty,
   setPot1IsEmpty,
   pot1Type,

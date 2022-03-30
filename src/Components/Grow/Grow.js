@@ -9,12 +9,17 @@ import { useState, useEffect } from "react";
 const Grow = () => {
   // *** USE STATES ***
 
-  // Location will show/hide Home and Town
+  // Location useState
   const [location, setLocation] = useState("tutorial");
 
-  // Action Points start at 4 each day
+  // Action Points and Day useStates
   const [actionPoints, setActionPoints] = useState(4);
   const [day, setDay] = useState(1);
+
+  // Letter UseStates
+  const [letter1, setLetter1] = useState(false);
+  const [letter2, setLetter2] = useState(false);
+  const [letter3, setLetter3] = useState(false);
 
   // Pot #1 UseStates
   const [pot1IsEmpty, setPot1IsEmpty] = useState(true);
@@ -151,6 +156,7 @@ const Grow = () => {
   // Trade Deal Farhana
   const tradeDealFarhana = () => {
     setTradePlantFarhana(true);
+    setLetter3(true);
     if (pot1Type === "Forget-Me-Not" && pot1IsFullyGrown === true) {
       resetPot1();
     } else if (pot2Type === "Forget-Me-Not" && pot2IsFullyGrown === true) {
@@ -163,6 +169,7 @@ const Grow = () => {
   // Trade Deal Ji
   const tradeDealJi = () => {
     setTradePlantJi(true);
+    setLetter2(true);
     if (pot1Type === "Tulip" && pot1IsFullyGrown === true) {
       resetPot1();
     } else if (pot2Type === "Tulip" && pot2IsFullyGrown === true) {
@@ -175,6 +182,7 @@ const Grow = () => {
   // Trade Deal Alba
   const tradeDealAlba = () => {
     setTradePlantAlba(true);
+    setLetter1(true);
     if (pot1Type === "Iris" && pot1IsFullyGrown === true) {
       resetPot1();
     } else if (pot2Type === "Iris" && pot2IsFullyGrown === true) {
@@ -251,6 +259,9 @@ const Grow = () => {
           setActionPoints={setActionPoints}
           decrementActionPoints={decrementActionPoints}
           startNewDay={startNewDay}
+          letter1={letter1}
+          letter2={letter2}
+          letter3={letter3}
           // Pot #1 Props
           pot1IsEmpty={pot1IsEmpty}
           setPot1IsEmpty={setPot1IsEmpty}
