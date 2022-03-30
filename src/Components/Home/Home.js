@@ -14,6 +14,8 @@ const Home = ({
   setPot1Type,
   pot1IsCaredFor,
   setPot1IsCaredFor,
+  pot1Age,
+  setPot1Age,
   pot1IsFullyGrown,
   setPot1IsFullyGrown,
   pot2IsEmpty,
@@ -22,6 +24,8 @@ const Home = ({
   setPot2Type,
   pot2IsCaredFor,
   setPot2IsCaredFor,
+  pot2Age,
+  setPot2Age,
   pot2IsFullyGrown,
   setPot2IsFullyGrown,
   pot3IsEmpty,
@@ -30,6 +34,8 @@ const Home = ({
   setPot3Type,
   pot3IsCaredFor,
   setPot3IsCaredFor,
+  pot3Age,
+  setPot3Age,
   pot3IsFullyGrown,
   setPot3IsFullyGrown
 }) => {
@@ -46,6 +52,8 @@ const Home = ({
       setPot1Type={setPot1Type}
       pot1IsCaredFor={pot1IsCaredFor}
       setPot1IsCaredFor={setPot1IsCaredFor}
+      pot1Age={pot1Age}
+      setPot1Age={setPot1Age}
       pot1IsFullyGrown={pot1IsFullyGrown}
       setPot1IsFullyGrown={setPot1IsFullyGrown}
       />
@@ -58,6 +66,8 @@ const Home = ({
       setPot2Type={setPot2Type}
       pot2IsCaredFor={pot2IsCaredFor}
       setPot2IsCaredFor={setPot2IsCaredFor}
+      pot2Age={pot2Age}
+      setPot2Age={setPot2Age}
       pot2IsFullyGrown={pot2IsFullyGrown}
       setPot2IsFullyGrown={setPot2IsFullyGrown}
       />
@@ -70,6 +80,8 @@ const Home = ({
       setPot3Type={setPot3Type}
       pot3IsCaredFor={pot3IsCaredFor}
       setPot3IsCaredFor={setPot3IsCaredFor}
+      pot3Age={pot3Age}
+      setPot3Age={setPot3Age}
       pot3IsFullyGrown={pot3IsFullyGrown}
       setPot3IsFullyGrown={setPot3IsFullyGrown}
       />

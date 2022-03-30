@@ -21,18 +21,21 @@ const Grow = () => {
   const [pot1Type, setPot1Type] = useState("None");
   const [pot1IsCaredFor, setPot1IsCaredFor] = useState(null);
   const [pot1IsFullyGrown, setPot1IsFullyGrown] = useState(false);
+  const [pot1Age, setPot1Age] = useState(0);
 
   // Pot #2 UseStates
   const [pot2IsEmpty, setPot2IsEmpty] = useState(true);
   const [pot2Type, setPot2Type] = useState("None");
   const [pot2IsCaredFor, setPot2IsCaredFor] = useState(null);
   const [pot2IsFullyGrown, setPot2IsFullyGrown] = useState(false);
+  const [pot2Age, setPot2Age] = useState(0);
 
   // Pot #3 UseStates
   const [pot3IsEmpty, setPot3IsEmpty] = useState(true);
   const [pot3Type, setPot3Type] = useState("None");
   const [pot3IsCaredFor, setPot3IsCaredFor] = useState(null);
   const [pot3IsFullyGrown, setPot3IsFullyGrown] = useState(false);
+  const [pot3Age, setPot3Age] = useState(0);
 
   // Town UseStates
   const [talkedToFarhana, setTalkedToFarhana] = useState(false);
@@ -235,6 +238,8 @@ const Grow = () => {
           setPot1Type={setPot1Type}
           pot1IsCaredFor={pot1IsCaredFor}
           setPot1IsCaredFor={setPot1IsCaredFor}
+          pot1Age={pot1Age}
+          setPot1Age={setPot1Age}
           pot1IsFullyGrown={pot1IsFullyGrown}
           setPot1IsFullyGrown={setPot1IsFullyGrown}
           // Pot #2 Props
@@ -244,6 +249,8 @@ const Grow = () => {
           setPot2Type={setPot2Type}
           pot2IsCaredFor={pot2IsCaredFor}
           setPot2IsCaredFor={setPot2IsCaredFor}
+          pot2Age={pot2Age}
+          setPot2Age={setPot2Age}
           pot2IsFullyGrown={setPot2IsFullyGrown}
           setPot2IsFullyGrown={setPot2IsFullyGrown}
           // Pot #3 Props
@@ -253,6 +260,8 @@ const Grow = () => {
           setPot3Type={setPot3Type}
           pot3IsCaredFor={pot3IsCaredFor}
           setPot3IsCaredFor={setPot3IsCaredFor}
+          pot3Age={pot3Age}
+          setPot3Age={setPot3Age}
           pot3IsFullyGrown={setPot3IsFullyGrown}
           setPot3IsFullyGrown={setPot3IsFullyGrown}
         />

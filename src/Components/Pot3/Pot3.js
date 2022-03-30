@@ -15,6 +15,8 @@ const Pot3 = ({
   setPot3Type,
   pot3IsCaredFor,
   setPot3IsCaredFor,
+  pot3Age,
+  setPot3Age,
   pot3IsFullyGrown,
   setPot3IsFullyGrown
 }) => {
@@ -44,17 +46,33 @@ const Pot3 = ({
 
   // Check Plant Status
   const checkPlant3Status = () => {
-    if (pot3Type === "Tulip" && pot3Age >= 2) {
-      setPot3IsFullyGrown(true);
+    if (pot3Type === "Tulip" && pot3Age <2) {
+      setPot3IsSeed(true);
       console.log("meow!");
-    } else if (pot3Type === "Iris" && pot3Age >= 3) {
-      setPot3IsFullyGrown(true);
-    } else if (pot3Type === "Forget-Me-Not" && pot3Age >= 4) {
-      setPot3IsFullyGrown(true);
-    } else {
-      setPot3IsFullyGrown(false);
+    } else if (pot3Type === "Tulip" && pot3Age < 3) {
+        setPot3IsSeed(false);
+        setPot3IsSeedling(true);
+    } else if (pot3Type === "Tulip" && pot3Age >= 3) {
+        setPot3IsSeedling(false);
+        setPot3IsFullyGrown(true);
+    } else if (pot3Type === "Iris" && pot3Age < 2) {
+        setPot3IsSeed(true);
+    } else if (pot3Type === "Iris" && pot3Age < 4) {
+        setPot3IsSeed(false);
+        setPot3IsSeedling(true);
+    } else if (pot3Type === "Iris" && pot3Age >= 4) {
+        setPot3IsSeedling(false);
+        setPot3IsFullyGrown(true);
+    } else if (pot3Type === "Forget-Me-Not" && pot3Age < 3) {
+        setPot3IsSeed(true);
+    } else if (pot3Type === "Forget-Me-Not" && pot3Age < 5) {
+        setPot3IsSeed(false);
+        setPot3IsSeedling(true);
+    } else if (pot3Type === "Forget-Me-Not" && pot3Age >= 5) {
+        setPot3IsSeedling(false);
+        setPot3IsFullyGrown(true);
     }
-  };
+  }
 
   // Increment Pot Age
   const incrementPot3Age = () => {

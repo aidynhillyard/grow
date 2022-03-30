@@ -15,6 +15,8 @@ const Pot1 = ({
   setPot1IsEmpty,
   pot1IsCaredFor,
   setPot1IsCaredFor,
+  pot1Age,
+  setPot1Age,
   pot1IsFullyGrown,
   setPot1IsFullyGrown
 }) => {
@@ -25,7 +27,6 @@ const Pot1 = ({
   const handleShow = () => setShow(true);
 
   // Pot #1 UseStates
-  const [pot1Age, setPot1Age] = useState(0);
   const [pot1IsSeed, setPot1IsSeed] = useState(null)
   const [pot1IsSeedling, setPot1IsSeedling] = useState(null)
 
@@ -71,19 +72,6 @@ const Pot1 = ({
         setPot1IsFullyGrown(true);
     }
   }
-
-//   const checkPlant1Status = () => {
-//     if (pot1Type === "Tulip" && pot1Age >= 2) {
-//       setPot1IsFullyGrown(true);
-//       console.log("meow!");
-//     } else if (pot1Type === "Iris" && pot1Age >= 3) {
-//       setPot1IsFullyGrown(true);
-//     } else if (pot1Type === "Forget-Me-Not" && pot1Age >= 4) {
-//       setPot1IsFullyGrown(true);
-//     } else {
-//       setPot1IsFullyGrown(false);
-//     }
-//   };
   
   // Increment Pot Age
   const incrementPot1Age = () => {
