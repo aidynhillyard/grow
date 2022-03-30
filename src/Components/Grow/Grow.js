@@ -21,21 +21,21 @@ const Grow = () => {
   const [pot1Type, setPot1Type] = useState("None");
   const [pot1IsCaredFor, setPot1IsCaredFor] = useState(null);
   const [pot1IsFullyGrown, setPot1IsFullyGrown] = useState(false);
-  const [pot1Age, setPot1Age] = useState(0);
+  const [pot1Age, setPot1Age] = useState(null);
 
   // Pot #2 UseStates
   const [pot2IsEmpty, setPot2IsEmpty] = useState(true);
   const [pot2Type, setPot2Type] = useState("None");
   const [pot2IsCaredFor, setPot2IsCaredFor] = useState(null);
   const [pot2IsFullyGrown, setPot2IsFullyGrown] = useState(false);
-  const [pot2Age, setPot2Age] = useState(0);
+  const [pot2Age, setPot2Age] = useState(null);
 
   // Pot #3 UseStates
   const [pot3IsEmpty, setPot3IsEmpty] = useState(true);
   const [pot3Type, setPot3Type] = useState("None");
   const [pot3IsCaredFor, setPot3IsCaredFor] = useState(null);
   const [pot3IsFullyGrown, setPot3IsFullyGrown] = useState(false);
-  const [pot3Age, setPot3Age] = useState(0);
+  const [pot3Age, setPot3Age] = useState(null);
 
   // Town UseStates
   const [talkedToFarhana, setTalkedToFarhana] = useState(false);
@@ -55,6 +55,33 @@ const Grow = () => {
   const decrementActionPoints = () => {
     setActionPoints((prevState) => prevState - 1);
   };
+
+  // Reset Pot #1
+  const resetPot1 = () => {
+    setPot1IsEmpty(true);
+    setPot1Type("None");
+    setPot1IsCaredFor(null);
+    setPot1IsFullyGrown(false);
+    setPot1Age(null);
+  }
+
+  // Reset Pot #2
+  const resetPot2 = () => {
+    setPot2IsEmpty(true);
+    setPot2Type("None");
+    setPot2IsCaredFor(null);
+    setPot2IsFullyGrown(false);
+    setPot2Age(null);
+  }
+
+   // Reset Pot #3
+   const resetPot3 = () => {
+    setPot3IsEmpty(true);
+    setPot3Type("None");
+    setPot3IsCaredFor(null);
+    setPot3IsFullyGrown(false);
+    setPot3Age(null);
+  }
 
   // Check Farhana Dialogue
   const checkFarhanaDialogue = () => {
@@ -123,14 +150,11 @@ const Grow = () => {
   const tradeDealFarhana = () => {
     setTradePlantFarhana(true);
     if (pot1Type === "Forget-Me-Not" && pot1IsFullyGrown === true) {
-      setPot1IsEmpty(true);
-      setPot1Type("None");
+      resetPot1();
     } else if (pot2Type === "Forget-Me-Not" && pot2IsFullyGrown === true) {
-      setPot2IsEmpty(true);
-      setPot2Type("None");
+      resetPot2();
     } else {
-      setPot3IsEmpty(true);
-      setPot3Type("None");
+      resetPot3();
     }
   };
 
@@ -138,14 +162,11 @@ const Grow = () => {
   const tradeDealJi = () => {
     setTradePlantJi(true);
     if (pot1Type === "Tulip" && pot1IsFullyGrown === true) {
-      setPot1IsEmpty(true);
-      setPot1Type("None");
+      resetPot1();
     } else if (pot2Type === "Tulip" && pot2IsFullyGrown === true) {
-      setPot2IsEmpty(true);
-      setPot2Type("None");
+      resetPot2();
     } else {
-      setPot3IsEmpty(true);
-      setPot3Type("None");
+      resetPot3();
     }
   };
 
@@ -153,14 +174,11 @@ const Grow = () => {
   const tradeDealAlba = () => {
     setTradePlantAlba(true);
     if (pot1Type === "Iris" && pot1IsFullyGrown === true) {
-      setPot1IsEmpty(true);
-      setPot1Type("None");
+      resetPot1();
     } else if (pot2Type === "Iris" && pot2IsFullyGrown === true) {
-      setPot2IsEmpty(true);
-      setPot2Type("None");
+      resetPot2();
     } else {
-      setPot3IsEmpty(true);
-      setPot3Type("None");
+      resetPot3();
     }
   };
 
