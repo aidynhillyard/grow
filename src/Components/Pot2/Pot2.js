@@ -11,8 +11,12 @@ const Pot2 = ({
   decrementActionPoints,
   pot2IsEmpty,
   setPot2IsEmpty,
+  pot2Type,
+  setPot2Type,
   pot2IsCaredFor,
   setPot2IsCaredFor,
+  pot2IsFullyGrown,
+  setPot2IsFullyGrown
 }) => {
 
   // useStates
@@ -21,11 +25,10 @@ const Pot2 = ({
   const handleShow = () => setShow(true);
 
   // Pot #2 UseStates
-  const [pot2Type, setPot2Type] = useState("None");
+  
   const [pot2Age, setPot2Age] = useState(0);
   const [pot2IsSeed, setPot2IsSeed] = useState(null)
   const [pot2IsSeedling, setPot2IsSeedling] = useState(null)
-  const [pot2IsFullyGrown, setPot2IsFullyGrown] = useState(false);
 
   // Plant Pot #2 Function
   const plantPot2 = () => {

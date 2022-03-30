@@ -26,8 +26,11 @@ const Town = ({
   talkedToAlba,
   setTalkedToAlba,
   dialogueStepFarhana,
+  setDialogueStepFarhana,
   dialogueStepJi,
+  setDialogueStepJi,
   dialogueStepAlba,
+  setDialogueStepAlba
 }) => {
 
   // Talk to Farhana Function
@@ -54,18 +57,22 @@ const Town = ({
     setTalkedToAlba(true);
   };
 
-  
+  // Trade Plant Function
+  // check if planttype is correct and is fully grown
+  // if so, if dialoguestep is 3, then += 1, else if dialoguestep is 5 do nothing
 
-  // Conditional Logic for talking to a townsperson (e.g., Farhana)
-//     Determine which dialogue to show
-  //        if dialogueStepFarhana = 1, then display conversation1
-  //        else if dialogueStepFarhana = 2, then display conversation2
-  //        else if dialogueStepFarhana = 3, then display conversation3
-  //        else if dialogueStepFarhana = 4, then display conversation4
-  //        else (if dialogueStepFarhana >= 5), then display conversation5
+  // step 4 will have button
+  // button will have onClick that will
+  // settradeplant to true and set potisempty to true
 
-  // On End Day, if talkedToFarhana = true, then dialogueStepFarhana += 1
-  // On Start New Day, talkedToFarhana = false, but dialogueStepFarhana does not change
+  // dialogue step 5 will only show if tradeplant(true)
+  // dialogue step 5 will also have button to trade more plants
+  // button runs tradeplantfunction
+
+  // if (talkedToFarhana === true) {
+  //   setDialogueStepFarhana((prevState) => prevState + 1);
+  // }
+
 
   // Conditional logic for trading plant to townsperson
   // (conversation4)

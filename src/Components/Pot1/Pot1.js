@@ -9,10 +9,14 @@ import Dropdown from "react-bootstrap/Dropdown";
 const Pot1 = ({
   actionPoints,
   decrementActionPoints,
+  pot1Type,
+  setPot1Type,
   pot1IsEmpty,
   setPot1IsEmpty,
   pot1IsCaredFor,
   setPot1IsCaredFor,
+  pot1IsFullyGrown,
+  setPot1IsFullyGrown
 }) => {
 
   // useStates
@@ -21,11 +25,9 @@ const Pot1 = ({
   const handleShow = () => setShow(true);
 
   // Pot #1 UseStates
-  const [pot1Type, setPot1Type] = useState("None");
   const [pot1Age, setPot1Age] = useState(0);
   const [pot1IsSeed, setPot1IsSeed] = useState(null)
   const [pot1IsSeedling, setPot1IsSeedling] = useState(null)
-  const [pot1IsFullyGrown, setPot1IsFullyGrown] = useState(false);
 
   // Plant Pot #1 Function
   const plantPot1 = () => {
