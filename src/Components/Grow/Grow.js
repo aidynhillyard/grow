@@ -115,6 +115,19 @@ const Grow = () => {
     }
   };
 
+  // Trade Deal Farhana
+const tradeDealFarhana = () => {
+  tradePlantFarhana(true);
+  if (pot1Type === "Forget-Me-Not" && pot1IsFullyGrown === true) {
+    setPot1IsEmpty(true);
+  } else if (pot2Type === "Forget-Me-Not" && pot2IsFullyGrown === true) {
+    setPot2IsEmpty(true);
+  } else {
+    setPot3IsEmpty(true);
+  }
+}
+
+
   // Start of Day
   const startNewDay = () => {
     setActionPoints(4);
@@ -223,22 +236,17 @@ const Grow = () => {
           setTalkedToFarhana={setTalkedToFarhana}
           dialogueStepFarhana={dialogueStepFarhana}
           setDialogueStepFarhana={setDialogueStepFarhana}
-          tradePlantFarhana={tradePlantFarhana}
-          setTradePlantFarhana={setTradePlantFarhana}
+          tradeDealFarhana={tradeDealFarhana}
           // Ji
           talkedToJi={talkedToJi}
           setTalkedToJi={setTalkedToJi}
           dialogueStepJi={dialogueStepJi}
           setDialogueStepJi={setDialogueStepJi}
-          tradePlantJi={tradePlantJi}
-          setTradePlantJi={setTradePlantJi}
           // Alba
           talkedToAlba={talkedToAlba}
           setTalkedToAlba={setTalkedToAlba}
           dialogueStepAlba={dialogueStepAlba}
           setDialogueStepAlba={setDialogueStepAlba}
-          tradePlantAlba={tradePlantAlba}
-          setTradePlantAlba={setTradePlantAlba}
         />
       </div>
       <div>

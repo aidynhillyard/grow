@@ -21,16 +21,14 @@ const Town = ({
   decrementActionPoints,
   talkedToFarhana,
   setTalkedToFarhana,
+  dialogueStepFarhana,
+  tradeDealFarhana,
   talkedToJi,
   setTalkedToJi,
-  talkedToAlba,
-  setTalkedToAlba,
-  dialogueStepFarhana,
-  setDialogueStepFarhana,
   dialogueStepJi,
-  setDialogueStepJi,
-  dialogueStepAlba,
-  setDialogueStepAlba
+  talkedToAlba,
+  setTalkedToAlba,  
+  dialogueStepAlba
 }) => {
 
   // Talk to Farhana Function
@@ -69,16 +67,6 @@ const Town = ({
   // dialogue step 5 will also have button to trade more plants
   // button runs tradeplantfunction
 
-  // if (talkedToFarhana === true) {
-  //   setDialogueStepFarhana((prevState) => prevState + 1);
-  // }
-
-
-  // Conditional logic for trading plant to townsperson
-  // (conversation4)
-
-  // if dialogueStepFarhana === 4 && (pot1Type === 'tulip' || pot2Type === 'tulip' || pot3Type === 'tulip'), then display conversation4, which has dialgoue offering tulip plant to Farhana
-  // Button says "Give Plant", onClick runs function to set that pot to Empty
 
   return (
     <Container>
@@ -119,6 +107,7 @@ const Town = ({
         <Farhana4Conversation 
         actionPoints={actionPoints}
         farhanaConversation={farhanaConversation}
+        tradeDealFarhana={tradeDealFarhana}
         />
       </div>
       {/* Farhana Dialogue #5 */}

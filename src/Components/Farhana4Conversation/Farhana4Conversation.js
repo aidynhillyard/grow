@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert'
 
-const Farhana4Conversation = ({ actionPoints, farhanaConversation }) => {
+const Farhana4Conversation = ({ actionPoints, farhanaConversation, tradeDealFarhana }) => {
 
   // useStates
   const [showF1, setShowF1] = useState(false);
@@ -16,6 +16,9 @@ const Farhana4Conversation = ({ actionPoints, farhanaConversation }) => {
             <p>
               This is when you can trade the plant to Farhana. She is excited you have it.  There will be some conditional logic going on here.
             </p>
+            <Button onClick={() => {
+                tradeDealFarhana();
+              }}>Trade Plant</Button>
           </div>
           <hr />
           <div className="player-dialogue">
