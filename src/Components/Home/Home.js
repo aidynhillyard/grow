@@ -1,5 +1,7 @@
 import "./Home.css";
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
 import Pot1 from "../Pot1/Pot1";
 import Pot2 from "../Pot2/Pot2";
 import Pot3 from "../Pot3/Pot3";
@@ -43,6 +45,9 @@ const Home = ({
   pot3IsFullyGrown,
   setPot3IsFullyGrown,
 }) => {
+  const [showPlantTypes, setShowPlantTypes] = useState(false);
+  const [showLetters, setShowLetters] = useState(false);
+
   return (
     <Container>
       <h1>Home</h1>
@@ -104,12 +109,40 @@ const Home = ({
           day.
         </p>
       </div>
-      <div><PlantDescriptions /></div>
-      <div><Letters
-      letter1={letter1}
-      letter2={letter2}
-      letter3={letter3}
-      /></div>
+      <div>
+        <Button
+          variant="info"
+          onClick={() => {
+            setShowPlantTypes(!showPlantTypes);
+          }}
+        >
+          Plant Types
+        </Button>
+      </div>
+      <div
+        style={{
+          display: showPlantTypes ? "block" : "none",
+        }}
+      >
+        <PlantDescriptions />
+      </div>
+      <div>
+        <Button
+          variant="info"
+          onClick={() => {
+            setShowLetters(!showLetters);
+          }}
+        >
+          Letters
+        </Button>
+      </div>
+      <div
+        style={{
+          display: showLetters ? "block" : "none",
+        }}
+      >
+        <Letters letter1={letter1} letter2={letter2} letter3={letter3} />
+      </div>
     </Container>
   );
 };
