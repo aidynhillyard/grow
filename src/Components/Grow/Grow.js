@@ -1,6 +1,7 @@
 import "./Grow.css";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+import Tutorial from "../Tutorial/Tutorial";
 import Home from "../Home/Home";
 import Town from "../Town/Town";
 import NewDay from "../NewDay/NewDay";
@@ -13,7 +14,7 @@ const Grow = () => {
   const [location, setLocation] = useState("tutorial");
 
   // Action Points and Day useStates
-  const [actionPoints, setActionPoints] = useState(4);
+  const [actionPoints, setActionPoints] = useState(1);
   const [day, setDay] = useState(1);
 
   // Letter UseStates
@@ -194,7 +195,7 @@ const Grow = () => {
 
   // Start of Day
   const startNewDay = () => {
-    setActionPoints(4);
+    setActionPoints(1);
     setLocation("home");
     setDay((prevState) => prevState + 1);
     setPot1IsCaredFor(false);
@@ -235,20 +236,9 @@ const Grow = () => {
         Tutorial
         ******** */}
       <div style={{ display: location === "tutorial" ? "inline" : "none" }}>
-        <h1>This is the Tutorial</h1>
-        <p>It has text under it.</p>
-        <p>
-          This is where the introduction scene will take place between the
-          player and Farhana.
-        </p>
-        <Button
-          variant="success"
-          onClick={() => {
-            setLocation("home");
-          }}
-        >
-          Go to Home
-        </Button>
+        <Tutorial 
+        setLocation={setLocation}
+        />
       </div>
       {/* ********
         Home
