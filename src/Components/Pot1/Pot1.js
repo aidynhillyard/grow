@@ -35,6 +35,7 @@ const Pot1 = ({
     if (pot1IsEmpty === true && actionPoints > 0) {
       setPot1IsEmpty(!pot1IsEmpty); //function
       setPot1IsCaredFor(!pot1IsCaredFor); //function
+      setPot1Age(0);
       setPot1IsSeed(true);
     } else if (pot1IsEmpty === true && actionPoints <= 0) {
       console.log("You do not have enough Action Points to plant a seed.");

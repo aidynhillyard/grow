@@ -28,7 +28,6 @@ const Pot2 = ({
 
   // Pot #2 UseStates
   
-  const [pot2Age, setPot2Age] = useState(0);
   const [pot2IsSeed, setPot2IsSeed] = useState(null)
   const [pot2IsSeedling, setPot2IsSeedling] = useState(null)
 
@@ -37,6 +36,7 @@ const Pot2 = ({
     if (pot2IsEmpty === true && actionPoints > 0) {
       setPot2IsEmpty(!pot2IsEmpty); //function
       setPot2IsCaredFor(!pot2IsCaredFor); //function
+      setPot2Age(0);
     } else if (pot2IsEmpty === true && actionPoints <= 0) {
       console.log("You do not have enough Action Points to plant a seed.");
     } else if (pot2IsEmpty === false) {
