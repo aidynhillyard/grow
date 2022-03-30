@@ -26,11 +26,12 @@ const Town = ({
   talkedToJi,
   setTalkedToJi,
   dialogueStepJi,
+  tradeDealJi,
   talkedToAlba,
-  setTalkedToAlba,  
-  dialogueStepAlba
+  setTalkedToAlba,
+  dialogueStepAlba,
+  tradeDealAlba,
 }) => {
-
   // Talk to Farhana Function
   const farhanaConversation = () => {
     if (talkedToFarhana === false) {
@@ -67,7 +68,6 @@ const Town = ({
   // dialogue step 5 will also have button to trade more plants
   // button runs tradeplantfunction
 
-
   return (
     <Container>
       <h1>Town</h1>
@@ -76,45 +76,62 @@ const Town = ({
         talking to the townspeople below. One day, there might be a photo.
       </p>
       <div className="farhana">
-      <h3>Farhana</h3>
-      <p>(she/her/hers)</p>
+        <h3>Farhana</h3>
+        <p>(she/her/hers)</p>
         <p>
           This is text about Farhana. It says a little bit about who she is and
           her relationship to you. There's probably also a picture of her.
         </p>
       </div>
       {/* Farhana Dialogue #1 */}
-      <div className="farhana-dialogue1" style={{ display: dialogueStepFarhana === 1 ? "inline" : "none" }}>
-        <Farhana1Conversation 
-        actionPoints={actionPoints}
-        farhanaConversation={farhanaConversation}
+      <div
+        className="farhana-dialogue1"
+        style={{ display: dialogueStepFarhana === 1 ? "inline" : "none" }}
+      >
+        <Farhana1Conversation
+          actionPoints={actionPoints}
+          farhanaConversation={farhanaConversation}
         />
       </div>
       {/* Farhana Dialogue #2 */}
-      <div className="farhana-dialogue2" style={{ display: dialogueStepFarhana === 2 ? "inline" : "none" }}>
+      <div
+        className="farhana-dialogue2"
+        style={{ display: dialogueStepFarhana === 2 ? "inline" : "none" }}
+      >
         <Farhana2Conversation
-        actionPoints={actionPoints}
-        farhanaConversation={farhanaConversation} />
+          actionPoints={actionPoints}
+          farhanaConversation={farhanaConversation}
+        />
       </div>
       {/* Farhana Dialogue #3 */}
-      <div className="farhana-dialogue3" style={{ display: dialogueStepFarhana === 3 ? "inline" : "none" }}>
+      <div
+        className="farhana-dialogue3"
+        style={{ display: dialogueStepFarhana === 3 ? "inline" : "none" }}
+      >
         <Farhana3Conversation
-        actionPoints={actionPoints}
-        farhanaConversation={farhanaConversation} />
+          actionPoints={actionPoints}
+          farhanaConversation={farhanaConversation}
+        />
       </div>
       {/* Farhana Dialogue #4 */}
-      <div className="farhana-dialogue4" style={{ display: dialogueStepFarhana === 4 ? "inline" : "none" }}>
-        <Farhana4Conversation 
-        actionPoints={actionPoints}
-        farhanaConversation={farhanaConversation}
-        tradeDealFarhana={tradeDealFarhana}
+      <div
+        className="farhana-dialogue4"
+        style={{ display: dialogueStepFarhana === 4 ? "inline" : "none" }}
+      >
+        <Farhana4Conversation
+          actionPoints={actionPoints}
+          farhanaConversation={farhanaConversation}
+          tradeDealFarhana={tradeDealFarhana}
         />
       </div>
       {/* Farhana Dialogue #5 */}
-      <div className="farhana-dialogue5" style={{ display: dialogueStepFarhana === 5 ? "inline" : "none" }}>
-        <Farhana5Conversation 
-        actionPoints={actionPoints}
-        farhanaConversation={farhanaConversation}
+      <div
+        className="farhana-dialogue5"
+        style={{ display: dialogueStepFarhana === 5 ? "inline" : "none" }}
+      >
+        <Farhana5Conversation
+          actionPoints={actionPoints}
+          farhanaConversation={farhanaConversation}
         />
       </div>
       <div className="ji">
@@ -126,38 +143,54 @@ const Town = ({
         </p>
       </div>
       {/* Ji Dialogue #1 */}
-      <div className="ji-dialogue1" style={{ display: dialogueStepJi === 1 ? "inline" : "none" }}>
+      <div
+        className="ji-dialogue1"
+        style={{ display: dialogueStepJi === 1 ? "inline" : "none" }}
+      >
         <Ji1Conversation
-        actionPoints={actionPoints}
-        jiConversation={jiConversation}
+          actionPoints={actionPoints}
+          jiConversation={jiConversation}
         />
       </div>
       {/* Ji Dialogue #2 */}
-      <div className="ji-dialogue2" style={{ display: dialogueStepJi === 2 ? "inline" : "none" }}>
+      <div
+        className="ji-dialogue2"
+        style={{ display: dialogueStepJi === 2 ? "inline" : "none" }}
+      >
         <Ji2Conversation
-        actionPoints={actionPoints}
-        jiConversation={jiConversation}
+          actionPoints={actionPoints}
+          jiConversation={jiConversation}
         />
       </div>
       {/* Ji Dialogue #3 */}
-      <div className="ji-dialogue3" style={{ display: dialogueStepJi === 3 ? "inline" : "none" }}>
+      <div
+        className="ji-dialogue3"
+        style={{ display: dialogueStepJi === 3 ? "inline" : "none" }}
+      >
         <Ji3Conversation
-        actionPoints={actionPoints}
-        jiConversation={jiConversation}
+          actionPoints={actionPoints}
+          jiConversation={jiConversation}
         />
       </div>
       {/* Ji Dialogue #4 */}
-      <div className="ji-dialogue4" style={{ display: dialogueStepJi === 4 ? "inline" : "none" }}>
+      <div
+        className="ji-dialogue4"
+        style={{ display: dialogueStepJi === 4 ? "inline" : "none" }}
+      >
         <Ji4Conversation
-        actionPoints={actionPoints}
-        jiConversation={jiConversation}
+          actionPoints={actionPoints}
+          jiConversation={jiConversation}
+          tradeDealJi={tradeDealJi}
         />
       </div>
       {/* Ji Dialogue #5 */}
-      <div className="ji-dialogue5" style={{ display: dialogueStepJi === 5 ? "inline" : "none" }}>
+      <div
+        className="ji-dialogue5"
+        style={{ display: dialogueStepJi === 5 ? "inline" : "none" }}
+      >
         <Ji5Conversation
-        actionPoints={actionPoints}
-        jiConversation={jiConversation}
+          actionPoints={actionPoints}
+          jiConversation={jiConversation}
         />
       </div>
       <div className="alba">
@@ -169,38 +202,54 @@ const Town = ({
         </p>
       </div>
       {/* Alba Dialogue #1 */}
-      <div className="alba-dialogue1" style={{ display: dialogueStepAlba === 1 ? "inline" : "none" }}>
+      <div
+        className="alba-dialogue1"
+        style={{ display: dialogueStepAlba === 1 ? "inline" : "none" }}
+      >
         <Alba1Conversation
-        actionPoints={actionPoints}
-        albaConversation={albaConversation}
+          actionPoints={actionPoints}
+          albaConversation={albaConversation}
         />
       </div>
       {/* Alba Dialogue #2 */}
-      <div className="alba-dialogue2" style={{ display: dialogueStepAlba === 2 ? "inline" : "none" }}>
+      <div
+        className="alba-dialogue2"
+        style={{ display: dialogueStepAlba === 2 ? "inline" : "none" }}
+      >
         <Alba2Conversation
-        actionPoints={actionPoints}
-        albaConversation={albaConversation}
+          actionPoints={actionPoints}
+          albaConversation={albaConversation}
         />
       </div>
       {/* Alba Dialogue #3 */}
-      <div className="alba-dialogue3" style={{ display: dialogueStepAlba === 3 ? "inline" : "none" }}>
+      <div
+        className="alba-dialogue3"
+        style={{ display: dialogueStepAlba === 3 ? "inline" : "none" }}
+      >
         <Alba3Conversation
-        actionPoints={actionPoints}
-        albaConversation={albaConversation}
+          actionPoints={actionPoints}
+          albaConversation={albaConversation}
         />
       </div>
       {/* Alba Dialogue #4 */}
-      <div className="alba-dialogue4" style={{ display: dialogueStepAlba === 4 ? "inline" : "none" }}>
+      <div
+        className="alba-dialogue4"
+        style={{ display: dialogueStepAlba === 4 ? "inline" : "none" }}
+      >
         <Alba4Conversation
-        actionPoints={actionPoints}
-        albaConversation={albaConversation}
+          actionPoints={actionPoints}
+          albaConversation={albaConversation}
+          tradeDealAlba={tradeDealAlba}
         />
       </div>
       {/* Alba Dialogue #5 */}
-      <div className="alba-dialogue5" style={{ display: dialogueStepAlba === 5 ? "inline" : "none" }}>
+      <div
+        className="alba-dialogue5"
+        style={{ display: dialogueStepAlba === 5 ? "inline" : "none" }}
+      >
         <Alba5Conversation
-        actionPoints={actionPoints}
-        albaConversation={albaConversation}
+          actionPoints={actionPoints}
+          albaConversation={albaConversation}
         />
       </div>
     </Container>

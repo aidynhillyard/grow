@@ -116,20 +116,49 @@ const Grow = () => {
   };
 
   // Trade Deal Farhana
-const tradeDealFarhana = () => {
-  setTradePlantFarhana(true);
-  if (pot1Type === "Forget-Me-Not" && pot1IsFullyGrown === true) {
-    setPot1IsEmpty(true);
-    setPot1Type("None");
-  } else if (pot2Type === "Forget-Me-Not" && pot2IsFullyGrown === true) {
-    setPot2IsEmpty(true);
-    setPot2Type("None");
-  } else {
-    setPot3IsEmpty(true);
-    setPot3Type("None");
-  }
-}
+  const tradeDealFarhana = () => {
+    setTradePlantFarhana(true);
+    if (pot1Type === "Forget-Me-Not" && pot1IsFullyGrown === true) {
+      setPot1IsEmpty(true);
+      setPot1Type("None");
+    } else if (pot2Type === "Forget-Me-Not" && pot2IsFullyGrown === true) {
+      setPot2IsEmpty(true);
+      setPot2Type("None");
+    } else {
+      setPot3IsEmpty(true);
+      setPot3Type("None");
+    }
+  };
 
+  // Trade Deal Ji
+  const tradeDealJi = () => {
+    setTradePlantJi(true);
+    if (pot1Type === "Tulip" && pot1IsFullyGrown === true) {
+      setPot1IsEmpty(true);
+      setPot1Type("None");
+    } else if (pot2Type === "Tulip" && pot2IsFullyGrown === true) {
+      setPot2IsEmpty(true);
+      setPot2Type("None");
+    } else {
+      setPot3IsEmpty(true);
+      setPot3Type("None");
+    }
+  };
+
+  // Trade Deal Alba
+  const tradeDealAlba = () => {
+    setTradePlantAlba(true);
+    if (pot1Type === "Iris" && pot1IsFullyGrown === true) {
+      setPot1IsEmpty(true);
+      setPot1Type("None");
+    } else if (pot2Type === "Iris" && pot2IsFullyGrown === true) {
+      setPot2IsEmpty(true);
+      setPot2Type("None");
+    } else {
+      setPot3IsEmpty(true);
+      setPot3Type("None");
+    }
+  };
 
   // Start of Day
   const startNewDay = () => {
@@ -245,11 +274,13 @@ const tradeDealFarhana = () => {
           setTalkedToJi={setTalkedToJi}
           dialogueStepJi={dialogueStepJi}
           setDialogueStepJi={setDialogueStepJi}
+          tradeDealJi={tradeDealJi}
           // Alba
           talkedToAlba={talkedToAlba}
           setTalkedToAlba={setTalkedToAlba}
           dialogueStepAlba={dialogueStepAlba}
           setDialogueStepAlba={setDialogueStepAlba}
+          tradeDealAlba={tradeDealAlba}
         />
       </div>
       <div>
