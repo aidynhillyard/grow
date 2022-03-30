@@ -3,7 +3,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
 
-const Alba4Conversation = ({ actionPoints, albaConversation, tradeDealJi }) => {
+const Alba4Conversation = ({ actionPoints, albaConversation, tradeDealAlba }) => {
   // useStates
   const [showA1, setShowA1] = useState(false);
   const [showA2, setShowA2] = useState(false);
