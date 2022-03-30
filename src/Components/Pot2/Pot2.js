@@ -34,8 +34,9 @@ const Pot2 = ({
   // Plant Pot #2 Function
   const plantPot2 = () => {
     if (pot2IsEmpty === true && actionPoints > 0) {
-      setPot2IsEmpty(!pot2IsEmpty); //function
-      setPot2IsCaredFor(!pot2IsCaredFor); //function
+      setPot2IsEmpty(!pot2IsEmpty);
+      setPot2IsCaredFor(!pot2IsCaredFor);
+      setPot2IsSeed(true);
       setPot2Age(0);
     } else if (pot2IsEmpty === true && actionPoints <= 0) {
       console.log("You do not have enough Action Points to plant a seed.");
@@ -46,29 +47,28 @@ const Pot2 = ({
 
   // Check Plant Status
   const checkPlant2Status = () => {
-    if (pot2Type === "Tulip" && pot2Age <2) {
+    if (pot2Type === "Tulip" && pot2Age === 1) {
       setPot2IsSeed(true);
-      console.log("meow!");
-    } else if (pot2Type === "Tulip" && pot2Age < 3) {
+    } else if (pot2Type === "Tulip" && pot2Age === 2) {
         setPot2IsSeed(false);
         setPot2IsSeedling(true);
-    } else if (pot2Type === "Tulip" && pot2Age >= 3) {
+    } else if (pot2Type === "Tulip" && pot2Age > 2) {
         setPot2IsSeedling(false);
         setPot2IsFullyGrown(true);
     } else if (pot2Type === "Iris" && pot2Age < 2) {
         setPot2IsSeed(true);
-    } else if (pot2Type === "Iris" && pot2Age < 4) {
+    } else if (pot2Type === "Iris" && pot2Age === 3) {
         setPot2IsSeed(false);
         setPot2IsSeedling(true);
-    } else if (pot2Type === "Iris" && pot2Age >= 4) {
+    } else if (pot2Type === "Iris" && pot2Age > 3) {
         setPot2IsSeedling(false);
         setPot2IsFullyGrown(true);
     } else if (pot2Type === "Forget-Me-Not" && pot2Age < 3) {
         setPot2IsSeed(true);
-    } else if (pot2Type === "Forget-Me-Not" && pot2Age < 5) {
+    } else if (pot2Type === "Forget-Me-Not" && pot2Age === 4) {
         setPot2IsSeed(false);
         setPot2IsSeedling(true);
-    } else if (pot2Type === "Forget-Me-Not" && pot2Age >= 5) {
+    } else if (pot2Type === "Forget-Me-Not" && pot2Age > 4) {
         setPot2IsSeedling(false);
         setPot2IsFullyGrown(true);
     }

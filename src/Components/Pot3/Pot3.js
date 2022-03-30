@@ -34,9 +34,10 @@ const Pot3 = ({
   // Plant Pot #3 Function
   const plantPot3 = () => {
     if (pot3IsEmpty === true && actionPoints > 0) {
-      setPot3IsEmpty(!pot3IsEmpty); //function
-      setPot3IsCaredFor(!pot3IsCaredFor); //function
+      setPot3IsEmpty(!pot3IsEmpty);
+      setPot3IsCaredFor(!pot3IsCaredFor);
       setPot3Age(0);
+      setPot3IsSeed(true);
     } else if (pot3IsEmpty === true && actionPoints <= 0) {
       console.log("You do not have enough Action Points to plant a seed.");
     } else if (pot3IsEmpty === false) {
@@ -46,29 +47,28 @@ const Pot3 = ({
 
   // Check Plant Status
   const checkPlant3Status = () => {
-    if (pot3Type === "Tulip" && pot3Age <2) {
+    if (pot3Type === "Tulip" && pot3Age === 1) {
       setPot3IsSeed(true);
-      console.log("meow!");
-    } else if (pot3Type === "Tulip" && pot3Age < 3) {
+    } else if (pot3Type === "Tulip" && pot3Age === 2) {
         setPot3IsSeed(false);
         setPot3IsSeedling(true);
-    } else if (pot3Type === "Tulip" && pot3Age >= 3) {
+    } else if (pot3Type === "Tulip" && pot3Age > 2) {
         setPot3IsSeedling(false);
         setPot3IsFullyGrown(true);
     } else if (pot3Type === "Iris" && pot3Age < 2) {
         setPot3IsSeed(true);
-    } else if (pot3Type === "Iris" && pot3Age < 4) {
+    } else if (pot3Type === "Iris" && pot3Age === 3) {
         setPot3IsSeed(false);
         setPot3IsSeedling(true);
-    } else if (pot3Type === "Iris" && pot3Age >= 4) {
+    } else if (pot3Type === "Iris" && pot3Age > 3) {
         setPot3IsSeedling(false);
         setPot3IsFullyGrown(true);
     } else if (pot3Type === "Forget-Me-Not" && pot3Age < 3) {
         setPot3IsSeed(true);
-    } else if (pot3Type === "Forget-Me-Not" && pot3Age < 5) {
+    } else if (pot3Type === "Forget-Me-Not" && pot3Age === 4) {
         setPot3IsSeed(false);
         setPot3IsSeedling(true);
-    } else if (pot3Type === "Forget-Me-Not" && pot3Age >= 5) {
+    } else if (pot3Type === "Forget-Me-Not" && pot3Age > 4) {
         setPot3IsSeedling(false);
         setPot3IsFullyGrown(true);
     }

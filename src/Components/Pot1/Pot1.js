@@ -46,33 +46,34 @@ const Pot1 = ({
 
   // Check Plant Status
   const checkPlant1Status = () => {
-    if (pot1Type === "Tulip" && pot1Age <2) {
+    if (pot1Type === "Tulip" && pot1Age === 1) {
       setPot1IsSeed(true);
-      console.log("meow!");
-    } else if (pot1Type === "Tulip" && pot1Age < 3) {
+    } else if (pot1Type === "Tulip" && pot1Age === 2) {
         setPot1IsSeed(false);
         setPot1IsSeedling(true);
-    } else if (pot1Type === "Tulip" && pot1Age >= 3) {
+    } else if (pot1Type === "Tulip" && pot1Age > 2) {
         setPot1IsSeedling(false);
         setPot1IsFullyGrown(true);
     } else if (pot1Type === "Iris" && pot1Age < 2) {
         setPot1IsSeed(true);
-    } else if (pot1Type === "Iris" && pot1Age < 4) {
+    } else if (pot1Type === "Iris" && pot1Age === 3) {
         setPot1IsSeed(false);
         setPot1IsSeedling(true);
-    } else if (pot1Type === "Iris" && pot1Age >= 4) {
+    } else if (pot1Type === "Iris" && pot1Age > 3) {
         setPot1IsSeedling(false);
         setPot1IsFullyGrown(true);
     } else if (pot1Type === "Forget-Me-Not" && pot1Age < 3) {
         setPot1IsSeed(true);
-    } else if (pot1Type === "Forget-Me-Not" && pot1Age < 5) {
+    } else if (pot1Type === "Forget-Me-Not" && pot1Age === 4) {
         setPot1IsSeed(false);
         setPot1IsSeedling(true);
-    } else if (pot1Type === "Forget-Me-Not" && pot1Age >= 5) {
+    } else if (pot1Type === "Forget-Me-Not" && pot1Age > 4) {
         setPot1IsSeedling(false);
         setPot1IsFullyGrown(true);
     }
   }
+  
+  // console.log("Is Seed: ", pot1IsSeed, "Is Seeding: ", pot1IsSeedling, "Age: ", pot1Age)
   
   // Increment Pot Age
   const incrementPot1Age = () => {
