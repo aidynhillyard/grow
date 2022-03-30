@@ -89,7 +89,10 @@ Unless otherwise noted, time is listed in hours:
 React Bootstrap
 
 ## Citations of Outside Sources
-TBD
+
+### Case 1: Incrementing and Decrementing State
+
+To increment and decrement a numeric state, I used this guide from Dave Ceddia: [link](https://daveceddia.com/usestate-hook-examples/.)
 
 ## Code Snippet
 
