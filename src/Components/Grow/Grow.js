@@ -1,6 +1,5 @@
 import "./Grow.css";
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
 import Tutorial from "../Tutorial/Tutorial";
 import Home from "../Home/Home";
 import Town from "../Town/Town";
@@ -307,18 +306,17 @@ const Grow = () => {
         />
       </div>
       <div>
-        <Button
-          variant="success"
+        <button
           style={{ display: location === "town" ? "inline" : "none" }}
           onClick={() => {
             setLocation("home");
           }}
         >
           Travel to Home
-        </Button>
+        </button>
       </div>
       <div>
-        <Button
+        <button
           variant="success"
           style={{
             display:
@@ -340,7 +338,7 @@ const Grow = () => {
           }}
         >
           Travel to Town
-        </Button>
+        </button>
       </div>
     </Container>
   );

@@ -1,7 +1,6 @@
 import "./Home.css";
 import { useState } from "react";
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
 import Pot1 from "../Pot1/Pot1";
 import Pot2 from "../Pot2/Pot2";
 import Pot3 from "../Pot3/Pot3";
@@ -110,14 +109,13 @@ const Home = ({
         </p>
       </div>
       <div>
-        <Button
-          variant="info"
+        <button
           onClick={() => {
             setShowPlantTypes(!showPlantTypes);
           }}
         >
           Plant Types
-        </Button>
+        </button>
       </div>
       <div
         style={{
@@ -127,14 +125,13 @@ const Home = ({
         <PlantDescriptions />
       </div>
       <div>
-        <Button
-          variant="info"
+        <button
           onClick={() => {
             setShowLetters(!showLetters);
           }}
         >
           Letters
-        </Button>
+        </button>
       </div>
       <div
         style={{

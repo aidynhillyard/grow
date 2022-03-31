@@ -105,15 +105,14 @@ const Pot1 = ({
             pot1IsEmpty === true || pot1IsCaredFor === true ? "none" : "block",
         }}
       >
-        <Button
-          variant="info"
+        <button
           onClick={() => {
             careForPlant1();
             handleShow();
           }}
         >
           Care for Plant
-        </Button>
+        </button>
       </div>
 
       <Modal show={show} onHide={handleClose}>

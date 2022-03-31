@@ -57,12 +57,6 @@ const Town = ({
   };
 
   // Trade Plant Function
-  // check if planttype is correct and is fully grown
-  // if so, if dialoguestep is 3, then += 1, else if dialoguestep is 5 do nothing
-
-  // step 4 will have button
-  // button will have onClick that will
-  // settradeplant to true and set potisempty to true
 
   // dialogue step 5 will only show if tradeplant(true)
   // dialogue step 5 will also have button to trade more plants

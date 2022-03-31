@@ -102,7 +102,7 @@ const Pot2 = ({
           display:
             pot2IsEmpty === true || pot2IsCaredFor === true ? "none" : "block",
         }}>
-        <Button
+        <button
           variant="info"
           onClick={() => {
             careForPlant2();
@@ -110,7 +110,7 @@ const Pot2 = ({
           }}
         >
           Care for Plant
-        </Button>
+        </button>
       </div>
 
       <Modal show={show} onHide={handleClose}>
