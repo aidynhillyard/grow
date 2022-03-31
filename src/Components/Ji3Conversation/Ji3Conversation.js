@@ -4,16 +4,30 @@ import ji from "../../images/jiplaceholder.png";
 import player from "../../images/playeravplaceholder.png";
 
 const Ji3Conversation = ({
+  actionPoints,
+  jiTalk,
   setJiTalk,
+  jiConversation,
   setShowFarhana,
   setShowJi,
   setShowAlba,
 }) => {
   // useStates
-  const [jiDialogue, setJiDialogue] = useState(1);
+  const [jiDialogue, setJiDialogue] = useState(0);
 
   return (
     <div>
+      <button
+        onClick={() => {
+          setShowFarhana(false);
+          setShowAlba(false);
+          jiConversation();
+          setJiDialogue((prevState) => prevState + 1);
+        }}
+        style={{ display: actionPoints > 0 && !jiTalk ? "inline" : "none" }}
+      >
+        Talk 3
+      </button>
       <div style={{ display: jiDialogue === 1 ? "inline" : "none" }}>
         <div className="ji-dialogue-label fade-in-text">
           <img src={ji} alt="Ji" id="ji-avatar" />
@@ -90,9 +104,9 @@ const Ji3Conversation = ({
         </div>
         <p className="fade-in-text npc-dialogue">
           Thanks, I made it myself. I started teaching myself how to cook after
-          my halmeoni, my grandma, passed away. Mom had been gone for awhile,
-          and Dad just kind of… checked out. So I figured someone should make
-          sure we were eating.
+          my <em>halmeoni</em>, my grandma, passed away. Mom had been gone for
+          awhile, and Dad just kind of… checked out. So I figured someone should
+          make sure we were eating.
         </p>
         <button
           className="fade-in-text"
@@ -218,8 +232,7 @@ const Ji3Conversation = ({
         <button
           className="fade-in-text"
           onClick={() => {
-            setJiDialogue((prevState) => prevState + 1);
-            setJiTalk(false);
+            setJiDialogue(0);
             setShowFarhana(true);
             setShowJi(true);
             setShowAlba(true);

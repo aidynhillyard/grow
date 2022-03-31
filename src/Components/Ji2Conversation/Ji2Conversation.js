@@ -1,20 +1,37 @@
 import "./Ji2Conversation.css";
-import { useState } from 'react';
+import { useState } from "react";
 import ji from "../../images/jiplaceholder.png";
 import player from "../../images/playeravplaceholder.png";
 
-const Ji2Conversation = ({ setJiTalk, setShowFarhana, setShowJi, setShowAlba }) => {
+const Ji2Conversation = ({
+  actionPoints,
+  jiTalk,
+  setJiTalk,
+  jiConversation,
+  setShowFarhana,
+  setShowJi,
+  setShowAlba,
+}) => {
   // useStates
-  const [jiDialogue, setJiDialogue] = useState(1);
+  const [jiDialogue, setJiDialogue] = useState(0);
 
   return (
     <div>
+      <button
+        onClick={() => {
+          setShowFarhana(false);
+          setShowAlba(false);
+          jiConversation();
+          setJiDialogue((prevState) => prevState + 1);
+        }}
+        style={{ display: actionPoints > 0 && !jiTalk ? "inline" : "none" }}
+      >Talk 2</button>
       <div style={{ display: jiDialogue === 1 ? "inline" : "none" }}>
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-        Hey, Ji.  How was hockey practice the other day?
+          Hey, Ji. How was hockey practice the other day?
         </p>
         <button
           className="fade-in-text"
@@ -32,7 +49,8 @@ const Ji2Conversation = ({ setJiTalk, setShowFarhana, setShowJi, setShowAlba }) 
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-        It was pretty chill until it was time for peewee hockey.  One of the little kids had an absolute meltdown.  I wish you had been there.
+          It was pretty chill until it was time for peewee hockey. One of the
+          little kids had an absolute meltdown. I wish you had been there.
         </p>
         <button
           className="fade-in-text"
@@ -49,7 +67,7 @@ const Ji2Conversation = ({ setJiTalk, setShowFarhana, setShowJi, setShowAlba }) 
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-        What, to share in your misery?
+          What, to share in your misery?
         </p>
         <button
           className="fade-in-text"
@@ -67,7 +85,10 @@ const Ji2Conversation = ({ setJiTalk, setShowFarhana, setShowJi, setShowAlba }) 
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-        No, to help!  I know you don’t remember, but… we used to work together at the movie theater.  It was my first day, actually, and this little kid threw a major tantrum at the concession stand.  I’m talking, five alarm bells.
+          No, to help! I know you don’t remember, but… we used to work together
+          at the movie theater. It was my first day, actually, and this little
+          kid threw a major tantrum at the concession stand. I’m talking, five
+          alarm bells.
         </p>
         <button
           className="fade-in-text"
@@ -83,9 +104,7 @@ const Ji2Conversation = ({ setJiTalk, setShowFarhana, setShowJi, setShowAlba }) 
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
-        <p className="fade-in-text player-dialogue">
-        What happened?
-        </p>
+        <p className="fade-in-text player-dialogue">What happened?</p>
         <button
           className="fade-in-text"
           aria-label="next"
@@ -102,7 +121,10 @@ const Ji2Conversation = ({ setJiTalk, setShowFarhana, setShowJi, setShowAlba }) 
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-        You came to my rescue.  The kid was clinging to my leg, and his mom was trying to pull him off of me, and you came around the corner and just sort of knelt down and started talking soothingly.  I don’t even remember what you said, but he stopped crying after a few minutes.
+          You came to my rescue. The kid was clinging to my leg, and his mom was
+          trying to pull him off of me, and you came around the corner and just
+          sort of knelt down and started talking soothingly. I don’t even
+          remember what you said, but he stopped crying after a few minutes.
         </p>
         <button
           className="fade-in-text"
@@ -119,7 +141,7 @@ const Ji2Conversation = ({ setJiTalk, setShowFarhana, setShowJi, setShowAlba }) 
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-        So I’m a Kid Whisperer.  Huh.
+          So I’m a Kid Whisperer. Huh.
         </p>
         <button
           className="fade-in-text"
@@ -137,7 +159,10 @@ const Ji2Conversation = ({ setJiTalk, setShowFarhana, setShowJi, setShowAlba }) 
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-        Oh, yeah.  You have the magic touch.  Kid went from horror to happy in under five minutes.  You should stop by the theater some time.  I’m the Assistant Manager now.  And the theater’s up to code (with a little recent help from Farhana), so you’ll be all set.
+          Oh, yeah. You have the magic touch. Kid went from horror to happy in
+          under five minutes. You should stop by the theater some time. I’m the
+          Assistant Manager now. And the theater’s up to code (with a little
+          recent help from Farhana), so you’ll be all set.
         </p>
         <button
           className="fade-in-text"
@@ -154,7 +179,8 @@ const Ji2Conversation = ({ setJiTalk, setShowFarhana, setShowJi, setShowAlba }) 
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-        Congrats on the Assistant Manager gig!  And maybe I’ll stop by sometime.
+          Congrats on the Assistant Manager gig! And maybe I’ll stop by
+          sometime.
         </p>
         <button
           className="fade-in-text"
@@ -176,8 +202,7 @@ const Ji2Conversation = ({ setJiTalk, setShowFarhana, setShowJi, setShowAlba }) 
         <button
           className="fade-in-text"
           onClick={() => {
-            setJiDialogue((prevState) => prevState + 1);
-            setJiTalk(false);
+            setJiDialogue(0);
             setShowFarhana(true);
             setShowJi(true);
             setShowAlba(true);

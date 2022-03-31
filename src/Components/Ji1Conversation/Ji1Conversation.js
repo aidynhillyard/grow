@@ -3,12 +3,31 @@ import { useState } from "react";
 import ji from "../../images/jiplaceholder.png";
 import player from "../../images/playeravplaceholder.png";
 
-const Ji1Conversation = ({ setJiTalk, setShowFarhana, setShowJi, setShowAlba }) => {
+const Ji1Conversation = ({
+  actionPoints,
+  jiTalk,
+  setJiTalk,
+  jiConversation,
+  setShowFarhana,
+  setShowJi,
+  setShowAlba,
+}) => {
   // useStates
-  const [jiDialogue, setJiDialogue] = useState(1);
+  const [jiDialogue, setJiDialogue] = useState(0);
 
   return (
     <div>
+      <button
+        onClick={() => {
+          setShowFarhana(false);
+          setShowAlba(false);
+          jiConversation();
+          setJiDialogue((prevState) => prevState + 1);
+        }}
+        style={{ display: actionPoints > 0 && !jiTalk ? "inline" : "none" }}
+      >
+        Talk 1
+      </button>
       <div style={{ display: jiDialogue === 1 ? "inline" : "none" }}>
         <div className="ji-dialogue-label fade-in-text">
           <img src={ji} alt="Ji" id="ji-avatar" />
@@ -202,8 +221,7 @@ const Ji1Conversation = ({ setJiTalk, setShowFarhana, setShowJi, setShowAlba }) 
         <button
           className="fade-in-text"
           onClick={() => {
-            setJiDialogue((prevState) => prevState + 1);
-            setJiTalk(false);
+            setJiDialogue(0);
             setShowFarhana(true);
             setShowJi(true);
             setShowAlba(true);

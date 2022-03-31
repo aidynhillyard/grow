@@ -32,13 +32,20 @@ const Town = ({
   setTalkedToAlba,
   dialogueStepAlba,
   tradeDealAlba,
+  pot1Type,
+  pot1IsFullyGrown,
+  pot2Type,
+  pot2IsFullyGrown,
+  pot3Type,
+  pot3IsFullyGrown,
 }) => {
   const [showFarhana, setShowFarhana] = useState(true);
   const [showJi, setShowJi] = useState(true);
   const [jiTalk, setJiTalk] = useState(false);
   const [showAlba, setShowAlba] = useState(true);
 
-  console.log("JiTalk is: ", jiTalk)
+  console.log("JiTalk is: ", jiTalk, "Ji Convo: ", dialogueStepJi);
+  console.log("Pot1Type", pot1Type, "Pot1 Is Fully Grown?", pot1IsFullyGrown);
 
   // Talk to Farhana Function
   const farhanaConversation = () => {
@@ -145,34 +152,29 @@ const Town = ({
           farhanaConversation={farhanaConversation}
         />
       </div>
-      <div className="ji" style={{ display: (showJi && !jiTalk) ? "inline" : "none" }}>
-        <div style={{ display: !jiTalk ? "inline" : "none" }}>
+      <div
+        className="ji"
+        style={{ display: showJi  ? "inline" : "none" }}
+      >
+        <div>
           <h3>Ji</h3>
           <p>(he/him/his)</p>
         </div>
-        <p style={{ display: !jiTalk ? "inline" : "none" }}>
+        <p>
           This is text about Ji. It says a little bit about who they are and
           their relationship to you. There's probably also a picture of them.
         </p>
-        <button
-          onClick={() => {
-            setShowFarhana(false);
-            setShowAlba(false);
-            setJiTalk(true);
-            jiConversation();
-          }}
-          style={{ display: actionPoints > 0 && !jiTalk ? "inline" : "none" }}
-        >
-          Talk
-        </button>
       </div>
       {/* Ji Dialogue #1 */}
       <div
         className="ji-dialogue1"
-        style={{ display: jiTalk && dialogueStepJi === 1 ? "inline" : "none" }}
+        style={{ display: dialogueStepJi === 1 ? "inline" : "none" }}
       >
         <Ji1Conversation
+          actionPoints={actionPoints}
+          jiTalk={jiTalk}
           setJiTalk={setJiTalk}
+          jiConversation={jiConversation}
           setShowFarhana={setShowFarhana}
           setShowJi={setShowJi}
           setShowAlba={setShowAlba}
@@ -181,10 +183,13 @@ const Town = ({
       {/* Ji Dialogue #2 */}
       <div
         className="ji-dialogue2"
-        style={{ display: jiTalk && dialogueStepJi === 2 ? "inline" : "none" }}
+        style={{ display: dialogueStepJi === 2 ? "inline" : "none" }}
       >
         <Ji2Conversation
+          actionPoints={actionPoints}
+          jiTalk={jiTalk}
           setJiTalk={setJiTalk}
+          jiConversation={jiConversation}
           setShowFarhana={setShowFarhana}
           setShowJi={setShowJi}
           setShowAlba={setShowAlba}
@@ -193,10 +198,13 @@ const Town = ({
       {/* Ji Dialogue #3 */}
       <div
         className="ji-dialogue3"
-        style={{ display: jiTalk && dialogueStepJi === 3 ? "inline" : "none" }}
+        style={{ display: dialogueStepJi === 3 ? "inline" : "none" }}
       >
         <Ji3Conversation
+          actionPoints={actionPoints}
+          jiTalk={jiTalk}
           setJiTalk={setJiTalk}
+          jiConversation={jiConversation}
           setShowFarhana={setShowFarhana}
           setShowJi={setShowJi}
           setShowAlba={setShowAlba}
@@ -205,23 +213,36 @@ const Town = ({
       {/* Ji Dialogue #4 */}
       <div
         className="ji-dialogue4"
-        style={{ display: jiTalk && dialogueStepJi === 4 ? "inline" : "none" }}
+        style={{ display: dialogueStepJi === 4 ? "inline" : "none" }}
       >
         <Ji4Conversation
+          actionPoints={actionPoints}
+          jiTalk={jiTalk}
           setJiTalk={setJiTalk}
+          jiConversation={jiConversation}
           setShowFarhana={setShowFarhana}
           setShowJi={setShowJi}
           setShowAlba={setShowAlba}
           tradeDealJi={tradeDealJi}
+          dialogueStepJi={dialogueStepJi}
+          pot1Type={pot1Type}
+          pot1IsFullyGrown={pot1IsFullyGrown}
+          pot2Type={pot2Type}
+          pot2IsFullyGrown={pot2IsFullyGrown}
+          pot3Type={pot3Type}
+          pot3IsFullyGrown={pot3IsFullyGrown}
         />
       </div>
       {/* Ji Dialogue #5 */}
       <div
         className="ji-dialogue5"
-        style={{ display: jiTalk && dialogueStepJi === 5 ? "inline" : "none" }}
+        style={{ display: dialogueStepJi === 5 ? "inline" : "none" }}
       >
         <Ji5Conversation
+          actionPoints={actionPoints}
+          jiTalk={jiTalk}
           setJiTalk={setJiTalk}
+          jiConversation={jiConversation}
           setShowFarhana={setShowFarhana}
           setShowJi={setShowJi}
           setShowAlba={setShowAlba}

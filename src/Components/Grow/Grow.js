@@ -13,7 +13,7 @@ const Grow = () => {
   const [location, setLocation] = useState("tutorial");
 
   // Action Points and Day useStates
-  const [actionPoints, setActionPoints] = useState(1);
+  const [actionPoints, setActionPoints] = useState(2);
   const [day, setDay] = useState(1);
 
   // Letter UseStates
@@ -113,23 +113,9 @@ const Grow = () => {
 
   // Check Ji Dialogue
   const checkJiDialogue = () => {
-    if (talkedToJi === true && dialogueStepJi < 3) {
+    if (talkedToJi === true) {
       setDialogueStepJi((prevState) => prevState + 1);
-    } else if (
-      talkedToJi === true &&
-      dialogueStepJi === 3 &&
-      ((pot1Type === "Tulip" && pot1IsFullyGrown === true) ||
-        (pot2Type === "Tulip" && pot2IsFullyGrown === true) ||
-        (pot3Type === "Tulip" && pot3IsFullyGrown === true))
-    ) {
-      setDialogueStepJi((prevState) => prevState + 1);
-    } else if (
-      talkedToJi === true &&
-      dialogueStepJi === 4 &&
-      tradePlantJi === true
-    ) {
-      setDialogueStepJi((prevState) => prevState + 1);
-    }
+    } 
   };
 
   // Check Alba Dialogue
@@ -194,7 +180,7 @@ const Grow = () => {
 
   // Start of Day
   const startNewDay = () => {
-    setActionPoints(1);
+    setActionPoints(2);
     setLocation("home");
     setDay((prevState) => prevState + 1);
     setPot1IsCaredFor(false);
@@ -287,6 +273,13 @@ const Grow = () => {
           actionPoints={actionPoints}
           setActionPoints={setActionPoints}
           decrementActionPoints={decrementActionPoints}
+          // Pots
+          pot1Type={pot1Type}
+          pot1IsFullyGrown={pot1IsFullyGrown}
+          pot2Type={pot2Type}
+          pot2IsFullyGrown={pot2IsFullyGrown}
+          pot3Type={pot3Type}
+          pot3IsFullyGrown={pot3IsFullyGrown}
           // Farhana
           talkedToFarhana={talkedToFarhana}
           setTalkedToFarhana={setTalkedToFarhana}
