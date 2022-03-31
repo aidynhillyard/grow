@@ -154,7 +154,7 @@ const Town = ({
       </div>
       <div
         className="ji"
-        style={{ display: showJi  ? "inline" : "none" }}
+        style={{ display: showJi && !jiTalk ? "inline" : "none" }}
       >
         <div>
           <h3>Ji</h3>

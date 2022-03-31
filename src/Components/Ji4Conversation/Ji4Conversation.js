@@ -31,6 +31,7 @@ const Ji4Conversation = ({
           setShowFarhana(false);
           setShowAlba(false);
           jiConversation();
+          setJiTalk(true);
           setJiDialogue((prevState) => prevState + 1);
         }}
         style={{ display: actionPoints > 0 && !jiTalk && (dialogueStepJi === 4 &&
@@ -241,6 +242,7 @@ const Ji4Conversation = ({
           className="fade-in-text"
           onClick={() => {
             setJiDialogue(0);
+            setJiTalk(false);
             setShowFarhana(true);
             setShowJi(true);
             setShowAlba(true);

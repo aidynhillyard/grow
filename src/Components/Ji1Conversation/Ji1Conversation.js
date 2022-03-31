@@ -21,6 +21,7 @@ const Ji1Conversation = ({
         onClick={() => {
           setShowFarhana(false);
           setShowAlba(false);
+          setJiTalk(true);
           jiConversation();
           setJiDialogue((prevState) => prevState + 1);
         }}
@@ -222,6 +223,7 @@ const Ji1Conversation = ({
           className="fade-in-text"
           onClick={() => {
             setJiDialogue(0);
+            setJiTalk(false);
             setShowFarhana(true);
             setShowJi(true);
             setShowAlba(true);

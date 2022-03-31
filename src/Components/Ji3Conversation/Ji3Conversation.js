@@ -20,6 +20,7 @@ const Ji3Conversation = ({
       <button
         onClick={() => {
           setShowFarhana(false);
+          setJiTalk(true);
           setShowAlba(false);
           jiConversation();
           setJiDialogue((prevState) => prevState + 1);
@@ -233,6 +234,7 @@ const Ji3Conversation = ({
           className="fade-in-text"
           onClick={() => {
             setJiDialogue(0);
+            setJiTalk(false);
             setShowFarhana(true);
             setShowJi(true);
             setShowAlba(true);

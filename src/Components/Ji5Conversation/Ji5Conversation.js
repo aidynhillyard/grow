@@ -23,6 +23,7 @@ const Ji5Conversation = ({
           setShowFarhana(false);
           setShowAlba(false);
           jiConversation();
+          setJiTalk(true);
           setJiDialogue((prevState) => prevState + 1);
         }}
         style={{ display: actionPoints > 0 && !jiTalk ? "inline" : "none" }}
@@ -229,6 +230,7 @@ const Ji5Conversation = ({
           className="fade-in-text"
           onClick={() => {
             setJiDialogue(0);
+            setJiTalk(false);
             setShowFarhana(true);
             setShowJi(true);
             setShowAlba(true);
