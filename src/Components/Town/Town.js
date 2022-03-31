@@ -20,6 +20,8 @@ import Alba5Conversation from "../Alba5Conversation/Alba5Conversation";
 const Town = ({
   actionPoints,
   decrementActionPoints,
+  location,
+  setLocation,
   talkedToFarhana,
   setTalkedToFarhana,
   dialogueStepFarhana,
@@ -310,6 +312,14 @@ const Town = ({
           albaConversation={albaConversation}
         />
       </div>
+      <button
+          style={{ display: location === "town" && !jiTalk ? "inline" : "none" }}
+          onClick={() => {
+            setLocation("home");
+          }}
+        >
+          Travel to Home
+        </button>
     </Container>
   );
 };

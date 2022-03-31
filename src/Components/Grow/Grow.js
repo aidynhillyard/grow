@@ -272,6 +272,8 @@ const Grow = () => {
         <Town
           actionPoints={actionPoints}
           setActionPoints={setActionPoints}
+          location={location}
+          setLocation={setLocation}
           decrementActionPoints={decrementActionPoints}
           // Pots
           pot1Type={pot1Type}
@@ -301,14 +303,7 @@ const Grow = () => {
         />
       </div>
       <div>
-        <button
-          style={{ display: location === "town" ? "inline" : "none" }}
-          onClick={() => {
-            setLocation("home");
-          }}
-        >
-          Travel to Home
-        </button>
+        
       </div>
       <div>
         <button
