@@ -10,7 +10,7 @@ function App() {
     <Container id="page-container" className="App">
       <Container id="content-wrap-app">
         <Header />
-        <main>
+        <main className="main-container">
           <Routes>
             <Route path='/' element={<Grow />}></Route>
           </Routes>
