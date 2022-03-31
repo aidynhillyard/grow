@@ -49,10 +49,10 @@ const Ji4Conversation = ({
           Hey, Ji. I, uh, grew this for you.
         </p>
         <button
-          className="fade-in-text player-dialogue"
+          className="fade-in-text player-dialogue" style={{ display: !tradedPlant ? "inline" : "none" }}
           onClick={() => {
             tradeDealJi();
-            tradedPlant(true);
+            setTradedPlant(true);
           }}
         >
           Give Plant

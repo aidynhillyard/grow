@@ -5,6 +5,7 @@ import player from "../../images/playeravplaceholder.png";
 
 const Ji5Conversation = ({
   actionPoints,
+  letter2IsRead,
   jiTalk,
   setJiTalk,
   jiConversation,
@@ -26,7 +27,7 @@ const Ji5Conversation = ({
           setJiTalk(true);
           setJiDialogue((prevState) => prevState + 1);
         }}
-        style={{ display: actionPoints > 0 && !jiTalk ? "inline" : "none" }}
+        style={{ display: actionPoints > 0 && !jiTalk && letter2IsRead ? "inline" : "none" }}
       >
         Talk 5
       </button>

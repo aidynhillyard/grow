@@ -11,8 +11,14 @@ const Home = ({
   actionPoints,
   decrementActionPoints,
   letter1,
+  letter1IsRead,
+  setLetter1IsRead,
   letter2,
+  letter2IsRead,
+  setLetter2IsRead,
   letter3,
+  letter3IsRead,
+  setLetter3IsRead,
   pot1IsEmpty,
   setPot1IsEmpty,
   pot1Type,
@@ -138,7 +144,18 @@ const Home = ({
           display: showLetters ? "block" : "none",
         }}
       >
-        <Letters letter1={letter1} letter2={letter2} letter3={letter3} />
+        <Letters
+          letter1={letter1}
+          letter2={letter2}
+          letter3={letter3}
+          letter1IsRead={letter1IsRead}
+          setLetter1IsRead={setLetter1IsRead}
+          letter2IsRead={letter2IsRead}
+          setLetter2IsRead={setLetter2IsRead}
+          letter3IsRead={letter3IsRead}
+          setLetter3IsRead={setLetter3IsRead}
+          
+        />
       </div>
     </Container>
   );

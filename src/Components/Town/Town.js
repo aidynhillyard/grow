@@ -22,6 +22,12 @@ const Town = ({
   decrementActionPoints,
   location,
   setLocation,
+  letter1IsRead,
+  setLetter1IsRead,
+  letter2IsRead,
+  setLetter2IsRead,
+  letter3IsRead,
+  setLetter3IsRead,
   talkedToFarhana,
   setTalkedToFarhana,
   dialogueStepFarhana,
@@ -248,6 +254,7 @@ const Town = ({
           setShowFarhana={setShowFarhana}
           setShowJi={setShowJi}
           setShowAlba={setShowAlba}
+          letter2IsRead={letter2IsRead}
           tradeDealJi={tradeDealJi}
         />
       </div>

@@ -20,6 +20,9 @@ const Grow = () => {
   const [letter1, setLetter1] = useState(false);
   const [letter2, setLetter2] = useState(false);
   const [letter3, setLetter3] = useState(false);
+  const [letter1IsRead, setLetter1IsRead] = useState(false);
+  const [letter2IsRead, setLetter2IsRead] = useState(false);
+  const [letter3IsRead, setLetter3IsRead] = useState(false);
 
   // Pot #1 UseStates
   const [pot1IsEmpty, setPot1IsEmpty] = useState(true);
@@ -52,6 +55,8 @@ const Grow = () => {
   const [talkedToAlba, setTalkedToAlba] = useState(false);
   const [dialogueStepAlba, setDialogueStepAlba] = useState(1);
   const [tradePlantAlba, setTradePlantAlba] = useState(false);
+
+  console.log("Letter 2 is read?", letter2IsRead)
 
   // *** FUNCTIONS ***
 
@@ -226,9 +231,16 @@ const Grow = () => {
           setActionPoints={setActionPoints}
           decrementActionPoints={decrementActionPoints}
           startNewDay={startNewDay}
+          // Letter Props
           letter1={letter1}
           letter2={letter2}
           letter3={letter3}
+          letter1IsRead={letter1IsRead}
+          setLetter1IsRead={setLetter1IsRead}
+          letter2IsRead={letter2IsRead}
+          setLetter2IsRead={setLetter2IsRead}
+          letter3IsRead={letter3IsRead}
+          setLetter3IsRead={setLetter3IsRead}
           // Pot #1 Props
           pot1IsEmpty={pot1IsEmpty}
           setPot1IsEmpty={setPot1IsEmpty}
@@ -282,6 +294,13 @@ const Grow = () => {
           pot2IsFullyGrown={pot2IsFullyGrown}
           pot3Type={pot3Type}
           pot3IsFullyGrown={pot3IsFullyGrown}
+          // Letters
+          letter1IsRead={letter1IsRead}
+          setLetter1IsRead={setLetter1IsRead}
+          letter2IsRead={letter2IsRead}
+          setLetter2IsRead={setLetter2IsRead}
+          letter3IsRead={letter3IsRead}
+          setLetter3IsRead={setLetter3IsRead}
           // Farhana
           talkedToFarhana={talkedToFarhana}
           setTalkedToFarhana={setTalkedToFarhana}
