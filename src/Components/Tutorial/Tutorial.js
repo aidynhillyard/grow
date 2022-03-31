@@ -91,12 +91,16 @@ const Tutorial = ({ setLocation }) => {
             setDialogue((prevState) => prevState + 1);
           }}>&or;</button>
       </div>
-      <div style={{ display: dialogue === 10 ? "inline" : "none" }}>
-      <div className="player-dialogue-label fade-in-text"><img src={player} alt="Plant avatar" id="player-avatar" /></div>
-        <p className="fade-in-text">
+      <div style={{ display: dialogue > 9 && dialogue < 13 ? "inline" : "none" }}><div className="player-dialogue-label fade-in-text"><img src={player} alt="Plant avatar" id="player-avatar" /></div></div>
+        <div style={{ display: dialogue === 10 ? "inline" : "none" }}><p className="fade-in-text">
           Wow, Farhana really did think of everything. There’s handrails by the
           toilet and the shower stall, and the shower stall even has a bench.
-          Now to check out the kitchen....</p>
+          Now to check out the kitchen....</p><button className="fade-in-text" aria-label="next" onClick={() => {
+            setDialogue((prevState) => prevState + 1);
+          }}>&or;</button></div>
+      <div style={{ display: dialogue === 11 ? "inline" : "none" }}>
+      
+        
           <p className="fade-in-text">
           Lowering the counters must’ve taken a lot of work–and money. I need to
           find a way to thank her.</p>
@@ -106,58 +110,63 @@ const Tutorial = ({ setLocation }) => {
             setDialogue((prevState) => prevState + 1);
           }}>&or;</button>
       </div>
-      <div style={{ display: dialogue === 11 ? "inline" : "none" }}>
+      <div style={{ display: dialogue === 12 ? "inline" : "none" }}>
         <p className="fade-in-text">
           <em>I was going through my shed and found these piles of seed packets. You
           always did like growing plants, so I thought I’d leave them here for
           you, just in case. You know.</em></p><p className="fade-in-text"><em>– Farhana</em>
-        </p><button className="fade-in-text" aria-label="next" onClick={() => {
+        </p>
+        <div><p className="fade-in-text">Image of plant will go here.</p></div><button className="fade-in-text" aria-label="next" onClick={() => {
             setDialogue((prevState) => prevState + 1);
           }}>&or;</button>
       </div>
       {/* Tutorial */}
-      <div className="tutorial" style={{ display: "none"}}>
-      <div>
-        <p>
+      <div className="tutorial">
+      <div style={{ display: dialogue > 12 ? "inline" : "none" }}><h2 className="fade-in-text">How to Play</h2></div>
+        <div style={{ display: dialogue === 13 ? "inline" : "none" }}><p className="fade-in-text">
           To plant seeds, you need to be in your Home. You have 3 empty pots,
           and you can plant one seed in each one.
-        </p>
+        </p><button className="fade-in-text" aria-label="next" onClick={() => {
+            setDialogue((prevState) => prevState + 1);
+          }}>&or;</button>
       </div>
-      <div>
-        <p>
+      <div style={{ display: dialogue === 14 ? "inline" : "none" }}>
+        <p className="fade-in-text">
           Every day, you have a limited amount of time to do actions. You have 4
           Action Points each day, meaning you can do 4 actions each day.
           Planting seeds, caring for plants, and talking to townspeople take 1
           Action Point each.
-        </p>
+        </p><button className="fade-in-text" aria-label="next" onClick={() => {
+            setDialogue((prevState) => prevState + 1);
+          }}>&or;</button>
       </div>
-      <div>
-        <p>
+      <div style={{ display: dialogue === 15 ? "inline" : "none" }}>
+        <p className="fade-in-text">
           When you have a seed planted, one of your actions each day will be to
           care for your plant. Each plant needs to be cared for separately, so
           if you have 2 plants, it will take 2 Action Points to care for them: 1
           for the first plant and 1 for the second plant.
-        </p>
+        </p><button className="fade-in-text" aria-label="next" onClick={() => {
+            setDialogue((prevState) => prevState + 1);
+          }}>&or;</button>
       </div>
-      <div>
-        <p>
+      <div style={{ display: dialogue === 16 ? "inline" : "none" }}>
+        <p className="fade-in-text">
           When your plant is fully grown, someone in town might be interested in
           it, and you might be interested in what they will trade for it. You
           can visit the town to talk to the townspeople.
         </p>
-      </div>
-      <div>
-        <p>Happy planting!</p>
-      </div>
-      </div>
-      <p className="go-home"><Button
-        variant="success"
+        <p className="fade-in-text">Happy planting!</p>
+          <p className="go-home fade-in-text"><button
         onClick={() => {
           setLocation("home");
         }}
       >
         Go to Home
-      </Button></p>
+      </button></p>
+      </div>
+      </div>
+      
     </div>
   );
 };

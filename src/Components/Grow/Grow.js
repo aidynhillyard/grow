@@ -217,8 +217,7 @@ const Grow = () => {
         <h1>GROW</h1>
         <h2>Tagline</h2>
       </div>
-      <div>
-        
+      <div style={{ display: location === "tutorial" ? "none" : "inline" }}>
         <p>Action Points: {actionPoints}</p>
         <p>Day: {day}</p>
       </div>
@@ -229,9 +228,7 @@ const Grow = () => {
         Tutorial
         ******** */}
       <div style={{ display: location === "tutorial" ? "inline" : "none" }}>
-        <Tutorial 
-        setLocation={setLocation}
-        />
+        <Tutorial setLocation={setLocation} />
       </div>
       {/* ********
         Home
