@@ -216,6 +216,8 @@ const Grow = () => {
         <h1>GROW</h1>
         <h2>Tagline</h2>
       </div>
+      <button onClick={() => {
+            setLocation("home");}}>*** go home ***</button>
       <div style={{ display: location === "tutorial" ? "none" : "inline" }}>
         <p>Action Points: {actionPoints}</p>
         <p>Day: {day}</p>

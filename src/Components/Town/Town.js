@@ -1,4 +1,5 @@
 import "./Town.css";
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Farhana1Conversation from "../Farhana1Conversation/Farhana1Conversation";
 import Farhana2Conversation from "../Farhana2Conversation/Farhana2Conversation";
@@ -32,6 +33,11 @@ const Town = ({
   dialogueStepAlba,
   tradeDealAlba,
 }) => {
+  const [showFarhana, setShowFarhana] = useState(true);
+  const [showJi, setShowJi] = useState(true);
+  const [jiTalk, setJiTalk] = useState(false);
+  const [showAlba, setShowAlba] = useState(true);
+
   // Talk to Farhana Function
   const farhanaConversation = () => {
     if (talkedToFarhana === false) {
@@ -69,7 +75,10 @@ const Town = ({
         This is placeholder text about the town. It also has instructions on
         talking to the townspeople below. One day, there might be a photo.
       </p>
-      <div className="farhana">
+      <div
+        className="farhana"
+        style={{ display: showFarhana ? "inline" : "none" }}
+      >
         <h3>Farhana</h3>
         <p>(she/her/hers)</p>
         <p>
@@ -80,11 +89,17 @@ const Town = ({
       {/* Farhana Dialogue #1 */}
       <div
         className="farhana-dialogue1"
-        style={{ display: dialogueStepFarhana === 1 ? "inline" : "none" }}
+        style={{
+          display: showFarhana && dialogueStepFarhana === 1 ? "inline" : "none",
+        }}
       >
         <Farhana1Conversation
           actionPoints={actionPoints}
           farhanaConversation={farhanaConversation}
+          showJi={showJi}
+          setShowJi={setShowJi}
+          showAlba={showAlba}
+          setShowAlba={setShowAlba}
         />
       </div>
       {/* Farhana Dialogue #2 */}
@@ -128,22 +143,37 @@ const Town = ({
           farhanaConversation={farhanaConversation}
         />
       </div>
-      <div className="ji">
-        <h3>Ji</h3>
-        <p>(he/him/his)</p>
-        <p>
+      <div className="ji" style={{ display: (showJi && showFarhana) ? "inline" : "none" }}>
+        <div style={{ display: showFarhana ? "inline" : "none" }}>
+          <h3>Ji</h3>
+          <p>(he/him/his)</p>
+        </div>
+        <p style={{ display: showFarhana ? "inline" : "none" }}>
           This is text about Ji. It says a little bit about who they are and
           their relationship to you. There's probably also a picture of them.
         </p>
+        <button
+          onClick={() => {
+            setShowFarhana(false);
+            setShowAlba(false);
+            setJiTalk(true);
+            jiConversation();
+          }}
+          style={{ display: actionPoints > 0 && showFarhana ? "inline" : "none" }}
+        >
+          Talk
+        </button>
       </div>
       {/* Ji Dialogue #1 */}
       <div
         className="ji-dialogue1"
-        style={{ display: dialogueStepJi === 1 ? "inline" : "none" }}
+        style={{ display: jiTalk && dialogueStepJi === 1 ? "inline" : "none" }}
       >
         <Ji1Conversation
-          actionPoints={actionPoints}
-          jiConversation={jiConversation}
+          setJiTalk={setJiTalk}
+          setShowFarhana={setShowFarhana}
+          setShowJi={setShowJi}
+          setShowAlba={setShowAlba}
         />
       </div>
       {/* Ji Dialogue #2 */}
@@ -187,7 +217,7 @@ const Town = ({
           jiConversation={jiConversation}
         />
       </div>
-      <div className="alba">
+      <div className="alba" style={{ display: showAlba ? "inline" : "none" }}>
         <h3>Alba</h3>
         (they/them/theirs)
         <p>
@@ -198,7 +228,9 @@ const Town = ({
       {/* Alba Dialogue #1 */}
       <div
         className="alba-dialogue1"
-        style={{ display: dialogueStepAlba === 1 ? "inline" : "none" }}
+        style={{
+          display: showAlba && dialogueStepAlba === 1 ? "inline" : "none",
+        }}
       >
         <Alba1Conversation
           actionPoints={actionPoints}
