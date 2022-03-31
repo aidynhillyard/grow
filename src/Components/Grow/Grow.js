@@ -14,7 +14,7 @@ const Grow = () => {
   const [location, setLocation] = useState("tutorial");
 
   // Action Points and Day useStates
-  const [actionPoints, setActionPoints] = useState(1);
+  const [actionPoints, setActionPoints] = useState(4);
   const [day, setDay] = useState(1);
 
   // Letter UseStates
@@ -195,7 +195,7 @@ const Grow = () => {
 
   // Start of Day
   const startNewDay = () => {
-    setActionPoints(1);
+    setActionPoints(4);
     setLocation("home");
     setDay((prevState) => prevState + 1);
     setPot1IsCaredFor(false);
@@ -218,14 +218,7 @@ const Grow = () => {
         <h2>Tagline</h2>
       </div>
       <div>
-        <Button
-          variant="success"
-          onClick={() => {
-            setLocation("tutorial");
-          }}
-        >
-          Start a New Game
-        </Button>{" "}
+        
         <p>Action Points: {actionPoints}</p>
         <p>Day: {day}</p>
       </div>

@@ -12,3 +12,31 @@
         opacity: 1;
      }
 }
+
+.farhana-dialogue-label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.player-dialogue-label {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#farhana-avatar {
+    padding: 10px;
+}
+
+.npc-dialogue {
+    text-align: left;
+}
+
+.player-dialogue {
+    text-align: right;
+}
+
+.go-home {
+    margin: 30px;
+}
