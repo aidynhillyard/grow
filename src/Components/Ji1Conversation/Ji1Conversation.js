@@ -203,7 +203,7 @@ const Ji1Conversation = ({ setJiTalk, setShowFarhana, setShowJi, setShowAlba }) 
           className="fade-in-text"
           onClick={() => {
             setJiDialogue((prevState) => prevState + 1);
-            setJiTalk(true);
+            setJiTalk(false);
             setShowFarhana(true);
             setShowJi(true);
             setShowAlba(true);

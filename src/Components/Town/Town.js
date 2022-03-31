@@ -38,6 +38,8 @@ const Town = ({
   const [jiTalk, setJiTalk] = useState(false);
   const [showAlba, setShowAlba] = useState(true);
 
+  console.log("JiTalk is: ", jiTalk)
+
   // Talk to Farhana Function
   const farhanaConversation = () => {
     if (talkedToFarhana === false) {
@@ -143,12 +145,12 @@ const Town = ({
           farhanaConversation={farhanaConversation}
         />
       </div>
-      <div className="ji" style={{ display: (showJi && showFarhana) ? "inline" : "none" }}>
-        <div style={{ display: showFarhana ? "inline" : "none" }}>
+      <div className="ji" style={{ display: (showJi && !jiTalk) ? "inline" : "none" }}>
+        <div style={{ display: !jiTalk ? "inline" : "none" }}>
           <h3>Ji</h3>
           <p>(he/him/his)</p>
         </div>
-        <p style={{ display: showFarhana ? "inline" : "none" }}>
+        <p style={{ display: !jiTalk ? "inline" : "none" }}>
           This is text about Ji. It says a little bit about who they are and
           their relationship to you. There's probably also a picture of them.
         </p>
@@ -159,7 +161,7 @@ const Town = ({
             setJiTalk(true);
             jiConversation();
           }}
-          style={{ display: actionPoints > 0 && showFarhana ? "inline" : "none" }}
+          style={{ display: actionPoints > 0 && !jiTalk ? "inline" : "none" }}
         >
           Talk
         </button>
@@ -179,42 +181,51 @@ const Town = ({
       {/* Ji Dialogue #2 */}
       <div
         className="ji-dialogue2"
-        style={{ display: dialogueStepJi === 2 ? "inline" : "none" }}
+        style={{ display: jiTalk && dialogueStepJi === 2 ? "inline" : "none" }}
       >
         <Ji2Conversation
-          actionPoints={actionPoints}
-          jiConversation={jiConversation}
+          setJiTalk={setJiTalk}
+          setShowFarhana={setShowFarhana}
+          setShowJi={setShowJi}
+          setShowAlba={setShowAlba}
         />
       </div>
       {/* Ji Dialogue #3 */}
       <div
         className="ji-dialogue3"
-        style={{ display: dialogueStepJi === 3 ? "inline" : "none" }}
+        style={{ display: jiTalk && dialogueStepJi === 3 ? "inline" : "none" }}
       >
         <Ji3Conversation
-          actionPoints={actionPoints}
-          jiConversation={jiConversation}
+          setJiTalk={setJiTalk}
+          setShowFarhana={setShowFarhana}
+          setShowJi={setShowJi}
+          setShowAlba={setShowAlba}
         />
       </div>
       {/* Ji Dialogue #4 */}
       <div
         className="ji-dialogue4"
-        style={{ display: dialogueStepJi === 4 ? "inline" : "none" }}
+        style={{ display: jiTalk && dialogueStepJi === 4 ? "inline" : "none" }}
       >
         <Ji4Conversation
-          actionPoints={actionPoints}
-          jiConversation={jiConversation}
+          setJiTalk={setJiTalk}
+          setShowFarhana={setShowFarhana}
+          setShowJi={setShowJi}
+          setShowAlba={setShowAlba}
           tradeDealJi={tradeDealJi}
         />
       </div>
       {/* Ji Dialogue #5 */}
       <div
         className="ji-dialogue5"
-        style={{ display: dialogueStepJi === 5 ? "inline" : "none" }}
+        style={{ display: jiTalk && dialogueStepJi === 5 ? "inline" : "none" }}
       >
         <Ji5Conversation
-          actionPoints={actionPoints}
-          jiConversation={jiConversation}
+          setJiTalk={setJiTalk}
+          setShowFarhana={setShowFarhana}
+          setShowJi={setShowJi}
+          setShowAlba={setShowAlba}
+          tradeDealJi={tradeDealJi}
         />
       </div>
       <div className="alba" style={{ display: showAlba ? "inline" : "none" }}>
