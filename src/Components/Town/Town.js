@@ -177,11 +177,17 @@ const Town = ({
       {/* Farhana Dialogue #5 */}
       <div
         className="farhana-dialogue5"
-        style={{ display: dialogueStepFarhana === 5 ? "inline" : "none" }}
+        style={{ display: showFarhana && dialogueStepFarhana === 5 ? "inline" : "none" }}
       >
         <Farhana5Conversation
           actionPoints={actionPoints}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
           farhanaConversation={farhanaConversation}
+          setShowFarhana={setShowFarhana}
+          setShowJi={setShowJi}
+          setShowAlba={setShowAlba}
+          letter3IsRead={letter3IsRead}
         />
       </div>
       <div

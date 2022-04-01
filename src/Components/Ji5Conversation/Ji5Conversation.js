@@ -6,8 +6,8 @@ import player from "../../images/playeravplaceholder.png";
 const Ji5Conversation = ({
   actionPoints,
   letter2IsRead,
-  jiTalk,
-  setJiTalk,
+  globalShow,
+  setGlobalShow,
   jiConversation,
   setShowFarhana,
   setShowJi,
@@ -23,12 +23,12 @@ const Ji5Conversation = ({
           setShowFarhana(false);
           setShowAlba(false);
           jiConversation();
-          setJiTalk(true);
+          setGlobalShow(true);
           setJiDialogue((prevState) => prevState + 1);
         }}
         style={{
           display:
-            actionPoints > 0 && !jiTalk && letter2IsRead ? "inline" : "none",
+            actionPoints > 0 && !globalShow && letter2IsRead ? "inline" : "none",
         }}
       >
         Talk 5
@@ -166,7 +166,7 @@ const Ji5Conversation = ({
           className="fade-in-text"
           onClick={() => {
             setJiDialogue(0);
-            setJiTalk(false);
+            setGlobalShow(false);
             setShowFarhana(true);
             setShowJi(true);
             setShowAlba(true);
