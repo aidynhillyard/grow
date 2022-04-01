@@ -224,6 +224,10 @@ const Grow = () => {
           setActionPoints={setActionPoints}
           decrementActionPoints={decrementActionPoints}
           startNewDay={startNewDay}
+          // Dialogue Steps
+          dialogueStepFarhana={dialogueStepFarhana}
+          dialogueStepJi={dialogueStepJi}
+          dialogueStepAlba={dialogueStepAlba}
           // Letter Props
           letter1={letter1}
           letter2={letter2}

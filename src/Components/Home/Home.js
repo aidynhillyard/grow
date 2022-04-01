@@ -4,12 +4,14 @@ import Container from "react-bootstrap/Container";
 import Pot1 from "../Pot1/Pot1";
 import Pot2 from "../Pot2/Pot2";
 import Pot3 from "../Pot3/Pot3";
-import PlantDescriptions from "../PlantDescriptions/PlantDescriptions";
 import Letters from "../Letters/Letters";
 
 const Home = ({
   actionPoints,
   decrementActionPoints,
+  dialogueStepFarhana,
+  dialogueStepJi,
+  dialogueStepAlba,
   letter1,
   letter1IsRead,
   setLetter1IsRead,
@@ -56,7 +58,35 @@ const Home = ({
   return (
     <Container>
       <h1>Home</h1>
-      <h2>Lovely Potted Plants</h2>
+      <div
+        style={{
+          display:
+            dialogueStepJi >= 6 &&
+            dialogueStepAlba >= 6 &&
+            dialogueStepFarhana >= 6
+              ? "inline"
+              : "none",
+        }}
+      >
+        <p>
+          <i>
+            "Say not, 'I have found the truth,' but rather, 'I have found a
+            truth.'
+            <br />
+            Say not, 'I have found the path of the soul.' Say rather, 'I have
+            met the soul walking upon my path.'
+            <br />
+            For the soul walks upon all paths.
+            <br />
+            The soul walks not upon a line, neither does it grow like a reed.
+            <br />
+            The soul unfolds itself, like a lotus of countless petals."
+          </i>
+        </p>
+        <p>
+          ― Kahlil Gibran, <em>The Prophet</em>
+        </p>
+      </div>
       <Pot1
         actionPoints={actionPoints}
         decrementActionPoints={decrementActionPoints}
@@ -99,21 +129,6 @@ const Home = ({
         pot3IsFullyGrown={pot3IsFullyGrown}
         setPot3IsFullyGrown={setPot3IsFullyGrown}
       />
-      {/* <div>
-        <p
-          style={{
-            display:
-              pot1IsCaredFor === true &&
-              pot2IsCaredFor === true &&
-              pot3IsCaredFor === true
-                ? "block"
-                : "none",
-          }}
-        >
-          You have cared for all of your plants. You can check back after a new
-          day.
-        </p>
-      </div> */}
       <div>
         <button
           onClick={() => {
@@ -122,13 +137,6 @@ const Home = ({
         >
           Plant Types
         </button>
-      </div>
-      <div
-        style={{
-          display: showPlantTypes ? "block" : "none",
-        }}
-      >
-        <PlantDescriptions />
       </div>
       <div>
         <button
