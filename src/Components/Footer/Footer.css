@@ -2,10 +2,23 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 2.5rem; /* Footer height */
+    height: 3.5rem; /* Footer height */
+    background-color: #90A955;
+    color: #132A13;
   }
 
   .footer-text {
       padding: 0vh;
       margin: 0vh;
+  }
+
+  .social-media-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .social-media-icon {
+    height: 2.75vh;
+    padding: 1vh 3vh 0vh 3vh;
   }
