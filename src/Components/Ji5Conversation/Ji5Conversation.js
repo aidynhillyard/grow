@@ -110,7 +110,7 @@ const Ji5Conversation = ({
         <p className="fade-in-text npc-dialogue">
           I love her, too. Thanks again for the tulip, by the way. Did you know
           that flowers have meanings? Tulips have a lot of different meanings,
-          but blue ones are supposed to mean trust.
+          but pink ones are supposed to mean friendship.
         </p>
         <button
           className="fade-in-text"
@@ -127,7 +127,7 @@ const Ji5Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          Hm. That's funny; the letter mentioned trust, too.
+          That feels accurate. Thank you for being a friend to me, Ji.
         </p>
         <button
           className="fade-in-text"
@@ -145,26 +145,8 @@ const Ji5Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          It's all connected. Life, and all that.
-        </p>
-        <button
-          className="fade-in-text"
-          aria-label="next"
-          onClick={() => {
-            setJiDialogue((prevState) => prevState + 1);
-          }}
-        >
-          &or;
-        </button>
-      </div>
-      <div style={{ display: jiDialogue === 8 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
-        <p className="fade-in-text player-dialogue">
-          I'm beginning to feel like that's true.
-        </p>
-        <button
+          You've been through a lot. I have, too. But we don't have to go through it alone.
+        </p><button
           className="fade-in-text"
           onClick={() => {
             setJiDialogue(0);
