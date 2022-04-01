@@ -23,7 +23,7 @@ const Tutorial = ({ setLocation }) => {
         </div>
         <p className="fade-in-text npc-dialogue">
           Hey, Friend! Welcome back to town. When I heard you’d be moving back
-          into your old home, but with those set of wheels, I took the liberty
+          into your old home, but in a wheelchair, I took the liberty
           of installing some… modifications for you. What do you think?
         </p>
         <button
