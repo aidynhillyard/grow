@@ -99,7 +99,7 @@ const Home = ({
         pot3IsFullyGrown={pot3IsFullyGrown}
         setPot3IsFullyGrown={setPot3IsFullyGrown}
       />
-      <div>
+      {/* <div>
         <p
           style={{
             display:
@@ -113,7 +113,7 @@ const Home = ({
           You have cared for all of your plants. You can check back after a new
           day.
         </p>
-      </div>
+      </div> */}
       <div>
         <button
           onClick={() => {

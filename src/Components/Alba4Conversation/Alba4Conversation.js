@@ -22,7 +22,6 @@ const Alba4Conversation = ({
 }) => {
   // useStates
   const [albaDialogue, setAlbaDialogue] = useState(0);
-  const [tradedPlant, setTradedPlant] = useState(false);
 
   return (
     <div>
@@ -57,23 +56,12 @@ const Alba4Conversation = ({
         </p>
         <button
           className="fade-in-text player-dialogue"
-          style={{ display: !tradedPlant ? "inline" : "none" }}
           onClick={() => {
             tradeDealAlba();
-            setTradedPlant(true);
-          }}
-        >
-          Give Plant
-        </button>
-        <button
-          style={{ display: tradedPlant ? "inline" : "none" }}
-          className="fade-in-text"
-          aria-label="next"
-          onClick={() => {
             setAlbaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          Give Plant
         </button>
       </div>
       <div style={{ display: albaDialogue === 2 ? "inline" : "none" }}>
@@ -254,7 +242,6 @@ const Alba4Conversation = ({
           onClick={() => {
             setAlbaDialogue(0);
             setGlobalShow(false);
-            setTradedPlant(false);
             setShowFarhana(true);
             setShowJi(true);
             setShowAlba(true);
