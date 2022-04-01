@@ -327,7 +327,12 @@ const Town = ({
       >
         <Alba3Conversation
           actionPoints={actionPoints}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
           albaConversation={albaConversation}
+          setShowFarhana={setShowFarhana}
+          setShowJi={setShowJi}
+          setShowAlba={setShowAlba}
         />
       </div>
       {/* Alba Dialogue #4 */}
