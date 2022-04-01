@@ -5,8 +5,8 @@ import player from "../../images/playeravplaceholder.png";
 
 const Ji3Conversation = ({
   actionPoints,
-  jiTalk,
-  setJiTalk,
+  globalShow,
+  setGlobalShow,
   jiConversation,
   setShowFarhana,
   setShowJi,
@@ -20,12 +20,12 @@ const Ji3Conversation = ({
       <button
         onClick={() => {
           setShowFarhana(false);
-          setJiTalk(true);
+          setGlobalShow(true);
           setShowAlba(false);
           jiConversation();
           setJiDialogue((prevState) => prevState + 1);
         }}
-        style={{ display: actionPoints > 0 && !jiTalk ? "inline" : "none" }}
+        style={{ display: actionPoints > 0 && !globalShow ? "inline" : "none" }}
       >
         Talk 3
       </button>
@@ -230,7 +230,7 @@ const Ji3Conversation = ({
           className="fade-in-text"
           onClick={() => {
             setJiDialogue(0);
-            setJiTalk(false);
+            setGlobalShow(false);
             setShowFarhana(true);
             setShowJi(true);
             setShowAlba(true);
