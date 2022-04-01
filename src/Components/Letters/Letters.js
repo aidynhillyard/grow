@@ -14,6 +14,7 @@ const Letters = ({
   letter3IsRead,
   setLetter3IsRead,
 }) => {
+  // useStates
   const [showLetter1, setShowLetter1] = useState(false);
   const [showLetter2, setShowLetter2] = useState(false);
   const [showLetter3, setShowLetter3] = useState(false);
@@ -98,7 +99,6 @@ const Letters = ({
       </div>
 
       {/* Letter #2 */}
-
       <div
         className="letter"
         style={{
@@ -117,13 +117,52 @@ const Letters = ({
         >
           Read Letter Given by Ji
         </button>
-
         <div
           style={{
             display: showLetter2 ? "block" : "none",
           }}
         >
-          <p>Text of Letter #2 goes here. It's amazing.</p>
+          <p>Dear Future Me,</p>
+
+          <p>
+            The memorial service for Ji's grandma was last week. Ji has been
+            really busy with family, and he hasn't been working of course, so we
+            haven't talked much. But I wish I could do something. I'm covering
+            his shifts at the theater but I want to do more.
+          </p>
+
+          <p>
+            I was really nervous singing at the service but Ji had asked me to
+            and I kinda just had to trust that it would be okay. I really wanted
+            to do something to honor her. She was always so kind to me when Ji
+            and I would stop by his house after work. Always cooking stuff and
+            asking how I was doing in school.
+          </p>
+
+          <p>
+            There were so many stories about his grandma at the memorial
+            service. It feels like everyone in the whole town had something to
+            say about her. How she always wished them good morning, or how she
+            would share her cooking. Or like that one time when she stopped that
+            bully from hurting that kid down the street.
+          </p>
+
+          <p>
+            It sounds nice to be remembered for touching so many people's lives
+            and making people's days brighter. Singing can do that. Ji told me
+            how much it meant to him. So a song is like a gift, then. Maybe
+            people would say that about me one day, when I'm gone: that I gave
+            them songs, and they felt things, and it meant something.
+          </p>
+
+          <p>- Me</p>
+          <button
+            onClick={() => {
+              setShowLetter2(false);
+            }}
+          >
+            Close
+          </button>
         </div>
       </div>
 
@@ -152,7 +191,48 @@ const Letters = ({
             display: showLetter3 ? "block" : "none",
           }}
         >
-          <p>Text of Letter #3 goes here. It's amazing.</p>
+          <p>Dear Future Me,</p>
+
+          <p>
+            Today, Farhana and I decided to move in together. I don't think her
+            family is exactly thrilled, but she promised me she would handle
+            that. It's going to be very difficult to explain to them that we're
+            not together, but we're like… together. See, I can't even explain it
+            to Future Me.
+          </p>
+
+          <p>
+            Mom was like, “So you're going to be roommates with your best
+            friend?” and it's not exactly that, either. Like, yes, but also no.
+            It's like saying a lake is an ocean. So of course Ji was like, “Oh,
+            so you're dating.” But it's not that at all. That's like saying an
+            ocean is a mountain.
+          </p>
+
+          <p>
+            A mountain is a mountain, and an ocean is an ocean. An ocean is not
+            a lesser version of a mountain, and a mountain is not more than an
+            ocean. Farhana and I just know we want to travel the ocean together,
+            in one boat. Okay, I don't even know if this metaphor is working.
+            Whatever.
+          </p>
+
+          <p>
+            Anyway, we're going to start looking at places next week. I told her
+            I'm not picky, as long as there's room for some sort of garden, even
+            if we have to keep it inside with potted plants. I just think
+            growing things is like magic. Today is like magic. Planting this
+            seed with Farhana, to see what will grow.
+          </p>
+
+          <p>- Me</p>
+          <button
+            onClick={() => {
+              setShowLetter3(false);
+            }}
+          >
+            Close
+          </button>
         </div>
       </div>
     </div>
