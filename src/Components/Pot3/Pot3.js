@@ -82,7 +82,7 @@ const Pot3 = ({
     <Container>
       {/* Pot #3 */}
       <div>
-        <p>
+        <p className="plant-name">
           Plant #3: {pot3Type}
           <span style={{ display: pot3IsEmpty === true ? "none" : "inline" }}>
             , Age: {pot3Age}, Seed: {pot3IsSeed ? "True" : "False"}, Seedling:{" "}
@@ -110,41 +110,43 @@ const Pot3 = ({
           display: pot3IsEmpty === true && actionPoints > 0 ? "block" : "none",
         }}
       >
-        <DropdownButton id="dropdown-item-button" title="Choose a Seed">
-          <Dropdown.Item
-            as="button"
-            onClick={() => {
-              plantPot3();
-              decrementActionPoints();
-              setPot3Type("Tulip");
-              incrementPot3Age();
-            }}
-          >
-            Tulip
-          </Dropdown.Item>
-          <Dropdown.Item
-            as="button"
-            onClick={() => {
-              plantPot3();
-              decrementActionPoints();
-              setPot3Type("Iris");
-              incrementPot3Age();
-            }}
-          >
-            Iris
-          </Dropdown.Item>
-          <Dropdown.Item
-            as="button"
-            onClick={() => {
-              plantPot3();
-              decrementActionPoints();
-              setPot3Type("Forget-Me-Not");
-              incrementPot3Age();
-            }}
-          >
-            Forget-Me-Not
-          </Dropdown.Item>
-        </DropdownButton>
+        <div className="choose-a-seed">
+          <DropdownButton id="dropdown-item-button" title="Choose a Seed">
+            <Dropdown.Item
+              as="button"
+              onClick={() => {
+                plantPot3();
+                decrementActionPoints();
+                setPot3Type("Tulip");
+                incrementPot3Age();
+              }}
+            >
+              Tulip
+            </Dropdown.Item>
+            <Dropdown.Item
+              as="button"
+              onClick={() => {
+                plantPot3();
+                decrementActionPoints();
+                setPot3Type("Iris");
+                incrementPot3Age();
+              }}
+            >
+              Iris
+            </Dropdown.Item>
+            <Dropdown.Item
+              as="button"
+              onClick={() => {
+                plantPot3();
+                decrementActionPoints();
+                setPot3Type("Forget-Me-Not");
+                incrementPot3Age();
+              }}
+            >
+              Forget-Me-Not
+            </Dropdown.Item>
+          </DropdownButton>
+        </div>
       </div>
       <div style={{ display: pot3IsCaredFor === true ? "inline" : "none" }}>
         You have cared for your {pot3Type} plant today!
