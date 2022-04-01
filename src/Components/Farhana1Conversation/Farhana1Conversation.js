@@ -1,62 +1,184 @@
 import "./Farhana1Conversation.css";
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Alert from 'react-bootstrap/Alert'
+import { useState } from "react";
+import farhana from "../../images/farhanabeta.png";
+import player from "../../images/playeravplaceholder.png";
 
-const Farhana1Conversation = ({ actionPoints, farhanaConversation }) => {
-
+const Farhana1Conversation = ({
+  actionPoints,
+  globalShow,
+  setGlobalShow,
+  farhanaConversation,
+  setShowFarhana,
+  setShowJi,
+  setShowAlba,
+}) => {
   // useStates
-  const [showF1, setShowF1] = useState(false);
-  const [showF2, setShowF2] = useState(false);
+  const [farhanaDialogue, setFarhanaDialogue] = useState(0);
 
   return (
     <div>
-        <Alert show={showF1} variant="success">
-          <div className="npc-dialogue">
-            <p>
-              This is what Farhana is saying. She is talking about the town and
-              about other things that we are interested in hearing. This is more
-              text to show she is still talking.
-            </p>
-          </div>
-          <hr />
-          <div className="player-dialogue">
-            <p>
-              Player dialogue goes here. Let's start with one dialogue option
-              first and not worry about player choices until later.
-            </p>
-          </div>
-          <div className="d-flex justify-content-end">
-            <Button
-              onClick={() => {
-                setShowF2(true);
-                setShowF1(false);
-              }}
-              variant="outline-success"
-            >
-              Next
-            </Button>
-          </div>
-        </Alert>
-        <Alert show={showF2} variant="success">
-          <p>Farhana's response. She says things depending on what you say.</p>
-          <div className="d-flex justify-content-end">
-            <Button onClick={() => setShowF2(false)} variant="outline-success">
-              Close
-            </Button>
-          </div>
-        </Alert>
-
-        {!showF1 && !showF2 && (
-          <Button style={{ display: actionPoints > 0 ? "inline" : "none" }}
-            onClick={() => {
-              setShowF1(true);
-              farhanaConversation();
-            }}
-          >
-            Talk
-          </Button>
-        )}
+      <button
+        onClick={() => {
+          setShowFarhana(false);
+          setShowAlba(false);
+          setGlobalShow(true);
+          farhanaConversation();
+          setFarhanaDialogue((prevState) => prevState + 1);
+        }}
+        style={{ display: actionPoints > 0 && !globalShow ? "inline" : "none" }}
+      >
+        Talk 1
+      </button>
+      <div style={{ display: farhanaDialogue === 1 ? "inline" : "none" }}>
+        <div className="farhana-dialogue-label fade-in-text">
+          <img src={farhana} alt="Ji" id="farhana-avatar" />
+          <p>Farhana (she/her/hers)</p>
+        </div>
+        <p className="fade-in-text npc-dialogue">
+          Hey, Friend! I’m glad you decided to come to town. I know it’s a lot,
+          trying to adjust to being back here.
+        </p>
+        <button
+          className="fade-in-text"
+          aria-label="next"
+          onClick={() => {
+            setFarhanaDialogue((prevState) => prevState + 1);
+          }}
+        >
+          &or;
+        </button>
+      </div>
+      <div style={{ display: farhanaDialogue === 2 ? "inline" : "none" }}>
+        <div className="player-dialogue-label fade-in-text">
+          <img src={player} alt="Plant avatar" id="player-avatar" />
+        </div>
+        <p className="fade-in-text player-dialogue">
+          Yeah, it is. How are you?
+        </p>
+        <button
+          className="fade-in-text"
+          aria-label="next"
+          onClick={() => {
+            setFarhanaDialogue((prevState) => prevState + 1);
+          }}
+        >
+          &or;
+        </button>
+      </div>
+      <div style={{ display: farhanaDialogue === 3 ? "inline" : "none" }}>
+        <div className="farhana-dialogue-label fade-in-text">
+          <img src={farhana} alt="Ji" id="farhana-avatar" />
+          <p>Farhana (she/her/hers)</p>
+        </div>
+        <p className="fade-in-text npc-dialogue">
+          Hopeful, actually. The city council is talking about renovating the
+          rec center, and I’m hoping my company would get the contract. There’s
+          a lot of places around town that need renovating, really, but I know
+          that’s expensive and they’re trying to prioritize.
+        </p>
+        <button
+          className="fade-in-text"
+          aria-label="next"
+          onClick={() => {
+            setFarhanaDialogue((prevState) => prevState + 1);
+          }}
+        >
+          &or;
+        </button>
+      </div>
+      <div style={{ display: farhanaDialogue === 4 ? "inline" : "none" }}>
+        <div className="player-dialogue-label fade-in-text">
+          <img src={player} alt="Plant avatar" id="player-avatar" />
+        </div>
+        <p className="fade-in-text player-dialogue">
+          You sound really excited when you talk about your work. You must like
+          it a lot, being in construction?
+        </p>
+        <button
+          className="fade-in-text"
+          aria-label="next"
+          onClick={() => {
+            setFarhanaDialogue((prevState) => prevState + 1);
+          }}
+        >
+          &or;
+        </button>
+      </div>
+      <div style={{ display: farhanaDialogue === 5 ? "inline" : "none" }}>
+        <div className="farhana-dialogue-label fade-in-text">
+          <img src={farhana} alt="Ji" id="farhana-avatar" />
+          <p>Farhana (she/her/hers)</p>
+        </div>
+        <p className="fade-in-text npc-dialogue">
+          I love it! Making things with my hands is just so nice. Tangible. You
+          can reach out and touch it and know you did a good job.
+        </p>
+        <button
+          className="fade-in-text"
+          aria-label="next"
+          onClick={() => {
+            setFarhanaDialogue((prevState) => prevState + 1);
+          }}
+        >
+          &or;
+        </button>
+      </div>
+      <div style={{ display: farhanaDialogue === 6 ? "inline" : "none" }}>
+        <div className="player-dialogue-label fade-in-text">
+          <img src={player} alt="Plant avatar" id="player-avatar" />
+        </div>
+        <p className="fade-in-text player-dialogue">
+          That reminds me: thanks again for building that ramp for me, and for
+          making the adjustments to the house. That had to have taken a lot of
+          time and money. I know you said we are very close, but it’s hard
+          feeling like I owe you so much.
+        </p>
+        <button
+          className="fade-in-text"
+          aria-label="next"
+          onClick={() => {
+            setFarhanaDialogue((prevState) => prevState + 1);
+          }}
+        >
+          &or;
+        </button>
+      </div>
+      <div style={{ display: farhanaDialogue === 7 ? "inline" : "none" }}>
+        <div className="farhana-dialogue-label fade-in-text">
+          <img src={farhana} alt="Ji" id="farhana-avatar" />
+          <p>Farhana (she/her/hers)</p>
+        </div>
+        <p className="fade-in-text npc-dialogue">
+          Eh, worth it. <em>You’re</em> worth it.
+        </p>
+        <button
+          className="fade-in-text"
+          aria-label="next"
+          onClick={() => {
+            setFarhanaDialogue((prevState) => prevState + 1);
+          }}
+        >
+          &or;
+        </button>
+      </div>
+      <div style={{ display: farhanaDialogue === 8 ? "inline" : "none" }}>
+        <div className="player-dialogue-label fade-in-text">
+          <img src={player} alt="Plant avatar" id="player-avatar" />
+        </div>
+        <p className="fade-in-text player-dialogue">Um, thanks.</p>
+        <button
+          className="fade-in-text"
+          onClick={() => {
+            setFarhanaDialogue(0);
+            setGlobalShow(false);
+            setShowFarhana(true);
+            setShowJi(true);
+            setShowAlba(true);
+          }}
+        >
+          End
+        </button>
+      </div>
     </div>
   );
 };

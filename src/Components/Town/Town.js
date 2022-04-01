@@ -109,27 +109,31 @@ const Town = ({
       {/* Farhana Dialogue #1 */}
       <div
         className="farhana-dialogue1"
-        style={{
-          display: showFarhana && dialogueStepFarhana === 1 ? "inline" : "none",
-        }}
+        style={{ display: showFarhana && dialogueStepFarhana === 1 ? "inline" : "none" }}
       >
         <Farhana1Conversation
           actionPoints={actionPoints}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
           farhanaConversation={farhanaConversation}
-          showJi={showJi}
+          setShowFarhana={setShowFarhana}
           setShowJi={setShowJi}
-          showAlba={showAlba}
           setShowAlba={setShowAlba}
         />
       </div>
       {/* Farhana Dialogue #2 */}
       <div
         className="farhana-dialogue2"
-        style={{ display: dialogueStepFarhana === 2 ? "inline" : "none" }}
+        style={{ display: showFarhana && dialogueStepFarhana === 2 ? "inline" : "none" }}
       >
         <Farhana2Conversation
           actionPoints={actionPoints}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
           farhanaConversation={farhanaConversation}
+          setShowFarhana={setShowFarhana}
+          setShowJi={setShowJi}
+          setShowAlba={setShowAlba}
         />
       </div>
       {/* Farhana Dialogue #3 */}
