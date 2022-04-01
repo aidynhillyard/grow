@@ -35,9 +35,9 @@ const Ji6Conversation = ({
           setJiDialogue((prevState) => prevState + 1);
         }}
         style={{ display: actionPoints > 0 && !jiTalk && (dialogueStepJi > 5 &&
-          ((pot1Type === "Tulip" && pot1IsFullyGrown === true) ||
-            (pot2Type === "Tulip" && pot2IsFullyGrown === true) ||
-            (pot3Type === "Tulip" && pot3IsFullyGrown === true))) ? "inline" : "none" }}
+            ((pot1Type === "Tulip" && pot1IsFullyGrown === true) ||
+              (pot2Type === "Tulip" && pot2IsFullyGrown === true) ||
+              (pot3Type === "Tulip" && pot3IsFullyGrown === true))) ? "inline" : "none" }}
       >
         Talk 6
       </button>
@@ -81,6 +81,7 @@ const Ji6Conversation = ({
           onClick={() => {
             setJiDialogue(0);
             setJiTalk(false);
+            setTradedPlant(false);
             setShowFarhana(true);
             setShowJi(true);
             setShowAlba(true);

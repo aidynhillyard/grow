@@ -260,7 +260,7 @@ const Town = ({
       </div>
       {/* Ji Dialogue #6 */}
       <div
-        className="ji-dialogue5"
+        className="ji-dialogue6"
         style={{ display: dialogueStepJi > 5 ? "inline" : "none" }}
       >
         <Ji6Conversation
@@ -271,8 +271,14 @@ const Town = ({
           setShowFarhana={setShowFarhana}
           setShowJi={setShowJi}
           setShowAlba={setShowAlba}
-          letter2IsRead={letter2IsRead}
           tradeDealJi={tradeDealJi}
+          dialogueStepJi={dialogueStepJi}
+          pot1Type={pot1Type}
+          pot1IsFullyGrown={pot1IsFullyGrown}
+          pot2Type={pot2Type}
+          pot2IsFullyGrown={pot2IsFullyGrown}
+          pot3Type={pot3Type}
+          pot3IsFullyGrown={pot3IsFullyGrown}
         />
       </div>
       <div className="alba" style={{ display: showAlba ? "inline" : "none" }}>

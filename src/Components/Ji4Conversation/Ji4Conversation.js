@@ -104,7 +104,7 @@ const Ji4Conversation = ({
           &or;
         </button>
       </div>
-      <div style={{ display: jiDialogue === 3 ? "inline" : "none" }}>
+      <div style={{ display: jiDialogue === 4 ? "inline" : "none" }}>
         <div className="ji-dialogue-label fade-in-text">
           <img src={ji} alt="Ji" id="ji-avatar" />
           <p>Ji (he/him/his)</p>
@@ -126,7 +126,7 @@ const Ji4Conversation = ({
           &or;
         </button>
       </div>
-      <div style={{ display: jiDialogue === 4 ? "inline" : "none" }}>
+      <div style={{ display: jiDialogue === 5 ? "inline" : "none" }}>
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
@@ -141,7 +141,7 @@ const Ji4Conversation = ({
           &or;
         </button>
       </div>
-      <div style={{ display: jiDialogue === 5 ? "inline" : "none" }}>
+      <div style={{ display: jiDialogue === 6 ? "inline" : "none" }}>
         <div className="ji-dialogue-label fade-in-text">
           <img src={ji} alt="Ji" id="ji-avatar" />
           <p>Ji (he/him/his)</p>
@@ -162,7 +162,7 @@ const Ji4Conversation = ({
           &or;
         </button>
       </div>
-      <div style={{ display: jiDialogue === 6 ? "inline" : "none" }}>
+      <div style={{ display: jiDialogue === 7 ? "inline" : "none" }}>
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
@@ -177,7 +177,7 @@ const Ji4Conversation = ({
           &or;
         </button>
       </div>
-      <div style={{ display: jiDialogue === 7 ? "inline" : "none" }}>
+      <div style={{ display: jiDialogue === 8 ? "inline" : "none" }}>
         <div className="ji-dialogue-label fade-in-text">
           <img src={ji} alt="Ji" id="ji-avatar" />
           <p>Ji (he/him/his)</p>
@@ -196,7 +196,7 @@ const Ji4Conversation = ({
           &or;
         </button>
       </div>
-      <div style={{ display: jiDialogue === 8 ? "inline" : "none" }}>
+      <div style={{ display: jiDialogue === 9 ? "inline" : "none" }}>
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
@@ -211,7 +211,7 @@ const Ji4Conversation = ({
           &or;
         </button>
       </div>
-      <div style={{ display: jiDialogue === 9 ? "inline" : "none" }}>
+      <div style={{ display: jiDialogue === 10 ? "inline" : "none" }}>
         <div className="ji-dialogue-label fade-in-text">
           <img src={ji} alt="Ji" id="ji-avatar" />
           <p>Ji (he/him/his)</p>
@@ -231,7 +231,7 @@ const Ji4Conversation = ({
           &or;
         </button>
       </div>
-      <div style={{ display: jiDialogue === 10 ? "inline" : "none" }}>
+      <div style={{ display: jiDialogue === 11 ? "inline" : "none" }}>
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
@@ -243,6 +243,7 @@ const Ji4Conversation = ({
           onClick={() => {
             setJiDialogue(0);
             setJiTalk(false);
+            setTradedPlant(false);
             setShowFarhana(true);
             setShowJi(true);
             setShowAlba(true);

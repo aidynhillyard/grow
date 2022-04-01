@@ -13,7 +13,7 @@ const Grow = () => {
   const [location, setLocation] = useState("tutorial");
 
   // Action Points and Day useStates
-  const [actionPoints, setActionPoints] = useState(2);
+  const [actionPoints, setActionPoints] = useState(3);
   const [day, setDay] = useState(1);
 
   // Letter UseStates
@@ -185,7 +185,7 @@ const Grow = () => {
 
   // Start of Day
   const startNewDay = () => {
-    setActionPoints(2);
+    setActionPoints(3);
     setLocation("home");
     setDay((prevState) => prevState + 1);
     setPot1IsCaredFor(false);
