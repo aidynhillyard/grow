@@ -22,7 +22,6 @@ const Ji4Conversation = ({
 }) => {
   // useStates
   const [jiDialogue, setJiDialogue] = useState(0);
-  const [tradedPlant, setTradedPlant] = useState(false);
 
   return (
     <div>
@@ -57,23 +56,12 @@ const Ji4Conversation = ({
         </p>
         <button
           className="fade-in-text player-dialogue"
-          style={{ display: !tradedPlant ? "inline" : "none" }}
           onClick={() => {
             tradeDealJi();
-            setTradedPlant(true);
-          }}
-        >
-          Give Plant
-        </button>
-        <button
-          style={{ display: tradedPlant ? "inline" : "none" }}
-          className="fade-in-text"
-          aria-label="next"
-          onClick={() => {
             setJiDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          Give Plant
         </button>
       </div>
       <div style={{ display: jiDialogue === 2 ? "inline" : "none" }}>
@@ -251,7 +239,6 @@ const Ji4Conversation = ({
           onClick={() => {
             setJiDialogue(0);
             setGlobalShow(false);
-            setTradedPlant(false);
             setShowFarhana(true);
             setShowJi(true);
             setShowAlba(true);
