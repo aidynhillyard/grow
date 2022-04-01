@@ -22,12 +22,6 @@ const Pot2 = ({
 }) => {
 
   // useStates
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-  // Pot #2 UseStates
-  
   const [pot2IsSeed, setPot2IsSeed] = useState(null)
   const [pot2IsSeedling, setPot2IsSeedling] = useState(null)
 
@@ -106,27 +100,11 @@ const Pot2 = ({
           variant="info"
           onClick={() => {
             careForPlant2();
-            handleShow();
           }}
         >
           Care for Plant
         </button>
       </div>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Care for Plant</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          You've spent one Action Point to care for your plant.
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
-            Okay
-          </Button>
-        </Modal.Footer>
-      </Modal>
-
       <div style={{ display: pot2IsEmpty === true && actionPoints > 0 ? "block" : "none" }}>
         <DropdownButton id="dropdown-item-button" title="Choose a Seed">
           <Dropdown.Item
@@ -163,6 +141,9 @@ const Pot2 = ({
             Forget-Me-Not
           </Dropdown.Item>
         </DropdownButton>
+      </div>
+      <div style={{ display: pot2IsCaredFor === true ? "inline" : "none" }}>
+        You have cared for your {pot2Type} plant today!
       </div>
     </Container>
   );
