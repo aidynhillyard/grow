@@ -1,20 +1,44 @@
 #dropdown-item-button {
-    border-radius: 0.5em;
-    border-color: #31572C;
-    background-color: #31572C;
-    color: #FBFCEB;
-    box-shadow: 0.1em 0.1em rgb(31, 31, 31);
+  border-radius: 0.5em;
+  border-color: #31572c;
+  background-color: #31572c;
+  color: #fbfceb;
+  box-shadow: 0.1em 0.1em rgb(31, 31, 31);
 }
 
 button:focus {
-    box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .dropdown-menu.show {
-    background-color: #ECF39E;
-    border-radius: 0.5em;
+  background-color: #ecf39e;
+  border-radius: 0.5em;
 }
 
 .home-title {
-    max-width: 30vh;
+  max-width: 30vh;
+}
+
+/*
+*************
+T A B L E T
+*************
+*/
+
+@media only screen and (min-width: 768px) {
+  .home-title {
+    max-width: 50%;
+  }
+}
+
+/*
+  *************
+  D E S K T O P
+  *************
+  */
+
+@media only screen and (min-width: 992px) {
+  .home-title {
+    max-width: 50%;
+  }
 }

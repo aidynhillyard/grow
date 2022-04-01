@@ -193,7 +193,7 @@ const Grow = () => {
   return (
     <Container>
       <div>
-        <img className="grow-logo" src={growtitle} alt="Grow"/>
+        <img className="grow-title" src={growtitle} alt="Grow"/>
         </div>
       <button
         onClick={() => {
@@ -202,9 +202,9 @@ const Grow = () => {
       >
         *** go home ***
       </button>
-      <div style={{ display: location === "tutorial" ? "none" : "inline" }}>
-        <p>Action Points: {actionPoints}</p>
-        <p>Day: {day}</p>
+      <div className="action-points-day" style={{ display: location === "tutorial" ? "none" : "inline" }}>
+        <p className="ap-day"><span className="key">Action Points:</span> {actionPoints}</p>
+        <p className="ap-day"><span className="key">Day:</span> {day}</p>
       </div>
       <div style={{ display: actionPoints === 0 && !globalShow ? "inline" : "none" }}>
         <NewDay startNewDay={startNewDay} />

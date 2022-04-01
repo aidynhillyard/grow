@@ -20,3 +20,27 @@
 .town-title {
     max-width: 30vh;
 }
+
+  /*
+*************
+T A B L E T
+*************
+*/
+
+@media only screen and (min-width: 768px) {
+    .town-title {
+        max-width: 50%;
+    }
+}
+  
+  /*
+  *************
+  D E S K T O P
+  *************
+  */
+  
+  @media only screen and (min-width: 992px) {
+    .town-title {
+        max-width: 50%;
+    }
+}

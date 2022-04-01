@@ -1,0 +1,23 @@
+.grow-title {
+    max-width: 100%;
+  }
+
+  .ap-day {
+      margin: 0;
+  }
+
+  .key {
+      font-weight: 600;
+  }
+
+/*
+*************
+D E S K T O P
+*************
+*/
+
+@media only screen and (min-width: 992px) {
+    .grow-title {
+        max-width: 80%;
+    }
+}

@@ -35,14 +35,10 @@ a {
 }
 
 button {
-  border-radius: 0.5em;
+  border-radius: 0.7em;
   background-color: #31572C;
   color: #FBFCEB;
   padding: 0.3em;
-}
-
-.grow-logo {
-  max-width: 350px;
 }
 
 @media (min-width: 1px) {
