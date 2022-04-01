@@ -1,8 +1,6 @@
 import "./Pot2.css";
 import { useState } from "react";
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 
@@ -18,12 +16,11 @@ const Pot2 = ({
   pot2Age,
   setPot2Age,
   pot2IsFullyGrown,
-  setPot2IsFullyGrown
+  setPot2IsFullyGrown,
 }) => {
-
   // useStates
-  const [pot2IsSeed, setPot2IsSeed] = useState(null)
-  const [pot2IsSeedling, setPot2IsSeedling] = useState(null)
+  const [pot2IsSeed, setPot2IsSeed] = useState(null);
+  const [pot2IsSeedling, setPot2IsSeedling] = useState(null);
 
   // Plant Pot #2 Function
   const plantPot2 = () => {
@@ -44,29 +41,29 @@ const Pot2 = ({
     if (pot2Type === "Tulip" && pot2Age === 1) {
       setPot2IsSeed(true);
     } else if (pot2Type === "Tulip" && pot2Age === 2) {
-        setPot2IsSeed(false);
-        setPot2IsSeedling(true);
+      setPot2IsSeed(false);
+      setPot2IsSeedling(true);
     } else if (pot2Type === "Tulip" && pot2Age > 2) {
-        setPot2IsSeedling(false);
-        setPot2IsFullyGrown(true);
+      setPot2IsSeedling(false);
+      setPot2IsFullyGrown(true);
     } else if (pot2Type === "Iris" && pot2Age < 2) {
-        setPot2IsSeed(true);
+      setPot2IsSeed(true);
     } else if (pot2Type === "Iris" && pot2Age === 3) {
-        setPot2IsSeed(false);
-        setPot2IsSeedling(true);
+      setPot2IsSeed(false);
+      setPot2IsSeedling(true);
     } else if (pot2Type === "Iris" && pot2Age > 3) {
-        setPot2IsSeedling(false);
-        setPot2IsFullyGrown(true);
+      setPot2IsSeedling(false);
+      setPot2IsFullyGrown(true);
     } else if (pot2Type === "Forget-Me-Not" && pot2Age < 3) {
-        setPot2IsSeed(true);
+      setPot2IsSeed(true);
     } else if (pot2Type === "Forget-Me-Not" && pot2Age === 4) {
-        setPot2IsSeed(false);
-        setPot2IsSeedling(true);
+      setPot2IsSeed(false);
+      setPot2IsSeedling(true);
     } else if (pot2Type === "Forget-Me-Not" && pot2Age > 4) {
-        setPot2IsSeedling(false);
-        setPot2IsFullyGrown(true);
+      setPot2IsSeedling(false);
+      setPot2IsFullyGrown(true);
     }
-  }
+  };
 
   // Increment Pot Age
   const incrementPot2Age = () => {
@@ -85,17 +82,21 @@ const Pot2 = ({
     <Container>
       {/* Pot #2 */}
       <div>
-      <p>
+        <p>
           Plant #2: {pot2Type}
           <span style={{ display: pot2IsEmpty === true ? "none" : "inline" }}>
-            , Age: {pot2Age}, Seed: {pot2IsSeed ? "True" : "False"}, Seedling: {pot2IsSeedling ? "True" : "False"} Fully Grown: {pot2IsFullyGrown ? "True" : "False"}
+            , Age: {pot2Age}, Seed: {pot2IsSeed ? "True" : "False"}, Seedling:{" "}
+            {pot2IsSeedling ? "True" : "False"} Fully Grown:{" "}
+            {pot2IsFullyGrown ? "True" : "False"}
           </span>
         </p>
       </div>
-      <div style={{
+      <div
+        style={{
           display:
             pot2IsEmpty === true || pot2IsCaredFor === true ? "none" : "block",
-        }}>
+        }}
+      >
         <button
           variant="info"
           onClick={() => {
@@ -105,7 +106,11 @@ const Pot2 = ({
           Care for Plant
         </button>
       </div>
-      <div style={{ display: pot2IsEmpty === true && actionPoints > 0 ? "block" : "none" }}>
+      <div
+        style={{
+          display: pot2IsEmpty === true && actionPoints > 0 ? "block" : "none",
+        }}
+      >
         <DropdownButton id="dropdown-item-button" title="Choose a Seed">
           <Dropdown.Item
             as="button"

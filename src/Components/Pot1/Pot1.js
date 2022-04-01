@@ -105,7 +105,6 @@ const Pot1 = ({
           Care for Plant
         </button>
       </div>
-
       <div
         style={{
           display: pot1IsEmpty === true && actionPoints > 0 ? "block" : "none",
