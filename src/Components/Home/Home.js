@@ -6,10 +6,13 @@ import Pot2 from "../Pot2/Pot2";
 import Pot3 from "../Pot3/Pot3";
 import Letters from "../Letters/Letters";
 import home from "../../images/home.png";
+import sprig from "../../images/sprig.png";
 
 const Home = ({
   actionPoints,
   decrementActionPoints,
+  location,
+  setLocation,
   dialogueStepFarhana,
   dialogueStepJi,
   dialogueStepAlba,
@@ -53,12 +56,11 @@ const Home = ({
   pot3IsFullyGrown,
   setPot3IsFullyGrown,
 }) => {
-  const [showPlantTypes, setShowPlantTypes] = useState(false);
   const [showLetters, setShowLetters] = useState(false);
 
   return (
     <Container>
-      <img className="home-title" src={home} alt="Home"/>
+      <img className="home-title" src={home} alt="Home" />
       <div
         style={{
           display:
@@ -130,40 +132,59 @@ const Home = ({
         pot3IsFullyGrown={pot3IsFullyGrown}
         setPot3IsFullyGrown={setPot3IsFullyGrown}
       />
-      <div>
-        <button
-          onClick={() => {
-            setShowPlantTypes(!showPlantTypes);
+      <div className="bottom-links">
+        <div><img className="sprig" src={sprig}/>
+          <button
+            onClick={() => {
+              setShowLetters(!showLetters);
+            }}
+          >
+            Letters
+          </button>
+        </div>
+        <div
+          style={{
+            display: showLetters ? "inline" : "none",
           }}
         >
-          Plant Types
-        </button>
-      </div>
-      <div>
-        <button
-          onClick={() => {
-            setShowLetters(!showLetters);
-          }}
-        >
-          Letters
-        </button>
-      </div>
-      <div
-        style={{
-          display: showLetters ? "inline" : "none",
-        }}
-      >
-        <Letters
-          letter1={letter1}
-          letter2={letter2}
-          letter3={letter3}
-          letter1IsRead={letter1IsRead}
-          setLetter1IsRead={setLetter1IsRead}
-          letter2IsRead={letter2IsRead}
-          setLetter2IsRead={setLetter2IsRead}
-          letter3IsRead={letter3IsRead}
-          setLetter3IsRead={setLetter3IsRead}
-        />
+          <Letters
+            letter1={letter1}
+            letter2={letter2}
+            letter3={letter3}
+            letter1IsRead={letter1IsRead}
+            setLetter1IsRead={setLetter1IsRead}
+            letter2IsRead={letter2IsRead}
+            setLetter2IsRead={setLetter2IsRead}
+            letter3IsRead={letter3IsRead}
+            setLetter3IsRead={setLetter3IsRead}
+          />
+        </div>
+        {/* Travel to Town Button */}
+        <div><img className="sprig" src={sprig}/>
+          <button
+            variant="success"
+            style={{
+              display:
+                location === "home" &&
+                (pot1IsCaredFor === true ||
+                  pot1IsCaredFor === null ||
+                  pot1IsEmpty === true) &&
+                (pot2IsCaredFor === true ||
+                  pot2IsCaredFor === null ||
+                  pot2IsEmpty === true) &&
+                (pot3IsCaredFor === true ||
+                  pot3IsCaredFor === null ||
+                  pot3IsEmpty === true)
+                  ? "inline"
+                  : "none",
+            }}
+            onClick={() => {
+              setLocation("town");
+            }}
+          >
+            Travel to Town
+          </button>
+        </div>
       </div>
     </Container>
   );

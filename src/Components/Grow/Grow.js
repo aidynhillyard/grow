@@ -224,6 +224,8 @@ const Grow = () => {
           setActionPoints={setActionPoints}
           decrementActionPoints={decrementActionPoints}
           startNewDay={startNewDay}
+          location={location}
+          setLocation={setLocation}
           // Dialogue Steps
           dialogueStepFarhana={dialogueStepFarhana}
           dialogueStepJi={dialogueStepJi}
@@ -319,33 +321,6 @@ const Grow = () => {
           setDialogueStepAlba={setDialogueStepAlba}
           tradeDealAlba={tradeDealAlba}
         />
-      </div>
-      <div></div>
-      {/* Travel to Town Button */}
-      <div>
-        <button
-          variant="success"
-          style={{
-            display:
-              location === "home" &&
-              (pot1IsCaredFor === true ||
-                pot1IsCaredFor === null ||
-                pot1IsEmpty === true) &&
-              (pot2IsCaredFor === true ||
-                pot2IsCaredFor === null ||
-                pot2IsEmpty === true) &&
-              (pot3IsCaredFor === true ||
-                pot3IsCaredFor === null ||
-                pot3IsEmpty === true)
-                ? "inline"
-                : "none",
-          }}
-          onClick={() => {
-            setLocation("town");
-          }}
-        >
-          Travel to Town
-        </button>
       </div>
     </Container>
   );

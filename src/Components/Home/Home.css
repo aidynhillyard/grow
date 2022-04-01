@@ -19,6 +19,15 @@ button:focus {
   max-width: 30vh;
 }
 
+.bottom-links {
+    display: flex;
+    justify-content: center;
+}
+
+.sprig {
+    max-width: 35px;
+}
+
 /*
 *************
 T A B L E T
