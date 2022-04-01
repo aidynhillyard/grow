@@ -50,10 +50,11 @@ const Town = ({
 }) => {
   const [showFarhana, setShowFarhana] = useState(true);
   const [showJi, setShowJi] = useState(true);
-  const [jiTalk, setJiTalk] = useState(false);
+  const [globalShow, setGlobalShow] = useState(false);
   const [showAlba, setShowAlba] = useState(true);
+  const [albaTalk, setAlbaTalk] = useState(false);
 
-  console.log("JiTalk is: ", jiTalk, "Ji Convo: ", dialogueStepJi);
+  console.log("GlobalShow is: ", globalShow, "Ji Convo: ", dialogueStepJi);
   console.log("Pot1Type", pot1Type, "Pot1 Is Fully Grown?", pot1IsFullyGrown);
 
   // Talk to Farhana Function
@@ -163,7 +164,7 @@ const Town = ({
       </div>
       <div
         className="ji"
-        style={{ display: showJi && !jiTalk ? "inline" : "none" }}
+        style={{ display: showJi && !globalShow ? "inline" : "none" }}
       >
         <div>
           <h3>Ji</h3>
@@ -177,12 +178,12 @@ const Town = ({
       {/* Ji Dialogue #1 */}
       <div
         className="ji-dialogue1"
-        style={{ display: dialogueStepJi === 1 ? "inline" : "none" }}
+        style={{ display: showJi && dialogueStepJi === 1 ? "inline" : "none" }}
       >
         <Ji1Conversation
           actionPoints={actionPoints}
-          jiTalk={jiTalk}
-          setJiTalk={setJiTalk}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
           jiConversation={jiConversation}
           setShowFarhana={setShowFarhana}
           setShowJi={setShowJi}
@@ -192,12 +193,12 @@ const Town = ({
       {/* Ji Dialogue #2 */}
       <div
         className="ji-dialogue2"
-        style={{ display: dialogueStepJi === 2 ? "inline" : "none" }}
+        style={{ display: showJi && dialogueStepJi === 2 ? "inline" : "none" }}
       >
         <Ji2Conversation
           actionPoints={actionPoints}
-          jiTalk={jiTalk}
-          setJiTalk={setJiTalk}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
           jiConversation={jiConversation}
           setShowFarhana={setShowFarhana}
           setShowJi={setShowJi}
@@ -207,12 +208,12 @@ const Town = ({
       {/* Ji Dialogue #3 */}
       <div
         className="ji-dialogue3"
-        style={{ display: dialogueStepJi === 3 ? "inline" : "none" }}
+        style={{ display: showJi && dialogueStepJi === 3 ? "inline" : "none" }}
       >
         <Ji3Conversation
           actionPoints={actionPoints}
-          jiTalk={jiTalk}
-          setJiTalk={setJiTalk}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
           jiConversation={jiConversation}
           setShowFarhana={setShowFarhana}
           setShowJi={setShowJi}
@@ -222,12 +223,12 @@ const Town = ({
       {/* Ji Dialogue #4 */}
       <div
         className="ji-dialogue4"
-        style={{ display: dialogueStepJi === 4 ? "inline" : "none" }}
+        style={{ display: showJi && dialogueStepJi === 4 ? "inline" : "none" }}
       >
         <Ji4Conversation
           actionPoints={actionPoints}
-          jiTalk={jiTalk}
-          setJiTalk={setJiTalk}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
           jiConversation={jiConversation}
           setShowFarhana={setShowFarhana}
           setShowJi={setShowJi}
@@ -245,12 +246,12 @@ const Town = ({
       {/* Ji Dialogue #5 */}
       <div
         className="ji-dialogue5"
-        style={{ display: dialogueStepJi === 5 ? "inline" : "none" }}
+        style={{ display: showJi && dialogueStepJi === 5 ? "inline" : "none" }}
       >
         <Ji5Conversation
           actionPoints={actionPoints}
-          jiTalk={jiTalk}
-          setJiTalk={setJiTalk}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
           jiConversation={jiConversation}
           setShowFarhana={setShowFarhana}
           setShowJi={setShowJi}
@@ -261,12 +262,12 @@ const Town = ({
       {/* Ji Dialogue #6 */}
       <div
         className="ji-dialogue6"
-        style={{ display: dialogueStepJi > 5 ? "inline" : "none" }}
+        style={{ display: showJi && dialogueStepJi > 5 ? "inline" : "none" }}
       >
         <Ji6Conversation
           actionPoints={actionPoints}
-          jiTalk={jiTalk}
-          setJiTalk={setJiTalk}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
           jiConversation={jiConversation}
           setShowFarhana={setShowFarhana}
           setShowJi={setShowJi}
@@ -281,7 +282,7 @@ const Town = ({
           pot3IsFullyGrown={pot3IsFullyGrown}
         />
       </div>
-      <div className="alba" style={{ display: showAlba ? "inline" : "none" }}>
+      <div className="alba" style={{ display: showAlba && !globalShow ? "inline" : "none" }}>
         <h3>Alba</h3>
         (they/them/theirs)
         <p>
@@ -292,29 +293,37 @@ const Town = ({
       {/* Alba Dialogue #1 */}
       <div
         className="alba-dialogue1"
-        style={{
-          display: showAlba && dialogueStepAlba === 1 ? "inline" : "none",
-        }}
+        style={{ display: showAlba && dialogueStepAlba === 1 ? "inline" : "none" }}
       >
         <Alba1Conversation
           actionPoints={actionPoints}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
           albaConversation={albaConversation}
+          setShowFarhana={setShowFarhana}
+          setShowJi={setShowJi}
+          setShowAlba={setShowAlba}
         />
       </div>
       {/* Alba Dialogue #2 */}
       <div
         className="alba-dialogue2"
-        style={{ display: dialogueStepAlba === 2 ? "inline" : "none" }}
+        style={{ display: showAlba && dialogueStepAlba === 2 ? "inline" : "none" }}
       >
         <Alba2Conversation
           actionPoints={actionPoints}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
           albaConversation={albaConversation}
+          setShowFarhana={setShowFarhana}
+          setShowJi={setShowJi}
+          setShowAlba={setShowAlba}
         />
       </div>
       {/* Alba Dialogue #3 */}
       <div
         className="alba-dialogue3"
-        style={{ display: dialogueStepAlba === 3 ? "inline" : "none" }}
+        style={{ display: showAlba && dialogueStepAlba === 3 ? "inline" : "none" }}
       >
         <Alba3Conversation
           actionPoints={actionPoints}
@@ -324,7 +333,7 @@ const Town = ({
       {/* Alba Dialogue #4 */}
       <div
         className="alba-dialogue4"
-        style={{ display: dialogueStepAlba === 4 ? "inline" : "none" }}
+        style={{ display: showAlba && dialogueStepAlba === 4 ? "inline" : "none" }}
       >
         <Alba4Conversation
           actionPoints={actionPoints}
@@ -335,7 +344,7 @@ const Town = ({
       {/* Alba Dialogue #5 */}
       <div
         className="alba-dialogue5"
-        style={{ display: dialogueStepAlba === 5 ? "inline" : "none" }}
+        style={{ display: showAlba && dialogueStepAlba === 5 ? "inline" : "none" }}
       >
         <Alba5Conversation
           actionPoints={actionPoints}
@@ -343,7 +352,7 @@ const Town = ({
         />
       </div>
       <button
-          style={{ display: location === "town" && !jiTalk ? "inline" : "none" }}
+          style={{ display: location === "town" && !globalShow ? "inline" : "none" }}
           onClick={() => {
             setLocation("home");
           }}

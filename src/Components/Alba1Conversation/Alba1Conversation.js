@@ -1,63 +1,143 @@
 import "./Alba1Conversation.css";
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Alert from 'react-bootstrap/Alert'
+import { useState } from "react";
+import alba from "../../images/albaplaceholder.png";
+import player from "../../images/playeravplaceholder.png";
 
-const Alba1Conversation = ({ actionPoints, albaConversation }) => {
-
+const Alba1Conversation = ({
+  actionPoints,
+  globalShow,
+  setGlobalShow,
+  albaConversation,
+  setShowFarhana,
+  setShowJi,
+  setShowAlba,
+}) => {
   // useStates
-  const [showA1, setShowA1] = useState(false);
-  const [showA2, setShowA2] = useState(false);
+  const [albaDialogue, setAlbaDialogue] = useState(0);
 
   return (
     <div>
-<Alert show={showA1} variant="success">
-          <div className="npc-dialogue">
-            <p>
-              This is what Alba is saying. They are talking about the town and
-              about other things that we are interested in hearing. This is more
-              text to show they are still talking.
-            </p>
-          </div>
-          <hr />
-          <div className="player-dialogue">
-            <p>
-              Player dialogue goes here. Let's start with one dialogue option
-              first and not worry about player choices until later.
-            </p>
-          </div>
-          <div className="d-flex justify-content-end">
-            <Button
-              onClick={() => {
-                setShowA2(true);
-                setShowA1(false);
-              }}
-              variant="outline-success"
-            >
-              Next
-            </Button>
-          </div>
-        </Alert>
-        <Alert show={showA2} variant="success">
-          <p>Alba's response. They say things depending on what you say.</p>
-          <div className="d-flex justify-content-end">
-            <Button onClick={() => setShowA2(false)} variant="outline-success">
-              Close
-            </Button>
-          </div>
-        </Alert>
-
-        {!showA1 && !showA2 && (
-          <Button style={{ display: actionPoints > 0 ? "inline" : "none" }}
-            onClick={() => {
-              setShowA1(true);
-              albaConversation();
-            }}
-          >
-            Talk
-          </Button>
-        )}
+      <button
+        onClick={() => {
+          setShowFarhana(false);
+          setShowJi(false);
+          setGlobalShow(true);
+          albaConversation();
+          setAlbaDialogue((prevState) => prevState + 1);
+        }}
+        style={{ display: actionPoints > 0 && !globalShow ? "inline" : "none" }}
+      >
+        Talk 1
+      </button>
+      <div style={{ display: albaDialogue === 1 ? "inline" : "none" }}>
+        <div className="alba-dialogue-label fade-in-text">
+          <img src={alba} alt="Alba" id="alba-avatar" />
+          <p>Alba (she/her/hers)</p>
         </div>
+        <p className="fade-in-text npc-dialogue">
+        Hello, neighbor!  I wondered when you’d decide to come out to the town.  They told me you don’t really remember anything.
+        </p>
+        <button
+          className="fade-in-text"
+          aria-label="next"
+          onClick={() => {
+            setAlbaDialogue((prevState) => prevState + 1);
+          }}
+        >
+          &or;
+        </button>
+      </div>
+      <div style={{ display: albaDialogue === 2 ? "inline" : "none" }}>
+        <div className="player-dialogue-label fade-in-text">
+          <img src={player} alt="Plant avatar" id="player-avatar" />
+        </div>
+        <p className="fade-in-text player-dialogue">
+        It’s true.  Coming back is like coming here for the first time.  I know I should know your name, but…
+        </p>
+        <button
+          className="fade-in-text"
+          aria-label="next"
+          onClick={() => {
+            setAlbaDialogue((prevState) => prevState + 1);
+          }}
+        >
+          &or;
+        </button>
+      </div>
+      <div style={{ display: albaDialogue === 3 ? "inline" : "none" }}>
+        <div className="alba-dialogue-label fade-in-text">
+          <img src={alba} alt="Alba" id="alba-avatar" />
+          <p>Alba (he/him/his)</p>
+        </div>
+        <p className="fade-in-text npc-dialogue">
+        It’s okay.  I’m Alba.  I know you don’t remember, but I used to go to your track meets.  You were amazing, doing all those races.
+        </p>
+        <button
+          className="fade-in-text"
+          aria-label="next"
+          onClick={() => {
+            setAlbaDialogue((prevState) => prevState + 1);
+          }}
+        >
+          &or;
+        </button>
+      </div>
+      <div style={{ display: albaDialogue === 4 ? "inline" : "none" }}>
+        <div className="player-dialogue-label fade-in-text">
+          <img src={player} alt="Plant avatar" id="player-avatar" />
+        </div>
+        <p className="fade-in-text player-dialogue">
+        Thanks.
+        </p>
+        <button
+          className="fade-in-text"
+          aria-label="next"
+          onClick={() => {
+            setAlbaDialogue((prevState) => prevState + 1);
+          }}
+        >
+          &or;
+        </button>
+      </div>
+      <div style={{ display: albaDialogue === 5 ? "inline" : "none" }}>
+        <div className="alba-dialogue-label fade-in-text">
+          <img src={alba} alt="Alba" id="alba-avatar" />
+          <p>Alba (she/her/hers)</p>
+        </div>
+        <p className="fade-in-text npc-dialogue">
+        You were such an athlete and always so active.  Oh, that earthquake, and you crushed under all that heavy stuff for so long.  I feel so bad that you’re trapped in that wheelchair now.
+        </p>
+        <button
+          className="fade-in-text"
+          aria-label="next"
+          onClick={() => {
+            setAlbaDialogue((prevState) => prevState + 1);
+          }}
+        >
+          &or;
+        </button>
+      </div>
+      <div style={{ display: albaDialogue === 6 ? "inline" : "none" }}>
+        <div className="player-dialogue-label fade-in-text">
+          <img src={player} alt="Plant avatar" id="player-avatar" />
+        </div>
+        <p className="fade-in-text player-dialogue">
+        It’s… I’m… um, I’ll see you around.
+        </p>
+        <button
+          className="fade-in-text"
+          onClick={() => {
+            setAlbaDialogue(0);
+            setGlobalShow(false);
+            setShowFarhana(true);
+            setShowJi(true);
+            setShowAlba(true);
+          }}
+        >
+          End
+        </button>
+      </div>
+    </div>
   );
 };
 
