@@ -1,18 +1,18 @@
-import "./Ji6Conversation.css";
+import "./Farhana6Conversation.css";
 import { useState } from "react";
-import ji from "../../images/jiplaceholder.png";
+import farhana from "../../images/farhanabeta.png";
 import player from "../../images/playeravplaceholder.png";
 
-const Ji6Conversation = ({
+const Farhana6Conversation = ({
   actionPoints,
   globalShow,
   setGlobalShow,
-  jiConversation,
+  farhanaConversation,
   setShowFarhana,
   setShowJi,
   setShowAlba,
-  tradeDealJi,
-  dialogueStepJi,
+  tradeDealFarhana,
+  dialogueStepFarhana,
   pot1Type,
   pot1IsFullyGrown,
   pot2Type,
@@ -21,7 +21,7 @@ const Ji6Conversation = ({
   pot3IsFullyGrown
 }) => {
   // useStates
-  const [jiDialogue, setJiDialogue] = useState(0);
+  const [farhanaDialogue, setFarhanaDialogue] = useState(0);
   const [tradedPlant, setTradedPlant] = useState(false);
 
   return (
@@ -30,46 +30,46 @@ const Ji6Conversation = ({
         onClick={() => {
           setShowFarhana(false);
           setShowAlba(false);
-          jiConversation();
+          farhanaConversation();
           setGlobalShow(true);
-          setJiDialogue((prevState) => prevState + 1);
+          setFarhanaDialogue((prevState) => prevState + 1);
         }}
-        style={{ display: actionPoints > 0 && !globalShow && (dialogueStepJi > 5 &&
-            ((pot1Type === "Tulip" && pot1IsFullyGrown === true) ||
-              (pot2Type === "Tulip" && pot2IsFullyGrown === true) ||
-              (pot3Type === "Tulip" && pot3IsFullyGrown === true))) ? "inline" : "none" }}
+        style={{ display: actionPoints > 0 && !globalShow && (dialogueStepFarhana > 5 &&
+            ((pot1Type === "Forget-Me-Not" && pot1IsFullyGrown === true) ||
+              (pot2Type === "Forget-Me-Not" && pot2IsFullyGrown === true) ||
+              (pot3Type === "Forget-Me-Not" && pot3IsFullyGrown === true))) ? "inline" : "none" }}
       >
         Talk 6
       </button>
-      <div style={{ display: jiDialogue === 1 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
+      <div style={{ display: farhanaDialogue === 1 ? "inline" : "none" }}>
+        <div className="farhana-dialogue-label fade-in-text">
+          <img src={farhana} alt="Farhana" id="farhana-avatar" />
+          <p>Farhana (she/her/hers)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-        If you have more tulips you don’t need, I’d love to take them home.  And I’m here for you, you know.
+        <em>Ya hayati</em>, we’ll figure this out.  Traveling the ocean together in one boat, as you say.  Oh, and if you have any, I’ll always want forget-me-nots from you.
         </p>
         <button
           className="fade-in-text"
           aria-label="next"
           onClick={() => {
-            setJiDialogue((prevState) => prevState + 1);
+            setFarhanaDialogue((prevState) => prevState + 1);
           }}
         >
           &or;
         </button>
       </div>
-      <div style={{ display: jiDialogue === 2 ? "inline" : "none" }}>
+      <div style={{ display: farhanaDialogue === 2 ? "inline" : "none" }}>
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          Thank you, Ji.
+          Thank you, Farhana.
         </p>
         <button
           className="fade-in-text player-dialogue" style={{ display: !tradedPlant ? "inline" : "none" }}
           onClick={() => {
-            tradeDealJi();
+            tradeDealFarhana();
             setTradedPlant(true);
           }}
         >
@@ -79,7 +79,7 @@ const Ji6Conversation = ({
           className="fade-in-text"
           aria-label="next"
           onClick={() => {
-            setJiDialogue(0);
+            setFarhanaDialogue(0);
             setGlobalShow(false);
             setTradedPlant(false);
             setShowFarhana(true);
@@ -94,4 +94,4 @@ const Ji6Conversation = ({
   );
 };
 
-export default Ji6Conversation;
+export default Farhana6Conversation;

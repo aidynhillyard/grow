@@ -6,6 +6,7 @@ import Farhana2Conversation from "../Farhana2Conversation/Farhana2Conversation";
 import Farhana3Conversation from "../Farhana3Conversation/Farhana3Conversation";
 import Farhana4Conversation from "../Farhana4Conversation/Farhana4Conversation";
 import Farhana5Conversation from "../Farhana5Conversation/Farhana5Conversation";
+import Farhana6Conversation from "../Farhana6Conversation/Farhana6Conversation";
 import Ji1Conversation from "../Ji1Conversation/Ji1Conversation";
 import Ji2Conversation from "../Ji2Conversation/Ji2Conversation";
 import Ji3Conversation from "../Ji3Conversation/Ji3Conversation";
@@ -188,6 +189,29 @@ const Town = ({
           setShowJi={setShowJi}
           setShowAlba={setShowAlba}
           letter3IsRead={letter3IsRead}
+        />
+      </div>
+      {/* Farhana Dialogue #6 */}
+      <div
+        className="farhana-dialogue6"
+        style={{ display: showFarhana && dialogueStepFarhana > 5 ? "inline" : "none" }}
+      >
+        <Farhana6Conversation
+          actionPoints={actionPoints}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
+          farhanaConversation={farhanaConversation}
+          setShowFarhana={setShowFarhana}
+          setShowJi={setShowJi}
+          setShowAlba={setShowAlba}
+          tradeDealFarhana={tradeDealFarhana}
+          dialogueStepFarhana={dialogueStepFarhana}
+          pot1Type={pot1Type}
+          pot1IsFullyGrown={pot1IsFullyGrown}
+          pot2Type={pot2Type}
+          pot2IsFullyGrown={pot2IsFullyGrown}
+          pot3Type={pot3Type}
+          pot3IsFullyGrown={pot3IsFullyGrown}
         />
       </div>
       <div
