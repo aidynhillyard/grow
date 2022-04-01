@@ -1,8 +1,9 @@
 #dropdown-item-button {
     border-radius: 0.5em;
-    border-color: grey;
+    border-color: #31572C;
     background-color: #31572C;
     color: #FBFCEB;
+    box-shadow: 0.1em 0.1em rgb(31, 31, 31);
 }
 
 button:focus {
