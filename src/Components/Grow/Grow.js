@@ -5,7 +5,7 @@ import Home from "../Home/Home";
 import Town from "../Town/Town";
 import NewDay from "../NewDay/NewDay";
 import { useState, useEffect } from "react";
-import growlogo from "../../images/growlogo.png";
+import growtitle from "../../images/growtitle.png";
 
 const Grow = () => {
   // ***************************
@@ -193,9 +193,8 @@ const Grow = () => {
   return (
     <Container>
       <div>
-        <img className="grow-logo" src={growlogo} alt="Grow"/>
-        <h2>What will you plant?</h2>
-      </div>
+        <img className="grow-logo" src={growtitle} alt="Grow"/>
+        </div>
       <button
         onClick={() => {
           setLocation("home");
