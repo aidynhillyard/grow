@@ -22,7 +22,6 @@ const Farhana4Conversation = ({
 }) => {
   // useStates
   const [farhanaDialogue, setFarhanaDialogue] = useState(0);
-  const [tradedPlant, setTradedPlant] = useState(false);
 
   return (
     <div>
@@ -97,23 +96,12 @@ const Farhana4Conversation = ({
         </p>
         <button
           className="fade-in-text player-dialogue"
-          style={{ display: !tradedPlant ? "inline" : "none" }}
           onClick={() => {
             tradeDealFarhana();
-            setTradedPlant(true);
-          }}
-        >
-          Give Plant
-        </button>
-        <button
-          style={{ display: tradedPlant ? "inline" : "none" }}
-          className="fade-in-text"
-          aria-label="next"
-          onClick={() => {
             setFarhanaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          Give Plant
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 4 ? "inline" : "none" }}>
@@ -229,7 +217,6 @@ const Farhana4Conversation = ({
           onClick={() => {
             setFarhanaDialogue(0);
             setGlobalShow(false);
-            setTradedPlant(false);
             setShowFarhana(true);
             setShowJi(true);
             setShowAlba(true);
