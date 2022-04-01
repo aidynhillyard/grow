@@ -20,7 +20,13 @@ button:focus {
 .dropdown-menu.show {
   background-color: #ecf39e;
   border-radius: 0.5em;
-  padding: 2vw;
+  padding: 5px;
+}
+
+#flower:hover {
+text-decoration: underline;
+text-decoration-color: #4F772D;
+text-decoration-style: dotted;
 }
 
 .home-title {

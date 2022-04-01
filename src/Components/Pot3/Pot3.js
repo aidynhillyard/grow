@@ -112,7 +112,7 @@ const Pot3 = ({
       >
         <div className="choose-a-seed">
           <DropdownButton id="dropdown-item-button" title="Choose a Seed">
-            <Dropdown.Item
+            <Dropdown.Item id="flower"
               as="button"
               onClick={() => {
                 plantPot3();
@@ -123,7 +123,7 @@ const Pot3 = ({
             >
               Tulip
             </Dropdown.Item>
-            <Dropdown.Item
+            <Dropdown.Item id="flower"
               as="button"
               onClick={() => {
                 plantPot3();
@@ -134,7 +134,7 @@ const Pot3 = ({
             >
               Iris
             </Dropdown.Item>
-            <Dropdown.Item
+            <Dropdown.Item id="flower"
               as="button"
               onClick={() => {
                 plantPot3();
