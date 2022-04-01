@@ -25,6 +25,8 @@ const Town = ({
   decrementActionPoints,
   location,
   setLocation,
+  globalShow,
+  setGlobalShow,
   letter1IsRead,
   setLetter1IsRead,
   letter2IsRead,
@@ -55,7 +57,6 @@ const Town = ({
   // ***************************
   const [showFarhana, setShowFarhana] = useState(true);
   const [showJi, setShowJi] = useState(true);
-  const [globalShow, setGlobalShow] = useState(false);
   const [showAlba, setShowAlba] = useState(true);
 
   console.log("GlobalShow is: ", globalShow);

@@ -17,6 +17,7 @@ const Grow = () => {
   // Action Points and Day useStates
   const [actionPoints, setActionPoints] = useState(3);
   const [day, setDay] = useState(1);
+  const [globalShow, setGlobalShow] = useState(false);
 
   // Letter UseStates
   const [letter1, setLetter1] = useState(true);
@@ -205,7 +206,7 @@ const Grow = () => {
         <p>Action Points: {actionPoints}</p>
         <p>Day: {day}</p>
       </div>
-      <div style={{ display: actionPoints === 0 ? "inline" : "none" }}>
+      <div style={{ display: actionPoints === 0 && !globalShow ? "inline" : "none" }}>
         <NewDay startNewDay={startNewDay} />
       </div>
       {/* *************** */}
@@ -279,6 +280,8 @@ const Grow = () => {
           location={location}
           setLocation={setLocation}
           decrementActionPoints={decrementActionPoints}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
           // Pots
           pot1Type={pot1Type}
           pot1IsFullyGrown={pot1IsFullyGrown}

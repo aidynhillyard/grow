@@ -141,12 +141,10 @@ const Home = ({
       </div>
       <div
         style={{
-          display: showLetters ? "block" : "none",
+          display: showLetters ? "inline" : "none",
         }}
       >
         <Letters
-          actionPoints={actionPoints}
-          decrementActionPoints={decrementActionPoints}
           letter1={letter1}
           letter2={letter2}
           letter3={letter3}
@@ -156,7 +154,6 @@ const Home = ({
           setLetter2IsRead={setLetter2IsRead}
           letter3IsRead={letter3IsRead}
           setLetter3IsRead={setLetter3IsRead}
-          
         />
       </div>
     </Container>

@@ -2,8 +2,6 @@ import "./Letters.css";
 import { useState } from "react";
 
 const Letters = ({
-  actionPoints,
-  decrementActionPoints,
   letter1,
   letter1IsRead,
   setLetter1IsRead,
@@ -28,7 +26,6 @@ const Letters = ({
       >
         <p>You have not received any letters yet.</p>
       </div>
-
       {/* Letter #1 */}
       <div
         className="letter"
@@ -37,13 +34,9 @@ const Letters = ({
         }}
       >
         <button
-          style={{
-            display: actionPoints > 0 ? "inline" : "none",
-          }}
           onClick={() => {
-            decrementActionPoints();
             setLetter1IsRead(true);
-            setShowLetter1(true);
+            setShowLetter1(!showLetter1);
           }}
         >
           Read Letter Given by Alba
@@ -90,7 +83,7 @@ const Letters = ({
           <p>- Me</p>
           <button
             onClick={() => {
-              setShowLetter1(false);
+              setShowLetter1(!showLetter1);
             }}
           >
             Close
@@ -106,11 +99,7 @@ const Letters = ({
         }}
       >
         <button
-          style={{
-            display: actionPoints > 0 ? "inline" : "none",
-          }}
           onClick={() => {
-            decrementActionPoints();
             setLetter2IsRead(true);
             setShowLetter2(!showLetter2);
           }}
@@ -158,7 +147,7 @@ const Letters = ({
           <p>- Me</p>
           <button
             onClick={() => {
-              setShowLetter2(false);
+              setShowLetter2(!showLetter2);
             }}
           >
             Close
@@ -174,11 +163,7 @@ const Letters = ({
         }}
       >
         <button
-          style={{
-            display: actionPoints > 0 ? "inline" : "none",
-          }}
           onClick={() => {
-            decrementActionPoints();
             setLetter3IsRead(true);
             setShowLetter3(!showLetter3);
           }}
@@ -228,7 +213,7 @@ const Letters = ({
           <p>- Me</p>
           <button
             onClick={() => {
-              setShowLetter3(false);
+              setShowLetter3(!showLetter3);
             }}
           >
             Close
