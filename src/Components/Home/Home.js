@@ -133,14 +133,14 @@ const Home = ({
         setPot3IsFullyGrown={setPot3IsFullyGrown}
       />
       <div className="bottom-links">
-        <div><img className="sprig" src={sprig}/>
+        <div><div className="bottom-single-link"><img className="sprig" src={sprig}/>
           <button
             onClick={() => {
               setShowLetters(!showLetters);
             }}
           >
             Letters
-          </button>
+          </button></div>
         </div>
         <div
           style={{
@@ -160,9 +160,8 @@ const Home = ({
           />
         </div>
         {/* Travel to Town Button */}
-        <div><img className="sprig" src={sprig}/>
+        <div><div className="bottom-single-link"><img className="sprig" src={sprig}/>
           <button
-            variant="success"
             style={{
               display:
                 location === "home" &&
@@ -183,7 +182,7 @@ const Home = ({
             }}
           >
             Travel to Town
-          </button>
+          </button></div>
         </div>
       </div>
     </Container>

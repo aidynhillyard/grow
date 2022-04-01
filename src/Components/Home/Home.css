@@ -1,9 +1,14 @@
 #dropdown-item-button {
-  border-radius: 0.5em;
-  border-color: #31572c;
-  background-color: #31572c;
-  color: #fbfceb;
-  box-shadow: 0.1em 0.1em rgb(31, 31, 31);
+  border-radius: 0.7em;
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  cursor: pointer;
+  color: #31572C;
+  padding: 0.3em;
+  text-decoration: underline;
+  text-decoration-color: #4F772D;
+  text-decoration-style: dotted;
 }
 
 button:focus {
@@ -22,10 +27,15 @@ button:focus {
 .bottom-links {
     display: flex;
     justify-content: center;
+    padding: 5vh;
+}
+
+.bottom-single-link {
+    margin: 0px 7px;
 }
 
 .sprig {
-    max-width: 35px;
+    max-width: 25px;
 }
 
 /*
