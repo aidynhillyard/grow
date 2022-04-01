@@ -5,8 +5,8 @@ import player from "../../images/playeravplaceholder.png";
 
 const Ji4Conversation = ({
   actionPoints,
-  jiTalk,
-  setJiTalk,
+  globalShow,
+  setGlobalShow,
   jiConversation,
   setShowFarhana,
   setShowJi,
@@ -31,10 +31,10 @@ const Ji4Conversation = ({
           setShowFarhana(false);
           setShowAlba(false);
           jiConversation();
-          setJiTalk(true);
+          setGlobalShow(true);
           setJiDialogue((prevState) => prevState + 1);
         }}
-        style={{ display: actionPoints > 0 && !jiTalk && (dialogueStepJi === 4 &&
+        style={{ display: actionPoints > 0 && !globalShow && (dialogueStepJi === 4 &&
           ((pot1Type === "Tulip" && pot1IsFullyGrown === true) ||
             (pot2Type === "Tulip" && pot2IsFullyGrown === true) ||
             (pot3Type === "Tulip" && pot3IsFullyGrown === true))) ? "inline" : "none" }}
@@ -242,7 +242,7 @@ const Ji4Conversation = ({
           className="fade-in-text"
           onClick={() => {
             setJiDialogue(0);
-            setJiTalk(false);
+            setGlobalShow(false);
             setTradedPlant(false);
             setShowFarhana(true);
             setShowJi(true);

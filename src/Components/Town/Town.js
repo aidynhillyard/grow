@@ -154,12 +154,24 @@ const Town = ({
       {/* Farhana Dialogue #4 */}
       <div
         className="farhana-dialogue4"
-        style={{ display: dialogueStepFarhana === 4 ? "inline" : "none" }}
+        style={{ display: showFarhana && dialogueStepFarhana === 4 ? "inline" : "none" }}
       >
         <Farhana4Conversation
           actionPoints={actionPoints}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
           farhanaConversation={farhanaConversation}
+          setShowFarhana={setShowFarhana}
+          setShowJi={setShowJi}
+          setShowAlba={setShowAlba}
           tradeDealFarhana={tradeDealFarhana}
+          dialogueStepFarhana={dialogueStepFarhana}
+          pot1Type={pot1Type}
+          pot1IsFullyGrown={pot1IsFullyGrown}
+          pot2Type={pot2Type}
+          pot2IsFullyGrown={pot2IsFullyGrown}
+          pot3Type={pot3Type}
+          pot3IsFullyGrown={pot3IsFullyGrown}
         />
       </div>
       {/* Farhana Dialogue #5 */}
