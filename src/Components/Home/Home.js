@@ -90,7 +90,8 @@ const Home = ({
           ― Kahlil Gibran, <em>The Prophet</em>
         </p>
       </div>
-      <Pot1
+      <div className="pot-components">
+      <div className="pot1-component"><Pot1
         actionPoints={actionPoints}
         decrementActionPoints={decrementActionPoints}
         pot1IsEmpty={pot1IsEmpty}
@@ -103,8 +104,8 @@ const Home = ({
         setPot1Age={setPot1Age}
         pot1IsFullyGrown={pot1IsFullyGrown}
         setPot1IsFullyGrown={setPot1IsFullyGrown}
-      />
-      <Pot2
+      /></div>
+      <div className="pot2-component"><Pot2
         actionPoints={actionPoints}
         decrementActionPoints={decrementActionPoints}
         pot2IsEmpty={pot2IsEmpty}
@@ -117,8 +118,8 @@ const Home = ({
         setPot2Age={setPot2Age}
         pot2IsFullyGrown={pot2IsFullyGrown}
         setPot2IsFullyGrown={setPot2IsFullyGrown}
-      />
-      <Pot3
+      /></div>
+      <div className="pot3-omponent"><Pot3
         actionPoints={actionPoints}
         decrementActionPoints={decrementActionPoints}
         pot3IsEmpty={pot3IsEmpty}
@@ -131,7 +132,7 @@ const Home = ({
         setPot3Age={setPot3Age}
         pot3IsFullyGrown={pot3IsFullyGrown}
         setPot3IsFullyGrown={setPot3IsFullyGrown}
-      />
+      /></div></div>
       <div className="bottom-links">
         <div>
           <div className="bottom-single-link">

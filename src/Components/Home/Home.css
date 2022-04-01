@@ -1,3 +1,5 @@
+/* Button Styling */
+
 #dropdown-item-button {
   border-radius: 0.7em;
   background: none!important;
@@ -18,11 +20,14 @@ button:focus {
 .dropdown-menu.show {
   background-color: #ecf39e;
   border-radius: 0.5em;
+  padding: 5px;
 }
 
 .home-title {
   max-width: 30vh;
 }
+
+/* Menu Links */
 
 .bottom-links {
     display: flex;
@@ -32,10 +37,34 @@ button:focus {
 
 .bottom-single-link {
     margin: 0px 7px;
+    display: flex;
 }
 
 .sprig {
     max-width: 25px;
+}
+
+/* Pot Components */
+
+.pot-components {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.pot1component {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.pot2component {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.pot3component {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
 }
 
 /*
@@ -48,6 +77,27 @@ T A B L E T
   .home-title {
     max-width: 50%;
   }
+
+.pot-components {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.pot1component {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.pot2component {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.pot3component {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
 }
 
 /*
@@ -59,5 +109,26 @@ T A B L E T
 @media only screen and (min-width: 992px) {
   .home-title {
     max-width: 50%;
+  }
+
+  .pot-components {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+  
+  .pot1component {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .pot2component {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  
+  .pot3component {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
   }
 }

@@ -11,6 +11,10 @@ Cream: #FBFCEB */
   margin: 0 auto;
 }
 
+html {
+  font-size: 110%;
+}
+
 body {
   background-color: #FBFCEB;
   color: #132A13;
