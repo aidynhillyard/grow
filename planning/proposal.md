@@ -98,8 +98,6 @@ To increment and decrement a numeric state, I used this guide from Dave Ceddia: 
 
 To fade in my dialogue text, I used this guide from Geeks For Geeks: [link](https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/)
 
-## Code Snippet
+### Case 3: Remove Focus Color from React Bootstrap Dropdown
 
-Here are some brief code snippets of functionality that I'm proud of and a brief description.
-
-TBD
+To remove the light blue focus color from the React Bootstrap Dropdown, I followed this guide from Stack Overflow: [link](https://stackoverflow.com/questions/48685197/react-how-to-remove-button-focus-outline-from-react-bootstrap-component)
