@@ -4,3 +4,12 @@
     background-color: #31572C;
     color: #FBFCEB;
 }
+
+button:focus {
+    box-shadow: none !important;
+}
+
+.dropdown-menu.show {
+    background-color: #ECF39E;
+    border-radius: 0.5em;
+}
