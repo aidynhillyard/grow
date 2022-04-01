@@ -365,9 +365,16 @@ const Town = ({
       >
         <Alba5Conversation
           actionPoints={actionPoints}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
           albaConversation={albaConversation}
+          setShowFarhana={setShowFarhana}
+          setShowJi={setShowJi}
+          setShowAlba={setShowAlba}
+          letter1IsRead={letter1IsRead}
         />
       </div>
+      {/* Travel to Home Button */}
       <button
           style={{ display: location === "town" && !globalShow ? "inline" : "none" }}
           onClick={() => {
