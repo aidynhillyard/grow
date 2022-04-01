@@ -26,7 +26,9 @@ const Ji2Conversation = ({
           setJiDialogue((prevState) => prevState + 1);
         }}
         style={{ display: actionPoints > 0 && !globalShow ? "inline" : "none" }}
-      >Talk 2</button>
+      >
+        Talk 2
+      </button>
       <div style={{ display: jiDialogue === 1 ? "inline" : "none" }}>
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
@@ -86,10 +88,10 @@ const Ji2Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          No, to help! I know you don’t remember, but… we used to work together
-          at the movie theater. It was my first day, actually, and this little
-          kid threw a major tantrum at the concession stand. I’m talking, five
-          alarm bells.
+          No, to help! I know you don't remember, but... we used to work
+          together at the movie theater. It was my first day, actually, and this
+          little kid threw a major tantrum at the concession stand. I'm talking,
+          five alarm bells.
         </p>
         <button
           className="fade-in-text"
@@ -124,7 +126,7 @@ const Ji2Conversation = ({
         <p className="fade-in-text npc-dialogue">
           You came to my rescue. The kid was clinging to my leg, and his mom was
           trying to pull him off of me, and you came around the corner and just
-          sort of knelt down and started talking soothingly. I don’t even
+          sort of knelt down and started talking soothingly. I don't even
           remember what you said, but he stopped crying after a few minutes.
         </p>
         <button
@@ -142,7 +144,7 @@ const Ji2Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          So I’m a Kid Whisperer. Huh.
+          So I'm a Kid Whisperer. Huh.
         </p>
         <button
           className="fade-in-text"
@@ -161,9 +163,9 @@ const Ji2Conversation = ({
         </div>
         <p className="fade-in-text npc-dialogue">
           Oh, yeah. You have the magic touch. Kid went from horror to happy in
-          under five minutes. You should stop by the theater some time. I’m the
-          Assistant Manager now. And the theater’s up to code (with a little
-          recent help from Farhana), so you’ll be all set.
+          under five minutes. You should stop by the theater some time. I'm the
+          Assistant Manager now. And the theater's up to code (with a little
+          recent help from Farhana), so you'll be all set.
         </p>
         <button
           className="fade-in-text"
@@ -180,7 +182,7 @@ const Ji2Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          Congrats on the Assistant Manager gig! And maybe I’ll stop by
+          Congrats on the Assistant Manager gig! And maybe I'll stop by
           sometime.
         </p>
         <button

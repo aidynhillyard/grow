@@ -20,7 +20,7 @@ const Farhana5Conversation = ({
     <div>
       <button
         onClick={() => {
-          setShowFarhana(false);
+          setShowJi(false);
           setShowAlba(false);
           farhanaConversation();
           setGlobalShow(true);
@@ -40,7 +40,7 @@ const Farhana5Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          Why didn’t you tell me we were going to live together? Did we ever
+          Why didn't you tell me we were going to live together? Did we ever
           actually live together?
         </p>
         <button
@@ -79,7 +79,7 @@ const Farhana5Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          Funny how there are some things I’m glad I don’t remember. What did we
+          Funny how there are some things I'm glad I don't remember. What did we
           both want?
         </p>
         <button
@@ -100,7 +100,7 @@ const Farhana5Conversation = ({
         <p className="fade-in-text npc-dialogue">
           You wanted me to move in with you, and I wanted us to find our own
           place. We agreed to put the, uh, discussion to the side because of our
-          trip. We didn’t want to fight during it. And then... Dad’s stroke, the
+          trip. We didn't want to fight during it. And then... Dad's stroke, the
           earthquake, and, well, now you barely know me.
         </p>
         <button
@@ -137,9 +137,9 @@ const Farhana5Conversation = ({
         </div>
         <p className="fade-in-text npc-dialogue">
           I wanted to remind you about us, and everything I read about
-          dissociative amnesia says that’s helpful, but I just got scared. What
-          if you don’t like who I am anymore? After everything you’ve been
-          through, maybe I’m not what you want now.
+          dissociative amnesia says that's helpful, but I just got scared. What
+          if you don't like who I am anymore? After everything you've been
+          through, maybe I'm not what you want now.
         </p>
         <button
           className="fade-in-text"
@@ -156,8 +156,8 @@ const Farhana5Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          Farhana, I’m the one in a wheelchair who can’t remember the most
-          important details of my life. I’m a lot more worried that <em>I'm</em>{" "}
+          Farhana, I'm the one in a wheelchair who can't remember the most
+          important details of my life. I'm a lot more worried that <em>I'm</em>{" "}
           not going to be what <em>you</em> want now.
         </p>
         <button
@@ -176,8 +176,8 @@ const Farhana5Conversation = ({
           <p>Farhana (she/her/hers)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          It’s not going to be easy. I know there are going to be miserable
-          moments, miserable days. Doubts. Regrets. But I’m willing to put in
+          It's not going to be easy. I know there are going to be miserable
+          moments, miserable days. Doubts. Regrets. But I'm willing to put in
           the work. We found each other and built something amazing together. We
           could do that again. I <em>want</em> to do that again.
         </p>

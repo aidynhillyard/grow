@@ -50,14 +50,37 @@ const Town = ({
   pot3Type,
   pot3IsFullyGrown,
 }) => {
+  // ***************************
+  // *** U S E - S T A T E S ***
+  // ***************************
   const [showFarhana, setShowFarhana] = useState(true);
   const [showJi, setShowJi] = useState(true);
   const [globalShow, setGlobalShow] = useState(false);
   const [showAlba, setShowAlba] = useState(true);
-  const [albaTalk, setAlbaTalk] = useState(false);
 
-  console.log("GlobalShow is: ", globalShow, "Ji Convo: ", dialogueStepJi);
-  console.log("Pot1Type", pot1Type, "Pot1 Is Fully Grown?", pot1IsFullyGrown);
+  console.log("GlobalShow is: ", globalShow);
+  console.log("Dialogue Step Ji: ", dialogueStepJi);
+  console.log("Dialogue Step Alba: ", dialogueStepAlba);
+  console.log("Dialogue Step Farhana: ", dialogueStepFarhana);
+  console.log(
+    "Letter1 is read: ",
+    letter1IsRead,
+    "| Letter2 is read: ",
+    letter2IsRead,
+    "| Letter3 is read: ",
+    letter3IsRead
+  );
+  console.log("Pot1Type", pot1Type, "| Pot1 Is Fully Grown?", pot1IsFullyGrown);
+  console.log("Pot2Type", pot2Type, "| Pot2 Is Fully Grown?", pot2IsFullyGrown);
+  console.log("Pot3Type", pot3Type, "| Pot3 Is Fully Grown?", pot3IsFullyGrown);
+
+  // *************************
+  // *** F U N C T I O N S ***
+  // *************************
+
+  // *******************
+  // TALK TO TOWNSPEOPLE
+  // *******************
 
   // Talk to Farhana Function
   const farhanaConversation = () => {
@@ -83,12 +106,6 @@ const Town = ({
     setTalkedToAlba(true);
   };
 
-  // Trade Plant Function
-
-  // dialogue step 5 will only show if tradeplant(true)
-  // dialogue step 5 will also have button to trade more plants
-  // button runs tradeplantfunction
-
   return (
     <Container>
       <h1>Town</h1>
@@ -96,21 +113,29 @@ const Town = ({
         This is placeholder text about the town. It also has instructions on
         talking to the townspeople below. One day, there might be a photo.
       </p>
+      {/* *********************** */}
+      {/* **** F A R H A N A **** */}
+      {/* *********************** */}
       <div
         className="farhana"
-        style={{ display: showFarhana ? "inline" : "none" }}
+        style={{ display: showFarhana && !globalShow ? "inline" : "none" }}
       >
-        <h3>Farhana</h3>
-        <p>(she/her/hers)</p>
+        <div>
+          <h3>Farhana</h3>
+          <p>(she/her/hers)</p>
+        </div>
         <p>
-          This is text about Farhana. It says a little bit about who she is and
-          her relationship to you. There's probably also a picture of her.
+          This is text about Farhana. It says a little bit about who they are
+          and their relationship to you. There's probably also a picture of
+          them.
         </p>
       </div>
       {/* Farhana Dialogue #1 */}
       <div
         className="farhana-dialogue1"
-        style={{ display: showFarhana && dialogueStepFarhana === 1 ? "inline" : "none" }}
+        style={{
+          display: showFarhana && dialogueStepFarhana === 1 ? "inline" : "none",
+        }}
       >
         <Farhana1Conversation
           actionPoints={actionPoints}
@@ -125,7 +150,9 @@ const Town = ({
       {/* Farhana Dialogue #2 */}
       <div
         className="farhana-dialogue2"
-        style={{ display: showFarhana && dialogueStepFarhana === 2 ? "inline" : "none" }}
+        style={{
+          display: showFarhana && dialogueStepFarhana === 2 ? "inline" : "none",
+        }}
       >
         <Farhana2Conversation
           actionPoints={actionPoints}
@@ -140,7 +167,9 @@ const Town = ({
       {/* Farhana Dialogue #3 */}
       <div
         className="farhana-dialogue3"
-        style={{ display: showFarhana && dialogueStepFarhana === 3 ? "inline" : "none" }}
+        style={{
+          display: showFarhana && dialogueStepFarhana === 3 ? "inline" : "none",
+        }}
       >
         <Farhana3Conversation
           actionPoints={actionPoints}
@@ -155,7 +184,9 @@ const Town = ({
       {/* Farhana Dialogue #4 */}
       <div
         className="farhana-dialogue4"
-        style={{ display: showFarhana && dialogueStepFarhana === 4 ? "inline" : "none" }}
+        style={{
+          display: showFarhana && dialogueStepFarhana === 4 ? "inline" : "none",
+        }}
       >
         <Farhana4Conversation
           actionPoints={actionPoints}
@@ -178,7 +209,9 @@ const Town = ({
       {/* Farhana Dialogue #5 */}
       <div
         className="farhana-dialogue5"
-        style={{ display: showFarhana && dialogueStepFarhana === 5 ? "inline" : "none" }}
+        style={{
+          display: showFarhana && dialogueStepFarhana === 5 ? "inline" : "none",
+        }}
       >
         <Farhana5Conversation
           actionPoints={actionPoints}
@@ -194,7 +227,9 @@ const Town = ({
       {/* Farhana Dialogue #6 */}
       <div
         className="farhana-dialogue6"
-        style={{ display: showFarhana && dialogueStepFarhana > 5 ? "inline" : "none" }}
+        style={{
+          display: showFarhana && dialogueStepFarhana > 5 ? "inline" : "none",
+        }}
       >
         <Farhana6Conversation
           actionPoints={actionPoints}
@@ -214,6 +249,9 @@ const Town = ({
           pot3IsFullyGrown={pot3IsFullyGrown}
         />
       </div>
+      {/* *********************** */}
+      {/* ********* J I ********* */}
+      {/* *********************** */}
       <div
         className="ji"
         style={{ display: showJi && !globalShow ? "inline" : "none" }}
@@ -334,7 +372,13 @@ const Town = ({
           pot3IsFullyGrown={pot3IsFullyGrown}
         />
       </div>
-      <div className="alba" style={{ display: showAlba && !globalShow ? "inline" : "none" }}>
+      {/* *********************** */}
+      {/* ******* A L B A ******* */}
+      {/* *********************** */}
+      <div
+        className="alba"
+        style={{ display: showAlba && !globalShow ? "inline" : "none" }}
+      >
         <h3>Alba</h3>
         (they/them/theirs)
         <p>
@@ -345,7 +389,9 @@ const Town = ({
       {/* Alba Dialogue #1 */}
       <div
         className="alba-dialogue1"
-        style={{ display: showAlba && dialogueStepAlba === 1 ? "inline" : "none" }}
+        style={{
+          display: showAlba && dialogueStepAlba === 1 ? "inline" : "none",
+        }}
       >
         <Alba1Conversation
           actionPoints={actionPoints}
@@ -360,7 +406,9 @@ const Town = ({
       {/* Alba Dialogue #2 */}
       <div
         className="alba-dialogue2"
-        style={{ display: showAlba && dialogueStepAlba === 2 ? "inline" : "none" }}
+        style={{
+          display: showAlba && dialogueStepAlba === 2 ? "inline" : "none",
+        }}
       >
         <Alba2Conversation
           actionPoints={actionPoints}
@@ -375,7 +423,9 @@ const Town = ({
       {/* Alba Dialogue #3 */}
       <div
         className="alba-dialogue3"
-        style={{ display: showAlba && dialogueStepAlba === 3 ? "inline" : "none" }}
+        style={{
+          display: showAlba && dialogueStepAlba === 3 ? "inline" : "none",
+        }}
       >
         <Alba3Conversation
           actionPoints={actionPoints}
@@ -390,7 +440,9 @@ const Town = ({
       {/* Alba Dialogue #4 */}
       <div
         className="alba-dialogue4"
-        style={{ display: showAlba && dialogueStepAlba === 4 ? "inline" : "none" }}
+        style={{
+          display: showAlba && dialogueStepAlba === 4 ? "inline" : "none",
+        }}
       >
         <Alba4Conversation
           actionPoints={actionPoints}
@@ -413,7 +465,9 @@ const Town = ({
       {/* Alba Dialogue #5 */}
       <div
         className="alba-dialogue5"
-        style={{ display: showAlba && dialogueStepAlba === 5 ? "inline" : "none" }}
+        style={{
+          display: showAlba && dialogueStepAlba === 5 ? "inline" : "none",
+        }}
       >
         <Alba5Conversation
           actionPoints={actionPoints}
@@ -429,7 +483,9 @@ const Town = ({
       {/* Alba Dialogue #6 */}
       <div
         className="alba-dialogue6"
-        style={{ display: showAlba && dialogueStepAlba > 5 ? "inline" : "none" }}
+        style={{
+          display: showAlba && dialogueStepAlba > 5 ? "inline" : "none",
+        }}
       >
         <Alba6Conversation
           actionPoints={actionPoints}
@@ -451,13 +507,15 @@ const Town = ({
       </div>
       {/* Travel to Home Button */}
       <button
-          style={{ display: location === "town" && !globalShow ? "inline" : "none" }}
-          onClick={() => {
-            setLocation("home");
-          }}
-        >
-          Travel to Home
-        </button>
+        style={{
+          display: location === "town" && !globalShow ? "inline" : "none",
+        }}
+        onClick={() => {
+          setLocation("home");
+        }}
+      >
+        Travel to Home
+      </button>
     </Container>
   );
 };

@@ -7,7 +7,9 @@ import NewDay from "../NewDay/NewDay";
 import { useState, useEffect } from "react";
 
 const Grow = () => {
-  // *** USE STATES ***
+  // ***************************
+  // *** U S E - S T A T E S ***
+  // ***************************
 
   // Location useState
   const [location, setLocation] = useState("tutorial");
@@ -56,17 +58,21 @@ const Grow = () => {
   const [dialogueStepAlba, setDialogueStepAlba] = useState(1);
   const [tradePlantAlba, setTradePlantAlba] = useState(false);
 
-  console.log("Letter 2 is read?", letter2IsRead)
-
-  // *** FUNCTIONS ***
-
   // useEffect Placeholder
   useEffect(() => console.log("Hello world"), [actionPoints]);
+
+  // *************************
+  // *** F U N C T I O N S ***
+  // *************************
 
   // Decrement Action Points
   const decrementActionPoints = () => {
     setActionPoints((prevState) => prevState - 1);
   };
+
+  // **********
+  // RESET POTS
+  // **********
 
   // Reset Pot #1
   const resetPot1 = () => {
@@ -95,23 +101,13 @@ const Grow = () => {
     setPot3Age(null);
   };
 
+  // **************
+  // CHECK DIALOGUE
+  // **************
+
   // Check Farhana Dialogue
   const checkFarhanaDialogue = () => {
-    if (talkedToFarhana === true && dialogueStepFarhana < 3) {
-      setDialogueStepFarhana((prevState) => prevState + 1);
-    } else if (
-      talkedToFarhana === true &&
-      dialogueStepFarhana === 3 &&
-      ((pot1Type === "Forget-Me-Not" && pot1IsFullyGrown === true) ||
-        (pot2Type === "Forget-Me-Not" && pot2IsFullyGrown === true) ||
-        (pot3Type === "Forget-Me-Not" && pot3IsFullyGrown === true))
-    ) {
-      setDialogueStepFarhana((prevState) => prevState + 1);
-    } else if (
-      talkedToFarhana === true &&
-      dialogueStepFarhana === 4 &&
-      tradePlantFarhana === true
-    ) {
+    if (talkedToFarhana === true) {
       setDialogueStepFarhana((prevState) => prevState + 1);
     }
   };
@@ -120,29 +116,19 @@ const Grow = () => {
   const checkJiDialogue = () => {
     if (talkedToJi === true) {
       setDialogueStepJi((prevState) => prevState + 1);
-    } 
+    }
   };
 
   // Check Alba Dialogue
   const checkAlbaDialogue = () => {
-    if (talkedToAlba === true && dialogueStepAlba < 3) {
-      setDialogueStepAlba((prevState) => prevState + 1);
-    } else if (
-      talkedToAlba === true &&
-      dialogueStepAlba === 3 &&
-      ((pot1Type === "Iris" && pot1IsFullyGrown === true) ||
-        (pot2Type === "Iris" && pot2IsFullyGrown === true) ||
-        (pot3Type === "Iris" && pot3IsFullyGrown === true))
-    ) {
-      setDialogueStepAlba((prevState) => prevState + 1);
-    } else if (
-      talkedToAlba === true &&
-      dialogueStepAlba === 4 &&
-      tradePlantAlba === true
-    ) {
+    if (talkedToAlba === true) {
       setDialogueStepAlba((prevState) => prevState + 1);
     }
   };
+
+  // ***********
+  // TRADE DEALS
+  // ***********
 
   // Trade Deal Farhana
   const tradeDealFarhana = () => {
@@ -183,9 +169,12 @@ const Grow = () => {
     }
   };
 
+  // ************
   // Start of Day
+  // ************
+
   const startNewDay = () => {
-    setActionPoints(3);
+    setActionPoints(4);
     setLocation("home");
     setDay((prevState) => prevState + 1);
     setPot1IsCaredFor(false);
@@ -198,8 +187,6 @@ const Grow = () => {
     setTalkedToJi(false);
     setTalkedToAlba(false);
   };
-  console.log(talkedToFarhana);
-  console.log(dialogueStepFarhana);
 
   return (
     <Container>
@@ -207,8 +194,13 @@ const Grow = () => {
         <h1>GROW</h1>
         <h2>Tagline</h2>
       </div>
-      <button onClick={() => {
-            setLocation("home");}}>*** go home ***</button>
+      <button
+        onClick={() => {
+          setLocation("home");
+        }}
+      >
+        *** go home ***
+      </button>
       <div style={{ display: location === "tutorial" ? "none" : "inline" }}>
         <p>Action Points: {actionPoints}</p>
         <p>Day: {day}</p>
@@ -216,15 +208,15 @@ const Grow = () => {
       <div style={{ display: actionPoints === 0 ? "inline" : "none" }}>
         <NewDay startNewDay={startNewDay} />
       </div>
-      {/* ********
-        Tutorial
-        ******** */}
+      {/* *************** */}
+      {/* T U T O R I A L */}
+      {/* *************** */}
       <div style={{ display: location === "tutorial" ? "inline" : "none" }}>
         <Tutorial setLocation={setLocation} />
       </div>
-      {/* ********
-        Home
-        ******** */}
+      {/* ******** */}
+      {/* H O M E */}
+      {/* ******** */}
       <div style={{ display: location === "home" ? "inline" : "none" }}>
         <Home
           actionPoints={actionPoints}
@@ -277,9 +269,9 @@ const Grow = () => {
         />
       </div>
 
-      {/* ********
-        Town
-        ******** */}
+      {/* ******** */}
+      {/* T O W N */}
+      {/* ******** */}
       <div style={{ display: location === "town" ? "inline" : "none" }}>
         <Town
           actionPoints={actionPoints}
@@ -321,9 +313,8 @@ const Grow = () => {
           tradeDealAlba={tradeDealAlba}
         />
       </div>
-      <div>
-        
-      </div>
+      <div></div>
+      {/* Travel to Town Button */}
       <div>
         <button
           variant="success"

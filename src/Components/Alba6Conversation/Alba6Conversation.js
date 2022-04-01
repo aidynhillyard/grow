@@ -18,7 +18,7 @@ const Alba6Conversation = ({
   pot2Type,
   pot2IsFullyGrown,
   pot3Type,
-  pot3IsFullyGrown
+  pot3IsFullyGrown,
 }) => {
   // useStates
   const [albaDialogue, setAlbaDialogue] = useState(0);
@@ -29,15 +29,22 @@ const Alba6Conversation = ({
       <button
         onClick={() => {
           setShowFarhana(false);
-          setShowAlba(false);
+          setShowJi(false);
           albaConversation();
           setGlobalShow(true);
           setAlbaDialogue((prevState) => prevState + 1);
         }}
-        style={{ display: actionPoints > 0 && !globalShow && (dialogueStepAlba > 5 &&
+        style={{
+          display:
+            actionPoints > 0 &&
+            !globalShow &&
+            dialogueStepAlba > 5 &&
             ((pot1Type === "Iris" && pot1IsFullyGrown === true) ||
               (pot2Type === "Iris" && pot2IsFullyGrown === true) ||
-              (pot3Type === "Iris" && pot3IsFullyGrown === true))) ? "inline" : "none" }}
+              (pot3Type === "Iris" && pot3IsFullyGrown === true))
+              ? "inline"
+              : "none",
+        }}
       >
         Talk 6
       </button>
@@ -47,7 +54,9 @@ const Alba6Conversation = ({
           <p>Alba (they/them/theirs)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-        I’m always happy to take more irises off your hands if you have them.  And remember, dear, you have your whole life to decide who you want to be.
+          I'm always happy to take more irises off your hands if you have them.
+          And remember, dear, you have your whole life to decide who you want to
+          be.
         </p>
         <button
           className="fade-in-text"
@@ -63,11 +72,10 @@ const Alba6Conversation = ({
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
-        <p className="fade-in-text player-dialogue">
-          Thank you, Alba.
-        </p>
+        <p className="fade-in-text player-dialogue">Thank you, Alba.</p>
         <button
-          className="fade-in-text player-dialogue" style={{ display: !tradedPlant ? "inline" : "none" }}
+          className="fade-in-text player-dialogue"
+          style={{ display: !tradedPlant ? "inline" : "none" }}
           onClick={() => {
             tradeDealAlba();
             setTradedPlant(true);
@@ -75,7 +83,8 @@ const Alba6Conversation = ({
         >
           Give Plant
         </button>
-        <button style={{ display: tradedPlant ? "inline" : "none" }}
+        <button
+          style={{ display: tradedPlant ? "inline" : "none" }}
           className="fade-in-text"
           aria-label="next"
           onClick={() => {

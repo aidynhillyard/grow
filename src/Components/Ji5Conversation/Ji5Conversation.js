@@ -28,7 +28,9 @@ const Ji5Conversation = ({
         }}
         style={{
           display:
-            actionPoints > 0 && !globalShow && letter2IsRead ? "inline" : "none",
+            actionPoints > 0 && !globalShow && letter2IsRead
+              ? "inline"
+              : "none",
         }}
       >
         Talk 5
@@ -38,7 +40,7 @@ const Ji5Conversation = ({
           <img src={ji} alt="Ji" id="ji-avatar" />
           <p>Ji (he/him/his)</p>
         </div>
-        <p className="fade-in-text npc-dialogue">Heya! How’ve you been?</p>
+        <p className="fade-in-text npc-dialogue">Heya! How've you been?</p>
         <button
           className="fade-in-text"
           aria-label="next"
@@ -54,7 +56,7 @@ const Ji5Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          I’m doing okay. I read the letter from me, to me, that you gave me.
+          I'm doing okay. I read the letter from me, to me, that you gave me.
         </p>
         <button
           className="fade-in-text"
@@ -71,7 +73,7 @@ const Ji5Conversation = ({
           <img src={ji} alt="Ji" id="ji-avatar" />
           <p>Ji (he/him/his)</p>
         </div>
-        <p className="fade-in-text npc-dialogue">And…?</p>
+        <p className="fade-in-text npc-dialogue">And...?</p>
         <button
           className="fade-in-text"
           aria-label="next"
@@ -87,7 +89,7 @@ const Ji5Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          And I wrote it just after your grandma passed away. I… really loved
+          And I wrote it just after your grandma passed away. I... really loved
           her.
         </p>
         <button
@@ -125,7 +127,7 @@ const Ji5Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          Hm. That’s funny; the letter talked about trust, too.
+          Hm. That's funny; the letter mentioned trust, too.
         </p>
         <button
           className="fade-in-text"
@@ -143,7 +145,7 @@ const Ji5Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          It’s all connected. Life, and all that.
+          It's all connected. Life, and all that.
         </p>
         <button
           className="fade-in-text"
@@ -160,7 +162,7 @@ const Ji5Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          I’m beginning to feel like that's true.
+          I'm beginning to feel like that's true.
         </p>
         <button
           className="fade-in-text"

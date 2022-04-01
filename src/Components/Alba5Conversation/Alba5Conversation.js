@@ -21,7 +21,7 @@ const Alba5Conversation = ({
       <button
         onClick={() => {
           setShowFarhana(false);
-          setShowAlba(false);
+          setShowJi(false);
           albaConversation();
           setGlobalShow(true);
           setAlbaDialogue((prevState) => prevState + 1);
@@ -58,7 +58,7 @@ const Alba5Conversation = ({
           <p>Alba (they/them/theirs)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          Eh, I’m okay, can’t complain. It’s supposed to rain, and that always
+          Eh, I'm okay, can't complain. It's supposed to rain, and that always
           makes these old bones a bit more creaky, but what can you do?
         </p>
         <button
@@ -77,7 +77,7 @@ const Alba5Conversation = ({
         </div>
         <p className="fade-in-text player-dialogue">
           I can relate; ever since the accident, I feel extra stiff in certain
-          weather. Oh, but I wanted to tell you… I read the letter you gave me.
+          weather. Oh, but I wanted to tell you... I read the letter you gave me.
         </p>
         <button
           className="fade-in-text"
@@ -110,9 +110,9 @@ const Alba5Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          Yeah, apparently I hated track and field! Here I was, thinking I had
+          Yes, apparently I hated track and field! Here I was, thinking I had
           all these dreams, like maybe even the Olympics, but come to find out I
-          really did hate it. I guess it was my mom’s idea.
+          really did hate it. I guess it was my mom's idea.
         </p>
         <button
           className="fade-in-text"
@@ -148,8 +148,8 @@ const Alba5Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          I can tell from everything left in the house. It’s comforting. And so
-          is the letter. I’m starting to figure out who I can be, but more
+          I can tell from everything left in the house. It's comforting. And so
+          is the letter. I'm starting to figure out who I can be, but more
           importantly, who I want to be.
         </p>
         <button

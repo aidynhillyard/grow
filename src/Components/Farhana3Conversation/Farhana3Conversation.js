@@ -19,7 +19,7 @@ const Farhana3Conversation = ({
     <div>
       <button
         onClick={() => {
-          setShowFarhana(false);
+          setShowJi(false);
           setGlobalShow(true);
           setShowAlba(false);
           farhanaConversation();
@@ -34,9 +34,7 @@ const Farhana3Conversation = ({
           <img src={farhana} alt="Farhana" id="farhana-avatar" />
           <p>Farhana (she/her/hers)</p>
         </div>
-        <p className="fade-in-text npc-dialogue">
-          Hey, Friend! How’re you today?
-        </p>
+        <p className="fade-in-text npc-dialogue">Heya! How're you today?</p>
         <button
           className="fade-in-text"
           aria-label="next"
@@ -52,7 +50,7 @@ const Farhana3Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          I’m okay. How about you? And how’s your family?
+          I'm okay. How about you? And how's your family?
         </p>
         <button
           className="fade-in-text"
@@ -70,7 +68,7 @@ const Farhana3Conversation = ({
           <p>Farhana (she/her/hers)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          They’re good. I was just talking with my sister last night about fate,
+          They're good. I was just talking with my sister last night about fate,
           actually.
         </p>
         <button
@@ -104,9 +102,9 @@ const Farhana3Conversation = ({
           <p>Farhana (she/her/hers)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          Yeah. It’s been really hard on me, that you don’t remember anything. I
-          know it’s not your fault, and I’m not mad at you. And I probably
-          should’ve tried to remind you about things before now, but it’s
+          Yeah. It's been really hard on me, that you don't remember anything. I
+          know it's not your fault, and I'm not mad at you. And I probably
+          should've tried to remind you about things before now, but it's
           just... really painful.
         </p>
         <button
@@ -124,9 +122,9 @@ const Farhana3Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          Not remembering things has been pretty hard on me, too. It’s not like
-          I want this weird reality where everyone knows me but I don’t know
-          them.
+          Not remembering things has been pretty hard on me, too. It's not like
+          I <em>want</em> this weird reality where everyone knows me but I don't
+          know them.
         </p>
         <button
           className="fade-in-text"
@@ -150,8 +148,8 @@ const Farhana3Conversation = ({
         </div>
         <div style={{ display: farhanaDialogue === 7 ? "inline" : "none" }}>
           <p className="fade-in-text npc-dialogue">
-            I know. That’s one of the reasons I haven’t said anything until now.
-            Because I don’t want to discount or overshadow what it’s like for
+            I know. That's one of the reasons I haven't said anything until now.
+            Because I don't want to discount or overshadow what it's like for
             you.
           </p>
           <button
@@ -166,7 +164,7 @@ const Farhana3Conversation = ({
         </div>
         <div style={{ display: farhanaDialogue === 8 ? "inline" : "none" }}>
           <p className="fade-in-text npc-dialogue">
-            I know you don’t remember, but we were actually there together. On
+            I know you don't remember, but we were actually there together. On
             the trip. It was our very first trip together, and we were supposed
             to have three more days, but then my dad had his stroke, and I
             changed my ticket and flew back early to be with him.
@@ -185,7 +183,7 @@ const Farhana3Conversation = ({
           <p className="fade-in-text npc-dialogue">
             You were going to come back with me, but I insisted you stay and
             enjoy yourself, because everything was already paid for anyway. I
-            just… I feel so awful about that. I can’t explain.
+            just… I feel so awful about that. I can't explain.
           </p>
           <button
             className="fade-in-text"
@@ -218,9 +216,9 @@ const Farhana3Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          You couldn’t have known. It sounds like you just… wanted me to be
-          happy. I don’t remember any of this, but I’m starting to get to know
-          you again, and you’re a kind person. Please don’t feel bad about this.
+          You didn't know, Farhana. It sounds like you just... wanted me to be
+          happy. I don't remember any of this, but I'm starting to get to know
+          you again, and you're a kind person. Please don't feel bad about this.
         </p>
         <button
           className="fade-in-text"
@@ -238,7 +236,7 @@ const Farhana3Conversation = ({
           <p>Farhana (she/her/hers)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          It’s so hard, starting over with you. Like the last several years
+          It's so hard, starting over with you. Like the last several years
           never even happened.
         </p>
         <button
@@ -255,7 +253,7 @@ const Farhana3Conversation = ({
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
-        <p className="fade-in-text player-dialogue">...I’m sorry.</p>
+        <p className="fade-in-text player-dialogue">...I'm sorry.</p>
         <button
           className="fade-in-text"
           aria-label="next"
@@ -272,10 +270,10 @@ const Farhana3Conversation = ({
           <p>Farhana (she/her/hers)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          No, <em>I’m</em> sorry. I shouldn’t vent to you, and it’s not your
-          fault. Anyway. I made this for you. It’s a little box, made of pine,
-          and I painted forget-me-nots on the sides. ...Please don’t look at me
-          like that. It’s not supposed to be mean; it’s supposed to be sweet.
+          No, <em>I'm</em> sorry. I shouldn't vent to you, and it's not your
+          fault. Anyway. I made this for you. It's a little pine box, and those
+          are forget-me-nots painted on the sides. ...Please don't look at me
+          like that. It's not supposed to be mean; it's supposed to be sweet.
         </p>
         <button
           className="fade-in-text"

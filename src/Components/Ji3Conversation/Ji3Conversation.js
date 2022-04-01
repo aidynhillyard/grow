@@ -34,7 +34,7 @@ const Ji3Conversation = ({
           <img src={ji} alt="Ji" id="ji-avatar" />
           <p>Ji (he/him/his)</p>
         </div>
-        <p className="fade-in-text npc-dialogue">Oh hey, how’s it going?</p>
+        <p className="fade-in-text npc-dialogue">Oh hey, how's it going?</p>
         <button
           className="fade-in-text"
           aria-label="next"
@@ -68,7 +68,7 @@ const Ji3Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-        Chocolate chip cookies.  Want one?
+          Chocolate chip cookies. Want one?
         </p>
         <button
           className="fade-in-text"
@@ -85,7 +85,7 @@ const Ji3Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-        Sure, I’m always up for cookies.  …Wow, these are delicious!
+          Sure, I'm always up for cookies. ...Hey, these are delicious!
         </p>
         <button
           className="fade-in-text"
@@ -103,7 +103,10 @@ const Ji3Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-        Thanks, I made them myself.  I started teaching myself how to cook after my grandma passed away.  Mom had been gone for awhile, and Dad just kind of… checked out.  So I figured someone should make sure we were eating.  Not that I made us cookies for dinner!
+          Thanks, I made them myself. I started teaching myself how to cook
+          after my grandma passed away. Mom had been gone for awhile, and Dad
+          just kind of... checked out. So I figured someone should make sure we
+          were eating. Not that I made us cookies for dinner!
         </p>
         <button
           className="fade-in-text"
@@ -139,7 +142,7 @@ const Ji3Conversation = ({
         </div>
         <p className="fade-in-text npc-dialogue">
           It was only about four years ago. Wow, this memory stuff is so weird.
-          You sang at my grandma’s funeral, actually.
+          You sang at my grandma's funeral, actually.
         </p>
         <button
           className="fade-in-text"
@@ -155,7 +158,7 @@ const Ji3Conversation = ({
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
-        <p className="fade-in-text player-dialogue">I… what?</p>
+        <p className="fade-in-text player-dialogue">I... what?</p>
         <button
           className="fade-in-text"
           aria-label="next"
@@ -174,8 +177,8 @@ const Ji3Conversation = ({
         <p className="fade-in-text npc-dialogue">
           Yeah. Well, at the memorial service afterward. The actual funeral was
           a really formal family thing and all, but afterward, I had put
-          together a sort of “share memories” thing, and you sang this really
-          pretty song. You’ve got a great voice.
+          together a sort of "share memories" thing, and you sang this really
+          pretty song. You've got a great voice.
         </p>
         <button
           className="fade-in-text"
@@ -209,7 +212,7 @@ const Ji3Conversation = ({
         </div>
         <p className="fade-in-text npc-dialogue">
           You brought her tulips. They were her favorite flower, and I guess
-          they’re mine now, too. …You should start singing again.
+          they're mine now, too. ...You should start singing again.
         </p>
         <button
           className="fade-in-text"
@@ -225,7 +228,7 @@ const Ji3Conversation = ({
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
-        <p className="fade-in-text player-dialogue">Maybe...</p>
+        <p className="fade-in-text player-dialogue">Maybe....</p>
         <button
           className="fade-in-text"
           onClick={() => {

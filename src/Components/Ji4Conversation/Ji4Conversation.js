@@ -18,7 +18,7 @@ const Ji4Conversation = ({
   pot2Type,
   pot2IsFullyGrown,
   pot3Type,
-  pot3IsFullyGrown
+  pot3IsFullyGrown,
 }) => {
   // useStates
   const [jiDialogue, setJiDialogue] = useState(0);
@@ -34,10 +34,17 @@ const Ji4Conversation = ({
           setGlobalShow(true);
           setJiDialogue((prevState) => prevState + 1);
         }}
-        style={{ display: actionPoints > 0 && !globalShow && (dialogueStepJi === 4 &&
-          ((pot1Type === "Tulip" && pot1IsFullyGrown === true) ||
-            (pot2Type === "Tulip" && pot2IsFullyGrown === true) ||
-            (pot3Type === "Tulip" && pot3IsFullyGrown === true))) ? "inline" : "none" }}
+        style={{
+          display:
+            actionPoints > 0 &&
+            !globalShow &&
+            dialogueStepJi === 4 &&
+            ((pot1Type === "Tulip" && pot1IsFullyGrown === true) ||
+              (pot2Type === "Tulip" && pot2IsFullyGrown === true) ||
+              (pot3Type === "Tulip" && pot3IsFullyGrown === true))
+              ? "inline"
+              : "none",
+        }}
       >
         Talk 4
       </button>
@@ -49,7 +56,8 @@ const Ji4Conversation = ({
           Hey, Ji. I, uh, grew this for you.
         </p>
         <button
-          className="fade-in-text player-dialogue" style={{ display: !tradedPlant ? "inline" : "none" }}
+          className="fade-in-text player-dialogue"
+          style={{ display: !tradedPlant ? "inline" : "none" }}
           onClick={() => {
             tradeDealJi();
             setTradedPlant(true);
@@ -57,7 +65,8 @@ const Ji4Conversation = ({
         >
           Give Plant
         </button>
-        <button style={{ display: tradedPlant ? "inline" : "none" }}
+        <button
+          style={{ display: tradedPlant ? "inline" : "none" }}
           className="fade-in-text"
           aria-label="next"
           onClick={() => {
@@ -73,7 +82,7 @@ const Ji4Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          Is that…? It’s a tulip! Thank you!
+          Is that...? It's a tulip! Thank you!
         </p>
         <button
           className="fade-in-text"
@@ -110,11 +119,10 @@ const Ji4Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          You know… growing up in a Korean family, we’re not usually big on
-          therapy. Don’t want anyone to think anything's <em>wrong</em>. But,
-          after I lost my grandma, and things were pretty bad, I
-          finally decided to see someone. I drove two towns over just in case
-          word got back.
+          You know… growing up in a Korean family, we're not usually big on
+          therapy. Don't want anyone to think anything's <em>wrong</em>. But,
+          after I lost my grandma, and things were pretty bad, I finally decided
+          to see someone. I drove two towns over just in case word got back.
         </p>
         <button
           className="fade-in-text"
@@ -130,7 +138,7 @@ const Ji4Conversation = ({
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
-        <p className="fade-in-text player-dialogue">Did… it help?</p>
+        <p className="fade-in-text player-dialogue">Did... it help?</p>
         <button
           className="fade-in-text"
           aria-label="next"
@@ -147,9 +155,9 @@ const Ji4Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          Kinda. It’s not like it made everything better. But it helped me feel
-          like I could handle things better. …I saw footage of the earthquake on
-          TV, you know. It looked really intense. And I can’t imagine being
+          Kinda. It's not like it made everything better. But it helped me feel
+          like I could handle things better. ...I saw footage of the earthquake
+          on TV, you know. It looked really intense. And I can't imagine being
           crushed under something like that.
         </p>
         <button
@@ -183,7 +191,7 @@ const Ji4Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          I guess what I’m saying is that you’ve been through a lot, and, you
+          I guess what I'm saying is that you've been through a lot, and, you
           know, talking to someone is a thing. Oh, and this is for you.
         </p>
         <button
@@ -218,7 +226,7 @@ const Ji4Conversation = ({
         </div>
         <p className="fade-in-text npc-dialogue">
           Yeah, you gave it to me a long time ago, and said to give it back to
-          you when you were older. Well, you’re older. We both are. So here it
+          you when you were older. Well, you're older. We both are. So here it
           is. And if you want, I can give you the name of my therapist.
         </p>
         <button
@@ -236,7 +244,7 @@ const Ji4Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          I’ll think about it. Really. And thank you for the letter.
+          I'll think about it. Really. And thank you for the letter.
         </p>
         <button
           className="fade-in-text"

@@ -19,7 +19,7 @@ const Farhana2Conversation = ({
     <div>
       <button
         onClick={() => {
-          setShowFarhana(false);
+          setShowJi(false);
           setShowAlba(false);
           farhanaConversation();
           setGlobalShow(true);
@@ -30,7 +30,7 @@ const Farhana2Conversation = ({
         Talk 2
       </button>
       <div style={{ display: farhanaDialogue === 1 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
+        <div className="player-dialo'ue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
@@ -71,7 +71,7 @@ const Farhana2Conversation = ({
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
-        <p className="fade-in-text player-dialogue">That’s kind of you.</p>
+        <p className="fade-in-text player-dialogue">That's kind of you.</p>
         <button
           className="fade-in-text"
           aria-label="next"
@@ -88,8 +88,8 @@ const Farhana2Conversation = ({
           <p>Farhana (she/her/hers)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          It’s what you do for family. She and her husband have our dad living
-          with them, plus four kids, and I honestly don’t know how she keeps it
+          It's what you do for family. She and her husband have our dad living
+          with them, plus four kids, and I honestly don't know how she keeps it
           together with a house that busy.
         </p>
         <button
@@ -107,7 +107,7 @@ const Farhana2Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          I take it you don’t live with her, then?
+          I take it you don't live with her, then?
         </p>
         <button
           className="fade-in-text"
@@ -125,8 +125,8 @@ const Farhana2Conversation = ({
           <p>Farhana (she/her/hers)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          ...No. I...? Nevermind. Anyway, since I’m already headed to the store,
-          I’m happy to pick you up something if you want?
+          ...No. I...? Nevermind. Anyway, since I'm already headed to the store,
+          I'm happy to pick you up something if you want?
         </p>
         <button
           className="fade-in-text"
@@ -143,7 +143,7 @@ const Farhana2Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          Um, I’m okay, but thanks anyway.
+          Um, I'm okay, but thanks anyway.
         </p>
         <button
           className="fade-in-text"
@@ -161,8 +161,8 @@ const Farhana2Conversation = ({
           <p>Farhana (she/her/hers)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          Alright, see you later! And don’t forget to say hi to Alba and Ji.
-          They’re excited to talk with you!
+          Alright, see you later! And don't forget to say hi to Alba and Ji.
+          They're excited to talk with you!
         </p>
         <button
           className="fade-in-text"

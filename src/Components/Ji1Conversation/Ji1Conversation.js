@@ -35,7 +35,7 @@ const Ji1Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          Hiya, Friend! Welcome back to town. It’s really great to see you
+          Hiya, Friend! Welcome back to town. It's really great to see you
           again.
         </p>
         <button
@@ -53,7 +53,7 @@ const Ji1Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          Thanks, it’s good to be back. You must be… Ji?
+          Thanks, it's good to be back. You must be… Ji?
         </p>
         <button
           className="fade-in-text"
@@ -87,9 +87,7 @@ const Ji1Conversation = ({
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
-        <p className="fade-in-text player-dialogue">
-          It’s… not really that glamorous or anything.
-        </p>
+        <p className="fade-in-text player-dialogue">Yeah. It's... stressful.</p>
         <button
           className="fade-in-text"
           aria-label="next"
@@ -106,7 +104,7 @@ const Ji1Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          Yeah, I figured. Hey, I’m headed over to the rec center for some
+          Yeah, I figured. Hey, I'm headed over to the rec center for some
           hockey practice. Wanna come?
         </p>
         <button
@@ -124,7 +122,7 @@ const Ji1Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          Come… do hockey practice with you?
+          Come... do hockey practice with you?
         </p>
         <button
           className="fade-in-text"
@@ -161,7 +159,7 @@ const Ji1Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          Farhana mentioned a lot of the places around town aren’t accessible.
+          Farhana mentioned a lot of the places around town aren't accessible.
           Could I even get to the rink?
         </p>
         <button
@@ -180,9 +178,9 @@ const Ji1Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          Uh, I’m not sure. Maybe we’ll take a rain check, then. Just wait until
-          winter, though. There’s this sick outdoor pond that ices over, and
-          then it’s outdoor hockey time. You could join me there.
+          Uh, I'm not sure. Maybe we'll take a rain check, then. Just wait until
+          winter, though. There's this sick outdoor pond that ices over, and
+          then it's outdoor hockey time. You could join me there.
         </p>
         <button
           className="fade-in-text"
@@ -199,7 +197,7 @@ const Ji1Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          I’ll think about it. Have fun, though.
+          I'll think about it. Have fun, though.
         </p>
         <button
           className="fade-in-text"

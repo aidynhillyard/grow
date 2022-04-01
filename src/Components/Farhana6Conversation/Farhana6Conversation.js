@@ -18,7 +18,7 @@ const Farhana6Conversation = ({
   pot2Type,
   pot2IsFullyGrown,
   pot3Type,
-  pot3IsFullyGrown
+  pot3IsFullyGrown,
 }) => {
   // useStates
   const [farhanaDialogue, setFarhanaDialogue] = useState(0);
@@ -28,16 +28,23 @@ const Farhana6Conversation = ({
     <div>
       <button
         onClick={() => {
-          setShowFarhana(false);
+          setShowJi(false);
           setShowAlba(false);
           farhanaConversation();
           setGlobalShow(true);
           setFarhanaDialogue((prevState) => prevState + 1);
         }}
-        style={{ display: actionPoints > 0 && !globalShow && (dialogueStepFarhana > 5 &&
+        style={{
+          display:
+            actionPoints > 0 &&
+            !globalShow &&
+            dialogueStepFarhana > 5 &&
             ((pot1Type === "Forget-Me-Not" && pot1IsFullyGrown === true) ||
               (pot2Type === "Forget-Me-Not" && pot2IsFullyGrown === true) ||
-              (pot3Type === "Forget-Me-Not" && pot3IsFullyGrown === true))) ? "inline" : "none" }}
+              (pot3Type === "Forget-Me-Not" && pot3IsFullyGrown === true))
+              ? "inline"
+              : "none",
+        }}
       >
         Talk 6
       </button>
@@ -47,7 +54,9 @@ const Farhana6Conversation = ({
           <p>Farhana (she/her/hers)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-        <em>Ya hayati</em>, we’ll figure this out.  Traveling the ocean together in one boat, as you say.  Oh, and if you have any, I’ll always want forget-me-nots from you.
+          <em>Ya hayati</em>, we'll figure this out. Traveling the ocean
+          together in one boat, as you say. Oh, and if you have any, I'll always
+          want forget-me-nots from you.
         </p>
         <button
           className="fade-in-text"
@@ -63,11 +72,10 @@ const Farhana6Conversation = ({
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
-        <p className="fade-in-text player-dialogue">
-          Thank you, Farhana.
-        </p>
+        <p className="fade-in-text player-dialogue">Thank you, Farhana.</p>
         <button
-          className="fade-in-text player-dialogue" style={{ display: !tradedPlant ? "inline" : "none" }}
+          className="fade-in-text player-dialogue"
+          style={{ display: !tradedPlant ? "inline" : "none" }}
           onClick={() => {
             tradeDealFarhana();
             setTradedPlant(true);
@@ -75,7 +83,8 @@ const Farhana6Conversation = ({
         >
           Give Plant
         </button>
-        <button style={{ display: tradedPlant ? "inline" : "none" }}
+        <button
+          style={{ display: tradedPlant ? "inline" : "none" }}
           className="fade-in-text"
           aria-label="next"
           onClick={() => {

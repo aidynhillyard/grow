@@ -19,7 +19,7 @@ const Farhana1Conversation = ({
     <div>
       <button
         onClick={() => {
-          setShowFarhana(false);
+          setShowJi(false);
           setShowAlba(false);
           setGlobalShow(true);
           farhanaConversation();
@@ -31,11 +31,11 @@ const Farhana1Conversation = ({
       </button>
       <div style={{ display: farhanaDialogue === 1 ? "inline" : "none" }}>
         <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Ji" id="farhana-avatar" />
+          <img src={farhana} alt="Farhana" id="farhana-avatar" />
           <p>Farhana (she/her/hers)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          Hey, Friend! I’m glad you decided to come to town. I know it’s a lot,
+          Hey, Friend! I'm glad you decided to come to town. I know it's a lot,
           trying to adjust to being back here.
         </p>
         <button
@@ -67,14 +67,14 @@ const Farhana1Conversation = ({
       </div>
       <div style={{ display: farhanaDialogue === 3 ? "inline" : "none" }}>
         <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Ji" id="farhana-avatar" />
+          <img src={farhana} alt="Farhana" id="farhana-avatar" />
           <p>Farhana (she/her/hers)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
           Hopeful, actually. The city council is talking about renovating the
-          rec center, and I’m hoping my company would get the contract. There’s
+          rec center, and I'm hoping my company would get the contract. There's
           a lot of places around town that need renovating, really, but I know
-          that’s expensive and they’re trying to prioritize.
+          that's expensive and they're trying to prioritize.
         </p>
         <button
           className="fade-in-text"
@@ -106,7 +106,7 @@ const Farhana1Conversation = ({
       </div>
       <div style={{ display: farhanaDialogue === 5 ? "inline" : "none" }}>
         <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Ji" id="farhana-avatar" />
+          <img src={farhana} alt="Farhana" id="farhana-avatar" />
           <p>Farhana (she/her/hers)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
@@ -130,7 +130,7 @@ const Farhana1Conversation = ({
         <p className="fade-in-text player-dialogue">
           That reminds me: thanks again for building that ramp for me, and for
           making the adjustments to the house. That had to have taken a lot of
-          time and money. I know you said we are very close, but it’s hard
+          time and money. I know you said we're really close, but it's hard
           feeling like I owe you so much.
         </p>
         <button
@@ -145,11 +145,11 @@ const Farhana1Conversation = ({
       </div>
       <div style={{ display: farhanaDialogue === 7 ? "inline" : "none" }}>
         <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Ji" id="farhana-avatar" />
+          <img src={farhana} alt="Farhana" id="farhana-avatar" />
           <p>Farhana (she/her/hers)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          Eh, worth it. <em>You’re</em> worth it.
+          Eh, worth it. <em>You're</em> worth it.
         </p>
         <button
           className="fade-in-text"

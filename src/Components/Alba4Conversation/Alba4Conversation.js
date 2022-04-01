@@ -29,7 +29,7 @@ const Alba4Conversation = ({
       <button
         onClick={() => {
           setShowFarhana(false);
-          setShowAlba(false);
+          setShowJi(false);
           albaConversation();
           setGlobalShow(true);
           setAlbaDialogue((prevState) => prevState + 1);
@@ -81,7 +81,7 @@ const Alba4Conversation = ({
           <img src={alba} alt="Alba" id="alba-avatar" />
           <p>Alba (they/them/theirs)</p>
         </div>
-        <p className="fade-in-text npc-dialogue">What is... oh, it’s lovely!</p>
+        <p className="fade-in-text npc-dialogue">What is... oh, it's lovely!</p>
         <button
           className="fade-in-text"
           aria-label="next"
@@ -97,8 +97,8 @@ const Alba4Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          You’ve tried really hard to help me feel welcome here again, and I
-          just thought… I could finally give you a real iris.
+          You've tried really hard to help me feel welcome here again, and I
+          just thought... I could finally give you a real iris.
         </p>
         <button
           className="fade-in-text"
@@ -117,7 +117,7 @@ const Alba4Conversation = ({
         </div>
         <p className="fade-in-text npc-dialogue">
           Thank you, dear. You know, I feel bad about what I said before. I was
-          talking with Farhana, and... I know it wasn’t a nice thing to say.
+          talking with Farhana, and... I know it wasn't a nice thing to say.
           About your wheelchair, I mean.
         </p>
         <button
@@ -136,7 +136,8 @@ const Alba4Conversation = ({
         </div>
         <p className="fade-in-text player-dialogue">
           Thank you. I know it can be hard to know what to say. And this is new
-          for me, too.
+          for me, too. I'm still adjusting to realizing I'll be using this
+          wheelchair forever.
         </p>
         <button
           className="fade-in-text"
@@ -154,7 +155,7 @@ const Alba4Conversation = ({
           <p>Alba (they/them/theirs)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          It’s hard not to see myself, is all. Back when I was little, I really
+          It's hard not to see myself, is all. Back when I was little, I really
           wanted to be a ballerina. For years, I begged my parents to let me
           take lessons, before they finally said yes. But I broke my leg a month
           later, and it never healed right, so I had to drop out.
@@ -190,9 +191,9 @@ const Alba4Conversation = ({
           <p>Alba (they/them/theirs)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          It was. At the time, I thought I’d never get over it. I’m old now,
-          though, and I don’t spend a lot of time thinking about what could’ve
-          been. But you, you’re still young. I just want you to have the future
+          It was. At the time, I thought I'd never get over it. I'm old now,
+          though, and I don't spend a lot of time thinking about what could've
+          been. But you, you're still young. I just want you to have the future
           you dreamed of.
         </p>
         <button
@@ -210,7 +211,7 @@ const Alba4Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          I’m still trying to figure out my dreams.
+          I'm still trying to figure out my dreams.
         </p>
         <button
           className="fade-in-text"
@@ -228,7 +229,7 @@ const Alba4Conversation = ({
           <p>Alba (they/them/theirs)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          Here, maybe this will help. It’s a letter from you, addressed to you.
+          Here, maybe this will help. It's a letter from you, addressed to you.
           You gave it to me some years ago and asked me to keep it safe until
           you were older. I think now is the time you would want yourself to
           have it.

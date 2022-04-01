@@ -18,7 +18,7 @@ const Ji6Conversation = ({
   pot2Type,
   pot2IsFullyGrown,
   pot3Type,
-  pot3IsFullyGrown
+  pot3IsFullyGrown,
 }) => {
   // useStates
   const [jiDialogue, setJiDialogue] = useState(0);
@@ -34,10 +34,17 @@ const Ji6Conversation = ({
           setGlobalShow(true);
           setJiDialogue((prevState) => prevState + 1);
         }}
-        style={{ display: actionPoints > 0 && !globalShow && (dialogueStepJi > 5 &&
+        style={{
+          display:
+            actionPoints > 0 &&
+            !globalShow &&
+            dialogueStepJi > 5 &&
             ((pot1Type === "Tulip" && pot1IsFullyGrown === true) ||
               (pot2Type === "Tulip" && pot2IsFullyGrown === true) ||
-              (pot3Type === "Tulip" && pot3IsFullyGrown === true))) ? "inline" : "none" }}
+              (pot3Type === "Tulip" && pot3IsFullyGrown === true))
+              ? "inline"
+              : "none",
+        }}
       >
         Talk 6
       </button>
@@ -47,7 +54,8 @@ const Ji6Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-        If you have more tulips you don’t need, I’d love to take them home.  And I’m here for you, you know.
+          If you have more tulips you don't need, I'd love to take them home.
+          And I'm here for you, you know.
         </p>
         <button
           className="fade-in-text"
@@ -63,11 +71,10 @@ const Ji6Conversation = ({
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
-        <p className="fade-in-text player-dialogue">
-          Thank you, Ji.
-        </p>
+        <p className="fade-in-text player-dialogue">Thank you, Ji.</p>
         <button
-          className="fade-in-text player-dialogue" style={{ display: !tradedPlant ? "inline" : "none" }}
+          className="fade-in-text player-dialogue"
+          style={{ display: !tradedPlant ? "inline" : "none" }}
           onClick={() => {
             tradeDealJi();
             setTradedPlant(true);
@@ -75,7 +82,8 @@ const Ji6Conversation = ({
         >
           Give Plant
         </button>
-        <button style={{ display: tradedPlant ? "inline" : "none" }}
+        <button
+          style={{ display: tradedPlant ? "inline" : "none" }}
           className="fade-in-text"
           aria-label="next"
           onClick={() => {

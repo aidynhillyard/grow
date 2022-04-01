@@ -36,7 +36,7 @@ const Alba2Conversation = ({
         </div>
         <p className="fade-in-text npc-dialogue">
           Did you hear? The town council might finally decide to renovate the
-          rec center. We’ve only been asking for the past decade! I’ve lived
+          rec center. We've only been asking for the past decade! I've lived
           here my whole life, you know. Long enough to tell you all the gossip
           going back, oh, at least 50 years.
         </p>
@@ -55,7 +55,7 @@ const Alba2Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          That’s a long time. You must’ve seen a lot of changes.
+          That's a long time. You must've seen a lot of changes.
         </p>
         <button
           className="fade-in-text"
@@ -110,7 +110,7 @@ const Alba2Conversation = ({
           <p>Alba (they/them/theirs)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          Oh, no, that’s not for me. My parents tried very hard, but they never
+          Oh, no, that's not for me. My parents tried very hard, but they never
           got anywhere with it. Eventually, they gave up looking for a husband
           for me.
         </p>
@@ -147,7 +147,7 @@ const Alba2Conversation = ({
           <p>Alba (they/them/theirs)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          Not really. They went to their graves with, “But, grandkids!” I don’t
+          Not really. They went to their graves with, “But, grandkids!” I don't
           think they ever forgave me for not giving them grandchildren.
         </p>
         <button
@@ -165,7 +165,7 @@ const Alba2Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          It’s hard disappointing people you love.
+          It's hard disappointing people you love.
         </p>
         <button
           className="fade-in-text"

@@ -28,7 +28,7 @@ const Farhana4Conversation = ({
     <div>
       <button
         onClick={() => {
-          setShowFarhana(false);
+          setShowJi(false);
           setShowAlba(false);
           farhanaConversation();
           setGlobalShow(true);
@@ -53,7 +53,7 @@ const Farhana4Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          Hi, Farhana. I’m sorry about leaving suddenly the other day. I’m
+          Hi, Farhana. I'm sorry about leaving suddenly the other day. I'm
           trying really hard to handle all of this, but some days are harder
           than others.
         </p>
@@ -73,7 +73,7 @@ const Farhana4Conversation = ({
           <p>Farhana (she/her/hers)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          It’s okay, really. You don’t need to apologize to me. But is that...?
+          It's okay, really. You don't need to apologize to me. But is that...?
         </p>
         <button
           className="fade-in-text"
@@ -90,8 +90,8 @@ const Farhana4Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          It’s a forget-me-not plant, for you. To, um, apologize. And to say
-          thank you for how kind you’ve been. Fixing up the house, advocating
+          It's a forget-me-not plant, for you. To, um, apologize. And to say
+          thank you for how kind you've been. Fixing up the house, advocating
           about accessibility in the town, being patient with me when I freak
           out.
         </p>
@@ -122,7 +122,7 @@ const Farhana4Conversation = ({
           <p>Farhana (she/her/hers)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          Thank you, truly. It’s beautiful. ...When I found out about the
+          Thank you, truly. It's beautiful. ...When I found out about the
           earthquake, I tried to fly back right away, but the airport there was
           in shambles, so I flew to the next closest one and drove through the
           night to get to you.
@@ -142,7 +142,7 @@ const Farhana4Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          I... don’t remember that.
+          I... don't remember that.
         </p>
         <button
           className="fade-in-text"
@@ -166,10 +166,10 @@ const Farhana4Conversation = ({
         </div>
         <div style={{ display: farhanaDialogue === 6 ? "inline" : "none" }}>
           <p className="fade-in-text npc-dialogue">
-            That’s because they wouldn’t let me see you. You were in the ICU for
-            such a long time, and they wouldn’t let me in, and finally I had to
-            come back here and help with my dad. I don’t even know what happened
-            to your phone in the earthquake, but I couldn’t reach you.
+            That's because they wouldn't let me see you. You were in the ICU for
+            such a long time, and they wouldn't let me in, and finally I had to
+            come back here and help with my dad. I don't even know what happened
+            to your phone in the earthquake, but I couldn't reach you.
           </p>
           <button
             className="fade-in-text"
@@ -183,9 +183,9 @@ const Farhana4Conversation = ({
         </div>
         <div style={{ display: farhanaDialogue === 7 ? "inline" : "none" }}>
           <p className="fade-in-text npc-dialogue">
-            After they finally let you out of the ICU, I thought maybe you’d do
+            After they finally let you out of the ICU, I thought maybe you'd do
             your physical therapy here, but you stayed there to work with the
-            specialists. And then I got that call from you... you said you
+            specialists. And then I got that call from you.... You said you
             called because I was listed in your phone as your emergency contact.
           </p>
           <button
@@ -200,10 +200,10 @@ const Farhana4Conversation = ({
         </div>
         <div style={{ display: farhanaDialogue === 8 ? "inline" : "none" }}>
           <p className="fade-in-text npc-dialogue">
-            ...It’s been such a long time, <em>ya hayati</em>. I should’ve said
-            something sooner. But here... maybe this will help. It’s a letter
+            ...It's been such a long time, <em>ya hayati</em>. I should've said
+            something sooner. But here... maybe this will help. It's a letter
             you wrote, and asked me to keep for you. I know you wanted me to
-            give it back years from now, but.... I haven’t read it, but I think
+            give it back years from now, but.... I haven't read it, but I think
             maybe you should read it now.
           </p>
           <button
@@ -222,7 +222,7 @@ const Farhana4Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          I... thank you, Farhana. I’m... going to go read this now.
+          I... thank you, Farhana. I'm... going to go read this now.
         </p>
         <button
           className="fade-in-text"
