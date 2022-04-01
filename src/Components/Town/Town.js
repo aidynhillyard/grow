@@ -11,6 +11,7 @@ import Ji2Conversation from "../Ji2Conversation/Ji2Conversation";
 import Ji3Conversation from "../Ji3Conversation/Ji3Conversation";
 import Ji4Conversation from "../Ji4Conversation/Ji4Conversation";
 import Ji5Conversation from "../Ji5Conversation/Ji5Conversation";
+import Ji6Conversation from "../Ji6Conversation/Ji6Conversation";
 import Alba1Conversation from "../Alba1Conversation/Alba1Conversation";
 import Alba2Conversation from "../Alba2Conversation/Alba2Conversation";
 import Alba3Conversation from "../Alba3Conversation/Alba3Conversation";
@@ -247,6 +248,22 @@ const Town = ({
         style={{ display: dialogueStepJi === 5 ? "inline" : "none" }}
       >
         <Ji5Conversation
+          actionPoints={actionPoints}
+          jiTalk={jiTalk}
+          setJiTalk={setJiTalk}
+          jiConversation={jiConversation}
+          setShowFarhana={setShowFarhana}
+          setShowJi={setShowJi}
+          setShowAlba={setShowAlba}
+          letter2IsRead={letter2IsRead}
+        />
+      </div>
+      {/* Ji Dialogue #6 */}
+      <div
+        className="ji-dialogue5"
+        style={{ display: dialogueStepJi > 5 ? "inline" : "none" }}
+      >
+        <Ji6Conversation
           actionPoints={actionPoints}
           jiTalk={jiTalk}
           setJiTalk={setJiTalk}

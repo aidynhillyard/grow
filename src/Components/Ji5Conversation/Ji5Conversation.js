@@ -12,7 +12,6 @@ const Ji5Conversation = ({
   setShowFarhana,
   setShowJi,
   setShowAlba,
-  tradeDealJi,
 }) => {
   // useStates
   const [jiDialogue, setJiDialogue] = useState(0);
