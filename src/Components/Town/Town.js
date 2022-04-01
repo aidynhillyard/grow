@@ -17,6 +17,7 @@ import Alba2Conversation from "../Alba2Conversation/Alba2Conversation";
 import Alba3Conversation from "../Alba3Conversation/Alba3Conversation";
 import Alba4Conversation from "../Alba4Conversation/Alba4Conversation";
 import Alba5Conversation from "../Alba5Conversation/Alba5Conversation";
+import Alba6Conversation from "../Alba6Conversation/Alba6Conversation";
 
 const Town = ({
   actionPoints,
@@ -372,6 +373,29 @@ const Town = ({
           setShowJi={setShowJi}
           setShowAlba={setShowAlba}
           letter1IsRead={letter1IsRead}
+        />
+      </div>
+      {/* Alba Dialogue #6 */}
+      <div
+        className="alba-dialogue6"
+        style={{ display: showAlba && dialogueStepAlba > 5 ? "inline" : "none" }}
+      >
+        <Alba6Conversation
+          actionPoints={actionPoints}
+          globalShow={globalShow}
+          setGlobalShow={setGlobalShow}
+          albaConversation={albaConversation}
+          setShowFarhana={setShowFarhana}
+          setShowJi={setShowJi}
+          setShowAlba={setShowAlba}
+          tradeDealAlba={tradeDealAlba}
+          dialogueStepAlba={dialogueStepAlba}
+          pot1Type={pot1Type}
+          pot1IsFullyGrown={pot1IsFullyGrown}
+          pot2Type={pot2Type}
+          pot2IsFullyGrown={pot2IsFullyGrown}
+          pot3Type={pot3Type}
+          pot3IsFullyGrown={pot3IsFullyGrown}
         />
       </div>
       {/* Travel to Home Button */}
