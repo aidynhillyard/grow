@@ -112,7 +112,7 @@ const Ji4Conversation = ({
         <p className="fade-in-text npc-dialogue">
           You know… growing up in a Korean family, we’re not usually big on
           therapy. Don’t want anyone to think anything's <em>wrong</em>. But,
-          after I lost my <em>halmeoni</em>, and things were pretty bad, I
+          after I lost my grandma, and things were pretty bad, I
           finally decided to see someone. I drove two towns over just in case
           word got back.
         </p>

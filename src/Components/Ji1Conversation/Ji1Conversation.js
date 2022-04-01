@@ -71,8 +71,7 @@ const Ji1Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          Wow, you really did forget everything, huh? Like something out of a
-          k-drama!
+          Wow, you really did forget everything, huh?
         </p>
         <button
           className="fade-in-text"
@@ -218,7 +217,6 @@ const Ji1Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">See you later!</p>
-
         <button
           className="fade-in-text"
           onClick={() => {

@@ -68,8 +68,7 @@ const Ji3Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          <em>Gyeongdan</em>. They're like… rice balls with sesame seeds on the
-          outside, and they're filled with red bean paste. Want one?
+        Chocolate chip cookies.  Want one?
         </p>
         <button
           className="fade-in-text"
@@ -86,7 +85,7 @@ const Ji3Conversation = ({
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
-          Sure, I’ll try it. ...Wow, this is delicious!
+        Sure, I’m always up for cookies.  …Wow, these are delicious!
         </p>
         <button
           className="fade-in-text"
@@ -104,10 +103,7 @@ const Ji3Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          Thanks, I made it myself. I started teaching myself how to cook after
-          my <em>halmeoni</em>, my grandma, passed away. Mom had been gone for
-          awhile, and Dad just kind of… checked out. So I figured someone should
-          make sure we were eating.
+        Thanks, I made them myself.  I started teaching myself how to cook after my grandma passed away.  Mom had been gone for awhile, and Dad just kind of… checked out.  So I figured someone should make sure we were eating.  Not that I made us cookies for dinner!
         </p>
         <button
           className="fade-in-text"
