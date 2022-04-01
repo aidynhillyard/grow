@@ -133,14 +133,17 @@ const Home = ({
         setPot3IsFullyGrown={setPot3IsFullyGrown}
       />
       <div className="bottom-links">
-        <div><div className="bottom-single-link"><img className="sprig" src={sprig}/>
-          <button
-            onClick={() => {
-              setShowLetters(!showLetters);
-            }}
-          >
-            Letters
-          </button></div>
+        <div>
+          <div className="bottom-single-link">
+            <img className="sprig" src={sprig} />
+            <button
+              onClick={() => {
+                setShowLetters(!showLetters);
+              }}
+            >
+              Letters
+            </button>
+          </div>
         </div>
         <div
           style={{
@@ -160,29 +163,32 @@ const Home = ({
           />
         </div>
         {/* Travel to Town Button */}
-        <div><div className="bottom-single-link"><img className="sprig" src={sprig}/>
-          <button
-            style={{
-              display:
-                location === "home" &&
-                (pot1IsCaredFor === true ||
-                  pot1IsCaredFor === null ||
-                  pot1IsEmpty === true) &&
-                (pot2IsCaredFor === true ||
-                  pot2IsCaredFor === null ||
-                  pot2IsEmpty === true) &&
-                (pot3IsCaredFor === true ||
-                  pot3IsCaredFor === null ||
-                  pot3IsEmpty === true)
-                  ? "inline"
-                  : "none",
-            }}
-            onClick={() => {
-              setLocation("town");
-            }}
-          >
-            Travel to Town
-          </button></div>
+        <div>
+          <div className="bottom-single-link">
+            <img className="sprig" src={sprig} />
+            <button
+              style={{
+                display:
+                  location === "home" &&
+                  (pot1IsCaredFor === true ||
+                    pot1IsCaredFor === null ||
+                    pot1IsEmpty === true) &&
+                  (pot2IsCaredFor === true ||
+                    pot2IsCaredFor === null ||
+                    pot2IsEmpty === true) &&
+                  (pot3IsCaredFor === true ||
+                    pot3IsCaredFor === null ||
+                    pot3IsEmpty === true)
+                    ? "inline"
+                    : "none",
+              }}
+              onClick={() => {
+                setLocation("town");
+              }}
+            >
+              Travel to Town
+            </button>
+          </div>
         </div>
       </div>
     </Container>

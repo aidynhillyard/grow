@@ -20,6 +20,7 @@ import Alba4Conversation from "../Alba4Conversation/Alba4Conversation";
 import Alba5Conversation from "../Alba5Conversation/Alba5Conversation";
 import Alba6Conversation from "../Alba6Conversation/Alba6Conversation";
 import town from "../../images/town.png";
+import sprig from "../../images/sprig.png";
 
 const Town = ({
   actionPoints,
@@ -508,7 +509,7 @@ const Town = ({
         />
       </div>
       {/* Travel to Home Button */}
-      <button
+      <div className="bottom-links"><img className="sprig" src={sprig} /><button
         style={{
           display: location === "town" && !globalShow ? "inline" : "none",
         }}
@@ -517,7 +518,7 @@ const Town = ({
         }}
       >
         Travel to Home
-      </button>
+      </button></div>
     </Container>
   );
 };

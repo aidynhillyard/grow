@@ -2,6 +2,7 @@ import "./Alba2Conversation.css";
 import { useState } from "react";
 import alba from "../../images/albaplaceholder.png";
 import player from "../../images/playeravplaceholder.png";
+import sprig from "../../images/sprig.png";
 
 const Alba2Conversation = ({
   actionPoints,
@@ -16,7 +17,7 @@ const Alba2Conversation = ({
   const [albaDialogue, setAlbaDialogue] = useState(0);
 
   return (
-    <div>
+    <div><div className="talk-button-img"><img className="sprig" src={sprig}/>
       <button
         onClick={() => {
           setShowFarhana(false);
@@ -27,8 +28,8 @@ const Alba2Conversation = ({
         }}
         style={{ display: actionPoints > 0 && !globalShow ? "inline" : "none" }}
       >
-        Talk 2
-      </button>
+        Talk
+      </button></div>
       <div style={{ display: albaDialogue === 1 ? "inline" : "none" }}>
         <div className="alba-dialogue-label fade-in-text">
           <img src={alba} alt="Alba" id="alba-avatar" />

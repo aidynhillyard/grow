@@ -2,6 +2,7 @@ import "./Farhana2Conversation.css";
 import { useState } from "react";
 import farhana from "../../images/farhanabeta.png";
 import player from "../../images/playeravplaceholder.png";
+import sprig from "../../images/sprig.png";
 
 const Farhana2Conversation = ({
   actionPoints,
@@ -16,7 +17,7 @@ const Farhana2Conversation = ({
   const [farhanaDialogue, setFarhanaDialogue] = useState(0);
 
   return (
-    <div>
+    <div><div className="talk-button-img"><img className="sprig" src={sprig}/>
       <button
         onClick={() => {
           setShowJi(false);
@@ -28,7 +29,7 @@ const Farhana2Conversation = ({
         style={{ display: actionPoints > 0 && !globalShow ? "inline" : "none" }}
       >
         Talk 2
-      </button>
+      </button></div>
       <div style={{ display: farhanaDialogue === 1 ? "inline" : "none" }}>
         <div className="player-dialo'ue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />

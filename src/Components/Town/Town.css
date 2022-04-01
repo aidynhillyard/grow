@@ -21,6 +21,25 @@
     max-width: 30vh;
 }
 
+.bottom-links {
+    display: flex;
+    justify-content: center;
+    padding: 5vh;
+}
+
+.bottom-single-link {
+    margin: 0px 7px;
+}
+
+.sprig {
+    max-width: 25px;
+}
+
+.talk-button-img {
+    display: flex;
+    justify-content: center;
+}
+
   /*
 *************
 T A B L E T

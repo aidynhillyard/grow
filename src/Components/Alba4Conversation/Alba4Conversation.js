@@ -2,6 +2,7 @@ import "./Alba4Conversation.css";
 import { useState } from "react";
 import alba from "../../images/albaplaceholder.png";
 import player from "../../images/playeravplaceholder.png";
+import sprig from "../../images/sprig.png";
 
 const Alba4Conversation = ({
   actionPoints,
@@ -24,7 +25,7 @@ const Alba4Conversation = ({
   const [albaDialogue, setAlbaDialogue] = useState(0);
 
   return (
-    <div>
+    <div><div className="talk-button-img"><img className="sprig" src={sprig}/>
       <button
         onClick={() => {
           setShowFarhana(false);
@@ -45,8 +46,8 @@ const Alba4Conversation = ({
               : "none",
         }}
       >
-        Talk 4
-      </button>
+        Talk
+      </button></div>
       <div style={{ display: albaDialogue === 1 ? "inline" : "none" }}>
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />

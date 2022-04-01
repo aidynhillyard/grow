@@ -2,6 +2,7 @@ import "./Ji6Conversation.css";
 import { useState } from "react";
 import ji from "../../images/jiplaceholder.png";
 import player from "../../images/playeravplaceholder.png";
+import sprig from "../../images/sprig.png";
 
 const Ji6Conversation = ({
   actionPoints,
@@ -25,7 +26,7 @@ const Ji6Conversation = ({
   const [tradedPlant, setTradedPlant] = useState(false);
 
   return (
-    <div>
+    <div><div className="talk-button-img"><img className="sprig" src={sprig}/>
       <button
         onClick={() => {
           setShowFarhana(false);
@@ -46,8 +47,8 @@ const Ji6Conversation = ({
               : "none",
         }}
       >
-        Talk 6
-      </button>
+        Talk
+      </button></div>
       <div style={{ display: jiDialogue === 1 ? "inline" : "none" }}>
         <div className="ji-dialogue-label fade-in-text">
           <img src={ji} alt="Ji" id="ji-avatar" />
