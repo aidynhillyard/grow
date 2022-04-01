@@ -19,9 +19,9 @@ const Grow = () => {
   const [day, setDay] = useState(1);
 
   // Letter UseStates
-  const [letter1, setLetter1] = useState(false);
-  const [letter2, setLetter2] = useState(false);
-  const [letter3, setLetter3] = useState(false);
+  const [letter1, setLetter1] = useState(true);
+  const [letter2, setLetter2] = useState(true);
+  const [letter3, setLetter3] = useState(true);
   const [letter1IsRead, setLetter1IsRead] = useState(false);
   const [letter2IsRead, setLetter2IsRead] = useState(false);
   const [letter3IsRead, setLetter3IsRead] = useState(false);

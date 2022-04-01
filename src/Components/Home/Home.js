@@ -145,6 +145,8 @@ const Home = ({
         }}
       >
         <Letters
+          actionPoints={actionPoints}
+          decrementActionPoints={decrementActionPoints}
           letter1={letter1}
           letter2={letter2}
           letter3={letter3}
