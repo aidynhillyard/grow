@@ -1,5 +1,5 @@
 import './App.css';
-import "@fontsource/didact-gothic";
+import "@fontsource/zen-maru-gothic";
 import { Routes, Route } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Grow from "./Components/Grow/Grow";

@@ -16,3 +16,7 @@
     background-color: black;
     color: white;
 }
+
+.town-title {
+    max-width: 30vh;
+}

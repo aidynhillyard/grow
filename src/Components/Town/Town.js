@@ -19,6 +19,7 @@ import Alba3Conversation from "../Alba3Conversation/Alba3Conversation";
 import Alba4Conversation from "../Alba4Conversation/Alba4Conversation";
 import Alba5Conversation from "../Alba5Conversation/Alba5Conversation";
 import Alba6Conversation from "../Alba6Conversation/Alba6Conversation";
+import town from "../../images/town.png";
 
 const Town = ({
   actionPoints,
@@ -109,7 +110,7 @@ const Town = ({
 
   return (
     <Container>
-      <h1>Town</h1>
+      <img className="town-title" src={town} alt="Town"/>
       <p>
         This is placeholder text about the town. It also has instructions on
         talking to the townspeople below. One day, there might be a photo.

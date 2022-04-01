@@ -5,6 +5,7 @@ import Pot1 from "../Pot1/Pot1";
 import Pot2 from "../Pot2/Pot2";
 import Pot3 from "../Pot3/Pot3";
 import Letters from "../Letters/Letters";
+import home from "../../images/home.png";
 
 const Home = ({
   actionPoints,
@@ -57,7 +58,7 @@ const Home = ({
 
   return (
     <Container>
-      <h1>Home</h1>
+      <img className="home-title" src={home} alt="Home"/>
       <div
         style={{
           display:

@@ -14,3 +14,7 @@ button:focus {
     background-color: #ECF39E;
     border-radius: 0.5em;
 }
+
+.home-title {
+    max-width: 30vh;
+}
