@@ -184,7 +184,7 @@ const Alba2Conversation = ({
         </div>
         <p className="fade-in-text npc-dialogue">Yes, it is.</p>
         <button
-          className="fade-in-text"
+          className="fade-in-text end"
           onClick={() => {
             setAlbaDialogue(0);
             setGlobalShow(false);

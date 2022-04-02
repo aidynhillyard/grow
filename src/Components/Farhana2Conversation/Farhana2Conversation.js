@@ -30,7 +30,7 @@ const Farhana2Conversation = ({
         Talk 2
       </button></div>
       <div style={{ display: farhanaDialogue === 1 ? "inline" : "none" }}>
-        <div className="player-dialo'ue-label fade-in-text">
+        <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
         </div>
         <p className="fade-in-text player-dialogue">
@@ -165,7 +165,7 @@ const Farhana2Conversation = ({
           They're excited to talk with you!
         </p>
         <button
-          className="fade-in-text"
+          className="fade-in-text end"
           onClick={() => {
             setFarhanaDialogue(0);
             setGlobalShow(false);

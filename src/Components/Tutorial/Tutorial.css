@@ -1,56 +1,56 @@
 .fade-in-text {
-    animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
-  
+
 @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .farhana-dialogue-label {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .player-dialogue-label {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 #farhana-avatar {
-    padding: 10px;
+  padding: 10px;
 }
 
 .npc-dialogue {
-    text-align: left;
+  text-align: left;
 }
 
 .player-dialogue {
-    text-align: right;
+  text-align: right;
 }
 
 .go-home {
-    margin: 30px;
+  margin: 30px;
 }
 
 .note-plant {
-    max-height: 10vh;
+  max-height: 10vh;
 }
 
 .meanwhile {
-    margin: 20vh 0vh 0vh 0vh;
+  margin: 20vh 0vh 0vh 0vh;
 }
 
 .end {
-    text-decoration: underline;
-    text-decoration-color: #4f772d;
-    text-decoration-style: dotted;
+  text-decoration: underline;
+  text-decoration-color: #4f772d;
+  text-decoration-style: dotted;
 }

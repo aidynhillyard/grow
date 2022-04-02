@@ -291,7 +291,7 @@ const Farhana3Conversation = ({
         </div>
         <p className="fade-in-text player-dialogue">I... I need to go.</p>
         <button
-          className="fade-in-text"
+          className="fade-in-text end"
           onClick={() => {
             setFarhanaDialogue(0);
             setGlobalShow(false);

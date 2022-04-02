@@ -124,7 +124,12 @@ const Town = ({
             className="farhana-name-pronouns"
             style={{ display: showFarhana && !globalShow ? "inline" : "none" }}
           >
-            <div><img className="farhana-lg" src={farhana} alt="A drawing of a brown-skinned woman wearing glasses and a gold hijab"/>
+            <div>
+              <img
+                className="farhana-lg"
+                src={farhana}
+                alt="A drawing of a brown-skinned woman wearing glasses and a gold hijab"
+              />
               <h3>Farhana</h3>
               <p>(she/her/hers)</p>
             </div>
@@ -263,7 +268,12 @@ const Town = ({
           {/* ********* J I ********* */}
           {/* *********************** */}
           <div className="ji-name-pronouns">
-            <div><img className="ji-lg" src={ji} alt="A drawing of a light-skinned person wearing a black leather jacket"/>
+            <div>
+              <img
+                className="ji-lg"
+                src={ji}
+                alt="A drawing of a light-skinned person wearing a black leather jacket"
+              />
               <h3>Ji</h3>
               <p>(he/him/his)</p>
             </div>
@@ -396,7 +406,12 @@ const Town = ({
           {/* ******* A L B A ******* */}
           {/* *********************** */}
           <div className="alba-name-pronouns">
-            <div><img className="alba-lg" src={alba} alt="A drawing of an older, light-skinned person wearing glasses and a tan cardigan"/>
+            <div>
+              <img
+                className="alba-lg"
+                src={alba}
+                alt="A drawing of an older, light-skinned person wearing glasses and a tan cardigan"
+              />
               <h3>Alba</h3>
               <p>(they/them/theirs)</p>
             </div>
@@ -530,7 +545,8 @@ const Town = ({
         }}
       >
         <img className="sprig" src={sprig} />
-        <button className="travel-home"
+        <button
+          className="travel-home"
           onClick={() => {
             setLocation("home");
           }}

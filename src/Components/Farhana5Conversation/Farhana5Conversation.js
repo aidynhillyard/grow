@@ -199,7 +199,7 @@ const Farhana5Conversation = ({
           One boat traveling the ocean....
         </p>
         <button
-          className="fade-in-text"
+          className="fade-in-text end"
           onClick={() => {
             setFarhanaDialogue(0);
             setGlobalShow(false);

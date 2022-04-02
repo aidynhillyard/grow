@@ -229,7 +229,7 @@ const Alba3Conversation = ({
         </div>
         <p className="fade-in-text player-dialogue">I won't, I promise.</p>
         <button
-          className="fade-in-text"
+          className="fade-in-text end"
           onClick={() => {
             setAlbaDialogue(0);
             setGlobalShow(false);

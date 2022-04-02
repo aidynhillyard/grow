@@ -230,7 +230,7 @@ const Ji3Conversation = ({
         </div>
         <p className="fade-in-text player-dialogue">Maybe....</p>
         <button
-          className="fade-in-text"
+          className="fade-in-text end"
           onClick={() => {
             setJiDialogue(0);
             setGlobalShow(false);

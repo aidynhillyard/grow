@@ -203,7 +203,7 @@ const Ji2Conversation = ({
         <p className="fade-in-text npc-dialogue">Looking forward to it!</p>
 
         <button
-          className="fade-in-text"
+          className="fade-in-text end"
           onClick={() => {
             setJiDialogue(0);
             setGlobalShow(false);

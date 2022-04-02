@@ -163,7 +163,7 @@ const Tutorial = ({ setLocation }) => {
         </button>
       </div>
       <div style={{ display: dialogue === 9 ? "inline" : "none" }}>
-      <p className="fade-in-text meanwhile">
+        <p className="fade-in-text meanwhile">
           <em>Inside the house...</em>
         </p>
         <button
@@ -176,7 +176,7 @@ const Tutorial = ({ setLocation }) => {
           &#9660;
         </button>
       </div>
-      <div 
+      <div
         style={{ display: dialogue > 9 && dialogue < 13 ? "inline" : "none" }}
       >
         <div className="player-dialogue-label fade-in-text">
@@ -229,7 +229,13 @@ const Tutorial = ({ setLocation }) => {
           <em>– Farhana</em>
         </p>
         <div>
-          <p className="fade-in-text"><img className="note-plant" src={note} alt="Line drawing of a leafy plant"/></p>
+          <p className="fade-in-text">
+            <img
+              className="note-plant"
+              src={note}
+              alt="Line drawing of a leafy plant"
+            />
+          </p>
         </div>
         <button
           className="fade-in-text"
@@ -298,13 +304,14 @@ const Tutorial = ({ setLocation }) => {
         <div style={{ display: dialogue === 16 ? "inline" : "none" }}>
           <p className="fade-in-text">
             When your plant is fully grown, you'll see it bloom. Someone in town
-            might be interested in it, and <em>you</em> might be interested in what they
-            will trade for it. You can visit the town to talk to the
+            might be interested in it, and <em>you</em> might be interested in
+            what they will trade for it. You can visit the town to talk to the
             townspeople.
           </p>
           <p className="fade-in-text">Happy planting!</p>
           <p className="go-home fade-in-text">
-            <button className="end"
+            <button
+              className="end"
               onClick={() => {
                 setLocation("home");
               }}

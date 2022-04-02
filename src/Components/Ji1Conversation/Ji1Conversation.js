@@ -222,7 +222,7 @@ const Ji1Conversation = ({
         </div>
         <p className="fade-in-text npc-dialogue">See you later!</p>
         <button
-          className="fade-in-text"
+          className="fade-in-text end"
           onClick={() => {
             setJiDialogue(0);
             setGlobalShow(false);

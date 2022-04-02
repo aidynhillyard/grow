@@ -213,7 +213,7 @@ const Farhana4Conversation = ({
           I... thank you, Farhana. I'm... going to go read this now.
         </p>
         <button
-          className="fade-in-text"
+          className="fade-in-text end"
           onClick={() => {
             setFarhanaDialogue(0);
             setGlobalShow(false);

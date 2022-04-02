@@ -171,7 +171,7 @@ const Alba5Conversation = ({
           And you have your whole life to decide, dear.
         </p>
         <button
-          className="fade-in-text"
+          className="fade-in-text end"
           onClick={() => {
             setAlbaDialogue(0);
             setGlobalShow(false);

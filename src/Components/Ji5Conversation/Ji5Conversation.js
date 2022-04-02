@@ -147,7 +147,7 @@ const Ji5Conversation = ({
         <p className="fade-in-text npc-dialogue">
           You've been through a lot. I have, too. But we don't have to go through it alone.
         </p><button
-          className="fade-in-text"
+          className="fade-in-text end"
           onClick={() => {
             setJiDialogue(0);
             setGlobalShow(false);

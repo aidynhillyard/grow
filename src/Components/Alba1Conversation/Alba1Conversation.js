@@ -128,7 +128,7 @@ const Alba1Conversation = ({
           It's... I'm... um, I'll see you around.
         </p>
         <button
-          className="fade-in-text"
+          className="fade-in-text end"
           onClick={() => {
             setAlbaDialogue(0);
             setGlobalShow(false);

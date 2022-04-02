@@ -235,7 +235,7 @@ const Ji4Conversation = ({
           I'll think about it. Really. And thank you for the letter.
         </p>
         <button
-          className="fade-in-text"
+          className="fade-in-text end"
           onClick={() => {
             setJiDialogue(0);
             setGlobalShow(false);

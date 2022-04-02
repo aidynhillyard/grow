@@ -238,7 +238,7 @@ const Alba4Conversation = ({
         </div>
         <p className="fade-in-text player-dialogue">Thank you, Alba.</p>
         <button
-          className="fade-in-text"
+          className="fade-in-text end"
           onClick={() => {
             setAlbaDialogue(0);
             setGlobalShow(false);

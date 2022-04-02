@@ -84,7 +84,7 @@ const Ji6Conversation = ({
         </button>
         <button
           style={{ display: tradedPlant ? "inline" : "none" }}
-          className="fade-in-text"
+          className="fade-in-text end"
           aria-label="next"
           onClick={() => {
             setJiDialogue(0);

@@ -82,7 +82,7 @@ const Letters = ({
           </p>
 
           <p>- Me</p>
-          <button
+          <button className="end"
             onClick={() => {
               setShowLetter1(!showLetter1);
             }}
@@ -146,7 +146,7 @@ const Letters = ({
           </p>
 
           <p>- Me</p>
-          <button
+          <button className="end"
             onClick={() => {
               setShowLetter2(!showLetter2);
             }}
@@ -212,7 +212,7 @@ const Letters = ({
           </p>
 
           <p>- Me</p>
-          <button
+          <button className="end"
             onClick={() => {
               setShowLetter3(!showLetter3);
             }}
