@@ -21,6 +21,9 @@ import Alba5Conversation from "../Alba5Conversation/Alba5Conversation";
 import Alba6Conversation from "../Alba6Conversation/Alba6Conversation";
 import town from "../../images/town.png";
 import sprig from "../../images/sprig.png";
+import farhana from "../../images/farhanacircle.png";
+import ji from "../../images/jicircle.png";
+import alba from "../../images/albacircle.png";
 
 const Town = ({
   actionPoints,
@@ -121,15 +124,10 @@ const Town = ({
             className="farhana-name-pronouns"
             style={{ display: showFarhana && !globalShow ? "inline" : "none" }}
           >
-            <div>
+            <div><img className="farhana-lg" src={farhana} alt="A drawing of a brown-skinned woman wearing glasses and a gold hijab"/>
               <h3>Farhana</h3>
               <p>(she/her/hers)</p>
             </div>
-            <p>
-              This is text about Farhana. It says a little bit about who they
-              are and their relationship to you. There's probably also a picture
-              of them.
-            </p>
           </div>
           {/* Farhana Dialogue #1 */}
           <div
@@ -265,15 +263,10 @@ const Town = ({
           {/* ********* J I ********* */}
           {/* *********************** */}
           <div className="ji-name-pronouns">
-            <div>
+            <div><img className="ji-lg" src={ji} alt="A drawing of a light-skinned person wearing a black leather jacket"/>
               <h3>Ji</h3>
               <p>(he/him/his)</p>
             </div>
-            <p>
-              This is text about Ji. It says a little bit about who they are and
-              their relationship to you. There's probably also a picture of
-              them.
-            </p>
           </div>
           {/* Ji Dialogue #1 */}
           <div
@@ -403,15 +396,10 @@ const Town = ({
           {/* ******* A L B A ******* */}
           {/* *********************** */}
           <div className="alba-name-pronouns">
-            <div>
+            <div><img className="alba-lg" src={alba} alt="A drawing of an older, light-skinned person wearing glasses and a tan cardigan"/>
               <h3>Alba</h3>
               <p>(they/them/theirs)</p>
             </div>
-            <p>
-              This is text about Alba. It says a little bit about who they are
-              and their relationship to you. There's probably also a picture of
-              them.
-            </p>
           </div>
           {/* Alba Dialogue #1 */}
           <div

@@ -68,3 +68,25 @@ button {
 }
 
 
+/*
+*************
+T A B L E T
+*************
+*/
+
+@media only screen and (min-width: 768px) {
+  
+}
+
+/*
+  *************
+  D E S K T O P
+  *************
+  */
+
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 100%;
+  }
+}
+

@@ -1,105 +1,119 @@
 .player-dialogue {
-    text-align: right;
+  text-align: right;
 }
 
 .npc-dialogue {
-    text-align: left;
+  text-align: left;
 }
 
 .town-title {
-    max-width: 30vh;
+  max-width: 30vh;
 }
 
 .travel-home {
-    margin: 0vh 0vh 3vh 0vh;
+  margin: 0vh 0vh 3vh 0vh;
 }
+
 /* Townspeople */
 
+.farhana-lg {
+  max-width: 24vh;
+  padding: 2vh;
+}
+
+.ji-lg {
+  max-width: 24vh;
+  padding: 2vh;
+}
+
+.alba-lg {
+  max-width: 24vh;
+  padding: 2vh;
+}
+
 .talk-button-img {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .townspeople {
-    padding: 3vh;
-  }
+  padding: 3vh;
+}
 
 .farhana-name-pronouns {
-    margin: 2vh 0vh;
+  margin: 2vh 0vh;
 }
 
 .ji-name-pronouns {
-    margin: 2vh 0vh;
+  margin: 2vh 0vh;
 }
 
 .alba-name-pronouns {
-    margin: 2vh 0vh;
+  margin: 2vh 0vh;
 }
 
 /* Dialogue */
 
 .fade-in-text {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .farhana-dialogue-label {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 .ji-dialogue-label {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 .alba-dialogue-label {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
-  /*
+/*
 *************
 T A B L E T
 *************
 */
 
 @media only screen and (min-width: 768px) {
-    
-    .town-title {
-        max-width: 50%;
-    }
+  .town-title {
+    max-width: 50%;
+  }
 }
-  
-  /*
+
+/*
   *************
   D E S K T O P
   *************
   */
-  
-  @media only screen and (min-width: 992px) {
-    
-    .town-title {
-        max-width: 50%;
-    }
 
-    .townspeople {
-        margin: 0vh 2vh;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        padding: 5vh;
-      }
+@media only screen and (min-width: 992px) {
+  .town-title {
+    max-width: 50%;
+  }
 
-    .farhana {
-        padding: 0vh 4vh 0vh 2vh;
-    }
+  .townspeople {
+    margin: 0vh 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 5vh;
+  }
 
-    .ji {
-        padding: 0vh 4vh 0vh 2vh;
-    }
+  .farhana {
+    padding: 0vh 4vh 0vh 2vh;
+  }
 
-    .alba {
-        padding: 0vh 4vh 0vh 2vh;
-    }
+  .ji {
+    padding: 0vh 4vh 0vh 2vh;
+  }
+
+  .alba {
+    padding: 0vh 4vh 0vh 2vh;
+  }
 }
