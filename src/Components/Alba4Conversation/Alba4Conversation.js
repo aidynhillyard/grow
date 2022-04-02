@@ -25,7 +25,17 @@ const Alba4Conversation = ({
   const [albaDialogue, setAlbaDialogue] = useState(0);
 
   return (
-    <div><div className="talk-button-img"><img className="sprig" src={sprig}/>
+    <div><div className="talk-button-img" style={{
+      display:
+        actionPoints > 0 &&
+        !globalShow &&
+        dialogueStepAlba === 4 &&
+        ((pot1Type === "Iris" && pot1IsFullyGrown === true) ||
+          (pot2Type === "Iris" && pot2IsFullyGrown === true) ||
+          (pot3Type === "Iris" && pot3IsFullyGrown === true))
+          ? "inline"
+          : "none",
+    }}><img className="sprig" src={sprig}/>
       <button
         onClick={() => {
           setShowFarhana(false);
@@ -33,17 +43,6 @@ const Alba4Conversation = ({
           albaConversation();
           setGlobalShow(true);
           setAlbaDialogue((prevState) => prevState + 1);
-        }}
-        style={{
-          display:
-            actionPoints > 0 &&
-            !globalShow &&
-            dialogueStepAlba === 4 &&
-            ((pot1Type === "Iris" && pot1IsFullyGrown === true) ||
-              (pot2Type === "Iris" && pot2IsFullyGrown === true) ||
-              (pot3Type === "Iris" && pot3IsFullyGrown === true))
-              ? "inline"
-              : "none",
         }}
       >
         Talk

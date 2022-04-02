@@ -18,7 +18,12 @@ const Alba5Conversation = ({
   const [albaDialogue, setAlbaDialogue] = useState(0);
 
   return (
-    <div><div className="talk-button-img"><img className="sprig" src={sprig}/>
+    <div><div className="talk-button-img" style={{
+      display:
+        actionPoints > 0 && !globalShow && letter1IsRead
+          ? "inline"
+          : "none",
+    }}><img className="sprig" src={sprig}/>
       <button
         onClick={() => {
           setShowFarhana(false);
@@ -26,12 +31,6 @@ const Alba5Conversation = ({
           albaConversation();
           setGlobalShow(true);
           setAlbaDialogue((prevState) => prevState + 1);
-        }}
-        style={{
-          display:
-            actionPoints > 0 && !globalShow && letter1IsRead
-              ? "inline"
-              : "none",
         }}
       >
         Talk

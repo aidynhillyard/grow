@@ -18,7 +18,7 @@ const Alba1Conversation = ({
 
   return (
     <div>
-      <div className="talk-button-img"><img className="sprig" src={sprig}/><button
+      <div className="talk-button-img" style={{ display: actionPoints > 0 && !globalShow ? "inline" : "none" }}><img className="sprig" src={sprig}/><button
         onClick={() => {
           setShowFarhana(false);
           setShowJi(false);
@@ -26,7 +26,6 @@ const Alba1Conversation = ({
           albaConversation();
           setAlbaDialogue((prevState) => prevState + 1);
         }}
-        style={{ display: actionPoints > 0 && !globalShow ? "inline" : "none" }}
       >
         Talk
       </button></div>
