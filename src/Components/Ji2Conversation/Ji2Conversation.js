@@ -1,7 +1,7 @@
 import "./Ji2Conversation.css";
 import { useState } from "react";
-import ji from "../../images/jiplaceholder.png";
-import player from "../../images/playeravplaceholder.png";
+import ji from "../../images/jicircle.png";
+import player from "../../images/player.png";
 import sprig from "../../images/sprig.png";
 
 const Ji2Conversation = ({

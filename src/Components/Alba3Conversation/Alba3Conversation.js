@@ -1,7 +1,7 @@
 import "./Alba3Conversation.css";
 import { useState } from "react";
-import alba from "../../images/albaplaceholder.png";
-import player from "../../images/playeravplaceholder.png";
+import alba from "../../images/albacircle.png";
+import player from "../../images/player.png";
 import sprig from "../../images/sprig.png";
 
 const Alba3Conversation = ({

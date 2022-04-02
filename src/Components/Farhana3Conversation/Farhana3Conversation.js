@@ -1,7 +1,7 @@
 import "./Farhana3Conversation.css";
 import { useState } from "react";
-import farhana from "../../images/farhanabeta.png";
-import player from "../../images/playeravplaceholder.png";
+import farhana from "../../images/farhanacircle.png";
+import player from "../../images/player.png";
 import sprig from "../../images/sprig.png";
 
 const Farhana3Conversation = ({
