@@ -1,5 +1,6 @@
 import "./Letters.css";
 import { useState } from "react";
+import sprig from "../../images/sprig.png";
 
 const Letters = ({
   letter1,
@@ -32,7 +33,7 @@ const Letters = ({
         style={{
           display: letter1 ? "block" : "none",
         }}
-      >
+      ><img className="sprig" src={sprig} />
         <button
           onClick={() => {
             setLetter1IsRead(true);
@@ -42,7 +43,7 @@ const Letters = ({
           Read Letter Given by Alba
         </button>
 
-        <div
+        <div className="full-letter"
           style={{
             display: showLetter1 ? "block" : "none",
           }}
@@ -97,7 +98,7 @@ const Letters = ({
         style={{
           display: letter2 ? "block" : "none",
         }}
-      >
+      ><img className="sprig" src={sprig} />
         <button
           onClick={() => {
             setLetter2IsRead(true);
@@ -106,7 +107,7 @@ const Letters = ({
         >
           Read Letter Given by Ji
         </button>
-        <div
+        <div className="full-letter"
           style={{
             display: showLetter2 ? "block" : "none",
           }}
@@ -161,7 +162,7 @@ const Letters = ({
         style={{
           display: letter3 ? "block" : "none",
         }}
-      >
+      ><img className="sprig" src={sprig} />
         <button
           onClick={() => {
             setLetter3IsRead(true);
@@ -171,7 +172,7 @@ const Letters = ({
           Read Letter Given by Farhana
         </button>
 
-        <div
+        <div className="full-letter"
           style={{
             display: showLetter3 ? "block" : "none",
           }}

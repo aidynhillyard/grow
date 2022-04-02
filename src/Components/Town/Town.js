@@ -535,12 +535,11 @@ const Town = ({
         </div>
       </div>
       {/* Travel to Home Button */}
-      <div className="bottom-links bottom-single-link">
+      <div className="bottom-links bottom-single-link" style={{
+            display: location === "town" && !globalShow ? "inline" : "none",
+          }}>
         <img className="sprig" src={sprig} />
         <button
-          style={{
-            display: location === "town" && !globalShow ? "inline" : "none",
-          }}
           onClick={() => {
             setLocation("home");
           }}

@@ -36,14 +36,13 @@ button:focus {
 /* Menu Links */
 
 .bottom-links {
-  display: flex;
   justify-content: center;
   padding: 1vh;
 }
 
 .bottom-single-link {
+  padding: 1.5vh;
   margin: 0vh 2vh;
-  display: flex;
 }
 
 .sprig {
