@@ -16,6 +16,8 @@
 
 /* Townspeople */
 
+/* Avatars */
+
 .farhana-lg {
   max-width: 24vh;
   padding: 2vh;
@@ -29,6 +31,21 @@
 .alba-lg {
   max-width: 24vh;
   padding: 2vh;
+}
+
+#player-avatar {
+    max-width: 16vh;
+}
+#farhana-avatar {
+    max-width: 16vh;
+}
+
+#ji-avatar {
+    max-width: 16vh;
+}
+
+#alba-avatar {
+    max-width: 16vh;
 }
 
 .talk-button-img {

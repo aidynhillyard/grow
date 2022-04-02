@@ -1,7 +1,7 @@
 import "./Farhana1Conversation.css";
 import { useState } from "react";
-import farhana from "../../images/farhanabeta.png";
-import player from "../../images/playeravplaceholder.png";
+import farhana from "../../images/farhanacircle.png";
+import player from "../../images/player.png";
 import sprig from "../../images/sprig.png";
 
 const Farhana1Conversation = ({
@@ -173,7 +173,7 @@ const Farhana1Conversation = ({
         </div>
         <p className="fade-in-text player-dialogue">Um, thanks.</p>
         <button
-          className="fade-in-text"
+          className="fade-in-text end"
           onClick={() => {
             setFarhanaDialogue(0);
             setGlobalShow(false);
