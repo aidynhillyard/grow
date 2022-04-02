@@ -64,7 +64,7 @@ const Ji6Conversation = ({
             setJiDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: jiDialogue === 2 ? "inline" : "none" }}>

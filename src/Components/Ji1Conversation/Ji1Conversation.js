@@ -51,7 +51,7 @@ const Ji1Conversation = ({
             setJiDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: jiDialogue === 2 ? "inline" : "none" }}>
@@ -68,7 +68,7 @@ const Ji1Conversation = ({
             setJiDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: jiDialogue === 3 ? "inline" : "none" }}>
@@ -86,7 +86,7 @@ const Ji1Conversation = ({
             setJiDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: jiDialogue === 4 ? "inline" : "none" }}>
@@ -101,7 +101,7 @@ const Ji1Conversation = ({
             setJiDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: jiDialogue === 5 ? "inline" : "none" }}>
@@ -120,7 +120,7 @@ const Ji1Conversation = ({
             setJiDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: jiDialogue === 6 ? "inline" : "none" }}>
@@ -137,7 +137,7 @@ const Ji1Conversation = ({
             setJiDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: jiDialogue === 7 ? "inline" : "none" }}>
@@ -157,7 +157,7 @@ const Ji1Conversation = ({
             setJiDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: jiDialogue === 8 ? "inline" : "none" }}>
@@ -175,7 +175,7 @@ const Ji1Conversation = ({
             setJiDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: jiDialogue === 9 ? "inline" : "none" }}>
@@ -195,7 +195,7 @@ const Ji1Conversation = ({
             setJiDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: jiDialogue === 10 ? "inline" : "none" }}>
@@ -212,7 +212,7 @@ const Ji1Conversation = ({
             setJiDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: jiDialogue === 11 ? "inline" : "none" }}>
