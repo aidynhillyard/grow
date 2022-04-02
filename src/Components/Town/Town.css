@@ -1,9 +1,3 @@
-.alert {
-    background-color: teal;
-    color: black;
-    border-radius: 40px;
-}
-
 .player-dialogue {
     text-align: right;
 }
@@ -12,14 +6,11 @@
     text-align: left;
 }
 
-.btn-outline-success {
-    background-color: black;
-    color: white;
-}
-
 .town-title {
     max-width: 30vh;
 }
+
+/* Links */
 
 .bottom-links {
     display: flex;
@@ -41,26 +32,12 @@
     align-items: flex-end;
 }
 
+/* Townspeople */
+
 .townspeople {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    display: flex;
+    justify-content: center;
     padding-top: 3vh;
-  }
-  
-  .farhana {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-  
-  .ji {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-  }
-  
-  .alba {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
   }
 
   /*
@@ -70,6 +47,7 @@ T A B L E T
 */
 
 @media only screen and (min-width: 768px) {
+    
     .town-title {
         max-width: 50%;
     }
@@ -82,7 +60,12 @@ T A B L E T
   */
   
   @media only screen and (min-width: 992px) {
+    
     .town-title {
         max-width: 50%;
+    }
+
+    .townspeople {
+        margin: 0vh 5vh;
     }
 }

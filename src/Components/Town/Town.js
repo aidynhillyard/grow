@@ -113,12 +113,12 @@ const Town = ({
     <Container>
       <img className="town-title" src={town} alt="Town" />
       <div className="townspeople">
-        <div className="farhana">
+        <div className="farhana" >
           {/* *********************** */}
           {/* **** F A R H A N A **** */}
           {/* *********************** */}
-          <div className="farhana-name-pronouns"
-            style={{ display: showFarhana && !globalShow ? "inline" : "none" }}
+          <div
+            className="farhana-name-pronouns" style={{ display: showFarhana && !globalShow ? "inline" : "none" }}
           >
             <div>
               <h3>Farhana</h3>
@@ -256,13 +256,12 @@ const Town = ({
             />
           </div>
         </div>
-        <div className="ji">
+        <div className="ji" style={{ display: showJi && !globalShow ? "inline" : "none" }}>
           {/* *********************** */}
           {/* ********* J I ********* */}
           {/* *********************** */}
           <div
             className="ji-name-pronouns"
-            style={{ display: showJi && !globalShow ? "inline" : "none" }}
           >
             <div>
               <h3>Ji</h3>
@@ -394,16 +393,17 @@ const Town = ({
             />
           </div>
         </div>
-        <div className="alba">
+        <div className="alba" style={{ display: showAlba && !globalShow ? "inline" : "none" }}>
           {/* *********************** */}
           {/* ******* A L B A ******* */}
           {/* *********************** */}
           <div
             className="alba-name-pronouns"
-            style={{ display: showAlba && !globalShow ? "inline" : "none" }}
           >
-            <h3>Alba</h3>
-            (they/them/theirs)
+            <div>
+              <h3>Alba</h3>
+              <p>(they/them/theirs)</p>
+            </div>
             <p>
               This is text about Alba. It says a little bit about who they are
               and their relationship to you. There's probably also a picture of
