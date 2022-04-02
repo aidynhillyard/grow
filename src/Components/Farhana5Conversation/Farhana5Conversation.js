@@ -50,7 +50,7 @@ const Farhana5Conversation = ({
             setFarhanaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 2 ? "inline" : "none" }}>
@@ -71,7 +71,7 @@ const Farhana5Conversation = ({
             setFarhanaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 3 ? "inline" : "none" }}>
@@ -89,7 +89,7 @@ const Farhana5Conversation = ({
             setFarhanaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 4 ? "inline" : "none" }}>
@@ -110,7 +110,7 @@ const Farhana5Conversation = ({
             setFarhanaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 5 ? "inline" : "none" }}>
@@ -127,7 +127,7 @@ const Farhana5Conversation = ({
             setFarhanaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 6 ? "inline" : "none" }}>
@@ -148,7 +148,7 @@ const Farhana5Conversation = ({
             setFarhanaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 7 ? "inline" : "none" }}>
@@ -167,7 +167,7 @@ const Farhana5Conversation = ({
             setFarhanaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 8 ? "inline" : "none" }}>
@@ -188,7 +188,7 @@ const Farhana5Conversation = ({
             setFarhanaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 9 ? "inline" : "none" }}>

@@ -65,7 +65,7 @@ const Farhana6Conversation = ({
             setFarhanaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 2 ? "inline" : "none" }}>
