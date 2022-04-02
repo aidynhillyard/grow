@@ -7,6 +7,8 @@ import Pot3 from "../Pot3/Pot3";
 import Letters from "../Letters/Letters";
 import home from "../../images/home.png";
 import sprig from "../../images/sprig.png";
+import note from "../../images/note.png";
+import { Link } from "react-router-dom";
 
 const Home = ({
   actionPoints,
@@ -89,6 +91,8 @@ const Home = ({
         <p>
           ― Kahlil Gibran, <em>The Prophet</em>
         </p>
+        <img src={note} alt="Line drawing of a leafy plant"/>
+        <p>For more information on GROW, please visit the <Link to="/about">About</Link> page.</p>
       </div>
       <div className="pot-components">
       <div className="pot1-component"><Pot1

@@ -2,6 +2,7 @@ import './App.css';
 import "@fontsource/zen-maru-gothic";
 import { Routes, Route } from "react-router-dom";
 import Header from "./Components/Header/Header";
+import About from "./Components/About/About";
 import Grow from "./Components/Grow/Grow";
 import Container from "react-bootstrap/Container";
 import Footer from "./Components/Footer/Footer";
@@ -14,6 +15,7 @@ function App() {
         <main className="main-container">
           <Routes>
             <Route path='/' element={<Grow />}></Route>
+            <Route path='/about' element={<About />}></Route>
           </Routes>
         </main>
       </Container>
