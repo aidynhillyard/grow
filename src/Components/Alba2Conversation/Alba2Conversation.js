@@ -47,7 +47,7 @@ const Alba2Conversation = ({
             setAlbaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: albaDialogue === 2 ? "inline" : "none" }}>
@@ -64,7 +64,7 @@ const Alba2Conversation = ({
             setAlbaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: albaDialogue === 3 ? "inline" : "none" }}>
@@ -83,7 +83,7 @@ const Alba2Conversation = ({
             setAlbaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: albaDialogue === 4 ? "inline" : "none" }}>
@@ -101,7 +101,7 @@ const Alba2Conversation = ({
             setAlbaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: albaDialogue === 5 ? "inline" : "none" }}>
@@ -121,7 +121,7 @@ const Alba2Conversation = ({
             setAlbaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: albaDialogue === 6 ? "inline" : "none" }}>
@@ -138,7 +138,7 @@ const Alba2Conversation = ({
             setAlbaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: albaDialogue === 7 ? "inline" : "none" }}>
@@ -157,7 +157,7 @@ const Alba2Conversation = ({
             setAlbaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: albaDialogue === 8 ? "inline" : "none" }}>
@@ -174,7 +174,7 @@ const Alba2Conversation = ({
             setAlbaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: albaDialogue === 9 ? "inline" : "none" }}>

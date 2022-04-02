@@ -65,7 +65,7 @@ const Alba6Conversation = ({
             setAlbaDialogue((prevState) => prevState + 1);
           }}
         >
-          &or;
+          &#9660;
         </button>
       </div>
       <div style={{ display: albaDialogue === 2 ? "inline" : "none" }}>
