@@ -41,6 +41,28 @@
     align-items: flex-end;
 }
 
+.townspeople {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    padding-top: 3vh;
+  }
+  
+  .farhana {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .ji {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  
+  .alba {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
   /*
 *************
 T A B L E T
