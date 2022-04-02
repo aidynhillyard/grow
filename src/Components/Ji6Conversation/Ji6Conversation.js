@@ -26,7 +26,17 @@ const Ji6Conversation = ({
   const [tradedPlant, setTradedPlant] = useState(false);
 
   return (
-    <div><div className="talk-button-img"><img className="sprig" src={sprig}/>
+    <div><div className="talk-button-img" style={{
+      display:
+        actionPoints > 0 &&
+        !globalShow &&
+        dialogueStepJi > 5 &&
+        ((pot1Type === "Tulip" && pot1IsFullyGrown === true) ||
+          (pot2Type === "Tulip" && pot2IsFullyGrown === true) ||
+          (pot3Type === "Tulip" && pot3IsFullyGrown === true))
+          ? "inline"
+          : "none",
+    }}><img className="sprig" src={sprig}/>
       <button
         onClick={() => {
           setShowFarhana(false);
@@ -34,17 +44,6 @@ const Ji6Conversation = ({
           jiConversation();
           setGlobalShow(true);
           setJiDialogue((prevState) => prevState + 1);
-        }}
-        style={{
-          display:
-            actionPoints > 0 &&
-            !globalShow &&
-            dialogueStepJi > 5 &&
-            ((pot1Type === "Tulip" && pot1IsFullyGrown === true) ||
-              (pot2Type === "Tulip" && pot2IsFullyGrown === true) ||
-              (pot3Type === "Tulip" && pot3IsFullyGrown === true))
-              ? "inline"
-              : "none",
         }}
       >
         Talk

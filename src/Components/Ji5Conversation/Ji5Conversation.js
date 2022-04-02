@@ -18,7 +18,12 @@ const Ji5Conversation = ({
   const [jiDialogue, setJiDialogue] = useState(0);
 
   return (
-    <div><div className="talk-button-img"><img className="sprig" src={sprig}/>
+    <div><div className="talk-button-img" style={{
+      display:
+        actionPoints > 0 && !globalShow && letter2IsRead
+          ? "inline"
+          : "none",
+    }}><img className="sprig" src={sprig}/>
       <button
         onClick={() => {
           setShowFarhana(false);
@@ -26,12 +31,6 @@ const Ji5Conversation = ({
           jiConversation();
           setGlobalShow(true);
           setJiDialogue((prevState) => prevState + 1);
-        }}
-        style={{
-          display:
-            actionPoints > 0 && !globalShow && letter2IsRead
-              ? "inline"
-              : "none",
         }}
       >
         Talk
