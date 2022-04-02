@@ -1,3 +1,7 @@
+.logo {
+  max-width: 4vh;
+}
+
 .header {
   width: 100%;
   margin: 0;
@@ -13,7 +17,7 @@
 }
 
 .brand {
-  padding: 0vh 2vh;
+  display: none;
 }
 
 .nav-bar-link {
@@ -71,6 +75,10 @@
   outline: none !important;
 }
 
+.header-about {
+  padding: 2vh;
+}
+
 /*
 *************
 T A B L E T
@@ -84,7 +92,7 @@ T A B L E T
   }
 
   .me-auto {
-    padding: 0vh;
+    padding: 1vh;
   }
 }
 
@@ -99,8 +107,8 @@ D E S K T O P
     padding: 1.5vh 2vh;
   }
 
-  #brand-text {
-    display: none;
+  .brand {
+    display: inline;
   }
 
   #page-container {
@@ -113,6 +121,6 @@ D E S K T O P
   }
 
   .me-auto {
-    padding: 0vh;
+    padding: 1vh;
   }
 }

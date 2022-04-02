@@ -1,12 +1,11 @@
 import "./Header.css";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Modal from "react-bootstrap/Modal";
-import CloseButton from "react-bootstrap/CloseButton";
 import About from "../About/About";
+import logo from "../../images/favicon192.png"
 
 const Header = () => {
   const [aboutShow, setAboutShow] = useState(false);
@@ -18,9 +17,6 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Link className="nav-bar-link" to="/">
-                Grow
-              </Link>
               <button onClick={() => setAboutShow(true)}>About</button>
               <Modal
                 size="lg"
@@ -29,7 +25,7 @@ const Header = () => {
                 aria-label="about"
               >
                 <Modal.Body>
-                  <About />
+                  <div className="header-about"><About /></div>
                   <button
                     className="close-about"
                     onClick={() => setAboutShow(false)}
@@ -41,7 +37,7 @@ const Header = () => {
             </Nav>
           </Navbar.Collapse>
           <Navbar.Brand className="brand">
-            <p id="brand-text">Grow</p>
+            <img className="logo" src={logo}/>
           </Navbar.Brand>
         </Container>
       </Navbar>
