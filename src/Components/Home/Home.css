@@ -36,6 +36,8 @@ button:focus {
 /* Menu Links */
 
 .bottom-links {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 1vh;
 }
@@ -151,5 +153,6 @@ T A B L E T
     margin: 0px 9vh;
     padding: 3vh 3vh;
     display: flex;
+    justify-content: center;
   }
 }

@@ -10,7 +10,10 @@
     max-width: 30vh;
 }
 
-/* Links */
+.travel-home {
+    margin: 0vh 0vh 3vh 0vh;
+}
+/* Townspeople */
 
 .talk-button-img {
     display: flex;
@@ -18,13 +21,21 @@
     align-items: flex-end;
 }
 
-/* Townspeople */
-
 .townspeople {
-    display: flex;
-    justify-content: center;
-    padding: 5vh;
+    padding: 3vh;
   }
+
+.farhana-name-pronouns {
+    margin: 2vh 0vh;
+}
+
+.ji-name-pronouns {
+    margin: 2vh 0vh;
+}
+
+.alba-name-pronouns {
+    margin: 2vh 0vh;
+}
 
 /* Dialogue */
 
@@ -33,6 +44,16 @@
 }
 
 .farhana-dialogue-label {
+    display: flex;
+    align-items: flex-end;
+}
+
+.ji-dialogue-label {
+    display: flex;
+    align-items: flex-end;
+}
+
+.alba-dialogue-label {
     display: flex;
     align-items: flex-end;
 }
@@ -64,7 +85,11 @@ T A B L E T
 
     .townspeople {
         margin: 0vh 2vh;
-    }
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 5vh;
+      }
 
     .farhana {
         padding: 0vh 4vh 0vh 2vh;
