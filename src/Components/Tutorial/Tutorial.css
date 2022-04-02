@@ -40,3 +40,17 @@
 .go-home {
     margin: 30px;
 }
+
+.note-plant {
+    max-height: 10vh;
+}
+
+.meanwhile {
+    margin: 20vh 0vh 0vh 0vh;
+}
+
+.end {
+    text-decoration: underline;
+    text-decoration-color: #4f772d;
+    text-decoration-style: dotted;
+}
