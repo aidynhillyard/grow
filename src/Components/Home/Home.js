@@ -92,7 +92,6 @@ const Home = ({
           ― Kahlil Gibran, <em>The Prophet</em>
         </p>
         <img src={note} alt="Line drawing of a leafy plant"/>
-        <p>For more information on GROW, please visit the <Link to="/about">About</Link> page.</p>
       </div>
       <div className="pot-components">
       <div className="pot1-component"><Pot1

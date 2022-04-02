@@ -1,63 +1,77 @@
 .header {
-    width: 100%;
-    margin: 0;
-    padding: 0vh;
-  }
-  
-  .nav-bar {
-    background-color: #90A955;
-    color: #31572C;
-    width: 100%;
-    margin: 0;
-    padding: 0vh;
-  }
-  
-  .brand {
-    padding: 0vh 2vh;
-  }
-  
-  .nav-bar-link {
-    color: #132A13;
-    text-decoration: none;
-  }
-  
-  .nav-bar-link:hover {
-    background-color: #132A13;
-    color: #FBFCEB;
-  }
-  
-  #brand-text {
-    display: none;
-  }
-  
-  .me-auto {
-    padding: 0vh 0vh 1vh 0vh;
-  }
-  
-  .container {
-    margin: 0vh;
-  }
-  
-  /*
+  width: 100%;
+  margin: 0;
+  padding: 0vh;
+}
+
+.nav-bar {
+  background-color: #90a955;
+  color: #31572c;
+  width: 100%;
+  margin: 0;
+  padding: 0vh;
+}
+
+.brand {
+  padding: 0vh 2vh;
+}
+
+.nav-bar-link {
+  color: #132a13;
+  text-decoration: none;
+}
+
+.nav-bar-link:hover {
+  background-color: #132a13;
+  color: #fbfceb;
+}
+
+#brand-text {
+  display: none;
+}
+
+.me-auto {
+  padding: 0vh 0vh 1vh 0vh;
+}
+
+.container {
+  margin: 0vh;
+}
+
+/*
   ******************
   Bootstrap-Specific
   ******************
   */
-  
-  .navbar {
-    padding: 0vh;
-  }
-  
-  #content-wrap {
-    padding: 0vh;
-  }
-  
-  #page-container {
-    margin: 0 auto;
-    width: 100%;
-  }
 
-  /*
+.navbar {
+  padding: 0vh;
+}
+
+#content-wrap {
+  padding: 0vh;
+}
+
+#page-container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.modal-body {
+  background-color: #fbfceb;
+  border-radius: 0.7em;
+}
+
+.close-about {
+  float: right;
+}
+
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+}
+
+/*
 *************
 T A B L E T
 *************
