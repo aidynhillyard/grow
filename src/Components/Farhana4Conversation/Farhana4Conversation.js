@@ -25,7 +25,17 @@ const Farhana4Conversation = ({
   const [farhanaDialogue, setFarhanaDialogue] = useState(0);
 
   return (
-    <div><div className="talk-button-img"><img className="sprig" src={sprig}/>
+    <div><div className="talk-button-img" style={{
+      display:
+        actionPoints > 0 &&
+        !globalShow &&
+        dialogueStepFarhana === 4 &&
+        ((pot1Type === "Forget-Me-Not" && pot1IsFullyGrown === true) ||
+          (pot2Type === "Forget-Me-Not" && pot2IsFullyGrown === true) ||
+          (pot3Type === "Forget-Me-Not" && pot3IsFullyGrown === true))
+          ? "inline"
+          : "none",
+    }}><img className="sprig" src={sprig}/>
       <button
         onClick={() => {
           setShowJi(false);
@@ -33,17 +43,6 @@ const Farhana4Conversation = ({
           farhanaConversation();
           setGlobalShow(true);
           setFarhanaDialogue((prevState) => prevState + 1);
-        }}
-        style={{
-          display:
-            actionPoints > 0 &&
-            !globalShow &&
-            dialogueStepFarhana === 4 &&
-            ((pot1Type === "Forget-Me-Not" && pot1IsFullyGrown === true) ||
-              (pot2Type === "Forget-Me-Not" && pot2IsFullyGrown === true) ||
-              (pot3Type === "Forget-Me-Not" && pot3IsFullyGrown === true))
-              ? "inline"
-              : "none",
         }}
       >
         Talk

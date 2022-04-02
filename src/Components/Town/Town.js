@@ -113,12 +113,13 @@ const Town = ({
     <Container>
       <img className="town-title" src={town} alt="Town" />
       <div className="townspeople">
-        <div className="farhana" >
+        <div className="farhana">
           {/* *********************** */}
           {/* **** F A R H A N A **** */}
           {/* *********************** */}
           <div
-            className="farhana-name-pronouns" style={{ display: showFarhana && !globalShow ? "inline" : "none" }}
+            className="farhana-name-pronouns"
+            style={{ display: showFarhana && !globalShow ? "inline" : "none" }}
           >
             <div>
               <h3>Farhana</h3>
@@ -256,13 +257,14 @@ const Town = ({
             />
           </div>
         </div>
-        <div className="ji" style={{ display: showJi && !globalShow ? "inline" : "none" }}>
+        <div
+          className="ji"
+          style={{ display: showJi && !globalShow ? "inline" : "none" }}
+        >
           {/* *********************** */}
           {/* ********* J I ********* */}
           {/* *********************** */}
-          <div
-            className="ji-name-pronouns"
-          >
+          <div className="ji-name-pronouns">
             <div>
               <h3>Ji</h3>
               <p>(he/him/his)</p>
@@ -393,13 +395,14 @@ const Town = ({
             />
           </div>
         </div>
-        <div className="alba" style={{ display: showAlba && !globalShow ? "inline" : "none" }}>
+        <div
+          className="alba"
+          style={{ display: showAlba && !globalShow ? "inline" : "none" }}
+        >
           {/* *********************** */}
           {/* ******* A L B A ******* */}
           {/* *********************** */}
-          <div
-            className="alba-name-pronouns"
-          >
+          <div className="alba-name-pronouns">
             <div>
               <h3>Alba</h3>
               <p>(they/them/theirs)</p>

@@ -18,7 +18,12 @@ const Farhana5Conversation = ({
   const [farhanaDialogue, setFarhanaDialogue] = useState(0);
 
   return (
-    <div><div className="talk-button-img"><img className="sprig" src={sprig}/>
+    <div><div className="talk-button-img" style={{
+      display:
+        actionPoints > 0 && !globalShow && letter3IsRead
+          ? "inline"
+          : "none",
+    }}><img className="sprig" src={sprig}/>
       <button
         onClick={() => {
           setShowJi(false);
@@ -26,12 +31,6 @@ const Farhana5Conversation = ({
           farhanaConversation();
           setGlobalShow(true);
           setFarhanaDialogue((prevState) => prevState + 1);
-        }}
-        style={{
-          display:
-            actionPoints > 0 && !globalShow && letter3IsRead
-              ? "inline"
-              : "none",
         }}
       >
         Talk

@@ -26,6 +26,17 @@
     padding: 5vh;
   }
 
+/* Dialogue */
+
+.fade-in-text {
+    text-decoration: none;
+}
+
+.farhana-dialogue-label {
+    display: flex;
+    align-items: flex-end;
+}
+
   /*
 *************
 T A B L E T
