@@ -2,14 +2,14 @@
 
 #dropdown-item-button {
   border-radius: 0.7em;
-  background: none!important;
+  background: none !important;
   border: none;
-  padding: 0!important;
+  padding: 0 !important;
   cursor: pointer;
-  color: #31572C;
+  color: #31572c;
   padding: 0.3em;
   text-decoration: underline;
-  text-decoration-color: #4F772D;
+  text-decoration-color: #4f772d;
   text-decoration-style: dotted;
 }
 
@@ -24,9 +24,9 @@ button:focus {
 }
 
 #flower:hover {
-text-decoration: underline;
-text-decoration-color: #4F772D;
-text-decoration-style: dotted;
+  text-decoration: underline;
+  text-decoration-color: #4f772d;
+  text-decoration-style: dotted;
 }
 
 .home-title {
@@ -36,18 +36,19 @@ text-decoration-style: dotted;
 /* Menu Links */
 
 .bottom-links {
-    display: flex;
-    justify-content: center;
-    padding: 5vh;
+  display: flex;
+  justify-content: center;
+  padding: 1vh;
 }
 
 .bottom-single-link {
-    margin: 0vh 2vh;
-    display: flex;
+  margin: 0vh 2vh;
+  display: flex;
 }
 
 .sprig {
-    max-width: 25px;
+  max-width: 25px;
+  max-height: 25px;
 }
 
 /* Pot Components */
@@ -93,26 +94,26 @@ T A B L E T
     max-width: 50%;
   }
 
-.pot-components {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-}
+  .pot-components {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
 
-.pot1component {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
+  .pot1component {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
 
-.pot2component {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-}
+  .pot2component {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
 
-.pot3component {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
-}
+  .pot3component {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
 }
 
 /*
@@ -131,25 +132,25 @@ T A B L E T
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
   }
-  
+
   .pot1component {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
-  
+
   .pot2component {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
   }
-  
+
   .pot3component {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
   }
-}
 
-.bottom-single-link {
-  margin: 0px 9vh;
-  padding: 0vh 3vh;
-  display: flex;
+  .bottom-single-link {
+    margin: 0px 9vh;
+    padding: 3vh 3vh;
+    display: flex;
+  }
 }

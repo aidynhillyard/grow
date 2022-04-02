@@ -532,7 +532,7 @@ const Town = ({
         </div>
       </div>
       {/* Travel to Home Button */}
-      <div className="bottom-links">
+      <div className="bottom-links bottom-single-link">
         <img className="sprig" src={sprig} />
         <button
           style={{
