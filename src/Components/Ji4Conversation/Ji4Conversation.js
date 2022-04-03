@@ -25,28 +25,34 @@ const Ji4Conversation = ({
   const [jiDialogue, setJiDialogue] = useState(0);
 
   return (
-    <div><div className="talk-button-img" style={{
-      display:
-        actionPoints > 0 &&
-        !globalShow &&
-        dialogueStepJi === 4 &&
-        ((pot1Type === "Tulip" && pot1IsFullyGrown === true) ||
-          (pot2Type === "Tulip" && pot2IsFullyGrown === true) ||
-          (pot3Type === "Tulip" && pot3IsFullyGrown === true))
-          ? "inline"
-          : "none",
-    }}><img className="sprig" src={sprig}/>
-      <button
-        onClick={() => {
-          setShowFarhana(false);
-          setShowAlba(false);
-          jiConversation();
-          setGlobalShow(true);
-          setJiDialogue((prevState) => prevState + 1);
+    <div className="dialogue-container">
+      <div
+        className="talk-button-img"
+        style={{
+          display:
+            actionPoints > 0 &&
+            !globalShow &&
+            dialogueStepJi === 4 &&
+            ((pot1Type === "Tulip" && pot1IsFullyGrown === true) ||
+              (pot2Type === "Tulip" && pot2IsFullyGrown === true) ||
+              (pot3Type === "Tulip" && pot3IsFullyGrown === true))
+              ? "inline"
+              : "none",
         }}
       >
-        Talk
-      </button></div>
+        <img className="sprig" src={sprig} />
+        <button
+          onClick={() => {
+            setShowFarhana(false);
+            setShowAlba(false);
+            jiConversation();
+            setGlobalShow(true);
+            setJiDialogue((prevState) => prevState + 1);
+          }}
+        >
+          Talk
+        </button>
+      </div>
       <div style={{ display: jiDialogue === 1 ? "inline" : "none" }}>
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />

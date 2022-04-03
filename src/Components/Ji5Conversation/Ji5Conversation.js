@@ -18,23 +18,29 @@ const Ji5Conversation = ({
   const [jiDialogue, setJiDialogue] = useState(0);
 
   return (
-    <div><div className="talk-button-img" style={{
-      display:
-        actionPoints > 0 && !globalShow && letter2IsRead
-          ? "inline"
-          : "none",
-    }}><img className="sprig" src={sprig}/>
-      <button
-        onClick={() => {
-          setShowFarhana(false);
-          setShowAlba(false);
-          jiConversation();
-          setGlobalShow(true);
-          setJiDialogue((prevState) => prevState + 1);
+    <div className="dialogue-container">
+      <div
+        className="talk-button-img"
+        style={{
+          display:
+            actionPoints > 0 && !globalShow && letter2IsRead
+              ? "inline"
+              : "none",
         }}
       >
-        Talk
-      </button></div>
+        <img className="sprig" src={sprig} />
+        <button
+          onClick={() => {
+            setShowFarhana(false);
+            setShowAlba(false);
+            jiConversation();
+            setGlobalShow(true);
+            setJiDialogue((prevState) => prevState + 1);
+          }}
+        >
+          Talk
+        </button>
+      </div>
       <div style={{ display: jiDialogue === 1 ? "inline" : "none" }}>
         <div className="ji-dialogue-label fade-in-text">
           <img src={ji} alt="Ji" id="ji-avatar" />
@@ -145,8 +151,10 @@ const Ji5Conversation = ({
           <p>Ji (he/him/his)</p>
         </div>
         <p className="fade-in-text npc-dialogue">
-          You've been through a lot. I have, too. But we don't have to go through it alone.
-        </p><button
+          You've been through a lot. I have, too. But we don't have to go
+          through it alone.
+        </p>
+        <button
           className="fade-in-text end"
           onClick={() => {
             setJiDialogue(0);

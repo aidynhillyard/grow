@@ -18,23 +18,29 @@ const Farhana5Conversation = ({
   const [farhanaDialogue, setFarhanaDialogue] = useState(0);
 
   return (
-    <div><div className="talk-button-img" style={{
-      display:
-        actionPoints > 0 && !globalShow && letter3IsRead
-          ? "inline"
-          : "none",
-    }}><img className="sprig" src={sprig}/>
-      <button
-        onClick={() => {
-          setShowJi(false);
-          setShowAlba(false);
-          farhanaConversation();
-          setGlobalShow(true);
-          setFarhanaDialogue((prevState) => prevState + 1);
+    <div className="dialogue-container">
+      <div
+        className="talk-button-img"
+        style={{
+          display:
+            actionPoints > 0 && !globalShow && letter3IsRead
+              ? "inline"
+              : "none",
         }}
       >
-        Talk
-      </button></div>
+        <img className="sprig" src={sprig} />
+        <button
+          onClick={() => {
+            setShowJi(false);
+            setShowAlba(false);
+            farhanaConversation();
+            setGlobalShow(true);
+            setFarhanaDialogue((prevState) => prevState + 1);
+          }}
+        >
+          Talk
+        </button>
+      </div>
       <div style={{ display: farhanaDialogue === 1 ? "inline" : "none" }}>
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />

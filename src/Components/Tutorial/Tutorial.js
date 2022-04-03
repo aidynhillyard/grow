@@ -1,5 +1,6 @@
 import "./Tutorial.css";
 import { useState } from "react";
+import Container from "react-bootstrap/Container";
 import farhana from "../../images/farhanacircle.png";
 import player from "../../images/player.png";
 import note from "../../images/note.png";
@@ -8,7 +9,7 @@ const Tutorial = ({ setLocation, setNewGame }) => {
   const [dialogue, setDialogue] = useState(0);
 
   return (
-    <div>
+    <Container className="tutorial-container">
       <button
         style={{ display: dialogue === 0 ? "inline" : "none" }}
         onClick={() => {
@@ -18,7 +19,7 @@ const Tutorial = ({ setLocation, setNewGame }) => {
       >
         Start a New Game
       </button>{" "}
-      <div style={{ display: dialogue === 1 ? "inline" : "none" }}>
+      <div className="global-dialogue" style={{ display: dialogue === 1 ? "inline" : "none" }}>
         <div className="farhana-dialogue-label fade-in-text">
           <img src={farhana} alt="Farhana" id="farhana-avatar" />
           <p>Farhana (she/her/hers)</p>
@@ -322,7 +323,7 @@ const Tutorial = ({ setLocation, setNewGame }) => {
           </p>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

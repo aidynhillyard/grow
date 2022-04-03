@@ -17,7 +17,7 @@ const Ji1Conversation = ({
   const [jiDialogue, setJiDialogue] = useState(0);
 
   return (
-    <div>
+    <div className="dialogue-container">
       <div
         className="talk-button-img"
         style={{ display: actionPoints > 0 && !globalShow ? "inline" : "none" }}

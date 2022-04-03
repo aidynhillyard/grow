@@ -17,7 +17,7 @@ const Farhana1Conversation = ({
   const [farhanaDialogue, setFarhanaDialogue] = useState(0);
 
   return (
-    <div>
+    <div className="dialogue-container">
       <div
         className="talk-button-img"
         style={{ display: actionPoints > 0 && !globalShow ? "inline" : "none" }}

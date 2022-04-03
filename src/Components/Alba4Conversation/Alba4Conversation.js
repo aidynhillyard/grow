@@ -25,28 +25,34 @@ const Alba4Conversation = ({
   const [albaDialogue, setAlbaDialogue] = useState(0);
 
   return (
-    <div><div className="talk-button-img" style={{
-      display:
-        actionPoints > 0 &&
-        !globalShow &&
-        dialogueStepAlba === 4 &&
-        ((pot1Type === "Iris" && pot1IsFullyGrown === true) ||
-          (pot2Type === "Iris" && pot2IsFullyGrown === true) ||
-          (pot3Type === "Iris" && pot3IsFullyGrown === true))
-          ? "inline"
-          : "none",
-    }}><img className="sprig" src={sprig}/>
-      <button
-        onClick={() => {
-          setShowFarhana(false);
-          setShowJi(false);
-          albaConversation();
-          setGlobalShow(true);
-          setAlbaDialogue((prevState) => prevState + 1);
+    <div className="dialogue-container">
+      <div
+        className="talk-button-img"
+        style={{
+          display:
+            actionPoints > 0 &&
+            !globalShow &&
+            dialogueStepAlba === 4 &&
+            ((pot1Type === "Iris" && pot1IsFullyGrown === true) ||
+              (pot2Type === "Iris" && pot2IsFullyGrown === true) ||
+              (pot3Type === "Iris" && pot3IsFullyGrown === true))
+              ? "inline"
+              : "none",
         }}
       >
-        Talk
-      </button></div>
+        <img className="sprig" src={sprig} />
+        <button
+          onClick={() => {
+            setShowFarhana(false);
+            setShowJi(false);
+            albaConversation();
+            setGlobalShow(true);
+            setAlbaDialogue((prevState) => prevState + 1);
+          }}
+        >
+          Talk
+        </button>
+      </div>
       <div style={{ display: albaDialogue === 1 ? "inline" : "none" }}>
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />

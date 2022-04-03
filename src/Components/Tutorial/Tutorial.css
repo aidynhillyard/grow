@@ -49,8 +49,15 @@
   margin: 20vh 0vh 0vh 0vh;
 }
 
-.end {
-  text-decoration: underline;
-  text-decoration-color: #4f772d;
-  text-decoration-style: dotted;
-}
+/*
+  *************
+  D E S K T O P
+  *************
+  */
+
+  @media only screen and (min-width: 992px) {
+    .tutorial-container {
+      width: 500px;
+      margin: 0 auto;
+    }
+  }

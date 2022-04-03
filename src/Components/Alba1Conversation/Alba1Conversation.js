@@ -17,18 +17,24 @@ const Alba1Conversation = ({
   const [albaDialogue, setAlbaDialogue] = useState(0);
 
   return (
-    <div>
-      <div className="talk-button-img" style={{ display: actionPoints > 0 && !globalShow ? "inline" : "none" }}><img className="sprig" src={sprig}/><button
-        onClick={() => {
-          setShowFarhana(false);
-          setShowJi(false);
-          setGlobalShow(true);
-          albaConversation();
-          setAlbaDialogue((prevState) => prevState + 1);
-        }}
+    <div className="dialogue-container">
+      <div
+        className="talk-button-img"
+        style={{ display: actionPoints > 0 && !globalShow ? "inline" : "none" }}
       >
-        Talk
-      </button></div>
+        <img className="sprig" src={sprig} />
+        <button
+          onClick={() => {
+            setShowFarhana(false);
+            setShowJi(false);
+            setGlobalShow(true);
+            albaConversation();
+            setAlbaDialogue((prevState) => prevState + 1);
+          }}
+        >
+          Talk
+        </button>
+      </div>
       <div style={{ display: albaDialogue === 1 ? "inline" : "none" }}>
         <div className="alba-dialogue-label fade-in-text">
           <img src={alba} alt="Alba" id="alba-avatar" />

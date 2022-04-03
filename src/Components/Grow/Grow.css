@@ -19,6 +19,12 @@
   padding: 2vh 0vh;
 }
 
+.end {
+  text-decoration: underline;
+  text-decoration-color: #4f772d;
+  text-decoration-style: dotted;
+}
+
 /*
 *************
 D E S K T O P

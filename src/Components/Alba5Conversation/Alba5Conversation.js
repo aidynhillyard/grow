@@ -18,23 +18,29 @@ const Alba5Conversation = ({
   const [albaDialogue, setAlbaDialogue] = useState(0);
 
   return (
-    <div><div className="talk-button-img" style={{
-      display:
-        actionPoints > 0 && !globalShow && letter1IsRead
-          ? "inline"
-          : "none",
-    }}><img className="sprig" src={sprig}/>
-      <button
-        onClick={() => {
-          setShowFarhana(false);
-          setShowJi(false);
-          albaConversation();
-          setGlobalShow(true);
-          setAlbaDialogue((prevState) => prevState + 1);
+    <div className="dialogue-container">
+      <div
+        className="talk-button-img"
+        style={{
+          display:
+            actionPoints > 0 && !globalShow && letter1IsRead
+              ? "inline"
+              : "none",
         }}
       >
-        Talk
-      </button></div>
+        <img className="sprig" src={sprig} />
+        <button
+          onClick={() => {
+            setShowFarhana(false);
+            setShowJi(false);
+            albaConversation();
+            setGlobalShow(true);
+            setAlbaDialogue((prevState) => prevState + 1);
+          }}
+        >
+          Talk
+        </button>
+      </div>
       <div style={{ display: albaDialogue === 1 ? "inline" : "none" }}>
         <div className="player-dialogue-label fade-in-text">
           <img src={player} alt="Plant avatar" id="player-avatar" />
@@ -77,7 +83,8 @@ const Alba5Conversation = ({
         </div>
         <p className="fade-in-text player-dialogue">
           I can relate; ever since the accident, I feel extra stiff in certain
-          weather. Oh, but I wanted to tell you... I read the letter you gave me.
+          weather. Oh, but I wanted to tell you... I read the letter you gave
+          me.
         </p>
         <button
           className="fade-in-text"

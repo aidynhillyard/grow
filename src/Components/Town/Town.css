@@ -140,4 +140,8 @@ T A B L E T
   .alba {
     padding: 0vh 4vh 0vh 2vh;
   }
+
+  .dialogue-container {
+    max-width: 500px;
+  }
 }
