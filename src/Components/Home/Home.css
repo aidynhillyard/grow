@@ -74,6 +74,10 @@ button:focus {
   max-width: 15vh;
 }
 
+.note {
+  max-width: 15vh;
+}
+
 /*
 *************
 T A B L E T

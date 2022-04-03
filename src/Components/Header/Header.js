@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <Container>
             <Nav className="me-auto">
-            <img className="header-sprig" src={sprig}/><button className="about-button" onClick={() => setAboutShow(true)}>About</button>
+            <img className="header-sprig" src={sprig} alt=""/><button className="about-button" onClick={() => setAboutShow(true)}>About</button>
               <Modal
                 size="lg"
                 show={aboutShow}
