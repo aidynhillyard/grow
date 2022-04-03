@@ -116,7 +116,7 @@ const Town = ({
     <Container>
       <img className="town-title" src={town} alt="Town" />
       <div className="townspeople">
-        <div className="alba">
+        <div id="alba">
           {/* *********************** */}
           {/* ******* A L B A ******* */}
           {/* *********************** */}
@@ -254,7 +254,7 @@ const Town = ({
             />
           </div>
         </div>
-        <div className="ji">
+        <div id="ji">
           {/* *********************** */}
           {/* ********* J I ********* */}
           {/* *********************** */}
@@ -392,7 +392,7 @@ const Town = ({
             />
           </div>
         </div>
-        <div className="farhana">
+        <div id="farhana">
           {/* *********************** */}
           {/* **** F A R H A N A **** */}
           {/* *********************** */}

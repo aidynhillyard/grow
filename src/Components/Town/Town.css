@@ -129,19 +129,8 @@ T A B L E T
     padding: 5vh;
   }
 
-  .farhana {
-    padding: 0vh 4vh 0vh 2vh;
-  }
-
-  .ji {
-    padding: 0vh 4vh 0vh 2vh;
-  }
-
-  .alba {
-    padding: 0vh 4vh 0vh 2vh;
-  }
-
   .dialogue-container {
-    max-width: 500px;
+    width: 500px;
   }
+
 }
