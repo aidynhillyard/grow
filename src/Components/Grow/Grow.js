@@ -6,6 +6,7 @@ import Town from "../Town/Town";
 import NewDay from "../NewDay/NewDay";
 import { useState, useEffect } from "react";
 import growtitle from "../../images/growtitle.png";
+import growplant from "../../images/growplant.mp4";
 
 const Grow = () => {
   // ***************************
@@ -19,6 +20,7 @@ const Grow = () => {
   const [actionPoints, setActionPoints] = useState(1);
   const [day, setDay] = useState(1);
   const [globalShow, setGlobalShow] = useState(false);
+  const [newGame, setNewGame] = useState(true);
 
   // Letter UseStates
   const [letter1, setLetter1] = useState(true);
@@ -193,8 +195,29 @@ const Grow = () => {
   return (
     <Container>
       <div>
-        <img className="grow-title" src={growtitle} alt="Grow"/>
-        </div>
+        <img className="grow-title" src={growtitle} alt="Grow" />
+      </div>
+      {/* *************** */}
+      {/* T U T O R I A L */}
+      {/* *************** */}
+      <div
+        className="tutorial"
+        style={{ display: location === "tutorial" ? "inline" : "none" }}
+      >
+        <Tutorial
+          setLocation={setLocation}
+          newGame={newGame}
+          setNewGame={setNewGame}
+        />
+      </div>
+      <div
+        className="moving-plant"
+        style={{ display: newGame === true ? "inline" : "none" }}
+      >
+        <video autoPlay muted id="video" style={{ position: "relative" }}>
+          <source src={growplant} type="video/mp4"></source>
+        </video>
+      </div>
       <button
         onClick={() => {
           setLocation("home");
@@ -202,18 +225,24 @@ const Grow = () => {
       >
         *** go home ***
       </button>
-      <div className="action-points-day" style={{ display: location === "tutorial" ? "none" : "inline" }}>
-        <p className="ap-day"><span className="key">Action Points:</span> {actionPoints}</p>
-        <p className="ap-day"><span className="key">Day:</span> {day}</p>
+      <div
+        className="action-points-day"
+        style={{ display: location === "tutorial" ? "none" : "inline" }}
+      >
+        <p className="ap-day">
+          <span className="key">Action Points:</span> {actionPoints}
+        </p>
+        <p className="ap-day">
+          <span className="key">Day:</span> {day}
+        </p>
       </div>
-      <div className="new-day" style={{ display: actionPoints === 0 && !globalShow ? "inline" : "none" }}>
+      <div
+        className="new-day"
+        style={{
+          display: actionPoints === 0 && !globalShow ? "inline" : "none",
+        }}
+      >
         <NewDay startNewDay={startNewDay} />
-      </div>
-      {/* *************** */}
-      {/* T U T O R I A L */}
-      {/* *************** */}
-      <div style={{ display: location === "tutorial" ? "inline" : "none" }}>
-        <Tutorial setLocation={setLocation} />
       </div>
       {/* ******** */}
       {/* H O M E */}

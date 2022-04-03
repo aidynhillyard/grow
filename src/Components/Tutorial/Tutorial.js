@@ -4,7 +4,7 @@ import farhana from "../../images/farhanacircle.png";
 import player from "../../images/player.png";
 import note from "../../images/note.png";
 
-const Tutorial = ({ setLocation }) => {
+const Tutorial = ({ setLocation, setNewGame }) => {
   const [dialogue, setDialogue] = useState(0);
 
   return (
@@ -13,6 +13,7 @@ const Tutorial = ({ setLocation }) => {
         style={{ display: dialogue === 0 ? "inline" : "none" }}
         onClick={() => {
           setDialogue((prevState) => prevState + 1);
+          setNewGame(false);
         }}
       >
         Start a New Game

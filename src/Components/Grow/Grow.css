@@ -1,14 +1,23 @@
 .grow-title {
-    max-width: 100%;
-  }
+  max-width: 100%;
+  padding-bottom: 2vh;
+}
 
-  .ap-day {
-      margin: 0;
-  }
+.ap-day {
+  margin: 0;
+}
 
-  .key {
-      font-weight: 600;
-  }
+.key {
+  font-weight: 600;
+}
+
+.moving-plant {
+  margin-top: 3vh;
+}
+
+.tutorial {
+  padding: 2vh 0vh;
+}
 
 /*
 *************
@@ -17,7 +26,7 @@ D E S K T O P
 */
 
 @media only screen and (min-width: 992px) {
-    .grow-title {
-        max-width: 80%;
-    }
+  .grow-title {
+    max-width: 80%;
+  }
 }
