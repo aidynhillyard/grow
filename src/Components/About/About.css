@@ -1,5 +1,7 @@
 .about-grow {
   padding: 2vh 0vh;
+  display: flex;
+  justify-content: center;
 }
 
 a {

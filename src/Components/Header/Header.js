@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Modal from "react-bootstrap/Modal";
 import About from "../About/About";
-import logo from "../../images/favicon192.png"
+import logo from "../../images/brand.png"
 
 const Header = () => {
   const [aboutShow, setAboutShow] = useState(false);
