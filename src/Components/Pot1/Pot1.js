@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import emptypot from "../../images/emptypot.png";
-import seedling from "../../images/seedling.png"
+import seedling from "../../images/seedling.png";
 import tulip from "../../images/tulip.png";
 import iris from "../../images/iris.png";
 import forgetmenot from "../../images/forgetmenot.png";
@@ -51,17 +51,20 @@ const Pot1 = ({
     } else if (pot1Type === "Tulip" && pot1Age > 2) {
       setPot1IsSeedling(false);
       setPot1IsFullyGrown(true);
-    } else if (pot1Type === "Iris" && pot1Age < 2) {
+    } else if (pot1Type === "Iris" && pot1Age === 1) {
       setPot1IsSeed(true);
-    } else if (pot1Type === "Iris" && pot1Age === 3) {
+    } else if ((pot1Type === "Iris" && pot1Age === 2) || pot1Age === 3) {
       setPot1IsSeed(false);
       setPot1IsSeedling(true);
     } else if (pot1Type === "Iris" && pot1Age > 3) {
       setPot1IsSeedling(false);
       setPot1IsFullyGrown(true);
-    } else if (pot1Type === "Forget-Me-Not" && pot1Age < 3) {
+    } else if (pot1Type === "Forget-Me-Not" && pot1Age < 2) {
       setPot1IsSeed(true);
-    } else if (pot1Type === "Forget-Me-Not" && pot1Age === 4) {
+    } else if (
+      (pot1Type === "Forget-Me-Not" && pot1Age === 3) ||
+      pot1Age === 4
+    ) {
       setPot1IsSeed(false);
       setPot1IsSeedling(true);
     } else if (pot1Type === "Forget-Me-Not" && pot1Age > 4) {
@@ -87,17 +90,50 @@ const Pot1 = ({
     <Container>
       {/* Pot #1 */}
       <div>
-        <div style={{ display: pot1IsEmpty || pot1IsSeed ? "inline" : "none" }}><img className="plant-imgs" src={emptypot}/></div>
-        <div style={{ display: pot1IsSeedling === true ? "inline" : "none" }}><img className="plant-imgs" src={seedling}/></div>
-        <div style={{ display: pot1Type === "Iris" && pot1IsFullyGrown ? "inline" : "none" }}><img className="plant-imgs" src={iris}/></div>
-        <div style={{ display: pot1Type === "Tulip" && pot1IsFullyGrown ? "inline" : "none" }}><img className="plant-imgs" src={tulip}/></div>
-        <div style={{ display: pot1Type === "Forget-Me-Not" && pot1IsFullyGrown ? "inline" : "none" }}><img className="plant-imgs" src={forgetmenot}/></div>
+        <div style={{ display: pot1IsEmpty || pot1IsSeed ? "inline" : "none" }}>
+          <img className="plant-imgs" src={emptypot} />
+        </div>
+        <div style={{ display: pot1IsSeedling === true ? "inline" : "none" }}>
+          <img className="plant-imgs" src={seedling} />
+        </div>
+        <div
+          style={{
+            display:
+              pot1Type === "Iris" && pot1IsFullyGrown === true
+                ? "inline"
+                : "none",
+          }}
+        >
+          <img className="plant-imgs" src={iris} />
+        </div>
+        <div
+          style={{
+            display:
+              pot1Type === "Tulip" && pot1IsFullyGrown === true
+                ? "inline"
+                : "none",
+          }}
+        >
+          <img className="plant-imgs" src={tulip} />
+        </div>
+        <div
+          style={{
+            display:
+              pot1Type === "Forget-Me-Not" && pot1IsFullyGrown === true
+                ? "inline"
+                : "none",
+          }}
+        >
+          <img className="plant-imgs" src={forgetmenot} />
+        </div>
         <p className="plant-name">
           Plant #1: {pot1Type}
           <span style={{ display: pot1IsEmpty === true ? "none" : "inline" }}>
             , Age: {pot1Age}
           </span>
-          <span style={{ display: pot1IsFullyGrown ? "inline" : "none"}}>Your {pot1Type} is fully grown!</span>
+        </p>
+        <p style={{ display: pot1IsFullyGrown === true ? "inline" : "none" }}>
+          Your {pot1Type} is fully grown!
         </p>
       </div>
       <div
@@ -121,7 +157,8 @@ const Pot1 = ({
       >
         <div className="choose-a-seed">
           <DropdownButton id="dropdown-item-button" title="Choose a Seed">
-            <Dropdown.Item id="flower"
+            <Dropdown.Item
+              id="flower"
               as="button"
               onClick={() => {
                 plantPot1();
@@ -132,7 +169,8 @@ const Pot1 = ({
             >
               Tulip
             </Dropdown.Item>
-            <Dropdown.Item id="flower"
+            <Dropdown.Item
+              id="flower"
               as="button"
               onClick={() => {
                 plantPot1();
@@ -143,7 +181,8 @@ const Pot1 = ({
             >
               Iris
             </Dropdown.Item>
-            <Dropdown.Item id="flower"
+            <Dropdown.Item
+              id="flower"
               as="button"
               onClick={() => {
                 plantPot1();
@@ -157,7 +196,10 @@ const Pot1 = ({
           </DropdownButton>
         </div>
       </div>
-      <div style={{ display: pot1IsCaredFor === true ? "inline" : "none" }}>
+      <div style={{ display: pot1IsEmpty === false && pot1Age === 1 ? "inline" : "none" }}>
+        Your {pot1Type} is planted!
+      </div>
+      <div style={{ display: pot1IsCaredFor === true && pot1Age > 1 ? "inline" : "none" }}>
         You have cared for your {pot1Type} plant today!
       </div>
     </Container>

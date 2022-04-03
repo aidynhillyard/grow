@@ -97,8 +97,7 @@ const Pot3 = ({
           <span style={{ display: pot3IsEmpty === true ? "none" : "inline" }}>
             , Age: {pot3Age}
           </span>
-          <span style={{ display: pot3IsFullyGrown === true ? "inline" : "none"}}>Your {pot3Type} is fully grown!</span>
-        </p>
+        </p><p style={{ display: pot3IsFullyGrown === true ? "inline" : "none"}}>Your {pot3Type} is fully grown!</p>
       </div>
       <div
         style={{
@@ -157,7 +156,10 @@ const Pot3 = ({
           </DropdownButton>
         </div>
       </div>
-      <div style={{ display: pot3IsCaredFor === true ? "inline" : "none" }}>
+      <div style={{ display: pot3IsEmpty === false && pot3Age === 1 ? "inline" : "none" }}>
+        Your {pot3Type} is planted!
+      </div>
+      <div style={{ display: pot3IsCaredFor === true && pot3Age > 1 ? "inline" : "none" }}>
         You have cared for your {pot3Type} plant today!
       </div>
     </Container>
