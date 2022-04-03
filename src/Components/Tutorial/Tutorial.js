@@ -19,7 +19,10 @@ const Tutorial = ({ setLocation, setNewGame }) => {
       >
         Start a New Game
       </button>{" "}
-      <div className="global-dialogue" style={{ display: dialogue === 1 ? "inline" : "none" }}>
+      <div
+        className="global-dialogue"
+        style={{ display: dialogue === 1 ? "inline" : "none" }}
+      >
         <div className="farhana-dialogue-label fade-in-text">
           <img src={farhana} alt="Farhana" id="farhana-avatar" />
           <p>Farhana (she/her/hers)</p>
@@ -256,6 +259,10 @@ const Tutorial = ({ setLocation, setNewGame }) => {
         </div>
         <div style={{ display: dialogue === 13 ? "inline" : "none" }}>
           <p className="fade-in-text">
+            <strong><em>Note:</em> Do not use the back button on your browser or refresh
+            the page; this will restart your game.</strong>
+          </p>
+          <p className="fade-in-text">
             To plant seeds, you need to be in your Home. You have 3 empty pots,
             and you can plant one seed in each one.
           </p>
@@ -289,9 +296,8 @@ const Tutorial = ({ setLocation, setNewGame }) => {
         <div style={{ display: dialogue === 15 ? "inline" : "none" }}>
           <p className="fade-in-text">
             When you have a seed planted, one of your actions each day will be
-            to care for your plant. Each plant needs to be cared for separately,
-            so if you have 2 plants, it will take 2 Action Points to care for
-            them: 1 for the first plant and 1 for the second plant.
+            to care for your plant. Each plant needs to be cared for separately.
+            You must care for each of your plants before you can travel to town.
           </p>
           <button
             className="fade-in-text"
