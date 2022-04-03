@@ -89,7 +89,7 @@ T A B L E T
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    align-items: end;
+    align-items: start;
     min-height: 25vh;
   }
 
