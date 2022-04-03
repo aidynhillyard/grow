@@ -125,12 +125,11 @@ T A B L E T
     margin: 0vh 2vh;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     padding: 5vh;
   }
 
   .dialogue-container {
     width: 500px;
   }
-
 }
