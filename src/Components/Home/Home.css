@@ -43,7 +43,7 @@ button:focus {
 }
 
 .bottom-single-link {
-  padding: 1.5vh;
+  padding: 1vh;
   margin: 0vh 2vh;
 }
 
@@ -159,7 +159,7 @@ T A B L E T
 
   .bottom-single-link {
     margin: 0px 9vh;
-    padding: 3vh 3vh;
+    padding: 2vh 0vh;
     display: flex;
     justify-content: center;
   }

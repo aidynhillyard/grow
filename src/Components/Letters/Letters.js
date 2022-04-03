@@ -34,7 +34,7 @@ const Letters = ({
           display: letter1 ? "block" : "none",
         }}
       ><img className="sprig" src={sprig} />
-        <button
+        <button className="read-letter"
           onClick={() => {
             setLetter1IsRead(true);
             setShowLetter1(!showLetter1);
@@ -99,7 +99,7 @@ const Letters = ({
           display: letter2 ? "block" : "none",
         }}
       ><img className="sprig" src={sprig} />
-        <button
+        <button className="read-letter"
           onClick={() => {
             setLetter2IsRead(true);
             setShowLetter2(!showLetter2);
@@ -163,7 +163,7 @@ const Letters = ({
           display: letter3 ? "block" : "none",
         }}
       ><img className="sprig" src={sprig} />
-        <button
+        <button className="read-letter"
           onClick={() => {
             setLetter3IsRead(true);
             setShowLetter3(!showLetter3);
