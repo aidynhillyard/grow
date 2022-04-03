@@ -90,51 +90,58 @@ const Home = ({
         <p>
           ― Kahlil Gibran, <em>The Prophet</em>
         </p>
-        <img src={note} alt="Line drawing of a leafy plant"/>
+        <img src={note} alt="Line drawing of a leafy plant" />
       </div>
       <div className="pot-components">
-      <div className="pot1-component"><Pot1
-        actionPoints={actionPoints}
-        decrementActionPoints={decrementActionPoints}
-        pot1IsEmpty={pot1IsEmpty}
-        setPot1IsEmpty={setPot1IsEmpty}
-        pot1Type={pot1Type}
-        setPot1Type={setPot1Type}
-        pot1IsCaredFor={pot1IsCaredFor}
-        setPot1IsCaredFor={setPot1IsCaredFor}
-        pot1Age={pot1Age}
-        setPot1Age={setPot1Age}
-        pot1IsFullyGrown={pot1IsFullyGrown}
-        setPot1IsFullyGrown={setPot1IsFullyGrown}
-      /></div>
-      <div className="pot2-component"><Pot2
-        actionPoints={actionPoints}
-        decrementActionPoints={decrementActionPoints}
-        pot2IsEmpty={pot2IsEmpty}
-        setPot2IsEmpty={setPot2IsEmpty}
-        pot2Type={pot2Type}
-        setPot2Type={setPot2Type}
-        pot2IsCaredFor={pot2IsCaredFor}
-        setPot2IsCaredFor={setPot2IsCaredFor}
-        pot2Age={pot2Age}
-        setPot2Age={setPot2Age}
-        pot2IsFullyGrown={pot2IsFullyGrown}
-        setPot2IsFullyGrown={setPot2IsFullyGrown}
-      /></div>
-      <div className="pot3-omponent"><Pot3
-        actionPoints={actionPoints}
-        decrementActionPoints={decrementActionPoints}
-        pot3IsEmpty={pot3IsEmpty}
-        setPot3IsEmpty={setPot3IsEmpty}
-        pot3Type={pot3Type}
-        setPot3Type={setPot3Type}
-        pot3IsCaredFor={pot3IsCaredFor}
-        setPot3IsCaredFor={setPot3IsCaredFor}
-        pot3Age={pot3Age}
-        setPot3Age={setPot3Age}
-        pot3IsFullyGrown={pot3IsFullyGrown}
-        setPot3IsFullyGrown={setPot3IsFullyGrown}
-      /></div></div>
+        <div className="pot1-component">
+          <Pot1
+            actionPoints={actionPoints}
+            decrementActionPoints={decrementActionPoints}
+            pot1IsEmpty={pot1IsEmpty}
+            setPot1IsEmpty={setPot1IsEmpty}
+            pot1Type={pot1Type}
+            setPot1Type={setPot1Type}
+            pot1IsCaredFor={pot1IsCaredFor}
+            setPot1IsCaredFor={setPot1IsCaredFor}
+            pot1Age={pot1Age}
+            setPot1Age={setPot1Age}
+            pot1IsFullyGrown={pot1IsFullyGrown}
+            setPot1IsFullyGrown={setPot1IsFullyGrown}
+          />
+        </div>
+        <div className="pot2-component">
+          <Pot2
+            actionPoints={actionPoints}
+            decrementActionPoints={decrementActionPoints}
+            pot2IsEmpty={pot2IsEmpty}
+            setPot2IsEmpty={setPot2IsEmpty}
+            pot2Type={pot2Type}
+            setPot2Type={setPot2Type}
+            pot2IsCaredFor={pot2IsCaredFor}
+            setPot2IsCaredFor={setPot2IsCaredFor}
+            pot2Age={pot2Age}
+            setPot2Age={setPot2Age}
+            pot2IsFullyGrown={pot2IsFullyGrown}
+            setPot2IsFullyGrown={setPot2IsFullyGrown}
+          />
+        </div>
+        <div className="pot3-omponent">
+          <Pot3
+            actionPoints={actionPoints}
+            decrementActionPoints={decrementActionPoints}
+            pot3IsEmpty={pot3IsEmpty}
+            setPot3IsEmpty={setPot3IsEmpty}
+            pot3Type={pot3Type}
+            setPot3Type={setPot3Type}
+            pot3IsCaredFor={pot3IsCaredFor}
+            setPot3IsCaredFor={setPot3IsCaredFor}
+            pot3Age={pot3Age}
+            setPot3Age={setPot3Age}
+            pot3IsFullyGrown={pot3IsFullyGrown}
+            setPot3IsFullyGrown={setPot3IsFullyGrown}
+          />
+        </div>
+      </div>
       <div className="bottom-links">
         <div>
           <div className="bottom-single-link">
@@ -167,21 +174,24 @@ const Home = ({
         </div>
         {/* Travel to Town Button */}
         <div>
-          <div className="bottom-single-link" style={{
-                display:
-                  location === "home" &&
-                  (pot1IsCaredFor === true ||
-                    pot1IsCaredFor === null ||
-                    pot1IsEmpty === true) &&
-                  (pot2IsCaredFor === true ||
-                    pot2IsCaredFor === null ||
-                    pot2IsEmpty === true) &&
-                  (pot3IsCaredFor === true ||
-                    pot3IsCaredFor === null ||
-                    pot3IsEmpty === true)
-                    ? "inline"
-                    : "none",
-              }}>
+          <div
+            className="bottom-single-link"
+            style={{
+              display:
+                location === "home" &&
+                (pot1IsCaredFor === true ||
+                  pot1IsCaredFor === null ||
+                  pot1IsEmpty === true) &&
+                (pot2IsCaredFor === true ||
+                  pot2IsCaredFor === null ||
+                  pot2IsEmpty === true) &&
+                (pot3IsCaredFor === true ||
+                  pot3IsCaredFor === null ||
+                  pot3IsEmpty === true)
+                  ? "inline"
+                  : "none",
+            }}
+          >
             <img className="sprig" src={sprig} />
             <button
               onClick={() => {

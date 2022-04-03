@@ -17,15 +17,15 @@ const Grow = () => {
   const [location, setLocation] = useState("tutorial");
 
   // Action Points and Day useStates
-  const [actionPoints, setActionPoints] = useState(1);
+  const [actionPoints, setActionPoints] = useState(4);
   const [day, setDay] = useState(1);
   const [globalShow, setGlobalShow] = useState(false);
   const [newGame, setNewGame] = useState(true);
 
   // Letter UseStates
-  const [letter1, setLetter1] = useState(true);
-  const [letter2, setLetter2] = useState(true);
-  const [letter3, setLetter3] = useState(true);
+  const [letter1, setLetter1] = useState(false);
+  const [letter2, setLetter2] = useState(false);
+  const [letter3, setLetter3] = useState(false);
   const [letter1IsRead, setLetter1IsRead] = useState(false);
   const [letter2IsRead, setLetter2IsRead] = useState(false);
   const [letter3IsRead, setLetter3IsRead] = useState(false);
@@ -62,8 +62,8 @@ const Grow = () => {
   const [dialogueStepAlba, setDialogueStepAlba] = useState(1);
   const [tradePlantAlba, setTradePlantAlba] = useState(false);
 
-  // useEffect Placeholder
-  useEffect(() => console.log("Hello world"), [actionPoints]);
+  // // useEffect Placeholder
+  // useEffect(() => console.log("Hello world"), [actionPoints]);
 
   // *************************
   // *** F U N C T I O N S ***
@@ -178,7 +178,7 @@ const Grow = () => {
   // ************
 
   const startNewDay = () => {
-    setActionPoints(1);
+    setActionPoints(4);
     setLocation("home");
     setDay((prevState) => prevState + 1);
     setPot1IsCaredFor(false);

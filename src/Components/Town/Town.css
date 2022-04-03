@@ -14,6 +14,12 @@
   margin: 0vh 0vh 3vh 0vh;
 }
 
+.end {
+  text-decoration: underline;
+  text-decoration-color: #4f772d;
+  text-decoration-style: dotted;
+}
+
 /* Townspeople */
 
 /* Avatars */
