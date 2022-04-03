@@ -32,10 +32,21 @@
 
 .me-auto {
   padding: 0vh 0vh 1vh 0vh;
+  background-color: #90A955;
 }
 
 .container {
   margin: 0vh;
+}
+
+.about-button {
+  display: flex;
+  align-items: flex-end;
+}
+
+.header-sprig {
+  max-height: 30px;
+  margin: 1vh 0vh 0vh 1vh;
 }
 
 /*
@@ -112,15 +123,12 @@ D E S K T O P
     padding: 2vh;
   }
 
-  .me-auto {
-    padding: 1vh;
-  }
-
   .about-button {
     margin: 0vh 1vh;
   }
 
   .header-sprig {
     max-height: 30px;
+    margin: 0vh;
   }
 }

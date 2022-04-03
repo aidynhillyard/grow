@@ -11,11 +11,7 @@ const Header = () => {
   const [aboutShow, setAboutShow] = useState(false);
 
   return (
-    <Container className="header">
-      <Navbar bg="light" expand="lg">
-        <Container className="nav-bar">
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+    <Container>
             <Nav className="me-auto">
             <img className="header-sprig" src={sprig}/><button className="about-button" onClick={() => setAboutShow(true)}>About</button>
               <Modal
@@ -35,9 +31,6 @@ const Header = () => {
                 </Modal.Body>
               </Modal>
             </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
     </Container>
   );
 };
