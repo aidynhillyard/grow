@@ -27,7 +27,7 @@ const Farhana2Conversation = ({
           setFarhanaDialogue((prevState) => prevState + 1);
         }}
       >
-        Talk 2
+        Talk
       </button></div>
       <div style={{ display: farhanaDialogue === 1 ? "inline" : "none" }}>
         <div className="player-dialogue-label fade-in-text">

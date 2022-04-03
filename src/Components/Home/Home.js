@@ -8,7 +8,6 @@ import Letters from "../Letters/Letters";
 import home from "../../images/home.png";
 import sprig from "../../images/sprig.png";
 import note from "../../images/note.png";
-import { Link } from "react-router-dom";
 
 const Home = ({
   actionPoints,

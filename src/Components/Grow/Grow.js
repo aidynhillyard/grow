@@ -206,7 +206,7 @@ const Grow = () => {
         <p className="ap-day"><span className="key">Action Points:</span> {actionPoints}</p>
         <p className="ap-day"><span className="key">Day:</span> {day}</p>
       </div>
-      <div style={{ display: actionPoints === 0 && !globalShow ? "inline" : "none" }}>
+      <div className="new-day" style={{ display: actionPoints === 0 && !globalShow ? "inline" : "none" }}>
         <NewDay startNewDay={startNewDay} />
       </div>
       {/* *************** */}

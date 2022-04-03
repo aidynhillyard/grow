@@ -3,6 +3,11 @@ import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
+import emptypot from "../../images/emptypot.png";
+import seedling from "../../images/seedling.png"
+import tulip from "../../images/tulip.png";
+import iris from "../../images/iris.png";
+import forgetmenot from "../../images/forgetmenot.png";
 
 const Pot1 = ({
   actionPoints,
@@ -82,13 +87,17 @@ const Pot1 = ({
     <Container>
       {/* Pot #1 */}
       <div>
+        <div style={{ display: pot1IsEmpty || pot1IsSeed ? "inline" : "none" }}><img className="plant-imgs" src={emptypot}/></div>
+        <div style={{ display: pot1IsSeedling === true ? "inline" : "none" }}><img className="plant-imgs" src={seedling}/></div>
+        <div style={{ display: pot1Type === "Iris" && pot1IsFullyGrown ? "inline" : "none" }}><img className="plant-imgs" src={iris}/></div>
+        <div style={{ display: pot1Type === "Tulip" && pot1IsFullyGrown ? "inline" : "none" }}><img className="plant-imgs" src={tulip}/></div>
+        <div style={{ display: pot1Type === "Forget-Me-Not" && pot1IsFullyGrown ? "inline" : "none" }}><img className="plant-imgs" src={forgetmenot}/></div>
         <p className="plant-name">
           Plant #1: {pot1Type}
           <span style={{ display: pot1IsEmpty === true ? "none" : "inline" }}>
-            , Age: {pot1Age}, Seed: {pot1IsSeed ? "True" : "False"}, Seedling:{" "}
-            {pot1IsSeedling ? "True" : "False"} Fully Grown:{" "}
-            {pot1IsFullyGrown ? "True" : "False"}
+            , Age: {pot1Age}
           </span>
+          <span style={{ display: pot1IsFullyGrown ? "inline" : "none"}}>Your {pot1Type} is fully grown!</span>
         </p>
       </div>
       <div
