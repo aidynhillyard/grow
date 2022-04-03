@@ -44,7 +44,7 @@ button:focus {
 
 .bottom-single-link {
   padding: 1vh;
-  margin: 0vh 2vh;
+  margin: 1vh 2vh;
 }
 
 .sprig {
@@ -158,8 +158,8 @@ T A B L E T
   }
 
   .bottom-single-link {
-    margin: 0px 9vh;
-    padding: 2vh 0vh;
+    margin: 1.5vh 3vh;
+    padding: 0.5vh 0vh;
     display: flex;
     justify-content: center;
   }

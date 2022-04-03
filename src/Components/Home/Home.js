@@ -5,6 +5,7 @@ import Pot1 from "../Pot1/Pot1";
 import Pot2 from "../Pot2/Pot2";
 import Pot3 from "../Pot3/Pot3";
 import Letters from "../Letters/Letters";
+import Library from "../Library/Library";
 import home from "../../images/home.png";
 import sprig from "../../images/sprig.png";
 import note from "../../images/note.png";
@@ -58,6 +59,7 @@ const Home = ({
   setPot3IsFullyGrown,
 }) => {
   const [showLetters, setShowLetters] = useState(false);
+  const [showLibrary, setShowLibrary] = useState(false);
 
   return (
     <Container>
@@ -170,6 +172,27 @@ const Home = ({
             setLetter2IsRead={setLetter2IsRead}
             letter3IsRead={letter3IsRead}
             setLetter3IsRead={setLetter3IsRead}
+          />
+        </div>
+        {/* View Library Button */}
+        <div className="bottom-single-link">
+          <img className="sprig" src={sprig} />
+          <button
+            onClick={() => {
+              setShowLibrary(!showLibrary);
+            }}
+          >
+            Library
+          </button>
+        </div>
+        <div
+          style={{
+            display: showLibrary ? "inline" : "none",
+          }}
+        >
+          <Library
+            actionPoints={actionPoints}
+            decrementActionPoints={decrementActionPoints}
           />
         </div>
         {/* Travel to Town Button */}

@@ -218,13 +218,13 @@ const Grow = () => {
           <source src={growplant} type="video/mp4"></source>
         </video>
       </div>
-      {/* <button
+      <button
         onClick={() => {
           setLocation("home");
         }}
       >
         *** go home ***
-      </button> */}
+      </button>
       <div
         className="action-points-day"
         style={{ display: location === "tutorial" ? "none" : "inline" }}
