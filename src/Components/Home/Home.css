@@ -89,6 +89,8 @@ T A B L E T
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
+    align-items: end;
+    min-height: 25vh;
   }
 
   .pot1component {
@@ -104,6 +106,12 @@ T A B L E T
   .pot3component {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
+  }
+
+  /* Pot Images */
+
+  .plant-imgs {
+    max-width: 20vh;
   }
 }
 
@@ -137,6 +145,12 @@ T A B L E T
   .pot3component {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
+  }
+
+  /* Pot Images */
+
+  .plant-imgs {
+    max-width: 25vh;
   }
 
   .bottom-single-link {

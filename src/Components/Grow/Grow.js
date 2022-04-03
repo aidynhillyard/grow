@@ -260,7 +260,7 @@ const Grow = () => {
           setPot2IsCaredFor={setPot2IsCaredFor}
           pot2Age={pot2Age}
           setPot2Age={setPot2Age}
-          pot2IsFullyGrown={setPot2IsFullyGrown}
+          pot2IsFullyGrown={pot2IsFullyGrown}
           setPot2IsFullyGrown={setPot2IsFullyGrown}
           // Pot #3 Props
           pot3IsEmpty={pot3IsEmpty}
@@ -271,7 +271,7 @@ const Grow = () => {
           setPot3IsCaredFor={setPot3IsCaredFor}
           pot3Age={pot3Age}
           setPot3Age={setPot3Age}
-          pot3IsFullyGrown={setPot3IsFullyGrown}
+          pot3IsFullyGrown={pot3IsFullyGrown}
           setPot3IsFullyGrown={setPot3IsFullyGrown}
         />
       </div>

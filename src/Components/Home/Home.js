@@ -167,10 +167,7 @@ const Home = ({
         </div>
         {/* Travel to Town Button */}
         <div>
-          <div className="bottom-single-link">
-            <img className="sprig" src={sprig} />
-            <button
-              style={{
+          <div className="bottom-single-link" style={{
                 display:
                   location === "home" &&
                   (pot1IsCaredFor === true ||
@@ -184,7 +181,9 @@ const Home = ({
                     pot3IsEmpty === true)
                     ? "inline"
                     : "none",
-              }}
+              }}>
+            <img className="sprig" src={sprig} />
+            <button
               onClick={() => {
                 setLocation("town");
               }}
