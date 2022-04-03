@@ -30,10 +30,6 @@
   color: #fbfceb;
 }
 
-#brand-text {
-  display: none;
-}
-
 .me-auto {
   padding: 0vh 0vh 1vh 0vh;
 }
@@ -107,10 +103,6 @@ D E S K T O P
     padding: 1.5vh 2vh;
   }
 
-  .brand {
-    display: inline;
-  }
-
   #page-container {
     margin: 0 auto;
     width: 100%;
@@ -122,5 +114,13 @@ D E S K T O P
 
   .me-auto {
     padding: 1vh;
+  }
+
+  .about-button {
+    margin: 0vh 1vh;
+  }
+
+  .header-sprig {
+    max-height: 30px;
   }
 }

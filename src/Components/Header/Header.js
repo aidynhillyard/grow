@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Modal from "react-bootstrap/Modal";
 import About from "../About/About";
-import logo from "../../images/brand.png"
+import sprig from "../../images/sprig.png"
 
 const Header = () => {
   const [aboutShow, setAboutShow] = useState(false);
@@ -17,7 +17,7 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <button onClick={() => setAboutShow(true)}>About</button>
+            <img className="header-sprig" src={sprig}/><button className="about-button" onClick={() => setAboutShow(true)}>About</button>
               <Modal
                 size="lg"
                 show={aboutShow}
@@ -36,9 +36,6 @@ const Header = () => {
               </Modal>
             </Nav>
           </Navbar.Collapse>
-          <Navbar.Brand className="brand">
-            <img className="logo" src={logo}/>
-          </Navbar.Brand>
         </Container>
       </Navbar>
     </Container>
