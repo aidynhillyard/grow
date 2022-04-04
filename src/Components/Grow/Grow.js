@@ -62,9 +62,6 @@ const Grow = () => {
   const [dialogueStepAlba, setDialogueStepAlba] = useState(1);
   const [tradePlantAlba, setTradePlantAlba] = useState(false);
 
-  // // useEffect Placeholder
-  // useEffect(() => console.log("Hello world"), [actionPoints]);
-
   // *************************
   // *** F U N C T I O N S ***
   // *************************
