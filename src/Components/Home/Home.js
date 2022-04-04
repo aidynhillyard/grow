@@ -193,6 +193,12 @@ const Home = ({
           <Library
             actionPoints={actionPoints}
             decrementActionPoints={decrementActionPoints}
+            pot1IsCaredFor={pot1IsCaredFor}
+            pot2IsCaredFor={pot2IsCaredFor}
+            pot3IsCaredFor={pot3IsCaredFor}
+            pot1IsEmpty={pot1IsEmpty}
+            pot2IsEmpty={pot2IsEmpty}
+            pot3IsEmpty={pot3IsEmpty}
           />
         </div>
         {/* Travel to Town Button */}

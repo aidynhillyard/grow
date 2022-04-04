@@ -264,7 +264,7 @@ const Tutorial = ({ setLocation, setNewGame }) => {
           </p>
           <p className="fade-in-text">
             To plant seeds, you need to be in your Home. You have 3 empty pots,
-            and you can plant one seed in each one.
+            and you can plant 1 seed in each pot.
           </p>
           <button
             className="fade-in-text"

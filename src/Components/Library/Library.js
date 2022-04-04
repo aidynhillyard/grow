@@ -1,7 +1,7 @@
 import "./Library.css";
 import { useState } from "react";
 
-const Library = ({ actionPoints, decrementActionPoints }) => {
+const Library = ({ actionPoints, decrementActionPoints, pot1IsCaredFor, pot2IsCaredFor, pot3IsCaredFor, pot1IsEmpty, pot2IsEmpty, pot3IsEmpty }) => {
   // useStates
   const [showBook1, setShowBook1] = useState(false);
   const [showBook2, setShowBook2] = useState(false);
@@ -9,16 +9,27 @@ const Library = ({ actionPoints, decrementActionPoints }) => {
 
   return (
     <div className="library">
-      <p>
+      <p className="book-container">
         There are several books in the library. Reading them takes an Action
-        Point.
+        Point. You must care for any plants you have before you can read any books.
       </p>
       <div className="book1">
         <button
           style={{
             display:
-              actionPoints > 0 && showBook1 === false ? "inline" : "none",
-          }}
+              (actionPoints > 0) && (showBook1 === false) &&
+                  ((pot1IsCaredFor === true ||
+                    pot1IsCaredFor === null ||
+                    pot1IsEmpty === true) &&
+                  (pot2IsCaredFor === true ||
+                    pot2IsCaredFor === null ||
+                    pot2IsEmpty === true) &&
+                  (pot3IsCaredFor === true ||
+                    pot3IsCaredFor === null ||
+                    pot3IsEmpty === true))
+                    ? "inline"
+                    : "none",
+              }}
           onClick={() => {
             decrementActionPoints();
             setShowBook1(true);
@@ -53,8 +64,19 @@ const Library = ({ actionPoints, decrementActionPoints }) => {
         <button
           style={{
             display:
-              actionPoints > 0 && showBook2 === false ? "inline" : "none",
-          }}
+              (actionPoints > 0) && (showBook2 === false) &&
+                  ((pot1IsCaredFor === true ||
+                    pot1IsCaredFor === null ||
+                    pot1IsEmpty === true) &&
+                  (pot2IsCaredFor === true ||
+                    pot2IsCaredFor === null ||
+                    pot2IsEmpty === true) &&
+                  (pot3IsCaredFor === true ||
+                    pot3IsCaredFor === null ||
+                    pot3IsEmpty === true))
+                    ? "inline"
+                    : "none",
+              }}
           onClick={() => {
             decrementActionPoints();
             setShowBook2(true);
@@ -99,8 +121,19 @@ const Library = ({ actionPoints, decrementActionPoints }) => {
         <button
           style={{
             display:
-              actionPoints > 0 && showBook3 === false ? "inline" : "none",
-          }}
+              (actionPoints > 0) && (showBook3 === false) &&
+                  ((pot1IsCaredFor === true ||
+                    pot1IsCaredFor === null ||
+                    pot1IsEmpty === true) &&
+                  (pot2IsCaredFor === true ||
+                    pot2IsCaredFor === null ||
+                    pot2IsEmpty === true) &&
+                  (pot3IsCaredFor === true ||
+                    pot3IsCaredFor === null ||
+                    pot3IsEmpty === true))
+                    ? "inline"
+                    : "none",
+              }}
           onClick={() => {
             decrementActionPoints();
             setShowBook3(true);
