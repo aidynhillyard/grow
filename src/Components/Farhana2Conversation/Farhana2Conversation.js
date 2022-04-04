@@ -22,7 +22,7 @@ const Farhana2Conversation = ({
         className="talk-button-img"
         style={{ display: actionPoints > 0 && !globalShow ? "inline" : "none" }}
       >
-        <img className="sprig" src={sprig} />
+        <img className="sprig" src={sprig} alt=""/>
         <button
           onClick={() => {
             setShowJi(false);
