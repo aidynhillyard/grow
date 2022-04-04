@@ -64,22 +64,6 @@ const Town = ({
   const [showJi, setShowJi] = useState(true);
   const [showAlba, setShowAlba] = useState(true);
 
-  console.log("GlobalShow is: ", globalShow);
-  console.log("Dialogue Step Ji: ", dialogueStepJi);
-  console.log("Dialogue Step Alba: ", dialogueStepAlba);
-  console.log("Dialogue Step Farhana: ", dialogueStepFarhana);
-  console.log(
-    "Letter1 is read: ",
-    letter1IsRead,
-    "| Letter2 is read: ",
-    letter2IsRead,
-    "| Letter3 is read: ",
-    letter3IsRead
-  );
-  console.log("Pot1Type", pot1Type, "| Pot1 Is Fully Grown?", pot1IsFullyGrown);
-  console.log("Pot2Type", pot2Type, "| Pot2 Is Fully Grown?", pot2IsFullyGrown);
-  console.log("Pot3Type", pot3Type, "| Pot3 Is Fully Grown?", pot3IsFullyGrown);
-
   // *************************
   // *** F U N C T I O N S ***
   // *************************
