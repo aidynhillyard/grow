@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/grow/static/css/main.9397592f.css",
-    "main.js": "/grow/static/js/main.e44c7c25.js",
+    "main.css": "/grow/static/css/main.500067a1.css",
+    "main.js": "/grow/static/js/main.b3fdbf0d.js",
     "static/js/787.1b847643.chunk.js": "/grow/static/js/787.1b847643.chunk.js",
     "static/media/zen-maru-gothic-all-400-normal.woff": "/grow/static/media/zen-maru-gothic-all-400-normal.eaffc0e6afcc85d64de0.woff",
     "static/media/growplant.mp4": "/grow/static/media/growplant.dbd76d7c32db9b03709d.mp4",
@@ -139,12 +139,12 @@
     "static/media/zen-maru-gothic-57-400-normal.woff2": "/grow/static/media/zen-maru-gothic-57-400-normal.163734886a92f708b95e.woff2",
     "static/media/zen-maru-gothic-2-400-normal.woff2": "/grow/static/media/zen-maru-gothic-2-400-normal.2d781680ce442d3c4699.woff2",
     "index.html": "/grow/index.html",
-    "main.9397592f.css.map": "/grow/static/css/main.9397592f.css.map",
-    "main.e44c7c25.js.map": "/grow/static/js/main.e44c7c25.js.map",
+    "main.500067a1.css.map": "/grow/static/css/main.500067a1.css.map",
+    "main.b3fdbf0d.js.map": "/grow/static/js/main.b3fdbf0d.js.map",
     "787.1b847643.chunk.js.map": "/grow/static/js/787.1b847643.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9397592f.css",
-    "static/js/main.e44c7c25.js"
+    "static/css/main.500067a1.css",
+    "static/js/main.b3fdbf0d.js"
   ]
 }
