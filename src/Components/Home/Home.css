@@ -163,4 +163,8 @@ T A B L E T
     display: flex;
     justify-content: center;
   }
+
+  .travel-to-town {
+    padding: 2vh;
+  }
 }

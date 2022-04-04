@@ -64,6 +64,9 @@ const Home = ({
   return (
     <Container>
       <img className="home-title" src={home} alt="Home" />
+      {/* *********************** */}
+      {/* E N D I N G - Q U O T E */}
+      {/* *********************** */}
       <div
         style={{
           display:
@@ -94,6 +97,9 @@ const Home = ({
         </p>
         <img src={note} alt="Line drawing of a leafy plant" />
       </div>
+      {/* ******* */}
+      {/* P O T S */}
+      {/* ******* */}
       <div className="pot-components">
         <div className="pot1-component">
           <Pot1
@@ -144,6 +150,9 @@ const Home = ({
           />
         </div>
       </div>
+      {/* *********************** */}
+      {/* B O T T O M - L I N K S */}
+      {/* *********************** */}
       <div className="bottom-links">
         <div>
           <div className="bottom-single-link">
@@ -202,7 +211,7 @@ const Home = ({
           />
         </div>
         {/* Travel to Town Button */}
-        <div>
+        <div className="travel-to-town">
           <div
             className="bottom-single-link"
             style={{

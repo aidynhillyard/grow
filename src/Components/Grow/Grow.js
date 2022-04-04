@@ -207,6 +207,9 @@ const Grow = () => {
           setNewGame={setNewGame}
         />
       </div>
+      {/* *********************** */}
+      {/* L A N D I N G - P A G E */}
+      {/* *********************** */}
       <div
         className="moving-plant"
         style={{ display: newGame === true ? "inline" : "none" }}
@@ -215,13 +218,9 @@ const Grow = () => {
           <source src={growplant} type="video/mp4"></source>
         </video>
       </div>
-      {/* <button
-        onClick={() => {
-          setLocation("home");
-        }}
-      >
-        *** go home ***
-      </button> */}
+      {/* ************************* */}
+      {/* A C T I O N - P O I N T S */}
+      {/* ************************* */}
       <div
         className="action-points-day"
         style={{ display: location === "tutorial" ? "none" : "inline" }}
