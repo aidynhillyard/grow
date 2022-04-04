@@ -32,7 +32,7 @@
 
 .me-auto {
   padding: 0vh 0vh 1vh 0vh;
-  background-color: #90A955;
+  background-color: #90a955;
 }
 
 .container {
@@ -42,6 +42,7 @@
 .about-button {
   display: flex;
   align-items: flex-end;
+  color: #132a13;
 }
 
 .header-sprig {

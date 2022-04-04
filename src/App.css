@@ -18,8 +18,8 @@ html {
 }
 
 body {
-  background-color: #FBFCEB;
-  color: #132A13;
+  background-color: #fbfceb;
+  color: #132a13;
   font-family: "Zen Maru Gothic";
 }
 
@@ -28,23 +28,23 @@ body {
 }
 
 h1 {
-  color: #31572C;
+  color: #31572c;
 }
 
 h2 {
-  color: #31572C;
+  color: #31572c;
 }
 
 button {
   border-radius: 0.7em;
-  background: none!important;
+  background: none !important;
   border: none;
-  padding: 0!important;
+  padding: 0 !important;
   cursor: pointer;
-  color: #31572C;
+  color: #31572c;
   padding: 0.3em;
   text-decoration: underline;
-  text-decoration-color: #4F772D;
+  text-decoration-color: #4f772d;
   text-decoration-style: dotted;
 }
 
@@ -67,7 +67,6 @@ button {
   padding-bottom: 2.5rem; /* Footer height */
 }
 
-
 /*
 *************
 T A B L E T
@@ -75,7 +74,6 @@ T A B L E T
 */
 
 @media only screen and (min-width: 768px) {
-  
 }
 
 /*
@@ -89,4 +87,3 @@ T A B L E T
     font-size: 100%;
   }
 }
-

@@ -13,6 +13,7 @@ const About = () => {
         <a
           href="https://capricorn-0mnikorn.tumblr.com/post/633330323882688512/a-bechdel-style-test-for-disabled-characters-you"
           target="_blank"
+          id="desires-test"
         >
           1001 Desires Test
         </a>
@@ -37,7 +38,11 @@ const About = () => {
       <p className="about">
         GROW was written, developed, and coded by Aidyn Hillyard (zie/hir/hirs).
         The images of townspeople were created with{" "}
-        <a href="https://picrew.me/image_maker/332600" target="_blank">
+        <a
+          href="https://picrew.me/image_maker/332600"
+          target="_blank"
+          id="picrew"
+        >
           Djarn's Picrew
         </a>
         .

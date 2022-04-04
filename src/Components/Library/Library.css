@@ -1,20 +1,30 @@
 .book3 {
-    margin-bottom: 2vh;
+  margin-bottom: 2vh;
 }
 
 .book-container {
-    max-width: 500px;
-    margin: 0 auto;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .book-title {
-    padding: 2vh;
+  padding: 2vh;
 }
 
 .response {
-    padding: 3vh;
+  padding: 3vh;
 }
 
 .close {
-    margin: 1vh 0vh;
+  margin: 1vh 0vh;
+}
+
+#recipe-link {
+  text-decoration: none;
+  color: #132a13;
+}
+
+#recipe-link:hover {
+  text-decoration: none;
+  color: #132a13;
 }

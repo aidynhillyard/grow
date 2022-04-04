@@ -14,3 +14,11 @@ a {
 .about {
   text-align: left;
 }
+
+#desires-test:hover {
+  color: #4f772d;
+}
+
+#picrew:hover {
+  color: #4f772d;
+}
