@@ -62,7 +62,8 @@ const Library = ({
             Oh, there's a scrap of paper...? It's a recipe for{" "}
             <a
               href="https://www.maangchi.com/recipe/gyungdan"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
               id="recipe-link"
             >
               <em>gyeongdan</em>

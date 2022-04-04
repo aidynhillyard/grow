@@ -87,10 +87,18 @@ const Pot2 = ({
       {/* Pot #2 */}
       <div>
         <div style={{ display: pot2IsEmpty || pot2IsSeed ? "inline" : "none" }}>
-          <img className="plant-imgs" src={emptypot} alt="A drawing of an empty plant pot"/>
+          <img
+            className="plant-imgs"
+            src={emptypot}
+            alt="A drawing of an empty plant pot"
+          />
         </div>
         <div style={{ display: pot2IsSeedling === true ? "inline" : "none" }}>
-          <img className="plant-imgs" src={seedling} alt="A drawing of a seedling in a plant pot"/>
+          <img
+            className="plant-imgs"
+            src={seedling}
+            alt="A drawing of a seedling in a plant pot"
+          />
         </div>
         <div
           style={{
@@ -100,7 +108,11 @@ const Pot2 = ({
                 : "none",
           }}
         >
-          <img className="plant-imgs" src={iris} alt="A drawing of a blue iris flower in a plant pot"/>
+          <img
+            className="plant-imgs"
+            src={iris}
+            alt="A drawing of a blue iris flower in a plant pot"
+          />
         </div>
         <div
           style={{
@@ -110,7 +122,11 @@ const Pot2 = ({
                 : "none",
           }}
         >
-          <img className="plant-imgs" src={tulip} alt="A drawing of a pink tulip flower in a plant pot"/>
+          <img
+            className="plant-imgs"
+            src={tulip}
+            alt="A drawing of a pink tulip flower in a plant pot"
+          />
         </div>
         <div
           style={{
@@ -120,7 +136,11 @@ const Pot2 = ({
                 : "none",
           }}
         >
-          <img className="plant-imgs" src={forgetmenot} alt="A drawing of a blue forget-me-not in a plant pot"/>
+          <img
+            className="plant-imgs"
+            src={forgetmenot}
+            alt="A drawing of a blue forget-me-not in a plant pot"
+          />
         </div>
         <p className="plant-name">
           Plant #2: {pot2Type}
@@ -193,10 +213,18 @@ const Pot2 = ({
           </DropdownButton>
         </div>
       </div>
-      <div style={{ display: pot2IsEmpty === false && pot2Age === 1 ? "inline" : "none" }}>
+      <div
+        style={{
+          display: pot2IsEmpty === false && pot2Age === 1 ? "inline" : "none",
+        }}
+      >
         Your {pot2Type} is planted!
       </div>
-      <div style={{ display: pot2IsCaredFor === true && pot2Age > 1 ? "inline" : "none" }}>
+      <div
+        style={{
+          display: pot2IsCaredFor === true && pot2Age > 1 ? "inline" : "none",
+        }}
+      >
         You have cared for your {pot2Type} plant today!
       </div>
     </Container>

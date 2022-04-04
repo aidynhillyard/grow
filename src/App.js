@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 import "@fontsource/zen-maru-gothic";
 import { Routes, Route } from "react-router-dom";
 import Header from "./Components/Header/Header";
@@ -13,7 +13,7 @@ function App() {
         <Header />
         <main className="main-container">
           <Routes>
-            <Route path='/' element={<Grow />}></Route>
+            <Route path="/" element={<Grow />}></Route>
           </Routes>
         </main>
       </Container>

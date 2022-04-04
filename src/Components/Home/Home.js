@@ -156,7 +156,7 @@ const Home = ({
       <div className="bottom-links">
         <div>
           <div className="bottom-single-link">
-            <img className="sprig" src={sprig} alt=""/>
+            <img className="sprig" src={sprig} alt="" />
             <button
               onClick={() => {
                 setShowLetters(!showLetters);
@@ -185,7 +185,7 @@ const Home = ({
         </div>
         {/* View Library Button */}
         <div className="bottom-single-link">
-          <img className="sprig" src={sprig} alt=""/>
+          <img className="sprig" src={sprig} alt="" />
           <button
             onClick={() => {
               setShowLibrary(!showLibrary);
@@ -230,7 +230,7 @@ const Home = ({
                   : "none",
             }}
           >
-            <img className="sprig" src={sprig} alt=""/>
+            <img className="sprig" src={sprig} alt="" />
             <button
               onClick={() => {
                 setLocation("town");

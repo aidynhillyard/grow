@@ -33,8 +33,10 @@ const Letters = ({
         style={{
           display: letter1 ? "block" : "none",
         }}
-      ><img className="sprig" src={sprig} alt=""/>
-        <button className="read-letter"
+      >
+        <img className="sprig" src={sprig} alt="" />
+        <button
+          className="read-letter"
           onClick={() => {
             setLetter1IsRead(true);
             setShowLetter1(!showLetter1);
@@ -43,7 +45,8 @@ const Letters = ({
           Read Letter Given by Alba
         </button>
 
-        <div className="full-letter"
+        <div
+          className="full-letter"
           style={{
             display: showLetter1 ? "block" : "none",
           }}
@@ -82,7 +85,8 @@ const Letters = ({
           </p>
 
           <p>- Me</p>
-          <button className="end"
+          <button
+            className="end"
             onClick={() => {
               setShowLetter1(!showLetter1);
             }}
@@ -98,8 +102,10 @@ const Letters = ({
         style={{
           display: letter2 ? "block" : "none",
         }}
-      ><img className="sprig" src={sprig} alt=""/>
-        <button className="read-letter"
+      >
+        <img className="sprig" src={sprig} alt="" />
+        <button
+          className="read-letter"
           onClick={() => {
             setLetter2IsRead(true);
             setShowLetter2(!showLetter2);
@@ -107,7 +113,8 @@ const Letters = ({
         >
           Read Letter Given by Ji
         </button>
-        <div className="full-letter"
+        <div
+          className="full-letter"
           style={{
             display: showLetter2 ? "block" : "none",
           }}
@@ -146,7 +153,8 @@ const Letters = ({
           </p>
 
           <p>- Me</p>
-          <button className="end"
+          <button
+            className="end"
             onClick={() => {
               setShowLetter2(!showLetter2);
             }}
@@ -162,8 +170,10 @@ const Letters = ({
         style={{
           display: letter3 ? "block" : "none",
         }}
-      ><img className="sprig" src={sprig} alt=""/>
-        <button className="read-letter"
+      >
+        <img className="sprig" src={sprig} alt="" />
+        <button
+          className="read-letter"
           onClick={() => {
             setLetter3IsRead(true);
             setShowLetter3(!showLetter3);
@@ -172,7 +182,8 @@ const Letters = ({
           Read Letter Given by Farhana
         </button>
 
-        <div className="full-letter"
+        <div
+          className="full-letter"
           style={{
             display: showLetter3 ? "block" : "none",
           }}
@@ -212,7 +223,8 @@ const Letters = ({
           </p>
 
           <p>- Me</p>
-          <button className="end"
+          <button
+            className="end"
             onClick={() => {
               setShowLetter3(!showLetter3);
             }}

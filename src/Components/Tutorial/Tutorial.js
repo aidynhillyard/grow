@@ -259,8 +259,10 @@ const Tutorial = ({ setLocation, setNewGame }) => {
         </div>
         <div style={{ display: dialogue === 13 ? "inline" : "none" }}>
           <p className="fade-in-text">
-            <strong><em>Note:</em> Do not use the back button on your browser or refresh
-            the page; this will restart your game.</strong>
+            <strong>
+              <em>Note:</em> Do not use the back button on your browser or
+              refresh the page; this will restart your game.
+            </strong>
           </p>
           <p className="fade-in-text">
             To plant seeds, you need to be in your Home. You have 3 empty pots,

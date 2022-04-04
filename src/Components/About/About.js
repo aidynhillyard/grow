@@ -12,7 +12,8 @@ const About = () => {
         GROW was designed to pass the{" "}
         <a
           href="https://capricorn-0mnikorn.tumblr.com/post/633330323882688512/a-bechdel-style-test-for-disabled-characters-you"
-          target="_blank" rel="noreferrer"
+          target="_blank"
+          rel="noreferrer"
           id="desires-test"
         >
           1001 Desires Test
@@ -40,7 +41,8 @@ const About = () => {
         The images of townspeople were created with{" "}
         <a
           href="https://picrew.me/image_maker/332600"
-          target="_blank" rel="noreferrer"
+          target="_blank"
+          rel="noreferrer"
           id="picrew"
         >
           Djarn's Picrew

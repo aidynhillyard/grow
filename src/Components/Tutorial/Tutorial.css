@@ -55,9 +55,9 @@
   *************
   */
 
-  @media only screen and (min-width: 992px) {
-    .tutorial-container {
-      width: 500px;
-      margin: 0 auto;
-    }
+@media only screen and (min-width: 992px) {
+  .tutorial-container {
+    width: 500px;
+    margin: 0 auto;
   }
+}

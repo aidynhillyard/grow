@@ -29,7 +29,7 @@ const Footer = () => {
           />
         </a>
       </div>
-        <p className="footer-text">Designed and coded by Aidyn Hillyard, 2022</p>
+      <p className="footer-text">Designed and coded by Aidyn Hillyard, 2022</p>
     </div>
   );
 };
