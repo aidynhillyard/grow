@@ -33,7 +33,7 @@ const Letters = ({
         style={{
           display: letter1 ? "block" : "none",
         }}
-      ><img className="sprig" src={sprig} />
+      ><img className="sprig" src={sprig} alt=""/>
         <button className="read-letter"
           onClick={() => {
             setLetter1IsRead(true);
@@ -98,7 +98,7 @@ const Letters = ({
         style={{
           display: letter2 ? "block" : "none",
         }}
-      ><img className="sprig" src={sprig} />
+      ><img className="sprig" src={sprig} alt=""/>
         <button className="read-letter"
           onClick={() => {
             setLetter2IsRead(true);
@@ -162,7 +162,7 @@ const Letters = ({
         style={{
           display: letter3 ? "block" : "none",
         }}
-      ><img className="sprig" src={sprig} />
+      ><img className="sprig" src={sprig} alt=""/>
         <button className="read-letter"
           onClick={() => {
             setLetter3IsRead(true);
