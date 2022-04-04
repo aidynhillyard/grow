@@ -23,7 +23,6 @@ The user is a person who enjoys self-paced, story-focused games, such as "slice 
 
 #### MVP
 
-- Django back end for full user auth
 - Fully functional text-based game
     - Player spents action points (4 given per day) to plant seeds, care for plants, and talk to townspeople
     - Player must talk to townspeople to determine who likes which plant
@@ -70,20 +69,18 @@ Unless otherwise noted, time is listed in hours:
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
-| Create React app and files for all components | H | 2 | |
-| Basic Navbar & Footer | H | 2 | |
-| Set up basic React routing | H | 1 | |
-| Game logic for growing plants | H | 8 | |
-| Game logic for talking to townspeople | H | 8 | |
-| Game tutorial for how to play | H | 6 | |
-| Write dialogue and letter contents | M | 8 | |
-| Displaying menus/dialogue | H | 6 | |
-| CSS for GROW page | H | 6 | |
-| CSS for About page | H | 2 | |
-| Create "Info" page with more info | L | 4 | |
-| Add home library feature | L | 8 | |
-| Add read-only journal feature | L | 10 | |
-| Total | H | 71 | |
+| Create React app and files for all components | H | 2 | 2 |
+| Basic Navbar & Footer | H | 2 | 1 |
+| Set up basic React routing | H | 1 | 0.5 |
+| Game logic for growing plants | H | 8 | 8 |
+| Game logic for talking to townspeople | H | 8 | 8 |
+| Game tutorial for how to play | H | 6 | 3 |
+| Write dialogue and letter contents | M | 8 | 5 |
+| Displaying menus/dialogue | H | 6 | 8 |
+| CSS for GROW page | H | 6 | 6 |
+| CSS for About page | H | 2 | 2 |
+| Add home library feature | L | 8 | 2 |
+| Total | H | 57 | 45.5 |
 
 ## Additional Libraries
 React Bootstrap
