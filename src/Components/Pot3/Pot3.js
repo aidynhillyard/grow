@@ -87,11 +87,11 @@ const Pot3 = ({
     <Container>
       {/* Pot #3 */}
       <div>
-        <div style={{ display: pot3IsEmpty || pot3IsSeed ? "inline" : "none" }}><img className="plant-imgs" src={emptypot}/></div>
-        <div style={{ display: pot3IsSeedling === true ? "inline" : "none" }}><img className="plant-imgs" src={seedling}/></div>
-        <div style={{ display: pot3Type === "Iris" && pot3IsFullyGrown === true ? "inline" : "none" }}><img className="plant-imgs" src={iris}/></div>
-        <div style={{ display: pot3Type === "Tulip" && pot3IsFullyGrown === true ? "inline" : "none" }}><img className="plant-imgs" src={tulip}/></div>
-        <div style={{ display: pot3Type === "Forget-Me-Not" && pot3IsFullyGrown === true ? "inline" : "none" }}><img className="plant-imgs" src={forgetmenot}/></div>
+        <div style={{ display: pot3IsEmpty || pot3IsSeed ? "inline" : "none" }}><img className="plant-imgs" src={emptypot} alt="A drawing of an empty plant pot"/></div>
+        <div style={{ display: pot3IsSeedling === true ? "inline" : "none" }}><img className="plant-imgs" src={seedling} alt="A drawing of a seedling in a plant pot"/></div>
+        <div style={{ display: pot3Type === "Iris" && pot3IsFullyGrown === true ? "inline" : "none" }}><img className="plant-imgs" src={iris} alt="A drawing of a blue iris flower in a plant pot"/></div>
+        <div style={{ display: pot3Type === "Tulip" && pot3IsFullyGrown === true ? "inline" : "none" }}><img className="plant-imgs" src={tulip} alt="A drawing of a pink tulip flower in a plant pot"/></div>
+        <div style={{ display: pot3Type === "Forget-Me-Not" && pot3IsFullyGrown === true ? "inline" : "none" }}><img className="plant-imgs" src={forgetmenot} alt="A drawing of a blue forget-me-not in a plant pot"/></div>
         <p className="plant-name">
           Plant #3: {pot3Type}
           <span style={{ display: pot3IsEmpty === true ? "none" : "inline" }}>

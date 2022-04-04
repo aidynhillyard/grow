@@ -528,7 +528,7 @@ const Town = ({
           display: location === "town" && !globalShow ? "inline" : "none",
         }}
       >
-        <img className="sprig" src={sprig} />
+        <img className="sprig" src={sprig} alt=""/>
         <button
           className="travel-home"
           onClick={() => {
