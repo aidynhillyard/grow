@@ -36,7 +36,7 @@ const Alba6Conversation = ({
           (pot3Type === "Iris" && pot3IsFullyGrown === true))
           ? "inline"
           : "none",
-    }}><img className="sprig" src={sprig}/>
+    }}><img className="sprig" src={sprig} alt=""/>
       <button
         onClick={() => {
           setShowFarhana(false);

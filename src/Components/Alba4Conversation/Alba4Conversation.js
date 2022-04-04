@@ -40,7 +40,7 @@ const Alba4Conversation = ({
               : "none",
         }}
       >
-        <img className="sprig" src={sprig} />
+        <img className="sprig" src={sprig} alt=""/>
         <button
           onClick={() => {
             setShowFarhana(false);
