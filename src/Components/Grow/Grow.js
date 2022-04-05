@@ -1,10 +1,10 @@
 import "./Grow.css";
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Tutorial from "../Tutorial/Tutorial";
 import Home from "../Home/Home";
 import Town from "../Town/Town";
 import NewDay from "../NewDay/NewDay";
-import { useState, useEffect } from "react";
 import growtitle from "../../images/growtitle.png";
 import growplant from "../../images/growplant.mp4";
 
