@@ -95,7 +95,7 @@ const Home = ({
         <p>
           ― Kahlil Gibran, <em>The Prophet</em>
         </p>
-        <img src={note} alt="Line drawing of a leafy plant" />
+        <img src={note} className="note-plant" alt="Line drawing of a leafy plant" />
       </div>
       {/* ******* */}
       {/* P O T S */}

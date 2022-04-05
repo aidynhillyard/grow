@@ -52,6 +52,10 @@ button:focus {
   max-height: 25px;
 }
 
+.travel-to-town {
+  padding: 2vh;
+}
+
 /* Pot Components */
 
 .pot-components {
@@ -155,6 +159,7 @@ T A B L E T
 
   .plant-imgs {
     max-width: 25vh;
+    padding: 1vh;
   }
 
   .bottom-single-link {
@@ -162,9 +167,5 @@ T A B L E T
     padding: 0.5vh 0vh;
     display: flex;
     justify-content: center;
-  }
-
-  .travel-to-town {
-    padding: 2vh;
   }
 }
