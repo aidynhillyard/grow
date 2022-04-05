@@ -26,7 +26,7 @@ const Alba6Conversation = ({
   const [tradedPlant, setTradedPlant] = useState(false);
 
   return (
-    <div>
+    <div className="dialogue-container">
       <div
         className="talk-button-img"
         style={{
