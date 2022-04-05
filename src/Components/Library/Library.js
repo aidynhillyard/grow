@@ -61,12 +61,12 @@ const Library = ({
           <p className="book-container">
             Oh, there's a scrap of paper...? It's a recipe for{" "}
             <a
-              href="https://www.maangchi.com/recipe/gyungdan"
+              href="https://www.koreanbapsang.com/songpyeon-half-moon-shaped-rice-cake/"
               target="_blank"
               rel="noreferrer"
               id="recipe-link"
             >
-              <em>gyeongdan</em>
+              <em>songpyeon</em>
             </a>
             . I wonder where it came from.
           </p>
