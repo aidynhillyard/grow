@@ -235,10 +235,10 @@ const Grow = () => {
       <div
         className="new-day"
         style={{
-          display: actionPoints === 0 && !globalShow ? "inline" : "none",
+          display: !globalShow ? "inline" : "none",
         }}
       >
-        <NewDay startNewDay={startNewDay} />
+        <NewDay startNewDay={startNewDay} actionPoints={actionPoints} globalShow={globalShow} />
       </div>
       {/* ******** */}
       {/* H O M E */}
