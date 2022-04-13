@@ -1,6 +1,6 @@
 import "./NewDay.css";
 
-const NewDay = ({ startNewDay, actionPoints, globalShow }) => {
+const NewDay = ({ startNewDay, actionPoints, globalShow, location }) => {
   return (
     <div>
       <div>
@@ -11,10 +11,12 @@ const NewDay = ({ startNewDay, actionPoints, globalShow }) => {
         day now?
       </p>
       <p style={{
-          display: actionPoints > 0 && !globalShow ? "inline" : "none",
+          display: actionPoints > 0 && !globalShow && location !== "tutorial" ? "inline" : "none",
         }}>You may start a new day when you are ready.</p>
         </div>
-      <button
+      <button style={{
+          display: !globalShow && location !== "tutorial" ? "inline" : "none",
+        }}
         onClick={() => {
           startNewDay();
         }}

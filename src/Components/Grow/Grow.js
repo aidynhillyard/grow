@@ -238,7 +238,7 @@ const Grow = () => {
           display: !globalShow ? "inline" : "none",
         }}
       >
-        <NewDay startNewDay={startNewDay} actionPoints={actionPoints} globalShow={globalShow} />
+        <NewDay startNewDay={startNewDay} actionPoints={actionPoints} globalShow={globalShow} location={location} />
       </div>
       {/* ******** */}
       {/* H O M E */}
