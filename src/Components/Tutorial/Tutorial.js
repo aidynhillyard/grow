@@ -1,9 +1,8 @@
 import "./Tutorial.css";
 import { useState } from "react";
 import Container from "react-bootstrap/Container";
-import farhana from "../../images/farhanacircle.png";
-import player from "../../images/player.png";
 import note from "../../images/note.png";
+import { getDialogueLabel } from "../UIElements/UIElements";
 
 const Tutorial = ({ setLocation, setNewGame }) => {
   const [dialogue, setDialogue] = useState(0);
@@ -23,10 +22,7 @@ const Tutorial = ({ setLocation, setNewGame }) => {
         className="global-dialogue"
         style={{ display: dialogue === 1 ? "inline" : "none" }}
       >
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           Hey, Friend! Welcome back to town. When I heard you'd be moving back
           into your old home, but using a wheelchair, I took the liberty of
@@ -43,9 +39,7 @@ const Tutorial = ({ setLocation, setNewGame }) => {
         </button>
       </div>
       <div style={{ display: dialogue === 2 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           Thank you, but are you sure that wooden ramp is stable?
         </p>
@@ -60,10 +54,7 @@ const Tutorial = ({ setLocation, setNewGame }) => {
         </button>
       </div>
       <div style={{ display: dialogue === 3 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           Absolutely. It's a 4.8 degree grade. And I've been a carpenter for
           over a decade, remember?
@@ -79,9 +70,7 @@ const Tutorial = ({ setLocation, setNewGame }) => {
         </button>
       </div>
       <div style={{ display: dialogue === 4 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">...</p>
         <button
           className="fade-in-text"
@@ -94,10 +83,7 @@ const Tutorial = ({ setLocation, setNewGame }) => {
         </button>
       </div>
       <div style={{ display: dialogue === 5 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           Sorry. I didn't mean anything by that; it's just going to take awhile
           for me to adjust. I know you told me on the phone, but… you really
@@ -114,9 +100,7 @@ const Tutorial = ({ setLocation, setNewGame }) => {
         </button>
       </div>
       <div style={{ display: dialogue === 6 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           No, I don't. The doctors say my memory will come back in time, but for
           now, they said the best thing I can do is be in familiar surroundings
@@ -133,10 +117,7 @@ const Tutorial = ({ setLocation, setNewGame }) => {
         </button>
       </div>
       <div style={{ display: dialogue === 7 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           Well, we're all glad to have you back. I'll, um, leave you to it. I'm
           sure you have a lot to unpack. Oh, and I added a few touches inside
@@ -153,9 +134,7 @@ const Tutorial = ({ setLocation, setNewGame }) => {
         </button>
       </div>
       <div style={{ display: dialogue === 8 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">Thank you, Farhana.</p>
         <button
           className="fade-in-text"
@@ -184,9 +163,7 @@ const Tutorial = ({ setLocation, setNewGame }) => {
       <div
         style={{ display: dialogue > 9 && dialogue < 13 ? "inline" : "none" }}
       >
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
       </div>
       <div style={{ display: dialogue === 10 ? "inline" : "none" }}>
         <p className="fade-in-text player-dialogue">

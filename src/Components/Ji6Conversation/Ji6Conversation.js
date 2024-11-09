@@ -1,7 +1,6 @@
 import "./Ji6Conversation.css";
 import { useState } from "react";
-import ji from "../../images/jicircle.png";
-import player from "../../images/player.png";
+import { getDialogueLabel } from "../UIElements/UIElements";
 import sprig from "../../images/sprig.png";
 
 const Ji6Conversation = ({
@@ -55,10 +54,7 @@ const Ji6Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 1 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">
           If you have more tulips you don't need, I'd love to take them home.
           And I'm here for you, you know.
@@ -74,9 +70,7 @@ const Ji6Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 2 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">Thank you, Ji.</p>
         <button
           className="fade-in-text player-dialogue"
