@@ -1,7 +1,6 @@
 import "./Ji4Conversation.css";
 import { useState } from "react";
-import ji from "../../images/jicircle.png";
-import player from "../../images/player.png";
+import { getDialogueLabel } from "../UIElements/UIElements";
 import sprig from "../../images/sprig.png";
 
 const Ji4Conversation = ({
@@ -54,9 +53,7 @@ const Ji4Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 1 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           Hey, Ji. I, uh, grew this for you.
         </p>
@@ -71,10 +68,7 @@ const Ji4Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 2 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">
           Is that...? It's a tulip! Thank you!
         </p>
@@ -89,9 +83,7 @@ const Ji4Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 3 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           I was going through some of the photos in the house, and I found one
           of you and me in your kitchen with your grandma, I think. And I just…
@@ -108,10 +100,7 @@ const Ji4Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 4 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">
           You know… growing up in a Korean family, we're not usually big on
           therapy. Don't want anyone to think anything's <em>wrong</em>. But,
@@ -129,9 +118,7 @@ const Ji4Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 5 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">Did... it help?</p>
         <button
           className="fade-in-text"
@@ -144,10 +131,7 @@ const Ji4Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 6 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">
           Kinda. It's not like it made everything better. But it helped me feel
           like I could handle things better. ...I saw footage of the earthquake
@@ -165,9 +149,7 @@ const Ji4Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 7 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">…</p>
         <button
           className="fade-in-text"
@@ -180,10 +162,7 @@ const Ji4Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 8 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">
           I guess what I'm saying is that you've been through a lot, and, you
           know, talking to someone is a thing. Oh, and this is for you.
@@ -199,9 +178,7 @@ const Ji4Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 9 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">A letter?</p>
         <button
           className="fade-in-text"
@@ -214,10 +191,7 @@ const Ji4Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 10 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">
           Yeah, you gave it to me a long time ago, and said to give it back to
           you when you were older. Well, you're older. We both are. So here it
@@ -234,9 +208,7 @@ const Ji4Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 11 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           I'll think about it. Really. And thank you for the letter.
         </p>

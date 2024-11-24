@@ -1,7 +1,6 @@
 import "./Farhana5Conversation.css";
 import { useState } from "react";
-import farhana from "../../images/farhanacircle.png";
-import player from "../../images/player.png";
+import { getDialogueLabel } from "../UIElements/UIElements";
 import sprig from "../../images/sprig.png";
 
 const Farhana5Conversation = ({
@@ -42,9 +41,7 @@ const Farhana5Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 1 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           Why didn't you tell me we were going to live together? Did we ever
           actually live together?
@@ -60,10 +57,7 @@ const Farhana5Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 2 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           No. While we were searching for a place, your Mom passed away, and you
           moved out of your apartment and back into the house. We started
@@ -81,9 +75,7 @@ const Farhana5Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 3 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           Funny how there are some things I'm glad I don't remember. What did we
           both want?
@@ -99,10 +91,7 @@ const Farhana5Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 4 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           You wanted me to move in with you, and I wanted us to find our own
           place. We agreed to put the, uh, discussion to the side because of our
@@ -120,9 +109,7 @@ const Farhana5Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 5 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           But... I <em>want</em> to know you.
         </p>
@@ -137,10 +124,7 @@ const Farhana5Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 6 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           I wanted to remind you about us, and everything I read about
           dissociative amnesia says that's helpful, but I just got scared. What
@@ -158,9 +142,7 @@ const Farhana5Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 7 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           Farhana, I'm the one in a wheelchair who can't remember the most
           important details of my life. I'm a lot more worried that <em>I'm</em>{" "}
@@ -177,10 +159,7 @@ const Farhana5Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 8 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           It's not going to be easy. I know there are going to be miserable
           moments, miserable days. Doubts. Regrets. But I'm willing to put in
@@ -198,9 +177,7 @@ const Farhana5Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 9 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           One boat traveling the ocean....
         </p>

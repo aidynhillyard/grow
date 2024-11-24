@@ -1,7 +1,6 @@
 import "./Ji2Conversation.css";
 import { useState } from "react";
-import ji from "../../images/jicircle.png";
-import player from "../../images/player.png";
+import { getDialogueLabel } from "../UIElements/UIElements";
 import sprig from "../../images/sprig.png";
 
 const Ji2Conversation = ({
@@ -36,9 +35,7 @@ const Ji2Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 1 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           Hey, Ji. How was hockey practice the other day?
         </p>
@@ -53,10 +50,7 @@ const Ji2Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 2 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">
           It was pretty chill until it was time for peewee hockey. One of the
           little kids had an absolute meltdown. I wish you had been there.
@@ -72,9 +66,7 @@ const Ji2Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 3 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           What, to share in your misery?
         </p>
@@ -89,10 +81,7 @@ const Ji2Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 4 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">
           No, to help! I know you don't remember, but... we used to work
           together at the movie theater. It was my first day, actually, and this
@@ -110,9 +99,7 @@ const Ji2Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 5 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">What happened?</p>
         <button
           className="fade-in-text"
@@ -125,10 +112,7 @@ const Ji2Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 6 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">
           You came to my rescue. The kid was clinging to my leg, and his mom was
           trying to pull him off of me, and you came around the corner and just
@@ -146,9 +130,7 @@ const Ji2Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 7 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           So I'm a Kid Whisperer. Huh.
         </p>
@@ -163,10 +145,7 @@ const Ji2Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 8 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">
           Oh, yeah. You have the magic touch. Kid went from horror to happy in
           under five minutes. You should stop by the theater some time. I'm the
@@ -184,9 +163,7 @@ const Ji2Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 9 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           Congrats on the Assistant Manager gig! And maybe I'll stop by
           sometime.
@@ -202,10 +179,7 @@ const Ji2Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 10 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">Looking forward to it!</p>
 
         <button

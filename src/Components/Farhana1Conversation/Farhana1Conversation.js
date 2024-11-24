@@ -1,7 +1,6 @@
 import "./Farhana1Conversation.css";
 import { useState } from "react";
-import farhana from "../../images/farhanacircle.png";
-import player from "../../images/player.png";
+import { getDialogueLabel } from "../UIElements/UIElements";
 import sprig from "../../images/sprig.png";
 
 const Farhana1Conversation = ({
@@ -36,10 +35,7 @@ const Farhana1Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 1 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           Hey, Friend! I'm glad you decided to come to town. I know it's a lot,
           trying to adjust to being back here.
@@ -55,9 +51,7 @@ const Farhana1Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 2 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           Yeah, it is. How are you?
         </p>
@@ -72,10 +66,7 @@ const Farhana1Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 3 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           Hopeful, actually. The city council is talking about renovating the
           rec center, and I'm hoping my company would get the contract. There's
@@ -93,9 +84,7 @@ const Farhana1Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 4 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           You sound really excited when you talk about your work. You must like
           it a lot, being in construction?
@@ -111,10 +100,7 @@ const Farhana1Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 5 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           I love it! Making things with my hands is just so nice. Tangible. You
           can reach out and touch it and know you did a good job.
@@ -130,9 +116,7 @@ const Farhana1Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 6 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           That reminds me: thanks again for building that ramp for me, and for
           making the adjustments to the house. That had to have taken a lot of
@@ -150,10 +134,7 @@ const Farhana1Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 7 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           Eh, worth it. <em>You're</em> worth it.
         </p>
@@ -168,9 +149,7 @@ const Farhana1Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 8 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">Um, thanks.</p>
         <button
           className="fade-in-text end"

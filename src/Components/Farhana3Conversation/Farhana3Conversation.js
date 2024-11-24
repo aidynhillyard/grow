@@ -1,7 +1,6 @@
 import "./Farhana3Conversation.css";
 import { useState } from "react";
-import farhana from "../../images/farhanacircle.png";
-import player from "../../images/player.png";
+import { getDialogueLabel } from "../UIElements/UIElements";
 import sprig from "../../images/sprig.png";
 
 const Farhana3Conversation = ({
@@ -36,10 +35,7 @@ const Farhana3Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 1 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">Heya! How're you today?</p>
         <button
           className="fade-in-text"
@@ -52,9 +48,7 @@ const Farhana3Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 2 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           I'm okay. How about you? And how's your family?
         </p>
@@ -69,10 +63,7 @@ const Farhana3Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 3 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           They're good. I was just talking with my sister last night about fate,
           actually.
@@ -88,9 +79,7 @@ const Farhana3Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 4 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">Fate?</p>
         <button
           className="fade-in-text"
@@ -103,10 +92,7 @@ const Farhana3Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 5 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           Yeah. It's been really hard on me, that you don't remember anything. I
           know it's not your fault, and I'm not mad at you. And I probably
@@ -124,9 +110,7 @@ const Farhana3Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 6 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           Not remembering things has been pretty hard on me, too. It's not like
           I <em>want</em> this weird reality where everyone knows me but I don't
@@ -148,10 +132,7 @@ const Farhana3Conversation = ({
             farhanaDialogue > 6 && farhanaDialogue < 11 ? "inline" : "none",
         }}
       >
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <div style={{ display: farhanaDialogue === 7 ? "inline" : "none" }}>
           <p className="fade-in-text npc-dialogue">
             I know. That's one of the reasons I haven't said anything until now.
@@ -218,9 +199,7 @@ const Farhana3Conversation = ({
         </div>
       </div>
       <div style={{ display: farhanaDialogue === 11 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           You didn't know, Farhana. It sounds like you just... wanted me to be
           happy. I don't remember any of this, but I'm starting to get to know
@@ -237,10 +216,7 @@ const Farhana3Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 12 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           It's so hard, starting over with you. Like the last several years
           never even happened.
@@ -256,9 +232,7 @@ const Farhana3Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 13 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">...I'm sorry.</p>
         <button
           className="fade-in-text"
@@ -271,10 +245,7 @@ const Farhana3Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 14 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           No, <em>I'm</em> sorry. I shouldn't vent to you, and it's not your
           fault. Anyway. I made this for you. It's a little pine box, and those
@@ -292,9 +263,7 @@ const Farhana3Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 15 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">I... I need to go.</p>
         <button
           className="fade-in-text end"

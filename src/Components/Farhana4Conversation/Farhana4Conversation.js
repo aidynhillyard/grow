@@ -1,7 +1,6 @@
 import "./Farhana4Conversation.css";
 import { useState } from "react";
-import farhana from "../../images/farhanacircle.png";
-import player from "../../images/player.png";
+import { getDialogueLabel } from "../UIElements/UIElements";
 import sprig from "../../images/sprig.png";
 
 const Farhana4Conversation = ({
@@ -54,9 +53,7 @@ const Farhana4Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 1 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           Hi, Farhana. I'm sorry about leaving suddenly the other day. I'm
           trying really hard to handle all of this, but some days are harder
@@ -73,10 +70,7 @@ const Farhana4Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 2 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           It's okay, really. You don't need to apologize to me. But is that...?
         </p>
@@ -91,9 +85,7 @@ const Farhana4Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 3 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           It's a forget-me-not plant, for you. To, um, apologize. And to say
           thank you for how kind you've been. Fixing up the house, advocating
@@ -111,10 +103,7 @@ const Farhana4Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 4 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           Thank you, truly. It's beautiful. ...When I found out about the
           earthquake, I tried to fly back right away, but the airport there was
@@ -132,9 +121,7 @@ const Farhana4Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 5 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           I... don't remember that.
         </p>
@@ -154,10 +141,7 @@ const Farhana4Conversation = ({
             farhanaDialogue > 5 && farhanaDialogue < 9 ? "inline" : "none",
         }}
       >
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <div style={{ display: farhanaDialogue === 6 ? "inline" : "none" }}>
           <p className="fade-in-text npc-dialogue">
             That's because they wouldn't let me see you. You were in the ICU for
@@ -212,9 +196,7 @@ const Farhana4Conversation = ({
         </div>
       </div>
       <div style={{ display: farhanaDialogue === 9 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           I... thank you, Farhana. I'm... going to go read this now.
         </p>

@@ -1,7 +1,6 @@
 import "./Alba5Conversation.css";
 import { useState } from "react";
-import alba from "../../images/albacircle.png";
-import player from "../../images/player.png";
+import { getDialogueLabel } from "../UIElements/UIElements";
 import sprig from "../../images/sprig.png";
 
 const Alba5Conversation = ({
@@ -42,9 +41,7 @@ const Alba5Conversation = ({
         </button>
       </div>
       <div style={{ display: albaDialogue === 1 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           Hi, Alba. How are you doing today?
         </p>
@@ -59,10 +56,7 @@ const Alba5Conversation = ({
         </button>
       </div>
       <div style={{ display: albaDialogue === 2 ? "inline" : "none" }}>
-        <div className="alba-dialogue-label fade-in-text">
-          <img src={alba} alt="Alba" id="alba-avatar" />
-          <p>Alba (they/them/theirs)</p>
-        </div>
+        {getDialogueLabel("alba")}
         <p className="fade-in-text npc-dialogue">
           Eh, I'm okay, can't complain. It's supposed to rain, and that always
           makes these old bones a bit more creaky, but what can you do?
@@ -78,9 +72,7 @@ const Alba5Conversation = ({
         </button>
       </div>
       <div style={{ display: albaDialogue === 3 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           I can relate; ever since the accident, I feel extra stiff in certain
           weather. Oh, but I wanted to tell you... I read the letter you gave
@@ -97,10 +89,7 @@ const Alba5Conversation = ({
         </button>
       </div>
       <div style={{ display: albaDialogue === 4 ? "inline" : "none" }}>
-        <div className="alba-dialogue-label fade-in-text">
-          <img src={alba} alt="Alba" id="alba-avatar" />
-          <p>Alba (they/them/theirs)</p>
-        </div>
+        {getDialogueLabel("alba")}
         <p className="fade-in-text npc-dialogue">Oh?</p>
         <button
           className="fade-in-text"
@@ -113,9 +102,7 @@ const Alba5Conversation = ({
         </button>
       </div>
       <div style={{ display: albaDialogue === 5 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           Yes, apparently I hated track and field! Here I was, thinking I had
           all these dreams, like maybe even the Olympics, but come to find out I
@@ -132,10 +119,7 @@ const Alba5Conversation = ({
         </button>
       </div>
       <div style={{ display: albaDialogue === 6 ? "inline" : "none" }}>
-        <div className="alba-dialogue-label fade-in-text">
-          <img src={alba} alt="Alba" id="alba-avatar" />
-          <p>Alba (they/them/theirs)</p>
-        </div>
+        {getDialogueLabel("alba")}
         <p className="fade-in-text npc-dialogue">
           Well, parents have a way of taking their own dreams and shifting them
           to their children. She loved you a lot, though.
@@ -151,9 +135,7 @@ const Alba5Conversation = ({
         </button>
       </div>
       <div style={{ display: albaDialogue === 7 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           I can tell from everything left in the house. It's comforting. And so
           is the letter. I'm starting to figure out who I can be, but more
@@ -170,10 +152,7 @@ const Alba5Conversation = ({
         </button>
       </div>
       <div style={{ display: albaDialogue === 8 ? "inline" : "none" }}>
-        <div className="alba-dialogue-label fade-in-text">
-          <img src={alba} alt="Alba" id="alba-avatar" />
-          <p>Alba (they/them/theirs)</p>
-        </div>
+        {getDialogueLabel("alba")}
         <p className="fade-in-text npc-dialogue">
           And you have your whole life to decide, dear.
         </p>

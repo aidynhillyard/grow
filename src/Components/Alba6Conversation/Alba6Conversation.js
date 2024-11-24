@@ -1,7 +1,6 @@
 import "./Alba6Conversation.css";
 import { useState } from "react";
-import alba from "../../images/albacircle.png";
-import player from "../../images/player.png";
+import { getDialogueLabel } from "../UIElements/UIElements";
 import sprig from "../../images/sprig.png";
 
 const Alba6Conversation = ({
@@ -55,10 +54,7 @@ const Alba6Conversation = ({
         </button>
       </div>
       <div style={{ display: albaDialogue === 1 ? "inline" : "none" }}>
-        <div className="alba-dialogue-label fade-in-text">
-          <img src={alba} alt="Alba" id="alba-avatar" />
-          <p>Alba (they/them/theirs)</p>
-        </div>
+        {getDialogueLabel("alba")}
         <p className="fade-in-text npc-dialogue">
           I'm always happy to take more irises off your hands if you have them.
           And remember, dear, you have your whole life to decide who you want to
@@ -75,9 +71,7 @@ const Alba6Conversation = ({
         </button>
       </div>
       <div style={{ display: albaDialogue === 2 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">Thank you, Alba.</p>
         <button
           className="fade-in-text player-dialogue"

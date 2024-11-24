@@ -1,7 +1,6 @@
 import "./Farhana6Conversation.css";
 import { useState } from "react";
-import farhana from "../../images/farhanacircle.png";
-import player from "../../images/player.png";
+import { getDialogueLabel } from "../UIElements/UIElements";
 import sprig from "../../images/sprig.png";
 
 const Farhana6Conversation = ({
@@ -55,10 +54,7 @@ const Farhana6Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 1 ? "inline" : "none" }}>
-        <div className="farhana-dialogue-label fade-in-text">
-          <img src={farhana} alt="Farhana" id="farhana-avatar" />
-          <p>Farhana (she/her/hers)</p>
-        </div>
+        {getDialogueLabel("farhana")}
         <p className="fade-in-text npc-dialogue">
           <em>Ya hayati</em>, we'll figure this out. Traveling the ocean
           together in one boat, as you say. Oh, and if you have any, I'll always
@@ -75,9 +71,7 @@ const Farhana6Conversation = ({
         </button>
       </div>
       <div style={{ display: farhanaDialogue === 2 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">Thank you, Farhana.</p>
         <button
           className="fade-in-text player-dialogue"

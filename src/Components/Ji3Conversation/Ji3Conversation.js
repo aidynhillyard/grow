@@ -1,7 +1,6 @@
 import "./Ji3Conversation.css";
 import { useState } from "react";
-import ji from "../../images/jicircle.png";
-import player from "../../images/player.png";
+import { getDialogueLabel } from "../UIElements/UIElements";
 import sprig from "../../images/sprig.png";
 
 const Ji3Conversation = ({
@@ -36,10 +35,7 @@ const Ji3Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 1 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">Oh hey, how's it going?</p>
         <button
           className="fade-in-text"
@@ -52,9 +48,7 @@ const Ji3Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 2 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           Not too bad. What are you eating?
         </p>
@@ -69,10 +63,7 @@ const Ji3Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 3 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">
           Chocolate chip cookies. Want one?
         </p>
@@ -87,9 +78,7 @@ const Ji3Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 4 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           Sure, I'm always up for cookies. ...Hey, these are delicious!
         </p>
@@ -104,10 +93,7 @@ const Ji3Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 5 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">
           Thanks, I made them myself. I started teaching myself how to cook
           after my grandma passed away. Mom had been gone for awhile, and Dad
@@ -125,9 +111,7 @@ const Ji3Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 6 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">
           That sounds like a lot for you to have to do. How old were you?
         </p>
@@ -142,10 +126,7 @@ const Ji3Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 7 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">
           It was only about four years ago. Wow, this memory stuff is so weird.
           You sang at my grandma's funeral, actually.
@@ -161,9 +142,7 @@ const Ji3Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 8 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">I... what?</p>
         <button
           className="fade-in-text"
@@ -176,10 +155,7 @@ const Ji3Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 9 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">
           Yeah. Well, at the memorial service afterward. The actual funeral was
           a really formal family thing and all, but afterward, I had put
@@ -197,9 +173,7 @@ const Ji3Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 10 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">Um, thanks.</p>
         <button
           className="fade-in-text"
@@ -212,10 +186,7 @@ const Ji3Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 11 ? "inline" : "none" }}>
-        <div className="ji-dialogue-label fade-in-text">
-          <img src={ji} alt="Ji" id="ji-avatar" />
-          <p>Ji (he/him/his)</p>
-        </div>
+        {getDialogueLabel("ji")}
         <p className="fade-in-text npc-dialogue">
           You brought her tulips. They were her favorite flower, and I guess
           they're mine now, too. ...You should start singing again.
@@ -231,9 +202,7 @@ const Ji3Conversation = ({
         </button>
       </div>
       <div style={{ display: jiDialogue === 12 ? "inline" : "none" }}>
-        <div className="player-dialogue-label fade-in-text">
-          <img src={player} alt="Plant avatar" id="player-avatar" />
-        </div>
+        {getDialogueLabel("player")}
         <p className="fade-in-text player-dialogue">Maybe....</p>
         <button
           className="fade-in-text end"
